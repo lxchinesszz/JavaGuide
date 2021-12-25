@@ -1,15 +1,16 @@
-const {config} = require("vuepress-theme-hope");
+const { config } = require("vuepress-theme-hope");
 const path = require("path");
 module.exports = config({
     theme: path.resolve(__dirname, './theme'),
     title: "Springlearn",
     description: "桃花潭水深千尺",
     author: '西魏陶渊明',
+    blog: false,
     dest: "./dist",
     head: [
         [
             "script",
-            {src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"},
+            { src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" },
         ],
         [
             "script",
@@ -17,10 +18,10 @@ module.exports = config({
                 src: "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
             },
         ],
-        ["script", {src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"}],
+        ["script", { src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" }],
         [
             "script",
-            {src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"},
+            { src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js" },
         ],
     ],
     locales: {
@@ -61,7 +62,7 @@ module.exports = config({
         repo: "https://github.com/vuepress-theme-hope/vuepress-theme-hope",
         editLinks: true,
         nav: [
-            {text: "指南", link: "/siteload", icon: "creative"}
+            { text: "指南", link: "/siteload", icon: "creative" }
         ],
         sidebarDepth: 4,
         displayAllHeaders: true,
@@ -86,16 +87,15 @@ module.exports = config({
                     errorHint: 'TMD，难道你想白嫖?'
                 },
                 nav: [
-                    {text: "网站地图", link: "/siteload", icon: "creative"},
-                    {text: "大学生专题", link: "/learn/school/students", icon: "study"},
+                    { text: "网站地图", link: "/siteload", icon: "creative" },
+                    { text: "大学生专题", link: "/learn/school/students", icon: "study" },
                     {
                         text: 'Java',
                         ariaLabel: 'Java',
                         items: [
-                            {text: 'Java基础', link: '/language/chinese/'},
-                            {text: 'Java中级', link: '/language/japanese/'},
-                            {text: 'Java高级', link: '/language/japanese/'},
-                            {text: 'JVM', link: '/language/japanese/'},
+                            { text: 'Java编程', link: '/learn/java/' },
+                            { text: 'Java八股文', link: '/learn/java2/' },
+                            { text: 'JVM', link: '/language/japanese/' },
                         ]
                     },
                     {
@@ -103,23 +103,34 @@ module.exports = config({
                         items: [
                             {
                                 text: '基础入门', items: [
-                                    {text: 'Maven基础', link: '/learn/maven/'},
-                                    {text: '自定义插件', link: '/learn/maven/自定义maven插件/'}
+                                    { text: 'Maven基础', link: '/learn/maven/' },
+                                    { text: '自定义插件', link: '/learn/maven/自定义maven插件/' }
                                 ]
                             },
                             {
                                 text: '源码分析', items: [
-                                    {text: 'spring-boot-maven-plugin', link: '/learn/maven/spring-boot-maven-plugin/'},
-                                    {text: 'maven-resources-plugin', link: '/learn/maven/maven-resources-plugin/'},
-                                    {text: 'maven-surefire-plugin', link: '/learn/maven/maven-surefire-plugin/'}
+                                    { text: 'spring-boot-maven-plugin', link: '/learn/maven/spring-boot-maven-plugin/' },
+                                    { text: 'maven-resources-plugin', link: '/learn/maven/maven-resources-plugin/' },
+                                    { text: 'maven-surefire-plugin', link: '/learn/maven/maven-surefire-plugin/' }
                                 ]
                             },
                             {
                                 text: '扩展开发', items: [
-                                    {text: '编译卡点插件', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    { text: '编译卡点插件', link: '/language/chinese/' },
+                                    { text: 'Japanese', link: '/language/japanese/' }
                                 ]
                             }
+                        ]
+                    },
+                    {
+                        text: '框架篇',
+                        ariaLabel: 'Java',
+                        items: [
+                            { text: 'Spring', link: '/learn/java/' },
+                            { text: 'SpringCloud', link: '/learn/java2/' },
+                            { text: 'Mybatis', link: '/language/japanese/' },
+                            { text: 'Dubbo', link: '/language/japanese/' },
+                            { text: 'Job', link: '/language/japanese/' },
                         ]
                     },
                     {
@@ -127,53 +138,37 @@ module.exports = config({
                         items: [
                             {
                                 text: '源码分析', items: [
-                                    {text: 'Chinese', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    { text: 'Chinese', link: '/language/chinese/' },
+                                    { text: 'Japanese', link: '/language/japanese/' }
                                 ]
                             },
                             {
                                 text: '扩展开发', items: [
-                                    {text: 'Chinese', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    { text: 'Chinese', link: '/language/chinese/' },
+                                    { text: 'Japanese', link: '/language/japanese/' }
                                 ]
                             }
                         ]
                     },
                     {
-                        text: '字节码',
-                        items: [
-                            {
-                                text: '源码分析', items: [
-                                    {text: 'Chinese', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
-                                ]
-                            },
-                            {
-                                text: '扩展开发', items: [
-                                    {text: 'Chinese', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
-                                ]
-                            }
-                        ]
-                    }, {
                         text: 'Database',
                         items: [
                             {
                                 text: '关系型数据库', items: [
-                                    {text: 'Mysql', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    { text: 'Mysql', link: '/language/chinese/' },
+                                    { text: 'Japanese', link: '/language/japanese/' }
                                 ]
                             },
                             {
                                 text: 'NoSql', items: [
-                                    {text: 'Redis', link: '/language/chinese/'},
-                                    {text: 'Mongo', link: '/language/japanese/'}
+                                    { text: 'Redis', link: '/language/chinese/' },
+                                    { text: 'Mongo', link: '/language/japanese/' }
                                 ]
                             },
                             {
                                 text: '图数据库', items: [
-                                    {text: 'Neo4J', link: '/language/chinese/'},
-                                    {text: 'JanuasGraph', link: '/language/japanese/'}
+                                    { text: 'Neo4J', link: '/language/chinese/' },
+                                    { text: 'JanuasGraph', link: '/language/japanese/' }
                                 ]
                             }
                         ]
@@ -183,12 +178,13 @@ module.exports = config({
                         items: [
                             {
                                 text: '规范', items: [
-                                    {text: 'Java代码规范全部奉上', link: '/learn/design/Java代码规范全部奉上'},
+                                    { text: 'Java代码规范全部奉上', link: '/learn/design/Java代码规范全部奉上' },
+                                    { text: '中文文档写作规范', link: '/learn/design/中文文档写作规范' }
                                 ]
                             },
                             {
                                 text: '设计', items: [
-                                    {text: '领域驱动模型的思考与认知', link: '/learn/design/领域驱动模型的思考与认知'},
+                                    { text: '领域驱动模型的思考与认知', link: '/learn/design/领域驱动模型的思考与认知' },
                                 ]
                             }
                         ]
@@ -198,50 +194,58 @@ module.exports = config({
                         items: [
                             {
                                 text: '博客框架', items: [
-                                    {text: 'Chinese', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    { text: 'Chinese', link: '/language/chinese/' },
+                                    { text: 'Japanese', link: '/language/japanese/' }
                                 ]
                             },
                             {
                                 text: '服务器选择', items: [
-                                    {text: 'Chinese', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    { text: 'Chinese', link: '/language/chinese/' },
+                                    { text: 'Japanese', link: '/language/japanese/' }
                                 ]
                             },
                             {
                                 text: '域名部署', items: [
-                                    {text: 'Chinese', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    { text: 'Chinese', link: '/language/chinese/' },
+                                    { text: 'Japanese', link: '/language/japanese/' }
                                 ]
                             }
                         ]
                     }
                 ],
                 sidebar: {
-                    "/zh/": [
-                        "",
-                        "home",
-                        "slides",
-                        "layout",
+                    "/learn/java/": [
                         {
-                            title: "如何使用",
-                            icon: "creative",
-                            prefix: "guide/",
-                            children: ["", "page", "markdown", "disable", "encrypt"],
+                            title: " 第一章 基础内容",
+                            icon: "jichushuju",
+                            collapsable: false,
+                            children: ['Java异常体系', '函数式编程', 'JMX', 'SPI', 'hooks函数','委派双亲之类加载器', '四大引用']
                         },
+                        {
+                            title: " 第二章 多线程编程",
+                            icon: "xiancheng",
+                            collapsable: false,
+                            children: ['线程池', '拒绝策略', '线程安全之锁操作','线程组','线程工厂','线程隔离','线程安全']
+                        },
+                        {
+                            title: " 第三章 并发编程",
+                            icon: "xiancheng",
+                            collapsable: false,
+                            children: ['Semaphore','CountDownLatch','CyclicBarrier','ReadWriteLock','原子操作']
+                        }
                     ],
-                    "/learn/other/": [
+                    "/learn/java2/": [
                         {
                             title: "基础能力",
                             icon: "creative",
-                            children: ['java-watch-file', 'bug','程序猿到底有没有必要买一台阿里云服务器','重剑无锋大巧不工']
-                        }
-                    ],
-                    "/learn/design/": [
-                        {
-                            title: "推荐",
-                            icon: "creative",
-                            children: ['/learn/other/java-watch-file', '/learn/other/bug']
+                            collapsable: false,
+                            children: [{
+                                title: 'v1',
+                                path: '/learn/java2/Java异常体系'
+                            }, {
+                                title: 'v2',
+                                path: '/learn/java2/函数式编程'
+                            }]
                         }
                     ],
                 },
@@ -249,15 +253,6 @@ module.exports = config({
         },
         markdown: {
             lineNumbers: true
-        },
-        blog: {
-            intro: "/intro/",
-            sidebarDisplay: "mobile",
-            links: {
-                Zhihu: "https://zhihu.com",
-                Baidu: "https://baidu.com",
-                Github: "https://github.com",
-            },
         },
         footer: {
             display: true,

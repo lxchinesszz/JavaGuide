@@ -1,0 +1,148 @@
+---
+breadcrumb: false
+navbar: true
+sidebar: true
+pageInfo: false
+contributor: true
+editLink: true
+updateTime: true
+prev: true
+next: true
+comment: false
+footer: true
+backtotop: true
+title: 线程安全之锁操作
+---
+
+
+![](https://img.springlearn.cn/learn_c87a079fcea0d7893b03d4d57478bca7.png)
+
+**作者**: 西魏陶渊明
+**博客**: [https://blog.springlearn.cn/](https://blog.springlearn.cn/)
+
+::: tip 西魏陶渊明
+莫笑少年江湖梦，谁不少年梦江湖
+:::
+
+
+# 线程锁
+
+在java体系内线程锁一般有两种方式,一种是基于JVM来保证的Sync锁,一种
+是基于java代码实现的Lock接口锁。
+
+
+## 一、Sync锁
+
+
+## 二、Lock锁
+
+
+## 三、常见锁概念
+
+### 3.1 重入锁&递归锁
+
+重入锁（ReentrantLock）是一种递归无阻塞的同步机制。 重入锁，也叫做递归锁，指的是同一线程 外层函数获得锁之后 ，内层递归函数仍然有获取该锁的代码，但不受影响。 在JAVA环境下 ReentrantLock 和synchronized 都是 可重入锁
+
+#### 举例
+
+```java 
+public class Lock{
+      private boolean isLocked = false;
+      public synchronized void lock() throws InterruptedException{
+          while(isLocked){    
+              wait();
+          }
+          isLocked = true;
+      }
+      public synchronized void unlock(){
+         isLocked = false;
+         notify();
+     }
+ }
+```
+
+重入锁不只是判断isLocked,而是还要获取下当前的Thread.currentThread()判断是否是已经加锁了。
+```java 
+Thread thread = Thread.currentThread();
+while(isLocked && lockedBy != thread){
+        wait();
+    }
+```
+
+重入锁,即判断是否当前线程,如果是当前线程的话,那说明之前已经拿到锁了,就不用在执行wait()方法了。
+
+只有不是当前线程才会在执行wait()
+
+### 3.2 自旋锁
+
+由于自旋锁使用者一般保持锁时间非常短，因此选择自旋而不是睡眠是非常必要的，自旋锁的效率远高于互斥锁。
+
+如何旋转呢？何为自旋锁，就是如果发现锁定了，不是睡眠等待，而是采用让当前线程不停地的在循环体内执行实现的，当循环的条件被其他线程改变时 才能进入临界区
+
+```java 
+/**
+ * @Package: com.example.lock
+ * @Description: 自旋锁
+ * @author: liuxin
+ * @date: 2017/8/28 下午4:48
+ */
+
+public class SpinLock {
+
+    //初始化为当前线程
+    private AtomicReference<Thread> sign = new AtomicReference<>();
+
+    public void lock() {
+
+        Thread current = Thread.currentThread();
+        //null 不等于当前线程，返回false   !fasle=true进入自选
+        while (!sign.compareAndSet(null, current)) {
+
+        }
+
+    }
+
+    public void unlock() {
+
+        Thread current = Thread.currentThread();
+        //对比current= 初始化信息，所以为true，并设置为null，此时
+//        while (!sign.compareAndSet(null, current))，所以，null=null，lock中自旋结束，当一个锁完成，sign中有回到初始化状态。
+        sign.compareAndSet(current, null);
+
+    }
+
+}
+```
+
+使用了CAS原子操作，lock函数将owner设置为当前线程，并且预测原来的值为空。unlock函数将owner设置为null，并且预测值为当前线程。
+
+当有第二个线程调用lock操作时由于owner值不为空，导致循环一直被执行，直至第一个线程调用unlock函数将owner设置为null，第二个线程才能进入临界区。
+
+由于自旋锁只是将当前线程不停地执行循环体，不进行线程状态的改变，所以响应速度更快。但当线程数不停增加时，性能下降明显，因为每个线程都需要执行，占用CPU时间。如果线程竞争不激烈，并且保持锁的时间段。适合使用自旋锁。
+
+![](http://note.youdao.com/yws/api/personal/file/WEBac2e1899cbb8f08af9a4d6207ca40396?method=download&shareKey=ecad4a7de4094c270276394507e87cc5)
+
+### 3.3 悲观锁
+
+独占锁是一种悲观锁，synchronized就是一种独占锁，它假设最坏的情况，并且只有在确保其它线程不会造成干扰的情况下执行，会导致其它所有需要锁的线程挂起，等待持有锁的线程释放锁。
+
+悲观并发控制主要用于数据争用激烈的环境，以及发生并发冲突时使用锁保护数据的成本要低于回滚事务的成本的环境中。
+
+### 3.4 乐观锁(CAS)
+
+乐观锁（ Optimistic Locking ） 相对悲观锁而言，乐观锁假设认为数据一般情况下不会造成冲突，所以在数据进行提交更新的时候
+
+eg：
+
+关系型数据库只支持悲观锁，也就是在将要操作的出局上都加上排他锁，其他人都不能操作
+
+乐观锁的实现是在开发者的代码上，可以在表中，添加一个version字段，当插入的时候先看version是否被更难，如果更新了就可以插入。
+
+
+## 四、注意
+
+`synchronized` 锁是一种不可逆的锁, 一但已经升级成重量级锁,那么他就一直是重量级锁了。所以一般
+开发中不使用`synchronized`。
+
+同样`synchronized`还是有很多知识点和面试题的，如果感兴趣可以看下面的面试题章节，看下锁升级的概念。
+
