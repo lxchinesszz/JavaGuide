@@ -5,7 +5,7 @@ module.exports = config({
     title: "Springlearn",
     description: "桃花潭水深千尺",
     author: '西魏陶渊明',
-    blog: false,
+    blog: true,
     dest: "./dist",
     head: [
         [
@@ -48,18 +48,20 @@ module.exports = config({
     // https://vuepress-theme-hope.github.io/zh/config/theme/feature/
     themeConfig: {
         //主题色和深色模式设置选项配置。 'auto-switch' | 'switch' | 'auto' | 'disable'
-        darkmode: 'disable',
+        darkmode: 'switch',
         // 不允许变色
-        themeColor: false,
+        themeColor: true,
         encrypt: {
             title: 'Hello'
         },
         // 默认为 "Edit this page"
-        logo: "/logo.svg",
+        logo: "https://img.springlearn.cn/avatar.jpg",
         searchPlaceholder: '斯是陋室惟吾德馨',
         hostname: "https://vuepress-theme-hope-demo.mrhope.site",
         author: "西魏陶渊明",
-        repo: "https://github.com/vuepress-theme-hope/vuepress-theme-hope",
+        repo: "https://github.com/lxchinesszz/JavaGuide",
+        docsBranch: "master",
+        docsDir: "docs",
         editLinks: true,
         nav: [
             { text: "指南", link: "/siteload", icon: "creative" }
@@ -133,42 +135,40 @@ module.exports = config({
                             { text: 'Job', link: '/language/japanese/' },
                         ]
                     },
-                    {
-                        text: '字节码',
-                        items: [
-                            {
-                                text: '源码分析', items: [
-                                    { text: 'Chinese', link: '/language/chinese/' },
-                                    { text: 'Japanese', link: '/language/japanese/' }
-                                ]
-                            },
-                            {
-                                text: '扩展开发', items: [
-                                    { text: 'Chinese', link: '/language/chinese/' },
-                                    { text: 'Japanese', link: '/language/japanese/' }
-                                ]
-                            }
-                        ]
-                    },
+                    // {
+                    //     text: '字节码',
+                    //     items: [
+                    //         {
+                    //             text: '源码分析', items: [
+                    //                 { text: 'Chinese', link: '/language/chinese/' },
+                    //                 { text: 'Japanese', link: '/language/japanese/' }
+                    //             ]
+                    //         },
+                    //         {
+                    //             text: '扩展开发', items: [
+                    //                 { text: 'Chinese', link: '/language/chinese/' },
+                    //                 { text: 'Japanese', link: '/language/japanese/' }
+                    //             ]
+                    //         }
+                    //     ]
+                    // },
                     {
                         text: 'Database',
                         items: [
                             {
                                 text: '关系型数据库', items: [
-                                    { text: 'Mysql', link: '/language/chinese/' },
-                                    { text: 'Japanese', link: '/language/japanese/' }
+                                    { text: 'Mysql', link: '/learn/databases/sql/' },
                                 ]
                             },
                             {
                                 text: 'NoSql', items: [
-                                    { text: 'Redis', link: '/language/chinese/' },
-                                    { text: 'Mongo', link: '/language/japanese/' }
+                                    { text: 'Redis', link: '/learn/databases/nosql/redis/' },
+                                    { text: 'Mongo', link: '/learn/databases/nosql/mongo/' }
                                 ]
                             },
                             {
                                 text: '图数据库', items: [
-                                    { text: 'Neo4J', link: '/language/chinese/' },
-                                    { text: 'JanuasGraph', link: '/language/japanese/' }
+                                    { text: 'Neo4J', link: '/learn/databases/map/' },
                                 ]
                             }
                         ]
@@ -179,7 +179,8 @@ module.exports = config({
                             {
                                 text: '规范', items: [
                                     { text: 'Java代码规范全部奉上', link: '/learn/design/Java代码规范全部奉上' },
-                                    { text: '中文文档写作规范', link: '/learn/design/中文文档写作规范' }
+                                    { text: '中文文档写作规范', link: '/learn/design/中文文档写作规范' },
+                                    { text: '年终总结汇报大纲', link: '/learn/design/年终总结汇报大纲' }
                                 ]
                             },
                             {
@@ -194,18 +195,19 @@ module.exports = config({
                         items: [
                             {
                                 text: '博客框架', items: [
-                                    { text: 'Chinese', link: '/language/chinese/' },
-                                    { text: 'Japanese', link: '/language/japanese/' }
+                                    { text: 'hexo', link: '/learn/blog/hexo/' },
+                                    { text: 'vuepress', link: '/learn/blog/vuepress/' },
+                                    { text: 'docsify', link: '/learn/blog/docsify/' }
                                 ]
                             },
                             {
                                 text: '服务器选择', items: [
-                                    { text: 'Chinese', link: '/language/chinese/' },
-                                    { text: 'Japanese', link: '/language/japanese/' }
+                                    { text: '自搭建服务', link: '/learn/chinese/' },
+                                    { text: 'Vercel', link: '/language/japanese/' }
                                 ]
                             },
                             {
-                                text: '域名部署', items: [
+                                text: '域名选择', items: [
                                     { text: 'Chinese', link: '/language/chinese/' },
                                     { text: 'Japanese', link: '/language/japanese/' }
                                 ]
@@ -219,19 +221,35 @@ module.exports = config({
                             title: " 第一章 基础内容",
                             icon: "jichushuju",
                             collapsable: false,
-                            children: ['Java异常体系', '函数式编程', 'JMX', 'SPI', 'hooks函数','委派双亲之类加载器', '四大引用']
+                            children: ['Java异常体系', '函数式编程', 'JMX', 'SPI', 'hooks函数', '委派双亲之类加载器', '四大引用', 'synchronized', '分布式锁', 'HashMap']
                         },
                         {
                             title: " 第二章 多线程编程",
                             icon: "xiancheng",
                             collapsable: false,
-                            children: ['线程池', '拒绝策略', '线程安全之锁操作','线程组','线程工厂','线程隔离','线程安全']
+                            children: ['线程池', '拒绝策略', '线程安全之锁操作', '线程组', '线程工厂', '线程隔离', '线程安全']
                         },
                         {
                             title: " 第三章 并发编程",
                             icon: "xiancheng",
                             collapsable: false,
-                            children: ['Semaphore','CountDownLatch','CyclicBarrier','ReadWriteLock','原子操作']
+                            children: ['Semaphore', 'CountDownLatch', 'CyclicBarrier', 'ReadWriteLock', '原子操作']
+                        }
+                    ],
+                    "/learn/databases/sql/": [
+                        {
+                            title: "优化相关",
+                            icon: "xiancheng",
+                            collapsable: false,
+                            children: ['垃圾SQL', 'explain', 'SQL优化示例', 'SQL索引性能优化', 'SQL锁机制', '海量数据模拟']
+                        }
+                    ],
+                    "/learn/databases/nosql/redis/": [
+                        {
+                            title: "优化相关",
+                            icon: "xiancheng",
+                            collapsable: false,
+                            children: ['Redis缓存穿透雪崩问题']
                         }
                     ],
                     "/learn/java2/": [
@@ -256,7 +274,7 @@ module.exports = config({
         },
         footer: {
             display: true,
-            content: "默认页脚",
+            content: " 只要坚持不懈，嘲笑你的人，迟早会被你笑死。",
         },
         comment: {
             type: "waline",

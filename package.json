@@ -1,7 +1,7 @@
 {
-  "name": "vuepress-theme-hope-project",
+  "name": "JavaGuide",
   "version": "1.0.0",
-  "description": "A project of vuepress-theme-hope",
+  "description": "西魏陶渊明的个人笔记",
   "license": "MIT",
   "scripts": {
     "docs:build": "vuepress build docs",
