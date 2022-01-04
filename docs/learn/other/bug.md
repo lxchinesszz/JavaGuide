@@ -1,7 +1,7 @@
 ---
 breadcrumb: false
 navbar: true
-sidebar: true
+sidebar: false
 pageInfo: false
 contributor: true
 editLink: true

@@ -11,7 +11,7 @@ next: true
 comment: false
 footer: true
 backtotop: true
-title: 重入锁 ReentrantLock
+title: 给线程创造条件Condition
 ---
 
 
@@ -23,3 +23,6 @@ title: 重入锁 ReentrantLock
 ::: tip 西魏陶渊明
 莫笑少年江湖梦，谁不少年梦江湖
 :::
+
+
+https://blog.csdn.net/a1439775520/article/details/98471610

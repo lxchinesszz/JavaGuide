@@ -11,9 +11,8 @@ next: true
 comment: false
 footer: true
 backtotop: true
-title: 重入锁 ReentrantLock
+title: Redis
 ---
-
 
 ![](https://img.springlearn.cn/learn_c87a079fcea0d7893b03d4d57478bca7.png)
 

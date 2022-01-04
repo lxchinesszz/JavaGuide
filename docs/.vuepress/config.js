@@ -25,13 +25,13 @@ module.exports = config({
         ],
     ],
     locales: {
-        "/play/": {
-            lang: "en-ZH",
-            title: "娱乐区",
-            // 默认是 false, 设置为 true 来启用
-            editLinks: true,
-            editLinkText: 'Edit this page on 娱乐区',
-        },
+        // "/play/": {
+        //     lang: "en-ZH",
+        //     title: "娱乐区",
+        //     // 默认是 false, 设置为 true 来启用
+        //     editLinks: true,
+        //     editLinkText: 'Edit this page on 娱乐区',
+        // },
         "/": {
             lang: "zh-CN",
             title: "学习区",
@@ -64,18 +64,18 @@ module.exports = config({
         docsDir: "docs",
         editLinks: true,
         nav: [
-            { text: "指南", link: "/siteload", icon: "creative" }
+            { text: "指南", link: "/learn/", icon: "creative" }
         ],
         sidebarDepth: 4,
         displayAllHeaders: true,
         locales: {
-            "/play/": {
-                lang: 'en-ZH', // 将会被设置为 <html> 的 lang 属性
-                label: '娱乐区',
-                selectText: 'Languages',
-                ariaLabel: 'Languages',
-                editLinkText: 'Edit this page on GitHub',
-            },
+            // "/play/": {
+            //     lang: 'en-ZH', // 将会被设置为 <html> 的 lang 属性
+            //     label: '娱乐区',
+            //     selectText: 'Languages',
+            //     ariaLabel: 'Languages',
+            //     editLinkText: 'Edit this page on GitHub',
+            // },
             "/": {
                 lang: 'zh-CN',
                 // 多语言下拉菜单的标题
@@ -90,7 +90,7 @@ module.exports = config({
                 },
                 nav: [
                     { text: "网站地图", link: "/siteload", icon: "creative" },
-                    { text: "大学生专题", link: "/learn/school/students", icon: "study" },
+                    // { text: "大学生专题", link: "/learn/school/students", icon: "study" },
                     {
                         text: 'Java',
                         ariaLabel: 'Java',

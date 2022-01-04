@@ -11,7 +11,7 @@ next: true
 comment: false
 footer: true
 backtotop: true
-title: 并发编程之Semaphore
+title: 信号量 Semaphore
 ---
 
 
