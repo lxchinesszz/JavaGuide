@@ -233,7 +233,7 @@ module.exports = config({
                             title: " 第三章 并发编程",
                             icon: "xiancheng",
                             collapsable: false,
-                            children: ['Semaphore', 'CountDownLatch', 'CyclicBarrier', 'ReadWriteLock', '原子操作']
+                            children: ['Semaphore', 'CountDownLatch', 'CyclicBarrier', 'ReadWriteLock', '原子操作', 'Condition']
                         }
                     ],
                     "/learn/databases/sql/": [
