@@ -1,4 +1,4 @@
-const { config } = require("vuepress-theme-hope");
+const {config} = require("vuepress-theme-hope");
 const path = require("path");
 module.exports = config({
     theme: path.resolve(__dirname, './theme'),
@@ -10,7 +10,7 @@ module.exports = config({
     head: [
         [
             "script",
-            { src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" },
+            {src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"},
         ],
         [
             "script",
@@ -18,10 +18,10 @@ module.exports = config({
                 src: "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
             },
         ],
-        ["script", { src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" }],
+        ["script", {src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"}],
         [
             "script",
-            { src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js" },
+            {src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"},
         ],
     ],
     locales: {
@@ -64,7 +64,7 @@ module.exports = config({
         docsDir: "docs",
         editLinks: true,
         nav: [
-            { text: "指南", link: "/learn/", icon: "creative" }
+            {text: "指南", link: "/learn/", icon: "creative"}
         ],
         sidebarDepth: 4,
         displayAllHeaders: true,
@@ -89,15 +89,15 @@ module.exports = config({
                     errorHint: 'TMD，难道你想白嫖?'
                 },
                 nav: [
-                    { text: "网站地图", link: "/siteload", icon: "creative" },
+                    {text: "网站地图", link: "/siteload", icon: "creative"},
                     // { text: "大学生专题", link: "/learn/school/students", icon: "study" },
                     {
                         text: 'Java',
                         ariaLabel: 'Java',
                         items: [
-                            { text: 'Java编程', link: '/learn/java/' },
-                            { text: 'Java八股文', link: '/learn/java2/' },
-                            { text: 'JVM', link: '/language/japanese/' },
+                            {text: 'Java编程', link: '/learn/java/'},
+                            {text: 'Java八股文', link: '/learn/java2/'},
+                            {text: 'JVM', link: '/language/japanese/'},
                         ]
                     },
                     {
@@ -105,21 +105,21 @@ module.exports = config({
                         items: [
                             {
                                 text: '基础入门', items: [
-                                    { text: 'Maven基础', link: '/learn/maven/' },
-                                    { text: '自定义插件', link: '/learn/maven/自定义maven插件/' }
+                                    {text: 'Maven基础', link: '/learn/maven/'},
+                                    {text: '自定义插件', link: '/learn/maven/自定义maven插件/'}
                                 ]
                             },
                             {
                                 text: '源码分析', items: [
-                                    { text: 'spring-boot-maven-plugin', link: '/learn/maven/spring-boot-maven-plugin/' },
-                                    { text: 'maven-resources-plugin', link: '/learn/maven/maven-resources-plugin/' },
-                                    { text: 'maven-surefire-plugin', link: '/learn/maven/maven-surefire-plugin/' }
+                                    {text: 'spring-boot-maven-plugin', link: '/learn/maven/spring-boot-maven-plugin/'},
+                                    {text: 'maven-resources-plugin', link: '/learn/maven/maven-resources-plugin/'},
+                                    {text: 'maven-surefire-plugin', link: '/learn/maven/maven-surefire-plugin/'}
                                 ]
                             },
                             {
                                 text: '扩展开发', items: [
-                                    { text: '编译卡点插件', link: '/language/chinese/' },
-                                    { text: 'Japanese', link: '/language/japanese/' }
+                                    {text: '编译卡点插件', link: '/language/chinese/'},
+                                    {text: 'Japanese', link: '/language/japanese/'}
                                 ]
                             }
                         ]
@@ -128,11 +128,11 @@ module.exports = config({
                         text: '框架篇',
                         ariaLabel: 'Java',
                         items: [
-                            { text: 'Spring', link: '/learn/java/' },
-                            { text: 'SpringCloud', link: '/learn/java2/' },
-                            { text: 'Mybatis', link: '/language/japanese/' },
-                            { text: 'Dubbo', link: '/language/japanese/' },
-                            { text: 'Job', link: '/language/japanese/' },
+                            {text: 'Spring', link: '/learn/java/'},
+                            {text: 'SpringCloud', link: '/learn/java2/'},
+                            {text: 'Mybatis', link: '/language/japanese/'},
+                            {text: 'Dubbo', link: '/language/japanese/'},
+                            {text: 'Job', link: '/language/japanese/'},
                         ]
                     },
                     // {
@@ -157,18 +157,18 @@ module.exports = config({
                         items: [
                             {
                                 text: '关系型数据库', items: [
-                                    { text: 'Mysql', link: '/learn/databases/sql/' },
+                                    {text: 'Mysql', link: '/learn/databases/sql/'},
                                 ]
                             },
                             {
                                 text: 'NoSql', items: [
-                                    { text: 'Redis', link: '/learn/databases/nosql/redis/' },
-                                    { text: 'Mongo', link: '/learn/databases/nosql/mongo/' }
+                                    {text: 'Redis', link: '/learn/databases/nosql/redis/'},
+                                    {text: 'Mongo', link: '/learn/databases/nosql/mongo/'}
                                 ]
                             },
                             {
                                 text: '图数据库', items: [
-                                    { text: 'Neo4J', link: '/learn/databases/map/' },
+                                    {text: 'Neo4J', link: '/learn/databases/map/'},
                                 ]
                             }
                         ]
@@ -178,14 +178,14 @@ module.exports = config({
                         items: [
                             {
                                 text: '规范', items: [
-                                    { text: 'Java代码规范全部奉上', link: '/learn/design/Java代码规范全部奉上' },
-                                    { text: '中文文档写作规范', link: '/learn/design/中文文档写作规范' },
-                                    { text: '年终总结汇报大纲', link: '/learn/design/年终总结汇报大纲' }
+                                    {text: 'Java代码规范全部奉上', link: '/learn/design/Java代码规范全部奉上'},
+                                    {text: '中文文档写作规范', link: '/learn/design/中文文档写作规范'},
+                                    {text: '年终总结汇报大纲', link: '/learn/design/年终总结汇报大纲'}
                                 ]
                             },
                             {
                                 text: '设计', items: [
-                                    { text: '领域驱动模型的思考与认知', link: '/learn/design/领域驱动模型的思考与认知' },
+                                    {text: '领域驱动模型的思考与认知', link: '/learn/design/领域驱动模型的思考与认知'},
                                 ]
                             }
                         ]
@@ -195,21 +195,21 @@ module.exports = config({
                         items: [
                             {
                                 text: '博客框架', items: [
-                                    { text: 'hexo', link: '/learn/blog/hexo/' },
-                                    { text: 'vuepress', link: '/learn/blog/vuepress/' },
-                                    { text: 'docsify', link: '/learn/blog/docsify/' }
+                                    {text: 'hexo', link: '/learn/blog/hexo/'},
+                                    {text: 'vuepress', link: '/learn/blog/vuepress/'},
+                                    {text: 'docsify', link: '/learn/blog/docsify/'}
                                 ]
                             },
                             {
                                 text: '服务器选择', items: [
-                                    { text: '自搭建服务', link: '/learn/chinese/' },
-                                    { text: 'Vercel', link: '/language/japanese/' }
+                                    {text: '自搭建服务', link: '/learn/chinese/'},
+                                    {text: 'Vercel', link: '/language/japanese/'}
                                 ]
                             },
                             {
                                 text: '域名选择', items: [
-                                    { text: 'Chinese', link: '/language/chinese/' },
-                                    { text: 'Japanese', link: '/language/japanese/' }
+                                    {text: 'Chinese', link: '/language/chinese/'},
+                                    {text: 'Japanese', link: '/language/japanese/'}
                                 ]
                             }
                         ]
