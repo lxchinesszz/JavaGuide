@@ -1,7 +1,6 @@
 import Anchor from "@theme/components/Anchor.vue";
-import Comment from "@Comment";
 import MyTransition from "@theme/components/MyTransition.vue";
-import PageInfo from "@mr-hope/vuepress-plugin-comment/lib/client/PageInfo.vue";
+import PageInfo from "@mr-hope/vuepress-plugin-components/lib/client/PageInfo.vue";
 import PageMeta from "@theme/components/PageMeta.vue";
 import PageNav from "@theme/components/PageNav.vue";
 import Password from "@theme/components/Password.vue";
@@ -10,7 +9,6 @@ export default pathEncryptMixin.extend({
     name: "Page",
     components: {
         Anchor,
-        Comment,
         MyTransition,
         PageInfo,
         PageMeta,
@@ -41,6 +39,16 @@ export default pathEncryptMixin.extend({
         },
         pageDescrypted() {
             return this.password === this.pagePassword;
+        },
+        pageInfoProps() {
+            return {
+                titleIcon: true,
+                titleIconPrefix: this.$themeConfig.iconPrefix,
+                items: this.$themeConfig.pageInfo,
+                categoryPath: "/category/$category/",
+                tagPath: "/tag/$tag/",
+                defaultAuthor: this.$themeConfig.author || "",
+            };
         },
     },
 });

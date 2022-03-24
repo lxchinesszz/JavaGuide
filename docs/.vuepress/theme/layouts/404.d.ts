@@ -2,7 +2,7 @@ import Vue from "vue";
 declare const _default: import("vue/types/vue").ExtendedVue<Vue, unknown, {
     back(): void;
 }, {
-    i18n: {
+    locales: {
         hint: string[];
         home: string;
         back: string;

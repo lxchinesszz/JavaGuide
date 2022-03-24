@@ -1,15 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { HopeThemeLocaleConfigItem } from "@mr-hope/vuepress-shared";
 import {
   BlogMedia,
-  HopeThemeConfig,
-  HopeNavBarConfig,
-  HopeSideBarConfig,
-  HopeFooterConfig,
+  HopeThemeLocalesConfig,
+  HopeThemeLocaleData,
+  ResolvedHopeThemeConfig,
 } from "./theme";
-import { PageInfotype } from "@mr-hope/vuepress-plugin-comment";
+import { PageInfo } from "@mr-hope/vuepress-plugin-comment";
 import { FeedFrontmatterOption } from "@mr-hope/vuepress-plugin-feed";
-import { AlgoliaOption } from "@mr-hope/vuepress-types";
 
 declare module "vue/types/vue" {
   export interface Vue {
@@ -50,7 +47,7 @@ declare module "@mr-hope/vuepress-types" {
       noSelect?: boolean;
     };
     feed?: FeedFrontmatterOption;
-    pageInfo?: PageInfotype[] | false;
+    pageInfo?: PageInfo[] | false;
     visitor?: boolean;
     breadcrumb?: boolean;
     breadcrumbIcon?: boolean;
@@ -71,19 +68,13 @@ declare module "@mr-hope/vuepress-types" {
     anchorDisplay?: boolean;
   }
 
-  interface I18nConfig extends Partial<HopeThemeLocaleConfigItem> {
-    /** 导航栏链接 */
-    nav?: HopeNavBarConfig;
-    /** 侧边栏配置 */
-    sidebar?: HopeSideBarConfig;
-    /** 当前语言的 algolia 设置 */
-    algolia?: AlgoliaOption;
-    /** 页脚设置 */
-    footer?: HopeFooterConfig;
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface ThemeLocaleData
+    extends HopeThemeLocaleData,
+      HopeThemeLocalesConfig {}
 
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface ThemeConfig extends HopeThemeConfig {}
+  interface ThemeConfig extends ResolvedHopeThemeConfig {}
 
   interface Page {
     _chunkName?: string;

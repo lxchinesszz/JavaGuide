@@ -7,7 +7,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<{
     setActive(name: string): void;
     navigate(path: string): void;
 }, {
-    i18n: {
+    locales: {
         article: string;
         articleList: string;
         category: string;

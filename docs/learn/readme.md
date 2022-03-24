@@ -28,7 +28,7 @@ features:
   link: /learn/databases
 - title: Design 🔧
   details: 设计模式及规范
-  link: /learn/design
+  link: /learn/design/Java%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%85%A8%E9%83%A8%E5%A5%89%E4%B8%8A/
   footer: Copyright © 2021 | The Blog by liuxin | 豫ICP备18041471号
 ---
 

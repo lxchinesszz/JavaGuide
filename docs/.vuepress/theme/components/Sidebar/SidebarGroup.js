@@ -21,9 +21,8 @@ export default Vue.extend({
     },
     methods: {
         getIcon(icon) {
-            const { iconPrefix } = this.$themeConfig;
             return this.$themeConfig.sidebarIcon !== false && icon
-                ? `${iconPrefix === "" ? "" : iconPrefix || "icon-"}${icon}`
+                ? `${this.$themeConfig.iconPrefix}${icon}`
                 : "";
         },
         isActive,

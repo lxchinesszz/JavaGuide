@@ -1,13 +1,18 @@
 <template>
   <main class="page">
     <MyTransition>
-      <BreadCrumb :key="$route.path" />
+      <BreadCrumb
+        :key="$route.path"
+        :show="$themeConfig.breadcrumb !== false"
+        :icon="$themeConfig.breadcrumbIcon !== false"
+        :icon-prefix="$themeConfig.iconPrefix"
+      />
     </MyTransition>
 
     <slot name="top" />
 
     <MyTransition :delay="0.04">
-      <PageInfo :key="$route.path" />
+      <PageInfo :key="$route.path" v-bind="pageInfoProps" />
     </MyTransition>
 
     <MyTransition v-if="pagePassword && !pageDescrypted" :delay="0.08">
@@ -48,7 +53,7 @@
       </MyTransition>
 
       <MyTransition :delay="0.16">
-        <Comment :key="$route.path" />
+        <CommentService v-if="$themeConfig.comment" :key="$route.path" />
       </MyTransition>
     </template>
 

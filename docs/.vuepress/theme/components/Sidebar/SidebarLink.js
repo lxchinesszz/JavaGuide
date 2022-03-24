@@ -79,10 +79,16 @@ export default Vue.extend({
             ? selfActive ||
                 (item.children || []).some((child) => isActive($route, `${item.basePath}#${child.slug}`))
             : selfActive;
-        const maxDepth = $page.frontmatter.sidebarDepth ||
-            $themeLocaleConfig.sidebarDepth ||
-            $themeConfig.sidebarDepth ||
-            2;
+        const pageMaxDepth = $page.frontmatter.sidebarDepth;
+        const localesMaxDepth = $themeLocaleConfig.sidebarDepth;
+        const themeMaxDepth = $themeConfig.sidebarDepth;
+        const maxDepth = typeof pageMaxDepth === "number"
+            ? pageMaxDepth
+            : typeof localesMaxDepth === "number"
+                ? localesMaxDepth
+                : typeof themeMaxDepth === "number"
+                    ? themeMaxDepth
+                    : 2;
         // the item is a heading
         if (item.type === "header")
             return [
@@ -103,9 +109,7 @@ export default Vue.extend({
             $themeConfig.displayAllHeaders;
         const link = renderLink(h, {
             icon: $themeConfig.sidebarIcon !== false && item.frontmatter.icon
-                ? `${$themeConfig.iconPrefix === ""
-                    ? ""
-                    : $themeConfig.iconPrefix || "icon-"}${item.frontmatter.icon}`
+                ? `${$themeConfig.iconPrefix}${item.frontmatter.icon}`
                 : "",
             text: item.title || item.path,
             link: item.path,

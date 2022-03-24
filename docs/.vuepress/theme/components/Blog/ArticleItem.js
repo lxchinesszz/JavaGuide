@@ -19,8 +19,9 @@ export default Vue.extend({
             if (this.article.excerpt)
                 return this.article.excerpt;
             return (this.article.frontmatter.description ||
-                this.article.frontmatter.summary ||
-                "");
+                (this.$themeConfig.blog && this.$themeConfig.blog.autoExcerpt === false
+                    ? ""
+                    : this.article.frontmatter.summary || ""));
         },
     },
 });

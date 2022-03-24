@@ -5,7 +5,7 @@ export default Vue.extend({
     name: "PageMeta",
     components: { EditIcon },
     computed: {
-        i18n() {
+        locales() {
             return (this.$themeLocaleConfig.meta || {
                 contributor: "Contributors",
                 editLink: "Edit this page",
@@ -20,29 +20,29 @@ export default Vue.extend({
                 : this.$page.contributors || [];
         },
         contributorsText() {
-            return this.i18n.contributor;
+            return this.locales.contributor;
         },
         updateTime() {
-            return this.$page.frontmatter.contributor === false ||
+            return this.$page.frontmatter.updateTime === false ||
                 (this.$themeConfig.updateTime === false &&
                     !this.$page.frontmatter.updateTime)
                 ? ""
                 : this.$page.updateTime || "";
         },
         updateTimeText() {
-            return this.i18n.updateTime;
+            return this.locales.updateTime;
         },
         editLink() {
             const showEditLink = this.$page.frontmatter.editLink ||
                 (this.$themeConfig.editLinks !== false &&
                     this.$page.frontmatter.editLink !== false);
-            const { repo, docsRepo } = this.$site.themeConfig;
+            const { repo, docsRepo } = this.$themeConfig;
             if (showEditLink && (repo || docsRepo) && this.$page.relativePath)
                 return this.createEditLink();
             return false;
         },
         editLinkText() {
-            return this.i18n.editLink;
+            return this.locales.editLink;
         },
     },
     methods: {

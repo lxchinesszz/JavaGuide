@@ -12,7 +12,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<{
     bloggerAvatar: string;
     hasIntro: boolean;
     hintAttr: string;
-    i18n: {
+    locales: {
         article: string;
         articleList: string;
         category: string;

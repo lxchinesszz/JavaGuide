@@ -7,7 +7,6 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     isLastItemOfArray(item: NavBarConfigItem, array: NavBarConfigItem[]): boolean;
 }, {
     dropdownAriaLabel: string;
-    iconPrefix: string;
 }, {
     item: NavBarConfigItem;
 }>;

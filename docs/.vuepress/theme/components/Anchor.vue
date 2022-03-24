@@ -1,4 +1,4 @@
-<script src="./Anchor"/>
+<script src="./Anchor" />
 
 <style lang="stylus">
 $headings = 2 3 4 5 6
@@ -25,6 +25,7 @@ $headings = 2 3 4 5 6
   max-width 15rem
   max-height 80vh
   overflow-y scroll
+
   @media (min-width $MQWide)
     .has-anchor &
       display block
@@ -67,7 +68,6 @@ $headings = 2 3 4 5 6
     padding 1px 8px
     list-style none
     line-height 1.5
-    color red
 
     &::before
       content ' '
@@ -105,5 +105,5 @@ $headings = 2 3 4 5 6
       for $heading in $headings
         &.heading{$heading}
           padding-left ($heading * 8 - 16) px
-          font-size: (16 - $heading) px
+          font-size: (16 - $heading)px
 </style>

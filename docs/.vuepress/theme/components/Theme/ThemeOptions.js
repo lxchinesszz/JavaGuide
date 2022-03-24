@@ -1,5 +1,4 @@
 import Vue from "vue";
-import { getDefaultLocale } from "@mr-hope/vuepress-shared";
 import DarkmodeSwitch from "@theme/components/Theme/DarkmodeSwitch.vue";
 const defaultColorPicker = {
     red: "#e74c3c",
@@ -17,7 +16,7 @@ export default Vue.extend({
     }),
     computed: {
         text() {
-            return (this.$themeLocaleConfig.themeColor || getDefaultLocale().themeColor);
+            return this.$themeLocaleConfig.themeColor;
         },
         themeColorEnabled() {
             return this.$themeConfig.themeColor !== false;

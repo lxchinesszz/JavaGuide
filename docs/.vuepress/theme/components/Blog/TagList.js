@@ -1,5 +1,4 @@
 import Vue from "vue";
-import { getDefaultLocale } from "@mr-hope/vuepress-shared";
 import { navigate } from "@theme/utils/navigate";
 export default Vue.extend({
     name: "TagList",
@@ -7,10 +6,7 @@ export default Vue.extend({
         tagList() {
             return [
                 {
-                    name: 
-                    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                    this.$themeLocaleConfig.blog.allText ||
-                        getDefaultLocale().blog.allText,
+                    name: this.$themeLocaleConfig.blog.allText,
                     path: "/tag/",
                 },
                 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
@@ -23,9 +19,7 @@ export default Vue.extend({
             return (name ===
                 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
                 ((this.$currentTag && this.$currentTag.key) ||
-                    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                    this.$themeLocaleConfig.blog.allText ||
-                    getDefaultLocale().blog.allText));
+                    this.$themeLocaleConfig.blog.allText));
         },
         clickTag(path) {
             navigate(path, this.$router, this.$route);

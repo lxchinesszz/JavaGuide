@@ -1,37 +1,43 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.config = void 0;
+exports.resolveVuePressConfig = exports.resolveThemeConfig = void 0;
 const vuepress_shared_1 = require("@mr-hope/vuepress-shared");
+const encrypt_1 = require("./encrypt");
 const locales_1 = require("./locales");
-const themeConfig_1 = require("./themeConfig");
 const defaultConfig = {
     base: process.env.VuePress_BASE || "/",
     temp: "./node_modules/.temp",
+    locales: {},
     theme: "hope",
     themeConfig: { locales: {} },
     evergreen: true,
 };
-const getRootLang = (config) => {
-    var _a, _b;
-    // infer from siteLocale
-    const siteLocales = config.locales;
-    if ((siteLocales === null || siteLocales === void 0 ? void 0 : siteLocales["/"]) && (0, vuepress_shared_1.checkLang)((_a = siteLocales["/"]) === null || _a === void 0 ? void 0 : _a.lang))
-        return siteLocales["/"].lang;
-    // infer from themeLocale
-    const themeLocales = config.locales;
-    if ((themeLocales === null || themeLocales === void 0 ? void 0 : themeLocales["/"]) && (0, vuepress_shared_1.checkLang)((_b = themeLocales["/"]) === null || _b === void 0 ? void 0 : _b.lang))
-        return themeLocales["/"].lang;
-    (0, vuepress_shared_1.showLangError)("root");
-    return "en-US";
+const defaultThemeConfig = {
+    sidebarDepth: 2,
+    iconPrefix: "icon-",
+    footer: {},
+    editLinks: true,
 };
-const config = (config) => {
+const resolveThemeConfig = (themeConfig, context) => {
+    // merge default themeConfig
+    (0, vuepress_shared_1.deepAssignReverse)(defaultThemeConfig, themeConfig);
+    // inject locales
+    themeConfig.locales = (0, vuepress_shared_1.getLocales)(context, locales_1.themeLocales, themeConfig.locales);
+    // handle encrypt options
+    if (themeConfig.encrypt)
+        (0, encrypt_1.resolveEncrypt)(themeConfig.encrypt);
+    return themeConfig;
+};
+exports.resolveThemeConfig = resolveThemeConfig;
+const resolveVuePressConfig = (config) => {
     // merge default config
     (0, vuepress_shared_1.deepAssignReverse)(defaultConfig, config);
-    const resolvedConfig = config;
-    const rootLang = getRootLang(resolvedConfig);
-    (0, themeConfig_1.resolveThemeConfig)(resolvedConfig.themeConfig, rootLang);
-    (0, locales_1.resolveLocales)(resolvedConfig, rootLang);
-    return resolvedConfig;
+    // assign lang to locales
+    for (const path in config.locales) {
+        if (path !== "/" && !config.locales[path].lang)
+            config.locales[path].lang = (0, vuepress_shared_1.path2Lang)(path);
+    }
+    return config;
 };
-exports.config = config;
+exports.resolveVuePressConfig = resolveVuePressConfig;
 //# sourceMappingURL=config.js.map

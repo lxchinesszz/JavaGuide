@@ -3,7 +3,7 @@ import type { GitContributor } from "@mr-hope/vuepress-plugin-git";
 declare const _default: import("vue/types/vue").ExtendedVue<Vue, unknown, {
     createEditLink(): string;
 }, {
-    i18n: {
+    locales: {
         contributor: string;
         editLink: string;
         updateTime: string;

@@ -7,11 +7,11 @@ heroFullScreen: true
 actionText: 网站地图
 editLink: true
 action:
-- text: 学习区 💡
-  link: /learn/
+- text: 开始修炼 💡
+  link: /learn/网站地图
   type: primary
-- text: 娱乐区 🎮
-  link: /play/
+- text: 桃花源 ❀
+  link: https://blog.springlearn.cn/
 features:
 - title: Java 🧰
   details: 提供Java基础,中级,高级等相关知识内容
@@ -30,6 +30,11 @@ features:
   link: /learn/databases
 - title: Design 🔧
   details: 设计模式及规范
-  link: /learn/design
+  link: /learn/design/
   footer: Copyright © 2021 | The Blog by liuxin | 豫ICP备18041471号
 ---
+
+::: info 
+想要逼死一个强迫症，那实在是太简了。
+:::
+

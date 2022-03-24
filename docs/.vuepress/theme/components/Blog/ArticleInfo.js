@@ -1,10 +1,10 @@
 import Vue from "vue";
 import { capitalize } from "@mr-hope/vuepress-shared";
-import AuthorIcon from "@mr-hope/vuepress-plugin-comment/lib/client/icons/AuthorIcon.vue";
-import CalendarIcon from "@mr-hope/vuepress-plugin-comment/lib/client/icons/CalendarIcon.vue";
-import CategoryInfo from "@mr-hope/vuepress-plugin-comment/lib/client/CategoryInfo.vue";
-import TagInfo from "@mr-hope/vuepress-plugin-comment/lib/client/TagInfo.vue";
-import TimerIcon from "@mr-hope/vuepress-plugin-comment/lib/client/icons/TimerIcon.vue";
+import AuthorIcon from "@mr-hope/vuepress-plugin-components/lib/client/pageinfo/icons/AuthorIcon.vue";
+import CalendarIcon from "@mr-hope/vuepress-plugin-components/lib/client/pageinfo/icons/CalendarIcon.vue";
+import CategoryInfo from "@mr-hope/vuepress-plugin-components/lib/client/pageinfo/CategoryInfo.vue";
+import TagInfo from "@mr-hope/vuepress-plugin-components/lib/client/pageinfo/TagInfo.vue";
+import TimerIcon from "@mr-hope/vuepress-plugin-components/lib/client/pageinfo/icons/TimerIcon.vue";
 export default Vue.extend({
     name: "ArticleInfo",
     components: {
@@ -48,22 +48,22 @@ export default Vue.extend({
             return `PT${Math.max(Math.round(this.$page.readingTime.minutes), 1)}M`;
         },
         readingTime() {
-            const { minute, time } = READING_TIME_I18N[this.$localePath || "/"];
+            const { less1Minute, time } = READING_TIME_LOCALES[this.$localePath || "/"];
             return this.article.readingTime.minutes < 1
-                ? minute
+                ? less1Minute
                 : time.replace("$time", Math.round(this.article.readingTime.minutes).toString());
         },
         authorText() {
-            return PAGE_INFO_I18N[this.$localePath || "/"].author;
+            return PAGE_INFO_LOCALES[this.$localePath || "/"].author;
         },
         timeText() {
-            return PAGE_INFO_I18N[this.$localePath || "/"].time;
+            return PAGE_INFO_LOCALES[this.$localePath || "/"].date;
         },
         tagText() {
-            return PAGE_INFO_I18N[this.$localePath || "/"].tag;
+            return PAGE_INFO_LOCALES[this.$localePath || "/"].tag;
         },
         readingTimeText() {
-            return PAGE_INFO_I18N[this.$localePath || "/"].readingTime;
+            return PAGE_INFO_LOCALES[this.$localePath || "/"].readingTime;
         },
     },
 });

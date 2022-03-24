@@ -1,3 +1,5 @@
+import type { SmoothScrollOptions } from "@theme/../smooth-scroll/lib/types";
+
 /**
  * 合法的媒体
  *
@@ -50,7 +52,7 @@ export type BlogOptions = {
   /**
    * 博主头像，应为绝对路径
    *
-   * Blogger avator, must be an absolute path
+   * Blogger avatar, must be an absolute path
    */
   avatar?: string;
 
@@ -107,6 +109,7 @@ export type BlogOptions = {
    * @default 'Yesterday once more'
    */
   timeline?: string;
+
   /**
    * 每页的文章数量
    *
@@ -115,6 +118,13 @@ export type BlogOptions = {
    * @default 10
    */
   perPage?: number;
+
+  /**
+   * 是否自动生成摘要
+   *
+   * @default true
+   */
+  autoExcerpt?: boolean;
 };
 
 /**
@@ -262,7 +272,7 @@ export interface HopeFeatureConfig {
    *
    * @default true
    */
-  smoothScroll?: boolean;
+  smoothScroll?: SmoothScrollOptions | number | false;
 
   /**
    * 每分钟的阅读字数

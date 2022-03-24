@@ -30,10 +30,10 @@ export const getDate = (date) => {
         getSecond(getNumber(second)),
     ];
 };
-export const compareDate = (dataA, dataB) => {
-    if (!dataA)
+export const compareDate = (dateA, dateB) => {
+    if (!dateA)
         return 1;
-    if (!dataB)
+    if (!dateB)
         return -1;
     const compare = (a, b) => {
         if (a.length === 0)
@@ -49,7 +49,7 @@ export const compareDate = (dataA, dataB) => {
         }
         return b[0] - a[0];
     };
-    return compare(getDate(dataA), getDate(dataB));
+    return compare(getDate(dateA), getDate(dateB));
 };
 export const filterArticle = (pages, filterFunc) => pages.filter((page) => {
     const { frontmatter: { article, blogpage, home }, title, } = page;

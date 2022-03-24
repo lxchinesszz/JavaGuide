@@ -1,11 +1,11 @@
 const {config} = require("vuepress-theme-hope");
 const path = require("path");
 module.exports = config({
-    theme: path.resolve(__dirname, './theme'),
-    title: "Springlearn",
+    // theme: path.resolve(__dirname, './theme'),
+    title: "西魏陶渊明",
     description: "桃花潭水深千尺",
     author: '西魏陶渊明',
-    blog: true,
+    blog: false,
     dest: "./dist",
     head: [
         [
@@ -23,6 +23,11 @@ module.exports = config({
             "script",
             {src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"},
         ],
+        ['link', {
+            rel: 'icon',
+            type: "image/x-icon",
+            href: 'https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico'
+        }]
     ],
     locales: {
         // "/play/": {
@@ -34,7 +39,7 @@ module.exports = config({
         // },
         "/": {
             lang: "zh-CN",
-            title: "学习区",
+            title: "西魏陶渊明",
             // 默认是 false, 设置为 true 来启用
             editLinks: true,
             editLinkText: '编辑学习区',
@@ -50,12 +55,13 @@ module.exports = config({
         //主题色和深色模式设置选项配置。 'auto-switch' | 'switch' | 'auto' | 'disable'
         darkmode: 'switch',
         // 不允许变色
-        themeColor: true,
+        themeColor: false,
+        fullscreen: false,
         encrypt: {
             title: 'Hello'
         },
         // 默认为 "Edit this page"
-        logo: "https://img.springlearn.cn/avatar.jpg",
+        logo: "https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico",
         searchPlaceholder: '斯是陋室惟吾德馨',
         hostname: "https://vuepress-theme-hope-demo.mrhope.site",
         author: "西魏陶渊明",
@@ -89,7 +95,7 @@ module.exports = config({
                     errorHint: 'TMD，难道你想白嫖?'
                 },
                 nav: [
-                    {text: "网站地图", link: "/siteload", icon: "creative"},
+                    {text: "网站地图", link: "/learn/网站地图", icon: "creative"},
                     // { text: "大学生专题", link: "/learn/school/students", icon: "study" },
                     {
                         text: 'Java',
@@ -98,6 +104,7 @@ module.exports = config({
                             {text: 'Java编程', link: '/learn/java/'},
                             {text: 'Java八股文', link: '/learn/java2/'},
                             {text: 'JVM', link: '/language/japanese/'},
+                            {text: '单元测试专题', link: '/learn/test/'},
                         ]
                     },
                     {
@@ -128,11 +135,23 @@ module.exports = config({
                         text: '框架篇',
                         ariaLabel: 'Java',
                         items: [
-                            {text: 'Spring', link: '/learn/java/'},
+                            {text: 'Spring', link: '/learn/spring/'},
                             {text: 'SpringCloud', link: '/learn/java2/'},
                             {text: 'Mybatis', link: '/language/japanese/'},
+                            {text: 'Mybatis-Plus', link: '/language/japanese/'},
                             {text: 'Dubbo', link: '/language/japanese/'},
                             {text: 'Job', link: '/language/japanese/'},
+                        ]
+                    },
+                    {
+                        text: '工具篇',
+                        ariaLabel: 'tools',
+                        items: [
+                            {text: '反射框架', link: '/learn/tools/reflections/'},
+                            {text: 'Guava', link: '/learn/tools/guava/'},
+                            {text: 'Arthas', link: '/learn/tools/arthas/'},
+                            {text: 'RxJava', link: '/learn/tools/rxjava/'},
+                            {text: 'Reactor', link: '/learn/tools/Reactor/'},
                         ]
                     },
                     // {
@@ -241,7 +260,7 @@ module.exports = config({
                             title: "优化相关",
                             icon: "xiancheng",
                             collapsable: false,
-                            children: ['垃圾SQL', 'explain', 'SQL优化示例', 'SQL索引性能优化', 'SQL锁机制', '海量数据模拟']
+                            children: ['垃圾SQL', 'explain', 'SQL优化示例', 'SQL索引性能优化', 'SQL锁机制', '海量数据模拟', 'join']
                         }
                     ],
                     "/learn/databases/nosql/redis/": [
@@ -266,6 +285,149 @@ module.exports = config({
                             }]
                         }
                     ],
+                    "/learn/spring/": [
+                        {
+                            title: "基础知识",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['Spring循环依赖']
+                        }
+                    ],
+                    "/learn/tools/guava/": [
+                        {
+                            title: "数据类型扩展",
+                            icon: "creative",
+                            collapsable: false,
+                            children: [{
+                                title: 'guava-map集合',
+                                path: '/learn/tools/guava/guava-map'
+                            }]
+                        },
+                        {
+                            title: "工具扩展",
+                            icon: "creative",
+                            collapsable: false,
+                            children: [{
+                                title: 'guava-retry重试组件',
+                                path: '/learn/tools/guava/guava-retry'
+                            }, {
+                                title: 'spring-retry重试组件',
+                                path: '/learn/tools/guava/spring-retry'
+                            }]
+                        }
+                    ],
+                    "/learn/test/": [
+                        {
+                            title: "技术框架",
+                            icon: "creative",
+                            collapsable: false,
+                            children: [{
+                                title: '技术选型',
+                                path: '/learn/test/技术选型'
+                            }, {
+                                title: 'JUnit API',
+                                path: '/learn/test/JUnitAPI'
+                            }, {
+                                title: 'MockData API',
+                                path: '/learn/test/MockDataAPI'
+                            }, {
+                                title: 'Mockito API',
+                                path: '/learn/test/MockitoAPI'
+                            }, {
+                                title: 'SpringBoot Testing',
+                                path: '/learn/test/SpringBootTesting'
+                            }, {
+                                title: 'Feign Mock注意事项',
+                                path: '/learn/test/FeignMock'
+                            }]
+                        },
+                        {
+                            title: "源码分析",
+                            icon: "kit",
+                            collapsable: false,
+                            children: [{
+                                title: '谁在调用JUnit',
+                                path: '/learn/test/谁在调用JUnit'
+                            }, {
+                                title: '如何知道是否依赖Spring容器',
+                                path: '/learn/test/如何知道是否依赖Spring容器'
+                            }, {
+                                title: 'JUnit单测类属性注入',
+                                path: '/learn/test/JUnit单测类属性注入'
+                            }, {
+                                title: '事务回滚原理',
+                                path: '/learn/test/事务回滚原理'
+                            }]
+                        },
+                        {
+                            title: "场景分析",
+                            icon: "changjingguanli",
+                            collapsable: false,
+                            children: [{
+                                title: '测试成本',
+                                path: '/learn/test/测试成本'
+                            }, {
+                                title: '启动缓慢',
+                                path: '/learn/test/启动缓慢'
+                            }, {
+                                title: '数据隔离',
+                                path: '/learn/test/数据隔离'
+                            }, {
+                                title: '消息验证',
+                                path: '/learn/test/消息验证'
+                            }, {
+                                title: '异步验证',
+                                path: '/learn/test/异步验证'
+                            }]
+                        },
+                        {
+                            title: "单测标准",
+                            icon: "icon-standard",
+                            collapsable: false,
+                            children: [{
+                                title: '命名规则',
+                                path: '/learn/test/命名规则'
+                            }, {
+                                title: '使用断言',
+                                path: '/learn/test/使用断言'
+                            }, {
+                                title: '极限测试',
+                                path: '/learn/test/极限测试'
+                            }, {
+                                title: '测试范围',
+                                path: '/learn/test/测试范围'
+                            }, {
+                                title: '影响范围',
+                                path: '/learn/test/影响范围'
+                            }, {
+                                title: '单测维护',
+                                path: '/learn/test/单测维护'
+                            }]
+                        },
+                        {
+                            title: "案例分享",
+                            icon: "fenxiang",
+                            collapsable: false,
+                            children: [{
+                                title: '难度指数',
+                                path: '/learn/test/案例分享'
+                            }]
+                        },
+                    ],
+                    "/learn/tools/arthas/": [
+                        {
+                            title: "快速入门",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['learn']
+                        },
+                        {
+                            title: "进阶使用",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['base-cli', 'jvm-cli', 'class-cli', 'watch-cli']
+                        }
+                    ]
                 },
             },
         },
@@ -290,6 +452,7 @@ module.exports = config({
             enableAll: true,
             // 支持居中
             align: true,
+            codegroup: true,
             presentation: {
                 plugins: [
                     "highlight",
@@ -304,7 +467,7 @@ module.exports = config({
             },
         },
         pwa: {
-            favicon: "/favicon.ico",
+            favicon: "https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico",
             cachePic: true,
             apple: {
                 icon: "/assets/icon/apple-icon-152.png",

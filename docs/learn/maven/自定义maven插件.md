@@ -61,13 +61,13 @@ public class MyMojo extends AbstractMojo {
 
 指定mvn install 安装到本地仓库,然后找个项目执行一下。
 
-``` 
+```
 [INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] ---------------------< org.example:nobug-learn-01 >---------------------
 [INFO] Building nobug-learn-01 1.0-SNAPSHOT
 [INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
+[INFO]
 [INFO] --- firstdemo-maven-plugin:1.0-SNAPSHOT:touch (default-cli) @ nobug-learn-01 ---
 [INFO] 我是一个Maven插件: FirstDemo
 [INFO] ------------------------------------------------------------------------
@@ -81,7 +81,7 @@ public class MyMojo extends AbstractMojo {
 ### 2.2 使用注解的方式
 
 首先引入注解包
-```xml 
+```xml
     <properties>
         <dep.maven-api.version>3.5.2</dep.maven-api.version>
     </properties>
@@ -116,7 +116,7 @@ public class MyMojo extends AbstractMojo {
 ```
 
 Mojo类
-```java 
+```java
 @Mojo(name = "myMojo", defaultPhase = LifecyclePhase.VALIDATE, threadSafe = true)
 @Execute(phase = LifecyclePhase.VALIDATE)
 public class MyMojo
@@ -131,7 +131,7 @@ public class MyMojo
 
 注意: 自定义的maven插件是没办法指定在maven声明周期执行的。
 
-``` 
+```
 <plugin>
     <groupId>org.example</groupId>
     <artifactId>firstdemo-maven-plugin</artifactId>
@@ -163,7 +163,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 | ------------ | -------------------------- |
 | name         | 声明参数的名字             |
 | alias        | 声明一个别名               |
-| property     | 从pom的propertys标签中读取 |
+| property     | 从pom的propertys标签中读取,或是-Dtest=123 使用-D添加到命令行 |
 | defaultValue | 字段的默认值               |
 | required     | 是否必须                   |
 | readonly     | 是否只读                   |
@@ -175,7 +175,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 这包括类型为 boolean 和 Boolean 的变量。 读取配置时，文本“true”会导致参数设置为 true，所有其他文本都会导致参数设置为 false。 例子：
 
-``` 
+```
     /**
      * My boolean.
      */
@@ -189,7 +189,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 这包括类型为 byte、Byte、int、Integer、long、Long、short 和 Short 的变量。 读取配置时，使用 Integer.parseInt() 或相应类的 valueOf() 方法将 XML 文件中的文本转换为整数值。 这意味着字符串必须是有效的十进制整数值，仅由数字 0 到 9 组成，前面有一个可选的 - 表示负值。 例子：
 
-``` 
+```
     /**
      * My Integer.
      */
@@ -201,7 +201,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 ### 3.3 Double类型
 这包括类型为 double、Double、float 和 Float 的变量。 读取配置时，XML 文件中的文本使用相应类的 valueOf() 方法转换为二进制形式。
-``` 
+```
     /**
      * My Double.
      */
@@ -215,7 +215,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 这包括类型为日期的变量。 读取配置时，XML 文件中的文本使用以下日期格式之一进行转换：“yyyy-MM-dd HH:mm:ss.S a”（示例日期为“2005-10-06 2:22 :55.1 PM”）或“yyyy-MM-dd HH:mm:ssa”（示例日期为“2005-10-06 2:22:55PM”）。 请注意，解析是使用 DateFormat.parse() 完成的，它允许对格式进行一些宽容。 如果该方法可以解析指定的日期和时间，即使它与上面的模式不完全匹配，它也会这样做。 例子：
 
-``` 
+```
     /**
      * My Date.
      */
@@ -227,7 +227,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 ### 3.5 File类型
 这包括类型为 File 的变量。 读取配置时，XML 文件中的文本用作所需文件或目录的路径。 如果路径是相对的（不以 / 或 C: 之类的驱动器号开头），则该路径是相对于包含 POM 的目录。 例子：
-``` 
+```
     /**
      * My File.
      */
@@ -241,7 +241,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 这包括变量类型的 URL。 读取配置时，使用 XML 文件中的文本作为 URL。 格式必须遵循 RFC 2396 准则，并且看起来像任何 Web 浏览器 URL (scheme://host:port/path/to/file)。 转换 URL 时，对 URL 任何部分的内容都没有限制。
 
-``` 
+```
     /**
      * My URL.
      */
@@ -254,13 +254,13 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 ### 3.7 枚举
 
 也可以使用枚举类型参数。 首先你需要定义你的枚举类型，然后你可以在参数定义中使用枚举类型：
-``` 
+```
     public enum Color {
       GREEN,
       RED,
       BLUE
     }
- 
+
     /**
      * My Enum
      */
@@ -272,7 +272,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 ### 3.8 Arrays
 
-``` 
+```
     /**
      * My Array.
      */
@@ -280,7 +280,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
     private String[] myArray;
 ```
 
-``` 
+```
 <myArray>
   <param>value1</param>
   <param>value2</param>
@@ -291,7 +291,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 此类别涵盖任何实现 java.util.Collection 的类，例如 ArrayList 或 HashSet。 这些参数是通过多次指定参数来配置的，就像数组一样。 例子：
 
-``` 
+```
    /**
      * My List.
      */
@@ -299,7 +299,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
     private List myList;
 ```
 
-``` 
+```
 <myList>
   <param>value1</param>
   <param>value2</param>
@@ -310,7 +310,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 此类别涵盖任何实现 java.util.Map（例如 HashMap）但未实现 java.util.Properties 的类。 这些参数是通过在参数配置中以 <key>value</key> 形式包含 XML 标签来配置的。 例子：
 
-``` 
+```
     /**
      * My Map.
      */
@@ -318,7 +318,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
     private Map myMap;
 ```
 
-``` 
+```
 <myMap>
   <key1>value1</key1>
   <key2>value2</key2>
@@ -329,7 +329,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 此类别涵盖实现 java.util.Properties 的任何地图。 这些参数是通过在参数配置中以 <property><name>myName</name> <value>myValue</value> </property> 形式包含 XML 标记来配置的。 例子：
 
-``` 
+```
     /**
      * My Properties.
      */
@@ -338,7 +338,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 ```
 
 
-``` 
+```
 <myProperties>
   <property>
     <name>propertyName1</name>
@@ -353,7 +353,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 ### 12. Object
 
-``` 
+```
     /**
      * My Object.
      */
@@ -361,7 +361,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
     private MyObject myObject;
 ```
 
-``` 
+```
 <myObject>
   <myField>test</myField>
 </myObject>
@@ -369,34 +369,34 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 ### 13. MavenSession
 
-``` 
+```
     @Parameter(defaultValue = "${session}", readonly = true)
     private MavenSession session;
 ```
 
 ### 14. MavenProject
 
-``` 
+```
     @Parameter(defaultValue = "${project}", readonly = true)
     private MavenProject project;
 ```
 ### 15. MojoExecution
 
-``` 
+```
     @Parameter(defaultValue = "${mojoExecution}", readonly = true)
     private MojoExecution mojo;
 ```
 
 ### 16. PluginDescriptor
 
-``` 
+```
     @Parameter(defaultValue = "${plugin}", readonly = true)
     private PluginDescriptor plugin;
 ```
 
 ### 17. Settings
 
-``` 
+```
     /**
      * maven的配置信息
      */
@@ -407,7 +407,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 ### 18. 项目路径
 
-``` 
+```
     /**
      * 项目路径
      */
@@ -417,7 +417,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 
 ### 19. 编译后目录
 
-``` 
+```
     /**
      * 编译后目录
      */
@@ -433,7 +433,7 @@ maven插件中是可以自定以参数的,通过配置然后传递到Mojo类中�
 我们自己开发的插件,要想执行必须要在项目的pom文件中来指定,插件不会默认来进行执行的。如下。
 :::
 
-``` 
+```
 <plugin>
     <groupId>org.example</groupId>
     <artifactId>firstdemo-maven-plugin</artifactId>

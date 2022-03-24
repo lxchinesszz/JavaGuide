@@ -4,7 +4,6 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, unknown, {
     focusoutAction(): void;
 }, {
     link: string;
-    iconPrefix: string;
     active: boolean;
     isNonHttpURI: boolean;
     isBlankTarget: boolean;

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JVM相关命令 | 西魏陶渊明</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico">
+    <link rel="alternate" type="application/atom+xml" href="https://vuepress-theme-hope-demo.mrhope.site/atom.xml" title="西魏陶渊明 Atom Feed">
+    <link rel="alternate" type="application/json" href="https://vuepress-theme-hope-demo.mrhope.site/feed.json" title="西魏陶渊明 JSON Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://vuepress-theme-hope-demo.mrhope.site/rss.xml" title="西魏陶渊明 RSS Feed">
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png">
+    <meta name="description" content="vuepress-theme-hope 的 demo">
+    <meta property="og:url" content="/learn/tools/arthas/jvm-cli.html">
+    <meta property="og:site_name" content="西魏陶渊明">
+    <meta property="og:title" content="JVM相关命令">
+    <meta property="og:description" content="一、启动Arthas 启动命令 java -jar arthas-boot.jar 二、选择进程 直接选择我们要监控的进程，输入3进入 提示已经连接上进程。 三、基础信息查询命令 3.1 dashboard 看板命令 输入 dashboard 会定时将应用信息输出到控制台上。 3.2 jad 反向编译 jad com.example.demo.DemoApp">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh-CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="西魏陶渊明">
+    <meta property="article:author" content="西魏陶渊明">
+    <meta name="theme-color" content="#46bd87">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <link rel="preload" href="/assets/css/0.styles.37d1b0f7.css" as="style"><link rel="preload" href="/assets/js/app.1b608849.js" as="script"><link rel="preload" href="/assets/js/layout-Layout.e10a25fb.js" as="script"><link rel="preload" href="/assets/js/layout-Blog~layout-Layout~layout-NotFound.160ce890.js" as="script"><link rel="preload" href="/assets/js/page-JVM相关命令.7f9f35d0.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.f9f4dfd9.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Layout.6119c117.js" as="script"><link rel="prefetch" href="/assets/js/113.c03bfd26.js"><link rel="prefetch" href="/assets/js/114.90a6ecab.js"><link rel="prefetch" href="/assets/js/115.9981dc5d.js"><link rel="prefetch" href="/assets/js/116.3fbf5a81.js"><link rel="prefetch" href="/assets/js/117.87ec6c61.js"><link rel="prefetch" href="/assets/js/118.8bf2bb01.js"><link rel="prefetch" href="/assets/js/119.cd2417d8.js"><link rel="prefetch" href="/assets/js/layout-Blog.35afc460.js"><link rel="prefetch" href="/assets/js/layout-NotFound.04dda7ad.js"><link rel="prefetch" href="/assets/js/layout-Slide.37ba2df7.js"><link rel="prefetch" href="/assets/js/page--052ba78e.1f90841d.js"><link rel="prefetch" href="/assets/js/page-Arthas（阿尔萨斯）能为你做什么.73518d8f.js"><link rel="prefetch" href="/assets/js/page-FeignMock注意事项.433748ac.js"><link rel="prefetch" href="/assets/js/page-Get新技能,Java实现文件监控.d21e242a.js"><link rel="prefetch" href="/assets/js/page-Guava-Map.349a341a.js"><link rel="prefetch" href="/assets/js/page-Guava-retry重试组件.b71c564f.js"><link rel="prefetch" href="/assets/js/page-Guava：用于Java的Google核心库.b4fbc6e3.js"><link rel="prefetch" href="/assets/js/page-Hexo.5b3f2114.js"><link rel="prefetch" href="/assets/js/page-Home.775c4af1.js"><link rel="prefetch" href="/assets/js/page-JUnitAPI.db7d4714.js"><link rel="prefetch" href="/assets/js/page-JUnit单测类属性注入.5204b102.js"><link rel="prefetch" href="/assets/js/page-JVM钩子hooks函数.2c8dccbe.js"><link rel="prefetch" href="/assets/js/page-Java代码规范全部奉上.720de3bd.js"><link rel="prefetch" href="/assets/js/page-Java四大引用.0b07824f.js"><link rel="prefetch" href="/assets/js/page-Java异常体系.c62c320b.js"><link rel="prefetch" href="/assets/js/page-Java管理扩展.3a2b7614.js"><link rel="prefetch" href="/assets/js/page-Join大法.fcae2c05.js"><link rel="prefetch" href="/assets/js/page-Lambda函数式编程.ca72ffa4.js"><link rel="prefetch" href="/assets/js/page-Markdown增强.fb2d8b23.js"><link rel="prefetch" href="/assets/js/page-Maven基础入门.11826c3a.js"><link rel="prefetch" href="/assets/js/page-MockDataAPI.cee6001f.js"><link rel="prefetch" href="/assets/js/page-MockitoAPI.7dc6f0c3.js"><link rel="prefetch" href="/assets/js/page-MySQL.5f305bb5.js"><link rel="prefetch" href="/assets/js/page-Mysql优化示例.4c78f5f9.js"><link rel="prefetch" href="/assets/js/page-Redis.62b29c87.js"><link rel="prefetch" href="/assets/js/page-Redis缓存穿透雪崩问题.903b2cc5.js"><link rel="prefetch" href="/assets/js/page-SPI服务发现机制.620c7be6.js"><link rel="prefetch" href="/assets/js/page-SQL索引性能优化.15d6bcac.js"><link rel="prefetch" href="/assets/js/page-SQL锁机制.5f0697f0.js"><link rel="prefetch" href="/assets/js/page-Spring-retry重试组件.0afa782c.js"><link rel="prefetch" href="/assets/js/page-Spring.707d5bce.js"><link rel="prefetch" href="/assets/js/page-SpringBootTesting.a6857a41.js"><link rel="prefetch" href="/assets/js/page-Spring循环依赖.28e17373.js"><link rel="prefetch" href="/assets/js/page-classclassloader相关.f1953a52.js"><link rel="prefetch" href="/assets/js/page-explain调优.7fc1841f.js"><link rel="prefetch" href="/assets/js/page-hehe.183f31bf.js"><link rel="prefetch" href="/assets/js/page-maven-resources-plugin.d93dca32.js"><link rel="prefetch" href="/assets/js/page-maven-surefire-plugin.3819cf36.js"><link rel="prefetch" href="/assets/js/page-monitorwatchtrace相关.fec2d196.js"><link rel="prefetch" href="/assets/js/page-spring-boot-maven-plugin.b039e898.js"><link rel="prefetch" href="/assets/js/page-synchronized锁升级.4bce48e1.js"><link rel="prefetch" href="/assets/js/page-①谁在调用JUnit.d7fdd2a5.js"><link rel="prefetch" href="/assets/js/page-②如何知道是否依赖Spring容器.b9439eef.js"><link rel="prefetch" href="/assets/js/page-中文文档写作规范.4c701cff.js"><link rel="prefetch" href="/assets/js/page-主要功能与配置演示.18aaaec8.js"><link rel="prefetch" href="/assets/js/page-事务回滚原理.bb93ddd7.js"><link rel="prefetch" href="/assets/js/page-使用断言.f64a9cfd.js"><link rel="prefetch" href="/assets/js/page-信号量Semaphore.e135c08d.js"><link rel="prefetch" href="/assets/js/page-倒计锁CountDownLatch.1cfced4a.js"><link rel="prefetch" href="/assets/js/page-八阿哥的剑.355bc600.js"><link rel="prefetch" href="/assets/js/page-再也不怕被HashMap欺负了.6cb86e7a.js"><link rel="prefetch" href="/assets/js/page-函数式编程.47f8a3a9.js"><link rel="prefetch" href="/assets/js/page-分布式锁.84e408b5.js"><link rel="prefetch" href="/assets/js/page-匆匆那年.61138edb.js"><link rel="prefetch" href="/assets/js/page-单元测试专题.032f54a8.js"><link rel="prefetch" href="/assets/js/page-单测维护.5d530aa8.js"><link rel="prefetch" href="/assets/js/page-博客主页.c1277139.js"><link rel="prefetch" href="/assets/js/page-反射框架Reflections.af80a363.js"><link rel="prefetch" href="/assets/js/page-启动缓慢.65a3003d.js"><link rel="prefetch" href="/assets/js/page-命名规则.08a0656a.js"><link rel="prefetch" href="/assets/js/page-基础命令.2e059ceb.js"><link rel="prefetch" href="/assets/js/page-基础教程.b2407608.js"><link rel="prefetch" href="/assets/js/page-如何学会复盘.38f4985a.js"><link rel="prefetch" href="/assets/js/page-如何找到垃圾SQL语句,你知道这些方式吗？.f6180b29.js"><link rel="prefetch" href="/assets/js/page-委派双亲之类加载器.b00500a3.js"><link rel="prefetch" href="/assets/js/page-密码加密的文章.8c8bb8de.js"><link rel="prefetch" href="/assets/js/page-年终总结汇报大纲.a4308c52.js"><link rel="prefetch" href="/assets/js/page-幻灯片页.57fccf83.js"><link rel="prefetch" href="/assets/js/page-开个工厂造线程.ee2eefef.js"><link rel="prefetch" href="/assets/js/page-异步验证.22381b4b.js"><link rel="prefetch" href="/assets/js/page-影响范围.2586f42e.js"><link rel="prefetch" href="/assets/js/page-循环锁屏障CyclicBarrier.59a7046f.js"><link rel="prefetch" href="/assets/js/page-成熟的线程要懂得拒绝.5e91fa3d.js"><link rel="prefetch" href="/assets/js/page-技术选型.8a0535e4.js"><link rel="prefetch" href="/assets/js/page-指南.b08384fa.js"><link rel="prefetch" href="/assets/js/page-数据隔离.f6ff25cf.js"><link rel="prefetch" href="/assets/js/page-极限测试.6cdb4b69.js"><link rel="prefetch" href="/assets/js/page-案例分享.f374aa23.js"><link rel="prefetch" href="/assets/js/page-没有条件创造条件Condition.c41adcad.js"><link rel="prefetch" href="/assets/js/page-没有规矩不成方圆.78f9e100.js"><link rel="prefetch" href="/assets/js/page-测试成本.78cb9f4b.js"><link rel="prefetch" href="/assets/js/page-测试范围.24c23a10.js"><link rel="prefetch" href="/assets/js/page-海量数据模拟.665a014b.js"><link rel="prefetch" href="/assets/js/page-消息验证.2eb9fa56.js"><link rel="prefetch" href="/assets/js/page-程序猿到底有没有必要买一台阿里云服务器.4b02dc0e.js"><link rel="prefetch" href="/assets/js/page-线程安全之原子操作.d7968611.js"><link rel="prefetch" href="/assets/js/page-线程安全感.e693c67f.js"><link rel="prefetch" href="/assets/js/page-线程池扫盲.c8c210a7.js"><link rel="prefetch" href="/assets/js/page-组件禁用.4a9d5a5a.js"><link rel="prefetch" href="/assets/js/page-给线程归归类.35a83940.js"><link rel="prefetch" href="/assets/js/page-自定义布局.9626a3b4.js"><link rel="prefetch" href="/assets/js/page-自定义插件教程.a5074939.js"><link rel="prefetch" href="/assets/js/page-读写锁ReadWriteLock.eb165d28.js"><link rel="prefetch" href="/assets/js/page-重入锁ReentrantLock.7d378634.js"><link rel="prefetch" href="/assets/js/page-重剑无锋大巧不工.6862933e.js"><link rel="prefetch" href="/assets/js/page-页面配置.3faaabd6.js"><link rel="prefetch" href="/assets/js/page-项目主页.f8b743dc.js"><link rel="prefetch" href="/assets/js/page-领域驱动模型的思考与认知.48864818.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.fcf94005.js"><link rel="prefetch" href="/assets/js/vendors~mermaid.609d04be.js"><link rel="prefetch" href="/assets/js/vendors~photo-swipe.0eed934f.js"><link rel="prefetch" href="/assets/js/vendors~reveal.2b2a4e20.js"><link rel="prefetch" href="/assets/js/vendors~waline.b496aca9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37d1b0f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container has-navbar has-sidebar has-anchor"><header class="navbar"><!----> <div class="content__navbar-start"></div> <button title="Sidebar Button" class="sidebar-button"><span class="icon"></span></button> <a href="/" class="home-link router-link-active"><img src="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico" alt="西魏陶渊明" class="logo"> <!----> <span class="site-name can-hide">西魏陶渊明</span></a> <!----> <div class="content__navbar-center"></div> <div class="links"><button tabindex="-1" aria-hidden="true" class="color-button"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="skin-icon"><path d="M224 800c0 9.6 3.2 44.8 6.4 54.4 6.4 48-48 76.8-48 76.8s80 41.6 147.2 0 134.4-134.4
+        38.4-195.2c-22.4-12.8-41.6-19.2-57.6-19.2C259.2 716.8 227.2 761.6 224 800zM560 675.2l-32
+        51.2c-51.2 51.2-83.2 32-83.2 32 25.6 67.2 0 112-12.8 128 25.6 6.4 51.2 9.6 80 9.6 54.4 0
+        102.4-9.6 150.4-32l0 0c3.2 0 3.2-3.2 3.2-3.2 22.4-16 12.8-35.2
+        6.4-44.8-9.6-12.8-12.8-25.6-12.8-41.6 0-54.4 60.8-99.2 137.6-99.2 6.4 0 12.8 0 22.4
+        0 12.8 0 38.4 9.6 48-25.6 0-3.2 0-3.2 3.2-6.4 0-3.2 3.2-6.4 3.2-6.4 6.4-16 6.4-16 6.4-19.2
+        9.6-35.2 16-73.6 16-115.2 0-105.6-41.6-198.4-108.8-268.8C704 396.8 560 675.2 560 675.2zM224
+        419.2c0-28.8 22.4-51.2 51.2-51.2 28.8 0 51.2 22.4 51.2 51.2 0 28.8-22.4 51.2-51.2 51.2C246.4
+        470.4 224 448 224 419.2zM320 284.8c0-22.4 19.2-41.6 41.6-41.6 22.4 0 41.6 19.2 41.6 41.6 0
+        22.4-19.2 41.6-41.6 41.6C339.2 326.4 320 307.2 320 284.8zM457.6 208c0-12.8 12.8-25.6 25.6-25.6
+        12.8 0 25.6 12.8 25.6 25.6 0 12.8-12.8 25.6-25.6 25.6C470.4 233.6 457.6 220.8 457.6 208zM128
+        505.6C128 592 153.6 672 201.6 736c28.8-60.8 112-60.8 124.8-60.8-16-51.2 16-99.2
+        16-99.2l316.8-422.4c-48-19.2-99.2-32-150.4-32C297.6 118.4 128 291.2 128 505.6zM764.8
+        86.4c-22.4 19.2-390.4 518.4-390.4 518.4-22.4 28.8-12.8 76.8 22.4 99.2l9.6 6.4c35.2 22.4
+        80 12.8 99.2-25.6 0 0 6.4-12.8 9.6-19.2 54.4-105.6 275.2-524.8 288-553.6
+        6.4-19.2-3.2-32-19.2-32C777.6 76.8 771.2 80 764.8 86.4z"></path></svg> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="darkmode-toggle"><label for="darkmode-toggle" class="desc">主题模式:</label> <div class="darkmode-switch"><div class="switch"><input id="switch" type="checkbox" checked="checked" class="switch-input"> <label for="switch" class="label"><span class="label-content"></span></label></div></div> <!----></div></div></div></button> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn/网站地图.html" class="nav-link"><i class="iconfont icon-creative"></i>
+  网站地图
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        Java
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><a href="/learn/java2/" class="nav-link"><!---->
+  Java八股文
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  JVM
+</a></li><li class="dropdown-item"><a href="/learn/test/" class="nav-link"><!---->
+  单元测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+        Maven扩展
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  编译卡点插件
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        框架篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/spring/" class="nav-link"><!---->
+  Spring
+</a></li><li class="dropdown-item"><a href="/learn/java2/" class="nav-link"><!---->
+  SpringCloud
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  Mybatis
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  Mybatis-Plus
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  Dubbo
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  Job
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+        工具篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><a href="/learn/tools/arthas/" class="nav-link router-link-active active"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+        Database
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+        设计&amp;规范
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+        博客搭建
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div></nav> <!----> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link can-hide">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <!----> <div class="content__navbar-end"></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!----> <!----> <div class="content__sidebar-top"></div> <nav class="sidebar-nav-links"><div class="nav-item"><a href="/learn/网站地图.html" class="nav-link"><i class="iconfont icon-creative"></i>
+  网站地图
+</a></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      Java
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><!----> <a href="/learn/java2/" class="nav-link"><!---->
+  Java八股文
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/learn/test/" class="nav-link"><!---->
+  单元测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+      Maven扩展
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  编译卡点插件
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      框架篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/spring/" class="nav-link"><!---->
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/learn/java2/" class="nav-link"><!---->
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  Mybatis-Plus
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  Dubbo
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  Job
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+      工具篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/arthas/" class="nav-link router-link-active active"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+      Database
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+      设计&amp;规范
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+      博客搭建
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <!----> <div class="content__sidebar-center"></div> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><i class="iconfont icon-creative"></i> <span class="title">快速入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn/tools/arthas/learn/" class="sidebar-link">基础教程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/learn/#一、启动arthas" class="sidebar-link">一、启动Arthas</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/learn/#二、选择进程" class="sidebar-link">二、选择进程</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/learn/#三、基础信息查询命令" class="sidebar-link">三、基础信息查询命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/learn/#_3-1-dashboard-看板命令" class="sidebar-link heading3">3.1 dashboard 看板命令</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/learn/#_3-2-jad-反向编译" class="sidebar-link heading3">3.2 jad 反向编译</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/learn/#_3-3-watch-监控指令" class="sidebar-link heading3">3.3 watch 监控指令</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><i class="iconfont icon-creative"></i> <span class="title">进阶使用</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn/tools/arthas/base-cli/" class="sidebar-link">基础命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/base-cli/#一、启动arthas" class="sidebar-link">一、启动Arthas</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/base-cli/#二、选择进程" class="sidebar-link">二、选择进程</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/base-cli/#三、基础信息查询命令" class="sidebar-link">三、基础信息查询命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/base-cli/#_3-1-dashboard-看板命令" class="sidebar-link heading3">3.1 dashboard 看板命令</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/base-cli/#_3-2-jad-反向编译" class="sidebar-link heading3">3.2 jad 反向编译</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/base-cli/#_3-3-watch-监控指令" class="sidebar-link heading3">3.3 watch 监控指令</a></li></ul></li></ul></li><li><a href="/learn/tools/arthas/jvm-cli/" aria-current="page" class="active sidebar-link">JVM相关命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/jvm-cli/#一、启动arthas" class="sidebar-link">一、启动Arthas</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/jvm-cli/#二、选择进程" class="sidebar-link">二、选择进程</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/jvm-cli/#三、基础信息查询命令" class="sidebar-link">三、基础信息查询命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/jvm-cli/#_3-1-dashboard-看板命令" class="sidebar-link heading3">3.1 dashboard 看板命令</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/jvm-cli/#_3-2-jad-反向编译" class="sidebar-link heading3">3.2 jad 反向编译</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/jvm-cli/#_3-3-watch-监控指令" class="sidebar-link heading3">3.3 watch 监控指令</a></li></ul></li></ul></li><li><a href="/learn/tools/arthas/class-cli/" class="sidebar-link">class/classloader相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/class-cli/#一、启动arthas" class="sidebar-link">一、启动Arthas</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/class-cli/#二、选择进程" class="sidebar-link">二、选择进程</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/class-cli/#三、基础信息查询命令" class="sidebar-link">三、基础信息查询命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/class-cli/#_3-1-dashboard-看板命令" class="sidebar-link heading3">3.1 dashboard 看板命令</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/class-cli/#_3-2-jad-反向编译" class="sidebar-link heading3">3.2 jad 反向编译</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/class-cli/#_3-3-watch-监控指令" class="sidebar-link heading3">3.3 watch 监控指令</a></li></ul></li></ul></li><li><a href="/learn/tools/arthas/watch-cli/" class="sidebar-link">monitor/watch/trace相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/watch-cli/#一、启动arthas" class="sidebar-link">一、启动Arthas</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/watch-cli/#二、选择进程" class="sidebar-link">二、选择进程</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/watch-cli/#三、基础信息查询命令" class="sidebar-link">三、基础信息查询命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/tools/arthas/watch-cli/#_3-1-dashboard-看板命令" class="sidebar-link heading3">3.1 dashboard 看板命令</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/watch-cli/#_3-2-jad-反向编译" class="sidebar-link heading3">3.2 jad 反向编译</a></li><li class="sidebar-sub-header"><a href="/learn/tools/arthas/watch-cli/#_3-3-watch-监控指令" class="sidebar-link heading3">3.3 watch 监控指令</a></li></ul></li></ul></li></ul></section></li></ul> <!----> <div class="content__sidebar-bottom"></div> <!----></aside> <main class="page"><nav class="breadcrumb disable"><!----></nav> <!----> <div class="content__page-top"></div> <div vocab="https://schema.org/" typeof="Article" class="page-title"><h1><!----> <span property="headline">JVM相关命令</span></h1> <!----> <!----> <hr></div> <div class="anchor-place-holder"><aside id="anchor"><div class="anchor-wrapper"><ul class="anchor-list"><li class="anchor"><a href="/learn/tools/arthas/jvm-cli/#一、启动arthas" class="anchor-link heading2"><div>一、启动Arthas</div></a></li><li class="anchor"><a href="/learn/tools/arthas/jvm-cli/#二、选择进程" class="anchor-link heading2"><div>二、选择进程</div></a></li><li class="anchor"><a href="/learn/tools/arthas/jvm-cli/#三、基础信息查询命令" class="anchor-link heading2"><div>三、基础信息查询命令</div></a></li><li class="anchor"><a href="/learn/tools/arthas/jvm-cli/#_3-1-dashboard-看板命令" class="anchor-link heading3"><div>3.1 dashboard 看板命令</div></a></li><li class="anchor"><a href="/learn/tools/arthas/jvm-cli/#_3-2-jad-反向编译" class="anchor-link heading3"><div>3.2 jad 反向编译</div></a></li><li class="anchor"><a href="/learn/tools/arthas/jvm-cli/#_3-3-watch-监控指令" class="anchor-link heading3"><div>3.3 watch 监控指令</div></a></li></ul></div></aside></div> <!----> <div class="content__content-top"></div> <div class="theme-default-content content__default"><h2 id="一、启动arthas"><a href="#一、启动arthas" class="header-anchor">#</a> 一、启动Arthas</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>curl -O https://arthas.aliyun.com/arthas-boot.jar
+java -jar arthas-boot.jar
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>启动命令 <code>java -jar arthas-boot.jar</code></p> <h2 id="二、选择进程"><a href="#二、选择进程" class="header-anchor">#</a> 二、选择进程</h2> <p><img src="https://img.springlearn.cn/blog/learn_1647178107000.png" alt="" loading="lazy"></p> <p>直接选择我们要监控的进程，输入3进入</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[INFO] Attach process 28667 success.
+[INFO] arthas-client connect 127.0.0.1 3658
+  ,---.  ,------. ,--------.,--.  ,--.  ,---.   ,---.                           
+ /  O  \ |  .--. ''--.  .--'|  '--'  | /  O  \ '   .-'                          
+|  .-.  ||  '--'.'   |  |   |  .--.  ||  .-.  |`.  `-.                          
+|  | |  ||  |\  \    |  |   |  |  |  ||  | |  |.-'    |                         
+`--' `--'`--' '--'   `--'   `--'  `--'`--' `--'`-----'                          
+
+wiki       https://arthas.aliyun.com/doc                                        
+tutorials  https://arthas.aliyun.com/doc/arthas-tutorials.html                  
+version    3.5.6                                                                
+main_class com.example.demo.DemoApplication                                     
+pid        28667                                                                
+time       2022-03-13 21:31:04   
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>提示已经连接上进程。</p> <h2 id="三、基础信息查询命令"><a href="#三、基础信息查询命令" class="header-anchor">#</a> 三、基础信息查询命令</h2> <h3 id="_3-1-dashboard-看板命令"><a href="#_3-1-dashboard-看板命令" class="header-anchor">#</a> 3.1 dashboard 看板命令</h3> <p>输入 <code>dashboard</code></p> <p><img src="https://img.springlearn.cn/blog/learn_1647178404000.png" alt="" loading="lazy"></p> <p>会定时将应用信息输出到控制台上。</p> <h3 id="_3-2-jad-反向编译"><a href="#_3-2-jad-反向编译" class="header-anchor">#</a> 3.2 jad 反向编译</h3> <p><code>jad com.example.demo.DemoApplication</code></p> <p><img src="https://img.springlearn.cn/blog/learn_1647178673000.png" alt="" loading="lazy"></p> <h3 id="_3-3-watch-监控指令"><a href="#_3-3-watch-监控指令" class="header-anchor">#</a> 3.3 watch 监控指令</h3> <p>这个命令是比较常用的命令,可以用来分析系统性能。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>demo</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">GetMapping</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">ResponseBody</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">RestController</span><span class="token punctuation">;</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">WebController</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/get&quot;</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ResponseBody</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>监控这个类 <code>watch com.example.demo.WebController get returnObj</code></p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">returnObj</td> <td style="text-align:center;">返回值</td></tr> <tr><td style="text-align:center;">params</td> <td style="text-align:center;">入参</td></tr> <tr><td style="text-align:center;">target</td> <td style="text-align:center;">方法调用方</td></tr></tbody></table> <p><code>watch com.example.demo.WebController get {params,returnObj,target}</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[arthas@32818]$ watch com.example.demo.WebController get returnObj
+Press Q or Ctrl+C to abort.
+Affect(class count: 1 , method count: 1) cost in 120 ms, listenerId: 1
+method=com.example.demo.WebController.get location=AtExit
+ts=2022-03-13 21:41:56; [cost=1.317166ms] result=@String[123]
+method=com.example.demo.WebController.get location=AtExit
+ts=2022-03-13 21:42:03; [cost=0.051875ms] result=@String[测试]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h1 id="四、退出"><a href="#四、退出" class="header-anchor">#</a> 四、退出</h1> <p>输入 <code>q</code></p></div> <!----> <div class="content__content-bottom"></div> <footer class="page-meta"><div class="edit-link"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon edit-icon"><path d="M117.953 696.992 64.306 959.696l265.931-49.336 450.204-452.505-212.284-213.376-450.204 452.513zm496.384-296.326L219.039 797.993l-46.108-46.34L568.233 354.33l46.104 46.335zm345.357-122.99-114.45 115.04-212.288-213.377 114.45-115.035 212.288 213.371zm0 0" fill="currentColor"></path></svg> <a href="https://github.com/lxchinesszz/JavaGuide/edit/master/docs/learn/tools/arthas/jvm-cli.md" target="_blank" rel="noopener noreferrer">编辑此页</a></div> <!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/learn/tools/arthas/base-cli/" class="prev"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon prev-icon"><path d="M906.783 588.79c-.02 8.499-6.882 15.36-15.38 15.37l-443.7-.01 75.704 191.682c2.52 6.42.482 13.763-5.038 17.91-5.52 4.168-13.138 4.147-18.616-.092L123.228 524.175a15.362 15.362 0 0 1-6-12.165c0-4.782 2.222-9.277 6-12.185L499.753 210.35a15.388 15.388 0 0 1 9.38-3.195c3.236 0 6.502 1.034 9.236 3.103 5.52 4.147 7.578 11.49 5.038 17.91L447.683 419.84l443.72-.01c8.498.01 15.36 6.881 15.36 15.36l.02 153.6z" fill="currentColor"></path></svg>
+        基础命令
+      </a></span> <span class="next"><a href="/learn/tools/arthas/class-cli/">
+        class/classloader相关
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon next-icon"><path d="M906.772 512c0 4.772-2.211 9.267-5.99 12.175L524.257 813.66a15.37 15.37 0 0 1-18.616.092 15.368 15.368 0 0 1-5.038-17.91l75.714-191.672h-443.73c-8.488 0-15.36-6.881-15.36-15.36v-153.6c0-8.489 6.872-15.36 15.36-15.36h443.73l-75.714-191.682a15.358 15.358 0 0 1 5.048-17.91c5.51-4.158 13.128-4.137 18.606.092l376.525 289.485a15.323 15.323 0 0 1 5.99 12.165z" fill="currentColor"></path></svg></a></span></p></div> <div class="comments-wrapper" style="display:none;"><div class="waline-wrapper" style="display:none;"><div id="waline-comment"></div></div></div> <!----> <div class="content__page-bottom"></div></main> <footer class="footer-wrapper"><!----> <div class="footer"> 只要坚持不懈，嘲笑你的人，迟早会被你笑死。</div> <div class="copyright">Copyright © 2022 西魏陶渊明</div></footer></div><div class="global-ui"><!----><!----><div id="pwa-install"><!----> <div id="install-modal-wrapper" style="display:none;"><div class="background"></div> <div class="install-modal"><div class="header"><button aria-label="关闭" class="close-button"><svg width="23" height="22" xmlns="http://www.w3.org/2000/svg" class="icon close-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.12.358a1.224 1.224 0 011.729 0l8.92 8.914L20.686.358a1.224 1.224 0 011.73 1.728L13.497 11l8.92 8.913a1.222 1.222 0 11-1.73 1.729l-8.919-8.913-8.92 8.913a1.224 1.224 0 01-1.729-1.729L10.04 11l-8.92-8.914a1.222 1.222 0 010-1.728z" fill="currentColor"></path></svg></button> <div class="logo"><!----> <div class="title"><h1></h1> <p class="desc">该应用可以安装在您的 PC 或移动设备上。这将使该 Web 应用程序外观和行为与其他应用程序相同。它将在出现在应用程序列表中，并可以固定到主屏幕，开始菜单或任务栏。此 Web 应用程序还将能够与其他应用程序和您的操作系统安全地进行交互。</p></div></div></div> <div class="content"><div class="highlight"><!----> <!----></div> <div class="description"><h3>详情</h3> <p></p></div></div> <div class="button-wrapper"><button class="install-button">
+        安装 <span></span></button> <button class="cancel-button">
+        取消
+      </button></div></div></div></div><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button title="关闭" aria-label="关闭" class="pswp__button pswp__button--close"></button> <button title="分享" aria-label="分享" class="pswp__button pswp__button--share"></button> <button title="切换全屏" aria-label="切换全屏" class="pswp__button pswp__button--fs"></button> <button title="缩放" aria-label="缩放" class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button title="上一个 (左箭头)" aria-label="上一个 (左箭头)" class="pswp__button pswp__button--arrow--left"></button> <button title="下一个 (右箭头)" aria-label="下一个 (右箭头)" class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div></div></div>
+    <script src="/assets/js/app.1b608849.js" defer></script><script src="/assets/js/layout-Layout.e10a25fb.js" defer></script><script src="/assets/js/layout-Blog~layout-Layout~layout-NotFound.160ce890.js" defer></script><script src="/assets/js/page-JVM相关命令.7f9f35d0.js" defer></script><script src="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.f9f4dfd9.js" defer></script><script src="/assets/js/vendors~layout-Layout.6119c117.js" defer></script>
+  </body>
+</html>

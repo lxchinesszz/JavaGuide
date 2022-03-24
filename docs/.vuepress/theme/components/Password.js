@@ -1,4 +1,3 @@
-import { getDefaultLocale } from "@mr-hope/vuepress-shared";
 import Vue from "vue";
 export default Vue.extend({
     name: "Password",
@@ -14,7 +13,7 @@ export default Vue.extend({
             return this.$frontmatter.home === true;
         },
         encrypt() {
-            return this.$themeLocaleConfig.encrypt || getDefaultLocale().encrypt;
+            return this.$themeLocaleConfig.encrypt;
         }
     },
     methods: {

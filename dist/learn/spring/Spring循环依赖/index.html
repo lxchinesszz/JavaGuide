@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring循环依赖 | 西魏陶渊明</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico">
+    <link rel="alternate" type="application/atom+xml" href="https://vuepress-theme-hope-demo.mrhope.site/atom.xml" title="西魏陶渊明 Atom Feed">
+    <link rel="alternate" type="application/json" href="https://vuepress-theme-hope-demo.mrhope.site/feed.json" title="西魏陶渊明 JSON Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://vuepress-theme-hope-demo.mrhope.site/rss.xml" title="西魏陶渊明 RSS Feed">
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png">
+    <meta name="description" content="vuepress-theme-hope 的 demo">
+    <meta property="og:url" content="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96.html">
+    <meta property="og:site_name" content="西魏陶渊明">
+    <meta property="og:title" content="Spring循环依赖">
+    <meta property="og:description" content="作者: 八阿哥的剑 博客: https://springlearn.cn 一日一句毒鸡汤 问世间钱为何物，只叫人生死相许。！😄 写文章不容易，如果感觉还行，请点个关注，点关注不迷路。 一、什么是循环依赖 这种简单的问题，直接伪代码吧。 我中有你，你中有我。 二、解决循环依赖思路 思路其实非常简单还是用伪代码来说明 思路就是这么简单，先分别把A和B给实例化。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh-CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="西魏陶渊明">
+    <meta property="article:author" content="西魏陶渊明">
+    <meta name="theme-color" content="#46bd87">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <link rel="preload" href="/assets/css/0.styles.37d1b0f7.css" as="style"><link rel="preload" href="/assets/js/app.1b608849.js" as="script"><link rel="preload" href="/assets/js/layout-Layout.e10a25fb.js" as="script"><link rel="preload" href="/assets/js/layout-Blog~layout-Layout~layout-NotFound.160ce890.js" as="script"><link rel="preload" href="/assets/js/page-Spring循环依赖.28e17373.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.f9f4dfd9.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Layout.6119c117.js" as="script"><link rel="prefetch" href="/assets/js/113.c03bfd26.js"><link rel="prefetch" href="/assets/js/114.90a6ecab.js"><link rel="prefetch" href="/assets/js/115.9981dc5d.js"><link rel="prefetch" href="/assets/js/116.3fbf5a81.js"><link rel="prefetch" href="/assets/js/117.87ec6c61.js"><link rel="prefetch" href="/assets/js/118.8bf2bb01.js"><link rel="prefetch" href="/assets/js/119.cd2417d8.js"><link rel="prefetch" href="/assets/js/layout-Blog.35afc460.js"><link rel="prefetch" href="/assets/js/layout-NotFound.04dda7ad.js"><link rel="prefetch" href="/assets/js/layout-Slide.37ba2df7.js"><link rel="prefetch" href="/assets/js/page--052ba78e.1f90841d.js"><link rel="prefetch" href="/assets/js/page-Arthas（阿尔萨斯）能为你做什么.73518d8f.js"><link rel="prefetch" href="/assets/js/page-FeignMock注意事项.433748ac.js"><link rel="prefetch" href="/assets/js/page-Get新技能,Java实现文件监控.d21e242a.js"><link rel="prefetch" href="/assets/js/page-Guava-Map.349a341a.js"><link rel="prefetch" href="/assets/js/page-Guava-retry重试组件.b71c564f.js"><link rel="prefetch" href="/assets/js/page-Guava：用于Java的Google核心库.b4fbc6e3.js"><link rel="prefetch" href="/assets/js/page-Hexo.5b3f2114.js"><link rel="prefetch" href="/assets/js/page-Home.775c4af1.js"><link rel="prefetch" href="/assets/js/page-JUnitAPI.db7d4714.js"><link rel="prefetch" href="/assets/js/page-JUnit单测类属性注入.5204b102.js"><link rel="prefetch" href="/assets/js/page-JVM相关命令.7f9f35d0.js"><link rel="prefetch" href="/assets/js/page-JVM钩子hooks函数.2c8dccbe.js"><link rel="prefetch" href="/assets/js/page-Java代码规范全部奉上.720de3bd.js"><link rel="prefetch" href="/assets/js/page-Java四大引用.0b07824f.js"><link rel="prefetch" href="/assets/js/page-Java异常体系.c62c320b.js"><link rel="prefetch" href="/assets/js/page-Java管理扩展.3a2b7614.js"><link rel="prefetch" href="/assets/js/page-Join大法.fcae2c05.js"><link rel="prefetch" href="/assets/js/page-Lambda函数式编程.ca72ffa4.js"><link rel="prefetch" href="/assets/js/page-Markdown增强.fb2d8b23.js"><link rel="prefetch" href="/assets/js/page-Maven基础入门.11826c3a.js"><link rel="prefetch" href="/assets/js/page-MockDataAPI.cee6001f.js"><link rel="prefetch" href="/assets/js/page-MockitoAPI.7dc6f0c3.js"><link rel="prefetch" href="/assets/js/page-MySQL.5f305bb5.js"><link rel="prefetch" href="/assets/js/page-Mysql优化示例.4c78f5f9.js"><link rel="prefetch" href="/assets/js/page-Redis.62b29c87.js"><link rel="prefetch" href="/assets/js/page-Redis缓存穿透雪崩问题.903b2cc5.js"><link rel="prefetch" href="/assets/js/page-SPI服务发现机制.620c7be6.js"><link rel="prefetch" href="/assets/js/page-SQL索引性能优化.15d6bcac.js"><link rel="prefetch" href="/assets/js/page-SQL锁机制.5f0697f0.js"><link rel="prefetch" href="/assets/js/page-Spring-retry重试组件.0afa782c.js"><link rel="prefetch" href="/assets/js/page-Spring.707d5bce.js"><link rel="prefetch" href="/assets/js/page-SpringBootTesting.a6857a41.js"><link rel="prefetch" href="/assets/js/page-classclassloader相关.f1953a52.js"><link rel="prefetch" href="/assets/js/page-explain调优.7fc1841f.js"><link rel="prefetch" href="/assets/js/page-hehe.183f31bf.js"><link rel="prefetch" href="/assets/js/page-maven-resources-plugin.d93dca32.js"><link rel="prefetch" href="/assets/js/page-maven-surefire-plugin.3819cf36.js"><link rel="prefetch" href="/assets/js/page-monitorwatchtrace相关.fec2d196.js"><link rel="prefetch" href="/assets/js/page-spring-boot-maven-plugin.b039e898.js"><link rel="prefetch" href="/assets/js/page-synchronized锁升级.4bce48e1.js"><link rel="prefetch" href="/assets/js/page-①谁在调用JUnit.d7fdd2a5.js"><link rel="prefetch" href="/assets/js/page-②如何知道是否依赖Spring容器.b9439eef.js"><link rel="prefetch" href="/assets/js/page-中文文档写作规范.4c701cff.js"><link rel="prefetch" href="/assets/js/page-主要功能与配置演示.18aaaec8.js"><link rel="prefetch" href="/assets/js/page-事务回滚原理.bb93ddd7.js"><link rel="prefetch" href="/assets/js/page-使用断言.f64a9cfd.js"><link rel="prefetch" href="/assets/js/page-信号量Semaphore.e135c08d.js"><link rel="prefetch" href="/assets/js/page-倒计锁CountDownLatch.1cfced4a.js"><link rel="prefetch" href="/assets/js/page-八阿哥的剑.355bc600.js"><link rel="prefetch" href="/assets/js/page-再也不怕被HashMap欺负了.6cb86e7a.js"><link rel="prefetch" href="/assets/js/page-函数式编程.47f8a3a9.js"><link rel="prefetch" href="/assets/js/page-分布式锁.84e408b5.js"><link rel="prefetch" href="/assets/js/page-匆匆那年.61138edb.js"><link rel="prefetch" href="/assets/js/page-单元测试专题.032f54a8.js"><link rel="prefetch" href="/assets/js/page-单测维护.5d530aa8.js"><link rel="prefetch" href="/assets/js/page-博客主页.c1277139.js"><link rel="prefetch" href="/assets/js/page-反射框架Reflections.af80a363.js"><link rel="prefetch" href="/assets/js/page-启动缓慢.65a3003d.js"><link rel="prefetch" href="/assets/js/page-命名规则.08a0656a.js"><link rel="prefetch" href="/assets/js/page-基础命令.2e059ceb.js"><link rel="prefetch" href="/assets/js/page-基础教程.b2407608.js"><link rel="prefetch" href="/assets/js/page-如何学会复盘.38f4985a.js"><link rel="prefetch" href="/assets/js/page-如何找到垃圾SQL语句,你知道这些方式吗？.f6180b29.js"><link rel="prefetch" href="/assets/js/page-委派双亲之类加载器.b00500a3.js"><link rel="prefetch" href="/assets/js/page-密码加密的文章.8c8bb8de.js"><link rel="prefetch" href="/assets/js/page-年终总结汇报大纲.a4308c52.js"><link rel="prefetch" href="/assets/js/page-幻灯片页.57fccf83.js"><link rel="prefetch" href="/assets/js/page-开个工厂造线程.ee2eefef.js"><link rel="prefetch" href="/assets/js/page-异步验证.22381b4b.js"><link rel="prefetch" href="/assets/js/page-影响范围.2586f42e.js"><link rel="prefetch" href="/assets/js/page-循环锁屏障CyclicBarrier.59a7046f.js"><link rel="prefetch" href="/assets/js/page-成熟的线程要懂得拒绝.5e91fa3d.js"><link rel="prefetch" href="/assets/js/page-技术选型.8a0535e4.js"><link rel="prefetch" href="/assets/js/page-指南.b08384fa.js"><link rel="prefetch" href="/assets/js/page-数据隔离.f6ff25cf.js"><link rel="prefetch" href="/assets/js/page-极限测试.6cdb4b69.js"><link rel="prefetch" href="/assets/js/page-案例分享.f374aa23.js"><link rel="prefetch" href="/assets/js/page-没有条件创造条件Condition.c41adcad.js"><link rel="prefetch" href="/assets/js/page-没有规矩不成方圆.78f9e100.js"><link rel="prefetch" href="/assets/js/page-测试成本.78cb9f4b.js"><link rel="prefetch" href="/assets/js/page-测试范围.24c23a10.js"><link rel="prefetch" href="/assets/js/page-海量数据模拟.665a014b.js"><link rel="prefetch" href="/assets/js/page-消息验证.2eb9fa56.js"><link rel="prefetch" href="/assets/js/page-程序猿到底有没有必要买一台阿里云服务器.4b02dc0e.js"><link rel="prefetch" href="/assets/js/page-线程安全之原子操作.d7968611.js"><link rel="prefetch" href="/assets/js/page-线程安全感.e693c67f.js"><link rel="prefetch" href="/assets/js/page-线程池扫盲.c8c210a7.js"><link rel="prefetch" href="/assets/js/page-组件禁用.4a9d5a5a.js"><link rel="prefetch" href="/assets/js/page-给线程归归类.35a83940.js"><link rel="prefetch" href="/assets/js/page-自定义布局.9626a3b4.js"><link rel="prefetch" href="/assets/js/page-自定义插件教程.a5074939.js"><link rel="prefetch" href="/assets/js/page-读写锁ReadWriteLock.eb165d28.js"><link rel="prefetch" href="/assets/js/page-重入锁ReentrantLock.7d378634.js"><link rel="prefetch" href="/assets/js/page-重剑无锋大巧不工.6862933e.js"><link rel="prefetch" href="/assets/js/page-页面配置.3faaabd6.js"><link rel="prefetch" href="/assets/js/page-项目主页.f8b743dc.js"><link rel="prefetch" href="/assets/js/page-领域驱动模型的思考与认知.48864818.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.fcf94005.js"><link rel="prefetch" href="/assets/js/vendors~mermaid.609d04be.js"><link rel="prefetch" href="/assets/js/vendors~photo-swipe.0eed934f.js"><link rel="prefetch" href="/assets/js/vendors~reveal.2b2a4e20.js"><link rel="prefetch" href="/assets/js/vendors~waline.b496aca9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37d1b0f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container has-navbar has-anchor"><header class="navbar"><!----> <div class="content__navbar-start"></div> <button title="Sidebar Button" class="sidebar-button"><span class="icon"></span></button> <a href="/" class="home-link router-link-active"><img src="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico" alt="西魏陶渊明" class="logo"> <!----> <span class="site-name can-hide">西魏陶渊明</span></a> <!----> <div class="content__navbar-center"></div> <div class="links"><button tabindex="-1" aria-hidden="true" class="color-button"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="skin-icon"><path d="M224 800c0 9.6 3.2 44.8 6.4 54.4 6.4 48-48 76.8-48 76.8s80 41.6 147.2 0 134.4-134.4
+        38.4-195.2c-22.4-12.8-41.6-19.2-57.6-19.2C259.2 716.8 227.2 761.6 224 800zM560 675.2l-32
+        51.2c-51.2 51.2-83.2 32-83.2 32 25.6 67.2 0 112-12.8 128 25.6 6.4 51.2 9.6 80 9.6 54.4 0
+        102.4-9.6 150.4-32l0 0c3.2 0 3.2-3.2 3.2-3.2 22.4-16 12.8-35.2
+        6.4-44.8-9.6-12.8-12.8-25.6-12.8-41.6 0-54.4 60.8-99.2 137.6-99.2 6.4 0 12.8 0 22.4
+        0 12.8 0 38.4 9.6 48-25.6 0-3.2 0-3.2 3.2-6.4 0-3.2 3.2-6.4 3.2-6.4 6.4-16 6.4-16 6.4-19.2
+        9.6-35.2 16-73.6 16-115.2 0-105.6-41.6-198.4-108.8-268.8C704 396.8 560 675.2 560 675.2zM224
+        419.2c0-28.8 22.4-51.2 51.2-51.2 28.8 0 51.2 22.4 51.2 51.2 0 28.8-22.4 51.2-51.2 51.2C246.4
+        470.4 224 448 224 419.2zM320 284.8c0-22.4 19.2-41.6 41.6-41.6 22.4 0 41.6 19.2 41.6 41.6 0
+        22.4-19.2 41.6-41.6 41.6C339.2 326.4 320 307.2 320 284.8zM457.6 208c0-12.8 12.8-25.6 25.6-25.6
+        12.8 0 25.6 12.8 25.6 25.6 0 12.8-12.8 25.6-25.6 25.6C470.4 233.6 457.6 220.8 457.6 208zM128
+        505.6C128 592 153.6 672 201.6 736c28.8-60.8 112-60.8 124.8-60.8-16-51.2 16-99.2
+        16-99.2l316.8-422.4c-48-19.2-99.2-32-150.4-32C297.6 118.4 128 291.2 128 505.6zM764.8
+        86.4c-22.4 19.2-390.4 518.4-390.4 518.4-22.4 28.8-12.8 76.8 22.4 99.2l9.6 6.4c35.2 22.4
+        80 12.8 99.2-25.6 0 0 6.4-12.8 9.6-19.2 54.4-105.6 275.2-524.8 288-553.6
+        6.4-19.2-3.2-32-19.2-32C777.6 76.8 771.2 80 764.8 86.4z"></path></svg> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="darkmode-toggle"><label for="darkmode-toggle" class="desc">主题模式:</label> <div class="darkmode-switch"><div class="switch"><input id="switch" type="checkbox" checked="checked" class="switch-input"> <label for="switch" class="label"><span class="label-content"></span></label></div></div> <!----></div></div></div></button> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn/网站地图.html" class="nav-link"><i class="iconfont icon-creative"></i>
+  网站地图
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        Java
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><a href="/learn/java2/" class="nav-link"><!---->
+  Java八股文
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  JVM
+</a></li><li class="dropdown-item"><a href="/learn/test/" class="nav-link"><!---->
+  单元测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+        Maven扩展
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  编译卡点插件
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        框架篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/spring/" class="nav-link router-link-active active"><!---->
+  Spring
+</a></li><li class="dropdown-item"><a href="/learn/java2/" class="nav-link"><!---->
+  SpringCloud
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  Mybatis
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  Mybatis-Plus
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  Dubbo
+</a></li><li class="dropdown-item"><a href="/language/japanese/" class="nav-link"><!---->
+  Job
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+        工具篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><a href="/learn/tools/arthas/" class="nav-link"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+        Database
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+        设计&amp;规范
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+        博客搭建
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div></nav> <!----> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link can-hide">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <!----> <div class="content__navbar-end"></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!----> <!----> <div class="content__sidebar-top"></div> <nav class="sidebar-nav-links"><div class="nav-item"><a href="/learn/网站地图.html" class="nav-link"><i class="iconfont icon-creative"></i>
+  网站地图
+</a></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      Java
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><!----> <a href="/learn/java2/" class="nav-link"><!---->
+  Java八股文
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/learn/test/" class="nav-link"><!---->
+  单元测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+      Maven扩展
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  编译卡点插件
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      框架篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/spring/" class="nav-link router-link-active active"><!---->
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/learn/java2/" class="nav-link"><!---->
+  SpringCloud
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  Mybatis-Plus
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  Dubbo
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link"><!---->
+  Job
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+      工具篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/arthas/" class="nav-link"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+      Database
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+      设计&amp;规范
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+      博客搭建
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <!----> <div class="content__sidebar-center"></div> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><i class="iconfont icon-creative"></i> <span class="title">基础知识</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/" aria-current="page" class="active sidebar-link">Spring循环依赖</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#一、什么是循环依赖" class="sidebar-link">一、什么是循环依赖</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#二、解决循环依赖思路" class="sidebar-link">二、解决循环依赖思路</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#三、spring如何解决循环依赖" class="sidebar-link">三、Spring如何解决循环依赖</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-1-spring中创建bean的步骤" class="sidebar-link heading3">3.1 Spring中创建Bean的步骤</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-2-循环依赖三层缓存" class="sidebar-link heading3">3.2 循环依赖三层缓存</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-3-发现点问题" class="sidebar-link heading3">3.3 发现点问题</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#四、知识点总结" class="sidebar-link">四、知识点总结</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-1-满足循环依赖的条件是什么" class="sidebar-link heading3">4.1 满足循环依赖的条件是什么?</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-2-循环依赖可能导致什么问题" class="sidebar-link heading3">4.2 循环依赖可能导致什么问题?</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-3-为什么要用三级缓存而不是二级缓存" class="sidebar-link heading3">4.3 为什么要用三级缓存而不是二级缓存?</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#五、开放性问题" class="sidebar-link">五、开放性问题</a></li></ul></li></ul></section></li></ul> <!----> <div class="content__sidebar-bottom"></div> <!----></aside> <main class="page"><nav class="breadcrumb disable"><!----></nav> <!----> <div class="content__page-top"></div> <div vocab="https://schema.org/" typeof="Article" class="page-title"><h1><!----> <span property="headline">Spring循环依赖</span></h1> <!----> <!----> <hr></div> <div class="anchor-place-holder"><aside id="anchor"><div class="anchor-wrapper"><ul class="anchor-list"><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#一、什么是循环依赖" class="anchor-link heading2"><div>一、什么是循环依赖</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#二、解决循环依赖思路" class="anchor-link heading2"><div>二、解决循环依赖思路</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#三、spring如何解决循环依赖" class="anchor-link heading2"><div>三、Spring如何解决循环依赖</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-1-spring中创建bean的步骤" class="anchor-link heading3"><div>3.1 Spring中创建Bean的步骤</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-2-循环依赖三层缓存" class="anchor-link heading3"><div>3.2 循环依赖三层缓存</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-3-发现点问题" class="anchor-link heading3"><div>3.3 发现点问题</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#四、知识点总结" class="anchor-link heading2"><div>四、知识点总结</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-1-满足循环依赖的条件是什么" class="anchor-link heading3"><div>4.1 满足循环依赖的条件是什么?</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-2-循环依赖可能导致什么问题" class="anchor-link heading3"><div>4.2 循环依赖可能导致什么问题?</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-3-为什么要用三级缓存而不是二级缓存" class="anchor-link heading3"><div>4.3 为什么要用三级缓存而不是二级缓存?</div></a></li><li class="anchor"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#五、开放性问题" class="anchor-link heading2"><div>五、开放性问题</div></a></li></ul></div></aside></div> <!----> <div class="content__content-top"></div> <div class="theme-default-content content__default"><p><img src="https://img.springlearn.cn/blog/learn_1647108921000.png" alt="" loading="lazy"></p> <p><strong>作者: 八阿哥的剑</strong></p> <p><em>博客: https://springlearn.cn</em></p> <div class="custom-block tip"><p class="custom-block-title">一日一句毒鸡汤</p> <p>问世间钱为何物，只叫人生死相许。！😄</p></div> <p>写文章不容易，如果感觉还行，请点个关注，点关注不迷路。</p> <h2 id="一、什么是循环依赖"><a href="#一、什么是循环依赖" class="header-anchor">#</a> 一、什么是循环依赖</h2> <p>这种简单的问题，直接伪代码吧。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Service</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">B</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Service</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">A</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>我中有你，你中有我。</p> <h2 id="二、解决循环依赖思路"><a href="#二、解决循环依赖思路" class="header-anchor">#</a> 二、解决循环依赖思路</h2> <p>思路其实非常简单还是用伪代码来说明</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">A</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">B</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span><span class="token function">setB</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span><span class="token function">setA</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>思路就是这么简单，先分别把A和B给实例化。
+这时候实例化的A和B仅仅是完成了实例化,内部的属性其实都没有。
+只有当执行了3、4行才算正常完成。</p> <div class="language-java line-numbers-mode"><div class="highlight-lines"><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br></div><pre class="language-java"><code><span class="token class-name">A</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">B</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span><span class="token function">setB</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span><span class="token function">setA</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>通过上面的代码我们总结下，要想实现循环注入。首先要满足第一个条件。</p> <ol><li><strong>能被实例化</strong></li></ol> <ul><li>有空构造</li> <li>或有构造且构造参数满足能被实例化。</li></ul> <p>好了，知道这点就成了，相信让你来实现循环注入，应该也可以了吧。其实就这么简单 ?</p> <p>那我们来看Spring如何来实现的。相信看完你就头大了。但是没关系，基本原理你已经知道了。
+带着这个思路来看Spring的源码就简单了。</p> <h2 id="三、spring如何解决循环依赖"><a href="#三、spring如何解决循环依赖" class="header-anchor">#</a> 三、Spring如何解决循环依赖</h2> <p>首先我们要知道Spring中的bean, 有两种形式。</p> <ul><li>第一种是单例。所谓单例就是容器中这个类，只会存在一个实例。不管你调用了多少次 <code>getBean(String beanName)</code> 返回的都是一个实例(因为每次都从缓存中获取的实例)。</li> <li>第二种是原型。所谓原型就是容器中这个类，没有缓存。每次都是新建一个Bean。</li></ul> <p>在这里我们思考下，如果要你来实现循环注入，以上两种模式。你能用那一个?
+要想实现循环注入，即这个Bean必须要有一个缓存的地方。不然每次都是创建，虽然能完成实例化，但是实例化后，需要注入的 <code>bean</code> 无法实现注入，就会陷入死循环。</p> <p>这里第二个必要因素就出来了。</p> <p><mark>2. 必须要是单例</mark></p> <p>好了，知道这么多我们开始看源码吧。</p> <h3 id="_3-1-spring中创建bean的步骤"><a href="#_3-1-spring中创建bean的步骤" class="header-anchor">#</a> 3.1 Spring中创建Bean的步骤</h3> <ul><li>实例化，createBeanInstance，就是new了个对象。</li> <li>属性注入，populateBean， 就是 set 一些属性值。</li> <li>初始化，initializeBean，执行一些 aware 接口中的方法，initMethod，AOP代理等</li></ul> <h3 id="_3-2-循环依赖三层缓存"><a href="#_3-2-循环依赖三层缓存" class="header-anchor">#</a> 3.2 循环依赖三层缓存</h3> <p>注意看细节，每个缓存的数据类型是什么? 后面要考。</p> <p><img src="https://img.springlearn.cn/blog/learn_1647104251000.png" alt="" loading="lazy"></p> <ul><li>一级缓存 <code>Map&lt;String, Object&gt; singletonObjects</code> <ul><li>如果等于空，或者当前单例正在创建中(即只完成了实例化)。就从二级缓存中获取。</li></ul></li> <li>二级缓存 <code>Map&lt;String, Object&gt; earlySingletonObjects</code> <ul><li>如果等于空，就从三级缓存中获取。</li></ul></li> <li>三级缓存 <code>Map&lt;String, ObjectFactory&lt;?&gt;&gt; singletonFactories</code> <ul><li>创建Bean的一个工厂，允许容器中定义特殊的，生成Bean的方法。使用 <code>addSingletonFactory</code></li></ul></li></ul> <p>其实要想实现循环依赖只用2个缓存就行。三级缓存的意义是为了完成某些功能。至于什么功能呢? 这里先不说后面看流程。</p> <div class="language-java line-numbers-mode"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><pre class="language-java"><code><span class="token keyword">protected</span> <span class="token class-name">Object</span> <span class="token function">getSingleton</span><span class="token punctuation">(</span><span class="token class-name">String</span> beanName<span class="token punctuation">,</span> <span class="token keyword">boolean</span> allowEarlyReference<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Object</span> singletonObject <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>singletonObjects<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>singletonObject <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isSingletonCurrentlyInCreation</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>singletonObjects<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				singletonObject <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>earlySingletonObjects<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword">if</span> <span class="token punctuation">(</span>singletonObject <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> allowEarlyReference<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token class-name">ObjectFactory</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> singletonFactory <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>singletonFactories<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword">if</span> <span class="token punctuation">(</span>singletonFactory <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+						singletonObject <span class="token operator">=</span> singletonFactory<span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+						<span class="token keyword">this</span><span class="token punctuation">.</span>earlySingletonObjects<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>beanName<span class="token punctuation">,</span> singletonObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+						<span class="token keyword">this</span><span class="token punctuation">.</span>singletonFactories<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token punctuation">}</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">return</span> singletonObject<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>好我们知道有这两个缓存就继续往下看源码。当 <code>getSingleton</code> 是 <code>null</code>。继续往下走。其他源码就跳过了，不是本篇的主要内容，我们只看
+解决循环依赖的核心代码。</p> <ul><li>doCreateBean#createBeanInstance 先实现实例化。</li> <li>当前bean是单例,不会添加到二级缓存，直接就添加到三级缓存中,注意这里不是添加的Bean，而是生成Bean的工厂方法 <code>ObjectFactory(#getEarlyBeanReference)</code>。</li></ul> <div class="language-java line-numbers-mode"><div class="highlight-lines"><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br></div><pre class="language-java"><code>	   <span class="token keyword">boolean</span> earlySingletonExposure <span class="token operator">=</span> <span class="token punctuation">(</span>mbd<span class="token punctuation">.</span><span class="token function">isSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>allowCircularReferences <span class="token operator">&amp;&amp;</span>
+				<span class="token function">isSingletonCurrentlyInCreation</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>earlySingletonExposure<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>logger<span class="token punctuation">.</span><span class="token function">isTraceEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				logger<span class="token punctuation">.</span><span class="token function">trace</span><span class="token punctuation">(</span><span class="token string">&quot;Eagerly caching bean '&quot;</span> <span class="token operator">+</span> beanName <span class="token operator">+</span>
+						<span class="token string">&quot;' to allow for resolving potential circular references&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+			<span class="token function">addSingletonFactory</span><span class="token punctuation">(</span>beanName<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token function">getEarlyBeanReference</span><span class="token punctuation">(</span>beanName<span class="token punctuation">,</span> mbd<span class="token punctuation">,</span> bean<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> 
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ul><li>doCreateBean#populateBean 实现属性注入</li></ul> <p>以上面的代码的例子，A创建时候被加入到了三级缓存中，然后继续执行 <code>populateBean</code>。发现要依赖B。然后依次从缓存中
+来找这个A。最终在三级缓存中读取到了B。然后实现注入。这里三级缓存中的 <code>Bean</code>。 有可能只是完成了 <code>new</code>。但是容器
+不管，先完成循环注入。至于注入的东西是否是完全品还是半成品不关心，因为都是单例所以，后面在注入属性也没关系。
+这里我们知道单例的用处了吧。试想一下，如果不是单例模式，而是原型模式。那么bean就必须是完全品，不然就陷入了死循环。</p> <p>下面我们还用伪代码的方式再来说一篇实现思路。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">// createBeanInstance先实例化，然后加入到三级缓存中</span>
+<span class="token class-name">A</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// a在执行populateBean的时候，发现要注入属性B，于是就使用getBean。</span>
+<span class="token comment">// getBean(b) 执行createBeanInstance先实例化</span>
+<span class="token class-name">B</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 然后加入到三级缓存中，b在执行populateBean注入属性值的时候。发现也依赖了A。</span>
+<span class="token comment">// 然后从缓存中找到办成品A。于是乎B的注入就完成，然后再执行B的init方法。</span>
+b<span class="token punctuation">.</span><span class="token function">setA</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// B完成后,则返回到A的populateBean也注入了B。然后在执行A的init方法</span>
+a<span class="token punctuation">.</span><span class="token function">setB</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>到这里就完成了循环注入，这里有点绕，小编画了一个图，大家跟着序号来看，然后好好理解下。</p> <p><img src="https://img.springlearn.cn/blog/learn_1647104949000.png" alt="" loading="lazy"></p> <p>通过这个图其实我们能发现一个问题。B此时从三级缓存中拿到的A是一个半成品的A。
+假如B在执行初始化方法的时候,依赖A的populateBean注入的属性。那么此时一定会拿不到的。
+下面写点伪代码，说一下这个问题。</p> <h3 id="_3-3-发现点问题"><a href="#_3-3-发现点问题" class="header-anchor">#</a> 3.3 发现点问题</h3> <h4 id="_3-3-1-半成品问题-1"><a href="#_3-3-1-半成品问题-1" class="header-anchor">#</a> 3.3.1 半成品问题-1</h4> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token keyword">implements</span> <span class="token class-name">InitializingBean</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">B</span> b<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;${a.name}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">afterPropertiesSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;A:&quot;</span> <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">implements</span> <span class="token class-name">InitializingBean</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">A</span> a<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">afterPropertiesSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;B:&quot;</span> <span class="token operator">+</span> a<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p><img src="https://img.springlearn.cn/blog/learn_1647105136000.png" alt="" loading="lazy"></p> <p>通过上图我们知道B会先执行初始化，而这里B的初始化 <mark>(图例8)</mark> 会依赖A的参数注入 <mark>(图例4)</mark> 。而B在执行初始化的时候。A(图例4没有完全完成注入)并没有完成属性注入。
+那么我们此时在拿到A的getName一定是空的。</p> <p><strong>以上代码执行就是:</strong></p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">B</span><span class="token operator">:</span><span class="token keyword">null</span>
+<span class="token class-name">A</span><span class="token operator">:</span><span class="token class-name"><span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>demo<span class="token punctuation">.</span></span>B</span><span class="token annotation punctuation">@38aa816f</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="_3-3-2-半成品问题-2"><a href="#_3-3-2-半成品问题-2" class="header-anchor">#</a> 3.3.2 半成品问题-2</h4> <p>A的BeanPostProcessor没有执行,那么假如我们想要对A进行方法代理。B在执行初始化的时候,调用A的 <code>getName</code>。会成功代理上吗?</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token keyword">implements</span> <span class="token class-name">InitializingBean</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">B</span> b<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">String</span> name <span class="token operator">=</span> <span class="token string">&quot;孙悟空&quot;</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">afterPropertiesSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;A:&quot;</span> <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token keyword">implements</span> <span class="token class-name">InitializingBean</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">A</span> a<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">afterPropertiesSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;B:&quot;</span> <span class="token operator">+</span> a<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token annotation punctuation">@Aspect</span>
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AopConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/**
+     * 精确匹配类名
+     */</span>
+    <span class="token annotation punctuation">@Pointcut</span><span class="token punctuation">(</span><span class="token string">&quot;within(A)&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">matchClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Before</span><span class="token punctuation">(</span><span class="token string">&quot;matchClass()&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">beforeMatchClassName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;--------精确匹配类名-------&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><p><strong>执行结果:</strong></p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>精确匹配类名<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
+<span class="token class-name">B</span><span class="token operator">:</span>孙悟空
+<span class="token class-name">A</span><span class="token operator">:</span><span class="token class-name"><span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>demo<span class="token punctuation">.</span></span>B</span><span class="token annotation punctuation">@5e01a982</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>发现疑问了吗? 前面我们说了,在执行B图例8的时候(b的初始化方法)，A图例9并没有执行，那为什么这里会代理成功呢?
+<img src="https://img.springlearn.cn/blog/learn_1647105949000.png" alt="" loading="lazy"></p> <div class="custom-block info"><p class="custom-block-title">答案揭晓</p> <p>这里在添加缓存的时候，并不是直接把实例添加到缓存中的。
+而是将图例9的逻辑，封装到
+ObjectFactory的方式添加到缓存中的。
+ObjectFactory#getObject时候执行了Bean
+的处理。(AOP代理等)</p></div> <p><strong>注意: 这里并不是把所有的处理器都包装到ObjectFactory方法中,而是有选择的使用,只有实现了SmartInstantiationAwareBeanPostProcessor接口
+才会放到里面。</strong></p> <p><img src="https://img.springlearn.cn/blog/learn_1647106252000.png" alt="" loading="lazy"></p> <p>答案就在这里，这里执行了。一些特殊逻辑的处理器。当实现了 <code>SmartInstantiationAwareBeanPostProcessor</code> 接口。
+就可以提前对那些半成品的Bean进行处理。</p> <div class="language-java line-numbers-mode"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br></div><pre class="language-java"><code><span class="token keyword">protected</span> <span class="token class-name">Object</span> <span class="token function">getEarlyBeanReference</span><span class="token punctuation">(</span><span class="token class-name">String</span> beanName<span class="token punctuation">,</span> <span class="token class-name">RootBeanDefinition</span> mbd<span class="token punctuation">,</span> <span class="token class-name">Object</span> bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Object</span> exposedObject <span class="token operator">=</span> bean<span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>mbd<span class="token punctuation">.</span><span class="token function">isSynthetic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">hasInstantiationAwareBeanPostProcessors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">SmartInstantiationAwareBeanPostProcessor</span> bp <span class="token operator">:</span> <span class="token function">getBeanPostProcessorCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>smartInstantiationAware<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				exposedObject <span class="token operator">=</span> bp<span class="token punctuation">.</span><span class="token function">getEarlyBeanReference</span><span class="token punctuation">(</span>exposedObject<span class="token punctuation">,</span> beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">return</span> exposedObject<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>比如AOP的实现类。
+<img src="https://img.springlearn.cn/blog/learn_1647106893000.png" alt="" loading="lazy"></p> <p>这里我们在思考一个问题。A半成品的时候被AOP代理了一次，那么当A在执行Bean处理器的时候岂不是有要被代理一次吗?</p> <p>AbstractAutoProxyCreator#getEarlyBeanReference</p> <p>第一次代理时候会被加到缓存中。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">getEarlyBeanReference</span><span class="token punctuation">(</span><span class="token class-name">Object</span> bean<span class="token punctuation">,</span> <span class="token class-name">String</span> beanName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Object</span> cacheKey <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getCacheKey</span><span class="token punctuation">(</span>bean<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>earlyProxyReferences<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>cacheKey<span class="token punctuation">,</span> bean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">wrapIfNecessary</span><span class="token punctuation">(</span>bean<span class="token punctuation">,</span> beanName<span class="token punctuation">,</span> cacheKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>第二次时候在执行AOP后置处理器,会先判断缓存,如果缓存中存在就不在处理了。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>   <span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">postProcessAfterInitialization</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Nullable</span> <span class="token class-name">Object</span> bean<span class="token punctuation">,</span> <span class="token class-name">String</span> beanName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>bean <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Object</span> cacheKey <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getCacheKey</span><span class="token punctuation">(</span>bean<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>earlyProxyReferences<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>cacheKey<span class="token punctuation">)</span> <span class="token operator">!=</span> bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">wrapIfNecessary</span><span class="token punctuation">(</span>bean<span class="token punctuation">,</span> beanName<span class="token punctuation">,</span> cacheKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> bean<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="四、知识点总结"><a href="#四、知识点总结" class="header-anchor">#</a> 四、知识点总结</h2> <h3 id="_4-1-满足循环依赖的条件是什么"><a href="#_4-1-满足循环依赖的条件是什么" class="header-anchor">#</a> 4.1 满足循环依赖的条件是什么?</h3> <ol><li>必须是单例模式</li> <li>循环依赖类,必须能实例化(空构造,或构造参数满足循环依赖条件)</li></ol> <h3 id="_4-2-循环依赖可能导致什么问题"><a href="#_4-2-循环依赖可能导致什么问题" class="header-anchor">#</a> 4.2 循环依赖可能导致什么问题?</h3> <p>在执行初始化的时候，如果初始化方法，依赖循环来的属性注入参数，可能导致获取不到数据信息的情况</p> <p>如上面问题1。</p> <h3 id="_4-3-为什么要用三级缓存而不是二级缓存"><a href="#_4-3-为什么要用三级缓存而不是二级缓存" class="header-anchor">#</a> 4.3 为什么要用三级缓存而不是二级缓存?</h3> <p>为了满足Spring声明周期方法,即对半成品的B进行提前生命周期处理。如实现AOP。</p> <h2 id="五、开放性问题"><a href="#五、开放性问题" class="header-anchor">#</a> 五、开放性问题</h2> <p>只使用一级缓存，和三级缓存是否就能解决循环依赖，并且满足bean一些特殊逻辑处理呢（eg:aop）?</p> <div class="language-java line-numbers-mode"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><pre class="language-java"><code><span class="token keyword">protected</span> <span class="token class-name">Object</span> <span class="token function">getSingleton</span><span class="token punctuation">(</span><span class="token class-name">String</span> beanName<span class="token punctuation">,</span> <span class="token keyword">boolean</span> allowEarlyReference<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Quick check for existing instance without full singleton lock</span>
+		<span class="token class-name">Object</span> singletonObject <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>singletonObjects<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>singletonObject <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isSingletonCurrentlyInCreation</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			singletonObject <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>earlySingletonObjects<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>singletonObject <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> allowEarlyReference<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>singletonObjects<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token comment">// Consistent creation of early reference within full singleton lock</span>
+					singletonObject <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>singletonObjects<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword">if</span> <span class="token punctuation">(</span>singletonObject <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+						singletonObject <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>earlySingletonObjects<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+						<span class="token keyword">if</span> <span class="token punctuation">(</span>singletonObject <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+							<span class="token class-name">ObjectFactory</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> singletonFactory <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>singletonFactories<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+							<span class="token keyword">if</span> <span class="token punctuation">(</span>singletonFactory <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+								singletonObject <span class="token operator">=</span> singletonFactory<span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+								<span class="token keyword">this</span><span class="token punctuation">.</span>earlySingletonObjects<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>beanName<span class="token punctuation">,</span> singletonObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+								<span class="token keyword">this</span><span class="token punctuation">.</span>singletonFactories<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+							<span class="token punctuation">}</span>
+						<span class="token punctuation">}</span>
+					<span class="token punctuation">}</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">return</span> singletonObject<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>小编回答:  仅仅使用1级缓存和3级缓存完全可以的。</p> <p>之所以使用2级缓存是因为三级缓存是ObjectFactory#getObject()。是每次都从工厂里面去拿。而使用了2级缓存，仅仅是为了提高性能。
+而设计的。所以一单这个单例Bean完成后。会里面把二级和三级缓存给移除掉。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">addSingleton</span><span class="token punctuation">(</span><span class="token class-name">String</span> beanName<span class="token punctuation">,</span> <span class="token class-name">Object</span> singletonObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>singletonObjects<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">this</span><span class="token punctuation">.</span>singletonObjects<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>beanName<span class="token punctuation">,</span> singletonObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">this</span><span class="token punctuation">.</span>singletonFactories<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">this</span><span class="token punctuation">.</span>earlySingletonObjects<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">this</span><span class="token punctuation">.</span>registeredSingletons<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>beanName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></div> <!----> <div class="content__content-bottom"></div> <footer class="page-meta"><div class="edit-link"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon edit-icon"><path d="M117.953 696.992 64.306 959.696l265.931-49.336 450.204-452.505-212.284-213.376-450.204 452.513zm496.384-296.326L219.039 797.993l-46.108-46.34L568.233 354.33l46.104 46.335zm345.357-122.99-114.45 115.04-212.288-213.377 114.45-115.035 212.288 213.371zm0 0" fill="currentColor"></path></svg> <a href="https://github.com/lxchinesszz/JavaGuide/edit/master/docs/learn/spring/Spring循环依赖.md" target="_blank" rel="noopener noreferrer">编辑此页</a></div> <!----> <!----></footer> <!----> <div class="comments-wrapper" style="display:none;"><div class="waline-wrapper" style="display:none;"><div id="waline-comment"></div></div></div> <!----> <div class="content__page-bottom"></div></main> <footer class="footer-wrapper"><!----> <div class="footer"> 只要坚持不懈，嘲笑你的人，迟早会被你笑死。</div> <div class="copyright">Copyright © 2022 西魏陶渊明</div></footer></div><div class="global-ui"><!----><!----><div id="pwa-install"><!----> <div id="install-modal-wrapper" style="display:none;"><div class="background"></div> <div class="install-modal"><div class="header"><button aria-label="关闭" class="close-button"><svg width="23" height="22" xmlns="http://www.w3.org/2000/svg" class="icon close-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.12.358a1.224 1.224 0 011.729 0l8.92 8.914L20.686.358a1.224 1.224 0 011.73 1.728L13.497 11l8.92 8.913a1.222 1.222 0 11-1.73 1.729l-8.919-8.913-8.92 8.913a1.224 1.224 0 01-1.729-1.729L10.04 11l-8.92-8.914a1.222 1.222 0 010-1.728z" fill="currentColor"></path></svg></button> <div class="logo"><!----> <div class="title"><h1></h1> <p class="desc">该应用可以安装在您的 PC 或移动设备上。这将使该 Web 应用程序外观和行为与其他应用程序相同。它将在出现在应用程序列表中，并可以固定到主屏幕，开始菜单或任务栏。此 Web 应用程序还将能够与其他应用程序和您的操作系统安全地进行交互。</p></div></div></div> <div class="content"><div class="highlight"><!----> <!----></div> <div class="description"><h3>详情</h3> <p></p></div></div> <div class="button-wrapper"><button class="install-button">
+        安装 <span></span></button> <button class="cancel-button">
+        取消
+      </button></div></div></div></div><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button title="关闭" aria-label="关闭" class="pswp__button pswp__button--close"></button> <button title="分享" aria-label="分享" class="pswp__button pswp__button--share"></button> <button title="切换全屏" aria-label="切换全屏" class="pswp__button pswp__button--fs"></button> <button title="缩放" aria-label="缩放" class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button title="上一个 (左箭头)" aria-label="上一个 (左箭头)" class="pswp__button pswp__button--arrow--left"></button> <button title="下一个 (右箭头)" aria-label="下一个 (右箭头)" class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div></div></div>
+    <script src="/assets/js/app.1b608849.js" defer></script><script src="/assets/js/layout-Layout.e10a25fb.js" defer></script><script src="/assets/js/layout-Blog~layout-Layout~layout-NotFound.160ce890.js" defer></script><script src="/assets/js/page-Spring循环依赖.28e17373.js" defer></script><script src="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.f9f4dfd9.js" defer></script><script src="/assets/js/vendors~layout-Layout.6119c117.js" defer></script>
+  </body>
+</html>

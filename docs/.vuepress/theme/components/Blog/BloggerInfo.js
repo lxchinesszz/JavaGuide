@@ -1,4 +1,3 @@
-import { getDefaultLocale } from "@mr-hope/vuepress-shared";
 import MediaLinks from "@theme/components/MediaLinks.vue";
 import { timelineMixin } from "@theme/mixins/timeline";
 import { filterArticle } from "@theme/utils/article";
@@ -13,7 +12,7 @@ export default timelineMixin.extend({
         bloggerName() {
             return (this.blogConfig.name ||
                 this.$themeConfig.author ||
-                this.$site.title ||
+                this.$siteTitle ||
                 "");
         },
         bloggerAvatar() {
@@ -25,8 +24,8 @@ export default timelineMixin.extend({
         hintAttr() {
             return this.hasIntro ? "aria-label" : "";
         },
-        i18n() {
-            return this.$themeLocaleConfig.blog || getDefaultLocale().blog;
+        locales() {
+            return this.$themeLocaleConfig.blog;
         },
         articleNumber() {
             return filterArticle(this.$site.pages).length;

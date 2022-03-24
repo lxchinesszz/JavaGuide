@@ -13,10 +13,6 @@ export default Vue.extend({
         dropdownAriaLabel() {
             return this.item.ariaLabel || this.item.text;
         },
-        iconPrefix() {
-            const { iconPrefix } = this.$themeConfig;
-            return iconPrefix === "" ? "" : iconPrefix || "icon-";
-        },
     },
     watch: {
         $route() {

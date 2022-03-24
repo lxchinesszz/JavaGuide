@@ -5,7 +5,7 @@ export default Vue.extend({
     components: { MediaLinks },
     computed: {
         footerConfig() {
-            return this.$themeLocaleConfig.footer || this.$themeConfig.footer || {};
+            return this.$themeLocaleConfig.footer || this.$themeConfig.footer;
         },
         enable() {
             const { copyrightText, footer, medialink } = this.$page.frontmatter;
