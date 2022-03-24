@@ -95,7 +95,7 @@ module.exports = config({
                     errorHint: 'TMD，难道你想白嫖?'
                 },
                 nav: [
-                    {text: "网站地图", link: "/learn/网站地图", icon: "creative"},
+                    {text: "网站地图", link: "/learn/网站地图/", icon: "creative"},
                     // { text: "大学生专题", link: "/learn/school/students", icon: "study" },
                     {
                         text: 'Java',
@@ -148,6 +148,7 @@ module.exports = config({
                         ariaLabel: 'tools',
                         items: [
                             {text: '反射框架', link: '/learn/tools/reflections/'},
+                            {text: '字节码', link: '/learn/tools/bytecode/Javassist'},
                             {text: 'Guava', link: '/learn/tools/guava/'},
                             {text: 'Arthas', link: '/learn/tools/arthas/'},
                             {text: 'RxJava', link: '/learn/tools/rxjava/'},
@@ -158,8 +159,8 @@ module.exports = config({
                     //     text: '字节码',
                     //     items: [
                     //         {
-                    //             text: '源码分析', items: [
-                    //                 { text: 'Chinese', link: '/language/chinese/' },
+                    //             text: '工具篇', items: [
+                    //                 { text: 'Javassist', link: '/language/chinese/' },
                     //                 { text: 'Japanese', link: '/language/japanese/' }
                     //             ]
                     //         },

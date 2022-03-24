@@ -14,15 +14,19 @@ backtotop: true
 title: Spring-retry重试组件
 ---
 
-[](https://github.com/lxchinesszz/spring-retry-example)
 
 ## 一、简介
 
+:::info Spring-retry
 前面我们了解到了,Guava的重试组件,我们可以基于Guava的能力,来封装我们需要的能力来满足我们的业务。今天来分享Spring-Retry重试组件。当然Spring只是帮我们封装好了，如果你不想自定义
 重试组件，那么我们可以直接使用Spring的能力来实现。
 
 
 API 也是非常的简单，几个注解就可以搞定。
+:::
+
+[![](https://img.shields.io/badge/%E4%BB%93%E5%BA%93-spring--retry--example-green)](https://github.com/lxchinesszz/spring-retry-example)
+
 
 ## 二、依赖
 

@@ -16,11 +16,13 @@ title: Guava-retry重试组件
 
 ## 一、简介
 
+:::info Guava-retry
 Guava 是一组来自 Google 的核心 Java 库，其中包括新的集合类型（例如 multimap 和 multiset）、不可变集合、图形库以及用于并发、I/O、散列、缓存、原语、字符串等的实用程序！它广泛用于 Google
 内部的大多数 Java 项目，也被许多其他公司广泛使用。
 
 
 API 非常的简单，我们可以非常轻松的使用，来封装成我们业务中自己的组件。
+:::
 
 ## 二、依赖
 
