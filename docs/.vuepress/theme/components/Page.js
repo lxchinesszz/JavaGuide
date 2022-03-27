@@ -4,6 +4,7 @@ import PageInfo from "@mr-hope/vuepress-plugin-components/lib/client/PageInfo.vu
 import PageMeta from "@theme/components/PageMeta.vue";
 import PageNav from "@theme/components/PageNav.vue";
 import Password from "@theme/components/Password.vue";
+import FooterBanner from "@theme/components/FooterBanner.vue";
 import { pathEncryptMixin } from "@theme/mixins/pathEncrypt";
 export default pathEncryptMixin.extend({
     name: "Page",
@@ -14,6 +15,7 @@ export default pathEncryptMixin.extend({
         PageMeta,
         PageNav,
         Password,
+        FooterBanner
     },
     props: {
         sidebarItems: {

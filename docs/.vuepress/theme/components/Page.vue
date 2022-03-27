@@ -33,15 +33,17 @@
 
     <template v-else>
       <MyTransition :delay="0.12">
-        <Anchor :key="$route.path" />
+        <Anchor :key="$route.path" :bannerImg="$themeConfig.anchorBanner"/>
       </MyTransition>
 
       <slot v-if="!pagePassword || pageDescrypted" name="content-top" />
 
       <MyTransition v-show="!pagePassword || pageDescrypted" :delay="0.08">
-        <Content :key="$route.path" class="theme-default-content" />
+        <div>
+          <Content :key="$route.path" class="theme-default-content" />
+          <FooterBanner class="theme-default-content" ></FooterBanner>
+        </div>
       </MyTransition>
-
       <slot v-if="!pagePassword || pageDescrypted" name="content-bottom" />
 
       <MyTransition :delay="0.12">

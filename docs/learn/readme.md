@@ -1,16 +1,18 @@
 ---
 home: true
 heroImage: /blog.png
-heroText: 昙花香 月色荒
-tagline: 莫回首 裹行囊 漂泊在江湖路上 悲欢早已寄远方
+heroText: 采菊东篱下
+tagline: 点滴笔记，点滴分享
 heroFullScreen: true
 actionText: 网站地图
 editLink: true
 action:
-- text: 学习指南
-  link: /learn/
+- text: 开始修炼 💡
+  link: /learn/网站地图
   type: primary
-features:
+- text: 桃花源 ❀
+  link: https://blog.springlearn.cn/
+  features:
 - title: Java 🧰
   details: 提供Java基础,中级,高级等相关知识内容
   link: /learn/java
@@ -20,43 +22,16 @@ features:
 - title: Netty 🎨
   details: Netty通信内容分享,及如何扩展
   link: /learn/netty
-- title: Project 🌙
-  details: 实战项目,快速参加战斗
-  link: /learn/project
 - title: Database 📡
   details: 数据库相关知识操作
   link: /learn/databases
 - title: Design 🔧
   details: 设计模式及规范
-  link: /learn/design/Java%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%85%A8%E9%83%A8%E5%A5%89%E4%B8%8A/
+  link: /learn/design/
   footer: Copyright © 2021 | The Blog by liuxin | 豫ICP备18041471号
 ---
 
+::: info
+想要逼死一个强迫症，那实在是太简了。
+:::
 
-### Badge
-- <Badge text="Building" type="warn"/>
-- <Badge text="MrHope" color="grey" />
-
-<CodeGroup>
-<CodeGroupItem title="yarn">
-```bash
-yarn add -D vuepress-theme-hope
-```
-</CodeGroupItem>
-
-<CodeGroupItem title="npm" active>
-```bash
-npm i -D vuepress-theme-hope
-```
-</CodeGroupItem>
-</CodeGroup>
-
-
-```java {2}
-public class Person{
-
-    public static void main(String[]args){
-
-    }
-}
-```

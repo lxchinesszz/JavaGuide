@@ -1,8 +1,8 @@
 const {config} = require("vuepress-theme-hope");
 const path = require("path");
 module.exports = config({
-    // theme: path.resolve(__dirname, './theme'),
-    title: "西魏陶渊明",
+    theme: path.resolve(__dirname, './theme'),
+    title: "采菊东篱下",
     description: "桃花潭水深千尺",
     author: '西魏陶渊明',
     blog: false,
@@ -39,7 +39,7 @@ module.exports = config({
         // },
         "/": {
             lang: "zh-CN",
-            title: "西魏陶渊明",
+            title: "采菊东篱下",
             // 默认是 false, 设置为 true 来启用
             editLinks: true,
             editLinkText: '编辑学习区',
@@ -54,8 +54,14 @@ module.exports = config({
     themeConfig: {
         //主题色和深色模式设置选项配置。 'auto-switch' | 'switch' | 'auto' | 'disable'
         darkmode: 'switch',
+        anchorBanner: 'https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg',
+        breadcrumb: false,
         // 不允许变色
         themeColor: false,
+        // 是否开启毒鸡汤,模式。如果开启home将不在使用tagline。而是随机获取毒鸡汤
+        dujitang: true,
+        // 正文上门的鸡汤，数据获取来自一言
+        homeJitang: false,
         fullscreen: false,
         encrypt: {
             title: 'Hello'
@@ -102,8 +108,8 @@ module.exports = config({
                         ariaLabel: 'Java',
                         items: [
                             {text: 'Java编程', link: '/learn/java/'},
-                            {text: 'Java八股文', link: '/learn/java2/'},
-                            {text: 'JVM', link: '/language/japanese/'},
+                            // {text: 'Java八股文', link: '/learn/java2/'},
+                            // {text: 'JVM', link: '/language/japanese/'},
                             {text: '单元测试专题', link: '/learn/test/'},
                         ]
                     },
@@ -126,7 +132,7 @@ module.exports = config({
                             {
                                 text: '扩展开发', items: [
                                     {text: '编译卡点插件', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    {text: 'Japanese', link: '/language/jap32anese/'}
                                 ]
                             }
                         ]
@@ -136,11 +142,10 @@ module.exports = config({
                         ariaLabel: 'Java',
                         items: [
                             {text: 'Spring', link: '/learn/spring/'},
-                            {text: 'SpringCloud', link: '/learn/java2/'},
-                            {text: 'Mybatis', link: '/language/japanese/'},
-                            {text: 'Mybatis-Plus', link: '/language/japanese/'},
-                            {text: 'Dubbo', link: '/language/japanese/'},
-                            {text: 'Job', link: '/language/japanese/'},
+                            {text: 'Mybatis', link: '/language/japane121se/'},
+                            {text: 'Mybatis-Plus', link: '/language/jap1333anese/'},
+                            {text: 'Dubbo', link: '/language/japa222nese/'},
+                            {text: 'Job', link: '/language/japa444nese/'},
                         ]
                     },
                     {
@@ -149,6 +154,7 @@ module.exports = config({
                         items: [
                             {text: '反射框架', link: '/learn/tools/reflections/'},
                             {text: '字节码', link: '/learn/tools/bytecode/Javassist'},
+                            {text: 'SQL解析', link: '/learn/tools/druid/'},
                             {text: 'Guava', link: '/learn/tools/guava/'},
                             {text: 'Arthas', link: '/learn/tools/arthas/'},
                             {text: 'RxJava', link: '/learn/tools/rxjava/'},
@@ -223,13 +229,13 @@ module.exports = config({
                             {
                                 text: '服务器选择', items: [
                                     {text: '自搭建服务', link: '/learn/chinese/'},
-                                    {text: 'Vercel', link: '/language/japanese/'}
+                                    {text: 'Vercel', link: '/language/japanese1/'}
                                 ]
                             },
                             {
                                 text: '域名选择', items: [
                                     {text: 'Chinese', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/japanese/'}
+                                    {text: 'Japanese', link: '/language/japanes2e/'}
                                 ]
                             }
                         ]
@@ -314,7 +320,11 @@ module.exports = config({
                             }, {
                                 title: 'spring-retry重试组件',
                                 path: '/learn/tools/guava/spring-retry'
-                            }]
+                            },
+                                {
+                                    title: 'guava-cache内存缓存',
+                                    path: '/learn/tools/guava/guava-cache'
+                                }]
                         }
                     ],
                     "/learn/test/": [
@@ -441,7 +451,7 @@ module.exports = config({
         },
         comment: {
             type: "waline",
-            serverURL: "https://vuepress-theme-hope-comment.vercel.app",
+            serverURL: "https://waline-fawn-six.vercel.app",
         },
         copyright: {
             status: "global",

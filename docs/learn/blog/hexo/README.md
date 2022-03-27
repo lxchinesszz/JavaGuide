@@ -14,10 +14,20 @@ backtotop: true
 title: Hexo
 ---
 
-## 一、Hexo
+
+:::info
+Hexo的风格个人感觉类似于QQ空间,属于自己的私人领地。文章比较琐碎,不太适合专题类、系列类的文档,其次是对Markdown的支持比较一般,
+部分主体支持代码高亮等功能。
+好处是简单,小编的第一个博客空间就是基于Hexo。目前也在维护中。
+:::
+
+## 一、[Hexo](https://hexo.io/zh-cn/)
+
+
+[![](https://img.shields.io/badge/Hexo-%E7%A4%BA%E4%BE%8B-green)](https://blog.springlearn.cn/)
+
 
 `Hexo` 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-[hexo](https://hexo.io/zh-cn/)
 
 ## 二、安装
 

@@ -2,7 +2,7 @@
 home: true
 heroImage: /blog.png
 heroText: 采菊东篱下
-tagline: 莫笑少年江湖梦，谁不少年梦江湖
+tagline: 点滴笔记，点滴分享
 heroFullScreen: true
 actionText: 网站地图
 editLink: true
@@ -12,29 +12,11 @@ action:
   type: primary
 - text: 桃花源 ❀
   link: https://blog.springlearn.cn/
-features:
-- title: Java 🧰
-  details: 提供Java基础,中级,高级等相关知识内容
-  link: /learn/java
-- title: Maven 📝
-  details: Maven相关原理及场景扩展和扩展教程
-  link: /learn/maven
-- title: Netty 🎨
-  details: Netty通信内容分享,及如何扩展
-  link: /learn/netty
-- title: Project 🌙
-  details: 实战项目,快速参加战斗
-  link: /learn/project
-- title: Database 📡
-  details: 数据库相关知识操作
-  link: /learn/databases
-- title: Design 🔧
-  details: 设计模式及规范
-  link: /learn/design/
   footer: Copyright © 2021 | The Blog by liuxin | 豫ICP备18041471号
 ---
 
-::: info 
-想要逼死一个强迫症，那实在是太简了。
-:::
+## <Badge text="程序猿" color="#4D96FF"/> <Badge text="上号" color="#6BCB77" />  <Badge text="打怪" color="#FF6B6B" /> <Badge text="升级" color="#8479E1" />  <Badge text="写Bug" color="grey" />
+
+![](https://www.jetbrains.com/idea/img/screenshots/idea_overview_5_1.png)
+
 

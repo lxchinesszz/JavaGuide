@@ -1,8 +1,12 @@
+<!--<template>-->
+<!--</template>-->
 <script src="./Anchor" />
 
 <style lang="stylus">
 $headings = 2 3 4 5 6
 
+.anchor-banner-img
+  width: 100%;
 .anchor-place-holder
   position sticky
   top: ($navbarHeight + 2rem)
@@ -21,7 +25,7 @@ $headings = 2 3 4 5 6
   display none
   position absolute
   left calc(100% + 0.5rem)
-  min-width 10rem
+  min-width 15rem
   max-width 15rem
   max-height 80vh
   overflow-y scroll

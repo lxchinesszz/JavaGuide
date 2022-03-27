@@ -1,53 +1,55 @@
 <template>
   <main
-    :aria-labelledby="$frontmatter.heroText !== null ? 'main-title' : null"
-    class="home"
+      :aria-labelledby="$frontmatter.heroText !== null ? 'main-title' : null"
+      class="home"
   >
     <header class="hero">
       <MyTransition>
         <img
-          v-if="$frontmatter.heroImage"
-          key="light"
-          :class="{ light: Boolean($frontmatter.darkHeroImage) }"
-          :src="$withBase($frontmatter.heroImage)"
-          :alt="$frontmatter.heroAlt || 'HomeLogo'"
+            v-if="$frontmatter.heroImage"
+            key="light"
+            :class="{ light: Boolean($frontmatter.darkHeroImage) }"
+            :src="$withBase($frontmatter.heroImage)"
+            :alt="$frontmatter.heroAlt || 'HomeLogo'"
         />
       </MyTransition>
       <MyTransition>
         <img
-          v-if="$frontmatter.darkHeroImage"
-          key="dark"
-          class="dark"
-          :src="$withBase($frontmatter.darkHeroImage)"
-          :alt="$frontmatter.heroAlt || 'HomeLogo'"
+            v-if="$frontmatter.darkHeroImage"
+            key="dark"
+            class="dark"
+            :src="$withBase($frontmatter.darkHeroImage)"
+            :alt="$frontmatter.heroAlt || 'HomeLogo'"
         />
       </MyTransition>
       <div class="hero-info">
         <MyTransition :delay="0.04">
           <h1
-            v-if="$frontmatter.heroText !== false"
-            id="main-title"
-            v-text="$frontmatter.heroText || $title || 'Hello'"
+              v-if="$frontmatter.heroText !== false"
+              id="main-title"
+              v-text="$frontmatter.heroText || $title || 'Hello'"
           />
         </MyTransition>
         <MyTransition :delay="0.08">
           <p
-            class="description"
-            v-text="
+              class="description"
+              v-text="
               $frontmatter.tagline ||
               $description ||
               'Welcome to your VuePress site'
             "
+              v-if="!$themeConfig.dujitang"
           />
+          <p v-else class="description">{{djt}}</p>
         </MyTransition>
         <MyTransition :delay="0.12">
           <p v-if="$frontmatter.action" class="action">
             <NavLink
-              v-for="action in actionLinks"
-              :key="action.text"
-              :item="action"
-              class="action-button"
-              :class="action.type || ''"
+                v-for="action in actionLinks"
+                :key="action.text"
+                :item="action"
+                class="action-button"
+                :class="action.type || ''"
             />
           </p>
         </MyTransition>
@@ -55,28 +57,32 @@
     </header>
 
     <MyTransition :delay="0.16">
+      <HomeJitang v-if="$themeConfig.homeJitang"></HomeJitang>
+    </MyTransition>
+
+    <MyTransition :delay="0.16">
       <div
-        v-if="$frontmatter.features && $frontmatter.features.length"
-        class="features"
+          v-if="$frontmatter.features && $frontmatter.features.length"
+          class="features"
       >
         <template v-for="(feature, index) in $frontmatter.features">
           <div
-            v-if="feature.link"
-            :key="index"
-            class="feature link"
-            :class="`feature${index % 9}`"
-            tabindex="0"
-            role="navigation"
-            @click="navigate(feature.link)"
+              v-if="feature.link"
+              :key="index"
+              class="feature link"
+              :class="`feature${index % 9}`"
+              tabindex="0"
+              role="navigation"
+              @click="navigate(feature.link)"
           >
             <h2>{{ feature.title }}</h2>
             <p>{{ feature.details }}</p>
           </div>
           <div
-            v-else
-            :key="index"
-            class="feature"
-            :class="`feature${index % 9}`"
+              v-else
+              :key="index"
+              class="feature"
+              :class="`feature${index % 9}`"
           >
             <h2>{{ feature.title }}</h2>
             <p>{{ feature.details }}</p>
@@ -86,12 +92,12 @@
     </MyTransition>
 
     <MyTransition :delay="0.24">
-      <Content class="theme-default-content custom" />
+      <Content class="theme-default-content custom"/>
     </MyTransition>
   </main>
 </template>
 
-<script src="./Home" />
+<script src="./Home"/>
 
 <style lang="stylus">
 .home
