@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第01篇:Mybatis抛砖引玉 环境搭建 | 采菊东篱下</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico">
+    <link rel="alternate" type="application/atom+xml" href="https://vuepress-theme-hope-demo.mrhope.site/atom.xml" title="采菊东篱下 Atom Feed">
+    <link rel="alternate" type="application/json" href="https://vuepress-theme-hope-demo.mrhope.site/feed.json" title="采菊东篱下 JSON Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://vuepress-theme-hope-demo.mrhope.site/rss.xml" title="采菊东篱下 RSS Feed">
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png">
+    <meta name="description" content="vuepress-theme-hope 的 demo">
+    <meta property="og:url" content="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html">
+    <meta property="og:site_name" content="采菊东篱下">
+    <meta property="og:title" content="第01篇:Mybatis抛砖引玉 环境搭建">
+    <meta property="og:description" content="一、环境搭建 1.1 数据库脚本 1.2 POM依赖 1.3 执行脚本生成代码 mysql数据库记得要安装好,如果clone代码下来学习,记得要改成自己的数据库。 当上面的步骤都完成后,并输入自己的mysql地址和用户信息后。就可以执行下面脚本了。 mvn mybatis-generator:generate 执行后就会生成我们本节要说的所有内容代码了。 二">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh-CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="采菊东篱下">
+    <meta property="article:author" content="西魏陶渊明">
+    <meta name="theme-color" content="#46bd87">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <link rel="preload" href="/assets/css/0.styles.d2b1edc6.css" as="style"><link rel="preload" href="/assets/js/app.71239624.js" as="script"><link rel="preload" href="/assets/js/layout-Layout.d87e4e77.js" as="script"><link rel="preload" href="/assets/js/layout-Blog~layout-Layout~layout-NotFound.dee40e34.js" as="script"><link rel="preload" href="/assets/js/page-第01篇Mybatis抛砖引玉环境搭建.43289aa6.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.62e68b4b.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Layout.3cea2888.js" as="script"><link rel="prefetch" href="/assets/js/124.219704dc.js"><link rel="prefetch" href="/assets/js/125.9a53b4f6.js"><link rel="prefetch" href="/assets/js/126.579949b4.js"><link rel="prefetch" href="/assets/js/127.936a2c9f.js"><link rel="prefetch" href="/assets/js/128.ac8c53ca.js"><link rel="prefetch" href="/assets/js/129.bf36881a.js"><link rel="prefetch" href="/assets/js/130.aea9e284.js"><link rel="prefetch" href="/assets/js/layout-Blog.dfabf178.js"><link rel="prefetch" href="/assets/js/layout-NotFound.301a83ee.js"><link rel="prefetch" href="/assets/js/layout-Slide.2ed565a6.js"><link rel="prefetch" href="/assets/js/page--052ba78e.2d2095e5.js"><link rel="prefetch" href="/assets/js/page-Arthas（阿尔萨斯）能为你做什么.0bd85c56.js"><link rel="prefetch" href="/assets/js/page-Docsify.0249144e.js"><link rel="prefetch" href="/assets/js/page-DruidSQL解析.c16fc265.js"><link rel="prefetch" href="/assets/js/page-FeignMock注意事项.75d02649.js"><link rel="prefetch" href="/assets/js/page-Get新技能,Java实现文件监控.668d4c02.js"><link rel="prefetch" href="/assets/js/page-Guava-Map.2248ef69.js"><link rel="prefetch" href="/assets/js/page-Guava-cache.3e2a9bfd.js"><link rel="prefetch" href="/assets/js/page-Guava-retry重试组件.2dd8fbc4.js"><link rel="prefetch" href="/assets/js/page-Guava：用于Java的Google核心库.3d5c7fff.js"><link rel="prefetch" href="/assets/js/page-Hexo.c775dbaa.js"><link rel="prefetch" href="/assets/js/page-Home.b73ec169.js"><link rel="prefetch" href="/assets/js/page-JUnitAPI.20d8ce63.js"><link rel="prefetch" href="/assets/js/page-JUnit单测类属性注入.c4565752.js"><link rel="prefetch" href="/assets/js/page-JVM相关命令.412525d0.js"><link rel="prefetch" href="/assets/js/page-JVM钩子hooks函数.54803e94.js"><link rel="prefetch" href="/assets/js/page-Javassist.774b5f44.js"><link rel="prefetch" href="/assets/js/page-Java代码规范全部奉上.d37ad027.js"><link rel="prefetch" href="/assets/js/page-Java四大引用.eea78c27.js"><link rel="prefetch" href="/assets/js/page-Java异常体系.52c8d4d1.js"><link rel="prefetch" href="/assets/js/page-Java管理扩展.7957a3d8.js"><link rel="prefetch" href="/assets/js/page-Java编程.568e252f.js"><link rel="prefetch" href="/assets/js/page-Join大法.5c8fa4ad.js"><link rel="prefetch" href="/assets/js/page-Lambda函数式编程.8f29fbbf.js"><link rel="prefetch" href="/assets/js/page-Markdown增强.343107d6.js"><link rel="prefetch" href="/assets/js/page-Maven基础入门.97f45517.js"><link rel="prefetch" href="/assets/js/page-MockDataAPI.2c550800.js"><link rel="prefetch" href="/assets/js/page-MockitoAPI.16863a39.js"><link rel="prefetch" href="/assets/js/page-MySQL.7f4799d7.js"><link rel="prefetch" href="/assets/js/page-Mybatis.f529e805.js"><link rel="prefetch" href="/assets/js/page-Mysql优化示例.ba519a23.js"><link rel="prefetch" href="/assets/js/page-Redis.46854567.js"><link rel="prefetch" href="/assets/js/page-Redis缓存穿透雪崩问题.01c566ef.js"><link rel="prefetch" href="/assets/js/page-SPI服务发现机制.517a6f91.js"><link rel="prefetch" href="/assets/js/page-SQL索引性能优化.0300986b.js"><link rel="prefetch" href="/assets/js/page-SQL锁机制.2467b895.js"><link rel="prefetch" href="/assets/js/page-Spring-retry重试组件.460d84d4.js"><link rel="prefetch" href="/assets/js/page-Spring.c0e01f7d.js"><link rel="prefetch" href="/assets/js/page-SpringBootTesting.85b44b73.js"><link rel="prefetch" href="/assets/js/page-Spring循环依赖.918eea0a.js"><link rel="prefetch" href="/assets/js/page-Vuepress.3362781e.js"><link rel="prefetch" href="/assets/js/page-classclassloader相关.32a10b7f.js"><link rel="prefetch" href="/assets/js/page-explain调优.2a37a6d2.js"><link rel="prefetch" href="/assets/js/page-hehe.0912bc1d.js"><link rel="prefetch" href="/assets/js/page-maven-resources-plugin.355ce4d5.js"><link rel="prefetch" href="/assets/js/page-maven-surefire-plugin.f269a160.js"><link rel="prefetch" href="/assets/js/page-monitorwatchtrace相关.312db767.js"><link rel="prefetch" href="/assets/js/page-spring-boot-maven-plugin.2d4ca982.js"><link rel="prefetch" href="/assets/js/page-synchronized锁升级.58b4b1f4.js"><link rel="prefetch" href="/assets/js/page-①谁在调用JUnit.af49fb7c.js"><link rel="prefetch" href="/assets/js/page-②如何知道是否依赖Spring容器.b03191b8.js"><link rel="prefetch" href="/assets/js/page-中文文档写作规范.70704469.js"><link rel="prefetch" href="/assets/js/page-主要功能与配置演示.1ca19532.js"><link rel="prefetch" href="/assets/js/page-事务回滚原理.e7f978c3.js"><link rel="prefetch" href="/assets/js/page-使用断言.a1c6d301.js"><link rel="prefetch" href="/assets/js/page-信号量Semaphore.7e00d298.js"><link rel="prefetch" href="/assets/js/page-倒计锁CountDownLatch.da9ff70d.js"><link rel="prefetch" href="/assets/js/page-八阿哥的剑.42380ac7.js"><link rel="prefetch" href="/assets/js/page-再也不怕被HashMap欺负了.1f3e98b0.js"><link rel="prefetch" href="/assets/js/page-函数式编程.9798eb7c.js"><link rel="prefetch" href="/assets/js/page-分布式锁.8d6e4917.js"><link rel="prefetch" href="/assets/js/page-匆匆那年.f0980f26.js"><link rel="prefetch" href="/assets/js/page-单元测试专题.123be6ec.js"><link rel="prefetch" href="/assets/js/page-单测维护.81930c54.js"><link rel="prefetch" href="/assets/js/page-博客主页.fd0adf8e.js"><link rel="prefetch" href="/assets/js/page-反射框架Reflections.8fd619d9.js"><link rel="prefetch" href="/assets/js/page-启动缓慢.262d1d68.js"><link rel="prefetch" href="/assets/js/page-命名规则.31881c6a.js"><link rel="prefetch" href="/assets/js/page-基础命令.fa9e3ccb.js"><link rel="prefetch" href="/assets/js/page-基础教程.58248f8e.js"><link rel="prefetch" href="/assets/js/page-如何学会复盘.54aef1a8.js"><link rel="prefetch" href="/assets/js/page-如何找到垃圾SQL语句,你知道这些方式吗？.67871c7e.js"><link rel="prefetch" href="/assets/js/page-委派双亲之类加载器.48d33e08.js"><link rel="prefetch" href="/assets/js/page-密码加密的文章.b0848163.js"><link rel="prefetch" href="/assets/js/page-年终总结汇报大纲.f9192c54.js"><link rel="prefetch" href="/assets/js/page-幻灯片页.9d7b99ce.js"><link rel="prefetch" href="/assets/js/page-开个工厂造线程.aabb98f2.js"><link rel="prefetch" href="/assets/js/page-异步验证.61782008.js"><link rel="prefetch" href="/assets/js/page-影响范围.0bae8ef0.js"><link rel="prefetch" href="/assets/js/page-循环锁屏障CyclicBarrier.6ccdd827.js"><link rel="prefetch" href="/assets/js/page-成熟的线程要懂得拒绝.27f22c81.js"><link rel="prefetch" href="/assets/js/page-技术选型.9b2eb0da.js"><link rel="prefetch" href="/assets/js/page-指南.3d86c9e7.js"><link rel="prefetch" href="/assets/js/page-数据隔离.7fd60682.js"><link rel="prefetch" href="/assets/js/page-极限测试.23c192f1.js"><link rel="prefetch" href="/assets/js/page-案例分享.ea7807ca.js"><link rel="prefetch" href="/assets/js/page-没有条件创造条件Condition.b5b3252d.js"><link rel="prefetch" href="/assets/js/page-没有规矩不成方圆.093ac87c.js"><link rel="prefetch" href="/assets/js/page-测试成本.b09d4793.js"><link rel="prefetch" href="/assets/js/page-测试范围.1923f11a.js"><link rel="prefetch" href="/assets/js/page-海量数据模拟.159aba77.js"><link rel="prefetch" href="/assets/js/page-消息验证.e5f60402.js"><link rel="prefetch" href="/assets/js/page-程序猿到底有没有必要买一台阿里云服务器.9288235e.js"><link rel="prefetch" href="/assets/js/page-第02篇Mybatis配置文件解析.342b5a94.js"><link rel="prefetch" href="/assets/js/page-第03篇Mybatis核心类详细介绍.9f6da775.js"><link rel="prefetch" href="/assets/js/page-第05篇Mybatis的插件设计分析.46b8e520.js"><link rel="prefetch" href="/assets/js/page-线程安全之原子操作.1f1280df.js"><link rel="prefetch" href="/assets/js/page-线程安全感.b90fb332.js"><link rel="prefetch" href="/assets/js/page-线程池扫盲.35e727c8.js"><link rel="prefetch" href="/assets/js/page-组件禁用.5dbc4c57.js"><link rel="prefetch" href="/assets/js/page-给线程归归类.33ca4744.js"><link rel="prefetch" href="/assets/js/page-自定义布局.1810855f.js"><link rel="prefetch" href="/assets/js/page-自定义插件教程.d56436c6.js"><link rel="prefetch" href="/assets/js/page-读写锁ReadWriteLock.0a3e794e.js"><link rel="prefetch" href="/assets/js/page-重入锁ReentrantLock.edff4982.js"><link rel="prefetch" href="/assets/js/page-重剑无锋大巧不工.9dd41536.js"><link rel="prefetch" href="/assets/js/page-页面配置.6aa40e1b.js"><link rel="prefetch" href="/assets/js/page-项目主页.8829c14f.js"><link rel="prefetch" href="/assets/js/page-领域驱动模型的思考与认知.3dc36e03.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.9496c693.js"><link rel="prefetch" href="/assets/js/vendors~mermaid.b0a52dad.js"><link rel="prefetch" href="/assets/js/vendors~photo-swipe.8259f449.js"><link rel="prefetch" href="/assets/js/vendors~reveal.ab22d0fc.js"><link rel="prefetch" href="/assets/js/vendors~waline.d75f2af8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d2b1edc6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container has-navbar has-sidebar has-anchor"><header class="navbar"><!----> <div class="content__navbar-start"></div> <button title="Sidebar Button" class="sidebar-button"><span class="icon"></span></button> <a href="/" class="home-link router-link-active"><img src="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico" alt="采菊东篱下" class="logo"> <!----> <span class="site-name can-hide">采菊东篱下</span></a> <!----> <div class="content__navbar-center"></div> <div class="links"><button tabindex="-1" aria-hidden="true" class="color-button"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="skin-icon"><path d="M224 800c0 9.6 3.2 44.8 6.4 54.4 6.4 48-48 76.8-48 76.8s80 41.6 147.2 0 134.4-134.4
+        38.4-195.2c-22.4-12.8-41.6-19.2-57.6-19.2C259.2 716.8 227.2 761.6 224 800zM560 675.2l-32
+        51.2c-51.2 51.2-83.2 32-83.2 32 25.6 67.2 0 112-12.8 128 25.6 6.4 51.2 9.6 80 9.6 54.4 0
+        102.4-9.6 150.4-32l0 0c3.2 0 3.2-3.2 3.2-3.2 22.4-16 12.8-35.2
+        6.4-44.8-9.6-12.8-12.8-25.6-12.8-41.6 0-54.4 60.8-99.2 137.6-99.2 6.4 0 12.8 0 22.4
+        0 12.8 0 38.4 9.6 48-25.6 0-3.2 0-3.2 3.2-6.4 0-3.2 3.2-6.4 3.2-6.4 6.4-16 6.4-16 6.4-19.2
+        9.6-35.2 16-73.6 16-115.2 0-105.6-41.6-198.4-108.8-268.8C704 396.8 560 675.2 560 675.2zM224
+        419.2c0-28.8 22.4-51.2 51.2-51.2 28.8 0 51.2 22.4 51.2 51.2 0 28.8-22.4 51.2-51.2 51.2C246.4
+        470.4 224 448 224 419.2zM320 284.8c0-22.4 19.2-41.6 41.6-41.6 22.4 0 41.6 19.2 41.6 41.6 0
+        22.4-19.2 41.6-41.6 41.6C339.2 326.4 320 307.2 320 284.8zM457.6 208c0-12.8 12.8-25.6 25.6-25.6
+        12.8 0 25.6 12.8 25.6 25.6 0 12.8-12.8 25.6-25.6 25.6C470.4 233.6 457.6 220.8 457.6 208zM128
+        505.6C128 592 153.6 672 201.6 736c28.8-60.8 112-60.8 124.8-60.8-16-51.2 16-99.2
+        16-99.2l316.8-422.4c-48-19.2-99.2-32-150.4-32C297.6 118.4 128 291.2 128 505.6zM764.8
+        86.4c-22.4 19.2-390.4 518.4-390.4 518.4-22.4 28.8-12.8 76.8 22.4 99.2l9.6 6.4c35.2 22.4
+        80 12.8 99.2-25.6 0 0 6.4-12.8 9.6-19.2 54.4-105.6 275.2-524.8 288-553.6
+        6.4-19.2-3.2-32-19.2-32C777.6 76.8 771.2 80 764.8 86.4z"></path></svg> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <!----></div></div></button> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn/网站地图/" class="nav-link"><i class="iconfont icon-creative"></i>
+  网站地图
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        Java
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><a href="/learn/test/" class="nav-link"><!---->
+  单元测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+        Maven扩展
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  编译卡点插件
+</a></li><li class="dropdown-subitem"><a href="/language/jap32anese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        框架篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/spring/" class="nav-link"><!---->
+  Spring
+</a></li><li class="dropdown-item"><a href="/learn/mybatis/" class="nav-link router-link-active active"><!---->
+  Mybatis
+</a></li><li class="dropdown-item"><a href="/language/jap1333anese/" class="nav-link"><!---->
+  Mybatis-Plus
+</a></li><li class="dropdown-item"><a href="/language/japa222nese/" class="nav-link"><!---->
+  Dubbo
+</a></li><li class="dropdown-item"><a href="/language/japa444nese/" class="nav-link"><!---->
+  Job
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+        工具篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><a href="/learn/tools/bytecode/Javassist.html" class="nav-link"><!---->
+  字节码
+</a></li><li class="dropdown-item"><a href="/learn/tools/druid/" class="nav-link"><!---->
+  SQL解析
+</a></li><li class="dropdown-item"><a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><a href="/learn/tools/arthas/" class="nav-link"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+        Database
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+        设计&amp;规范
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+        博客搭建
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese1/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanes2e/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div></nav> <!----> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link can-hide">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <!----> <div class="content__navbar-end"></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!----> <!----> <div class="content__sidebar-top"></div> <nav class="sidebar-nav-links"><div class="nav-item"><a href="/learn/网站地图/" class="nav-link"><i class="iconfont icon-creative"></i>
+  网站地图
+</a></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      Java
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><!----> <a href="/learn/test/" class="nav-link"><!---->
+  单元测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+      Maven扩展
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  编译卡点插件
+</a></li><li class="dropdown-subitem"><a href="/language/jap32anese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      框架篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/spring/" class="nav-link"><!---->
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/learn/mybatis/" class="nav-link router-link-active active"><!---->
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/language/jap1333anese/" class="nav-link"><!---->
+  Mybatis-Plus
+</a></li><li class="dropdown-item"><!----> <a href="/language/japa222nese/" class="nav-link"><!---->
+  Dubbo
+</a></li><li class="dropdown-item"><!----> <a href="/language/japa444nese/" class="nav-link"><!---->
+  Job
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+      工具篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/bytecode/Javassist.html" class="nav-link"><!---->
+  字节码
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/druid/" class="nav-link"><!---->
+  SQL解析
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/arthas/" class="nav-link"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+      Database
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+      设计&amp;规范
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+      博客搭建
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese1/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanes2e/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <!----> <div class="content__sidebar-center"></div> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><i class="iconfont icon-creative"></i> <span class="title">源码学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" aria-current="page" class="active sidebar-link">第01篇:Mybatis抛砖引玉 环境搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#一、环境搭建" class="sidebar-link">一、环境搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_1-1-数据库脚本" class="sidebar-link heading3">1.1 数据库脚本</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_1-2-pom依赖" class="sidebar-link heading3">1.2 POM依赖</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_1-3-执行脚本生成代码" class="sidebar-link heading3">1.3 执行脚本生成代码</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#二、抛转引玉" class="sidebar-link">二、抛转引玉</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_2-1-学习目标制定" class="sidebar-link heading3">2.1 学习目标制定</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_2-2-学习后我们能得到什么" class="sidebar-link heading3">2.2 学习后我们能得到什么</a></li></ul></li></ul></li><li><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/" class="sidebar-link">第02篇:Mybatis配置文件解析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#一、配置文件分析" class="sidebar-link">一、配置文件分析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_1-1-mybatisconfig-xml" class="sidebar-link heading3">1.1 mybatisConfig.xml</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#二、知识点讲解" class="sidebar-link">二、知识点讲解</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-1-xml约束文件dtd" class="sidebar-link">2.1 xml约束文件dtd</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-1-1-元素-属性-属性值" class="sidebar-link heading3">2.1.1 元素 &amp; 属性 &amp; 属性值</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-2-configuration标签分析" class="sidebar-link">2.2 configuration标签分析</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-3-mybatis配置解析核心逻辑" class="sidebar-link">2.3 Mybatis配置解析核心逻辑</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-3-1-new-sqlsessionfactorybuilder-build" class="sidebar-link heading3">2.3.1 new SqlSessionFactoryBuilder().build</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-3-2-核心配置类解析-xmlconfigbuilder" class="sidebar-link heading3">2.3.2 核心配置类解析(XMLConfigBuilder)</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-3-3-configuration属性介绍" class="sidebar-link heading3">2.3.3 Configuration属性介绍</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-3-4-mapper-xml-解析" class="sidebar-link heading3">2.3.4 Mapper.xml 解析</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-4-mybatis可以借鉴的知识点" class="sidebar-link">2.4 Mybatis可以借鉴的知识点</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-4-1-占位符解析逻辑" class="sidebar-link heading3">2.4.1 占位符解析逻辑</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-4-2-mybatis-resources-工具" class="sidebar-link heading3">2.4.2 Mybatis Resources 工具</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-4-3-mybatis-propertyparser-占位符解析" class="sidebar-link heading3">2.4.3 Mybatis PropertyParser 占位符解析</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-4-4-反射工厂-reflectorfactory" class="sidebar-link heading3">2.4.4 反射工厂 ReflectorFactory</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/#_2-4-5-异常上下文设计-errorcontext" class="sidebar-link heading3">2.4.5 异常上下文设计 ErrorContext</a></li></ul></li></ul></li><li><a href="/learn/mybatis/%E6%A0%B8%E5%BF%83%E7%B1%BB%E4%BB%8B%E7%BB%8D/" class="sidebar-link">第03篇:Mybatis核心类详细介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%A0%B8%E5%BF%83%E7%B1%BB%E4%BB%8B%E7%BB%8D/#一、configuration" class="sidebar-link">一、Configuration</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%A0%B8%E5%BF%83%E7%B1%BB%E4%BB%8B%E7%BB%8D/#_1-1-typealiasregistry" class="sidebar-link">1.1 TypeAliasRegistry</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%A0%B8%E5%BF%83%E7%B1%BB%E4%BB%8B%E7%BB%8D/#_1-2-properties" class="sidebar-link">1.2 Properties</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%A0%B8%E5%BF%83%E7%B1%BB%E4%BB%8B%E7%BB%8D/#_1-3-interceptorchain" class="sidebar-link">1.3 InterceptorChain</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%A0%B8%E5%BF%83%E7%B1%BB%E4%BB%8B%E7%BB%8D/#二、mapperbuilderassistant" class="sidebar-link">二、MapperBuilderAssistant</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%A0%B8%E5%BF%83%E7%B1%BB%E4%BB%8B%E7%BB%8D/#三、可以借鉴的知识点" class="sidebar-link">三、可以借鉴的知识点</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><i class="iconfont icon-creative"></i> <span class="title">插件扩展</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/" class="sidebar-link">第05篇:Mybatis的插件设计分析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#一、-插件设计介绍" class="sidebar-link">一、 插件设计介绍</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_1-1-interceptor" class="sidebar-link">1.1 Interceptor</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_1-2-interceptorchain" class="sidebar-link">1.2 InterceptorChain</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_1-3-invocationhandler" class="sidebar-link">1.3 InvocationHandler</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_1-4-intercepts-和-signature" class="sidebar-link">1.4 @Intercepts 和 @Signature</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_1-5-plugin" class="sidebar-link">1.5 Plugin</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#二、问题总结" class="sidebar-link">二、问题总结</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_2-1-插件能拦截那些类" class="sidebar-link">2.1 插件能拦截那些类?</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_2-1-1-parameterhandler" class="sidebar-link heading3">2.1.1 ParameterHandler</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_2-1-2-resultsethandler" class="sidebar-link heading3">2.1.2 ResultSetHandler</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_2-1-3-statementhandler" class="sidebar-link heading3">2.1.3 StatementHandler</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_2-1-4-executor" class="sidebar-link heading3">2.1.4 Executor</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_2-2-如何定义一个拦截器" class="sidebar-link">2.2 如何定义一个拦截器?</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_2-3-插件的设计缺陷" class="sidebar-link">2.3 插件的设计缺陷</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#三、可以借鉴的知识点" class="sidebar-link">三、可以借鉴的知识点</a></li><li class="sidebar-sub-header"><a href="/learn/mybatis/%E6%8F%92%E4%BB%B6%E5%88%86%E6%9E%90/#_3-1-插件的设计模式" class="sidebar-link">3.1 插件的设计模式</a></li></ul></li></ul></section></li></ul> <!----> <div class="content__sidebar-bottom"></div> <!----></aside> <main class="page"><nav class="breadcrumb disable"><!----></nav> <!----> <div class="content__page-top"></div> <div vocab="https://schema.org/" typeof="Article" class="page-title"><h1><!----> <span property="headline">第01篇:Mybatis抛砖引玉 环境搭建</span></h1> <!----> <!----> <hr></div> <div class="anchor-place-holder"><aside id="anchor"><div class="anchor-banner"><img class="anchor-banner-img" src="https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg"></div><div class="anchor-wrapper"><ul class="anchor-list"><li class="anchor"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#一、环境搭建" class="anchor-link heading2"><div>一、环境搭建</div></a></li><li class="anchor"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_1-1-数据库脚本" class="anchor-link heading3"><div>1.1 数据库脚本</div></a></li><li class="anchor"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_1-2-pom依赖" class="anchor-link heading3"><div>1.2 POM依赖</div></a></li><li class="anchor"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_1-3-执行脚本生成代码" class="anchor-link heading3"><div>1.3 执行脚本生成代码</div></a></li><li class="anchor"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#二、抛转引玉" class="anchor-link heading2"><div>二、抛转引玉</div></a></li><li class="anchor"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_2-1-学习目标制定" class="anchor-link heading3"><div>2.1 学习目标制定</div></a></li><li class="anchor"><a href="/learn/mybatis/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#_2-2-学习后我们能得到什么" class="anchor-link heading3"><div>2.2 学习后我们能得到什么</div></a></li></ul></div></aside></div> <!----> <div class="content__content-top"></div> <div><div class="theme-default-content content__default"><h2 id="一、环境搭建"><a href="#一、环境搭建" class="header-anchor">#</a> 一、环境搭建</h2> <h3 id="_1-1-数据库脚本"><a href="#_1-1-数据库脚本" class="header-anchor">#</a> 1.1 数据库脚本</h3> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">SET</span> NAMES utf8<span class="token punctuation">;</span>
+<span class="token keyword">SET</span> FOREIGN_KEY_CHECKS <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- ----------------------------</span>
+<span class="token comment">--  Table structure for `T_USER`</span>
+<span class="token comment">-- ----------------------------</span>
+<span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> <span class="token identifier"><span class="token punctuation">`</span>T_USER<span class="token punctuation">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token identifier"><span class="token punctuation">`</span>T_USER<span class="token punctuation">`</span></span> <span class="token punctuation">(</span>
+  <span class="token identifier"><span class="token punctuation">`</span>uid<span class="token punctuation">`</span></span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span> <span class="token keyword">COMMENT</span> <span class="token string">'用户id'</span><span class="token punctuation">,</span>
+  <span class="token identifier"><span class="token punctuation">`</span>name<span class="token punctuation">`</span></span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  <span class="token identifier"><span class="token punctuation">`</span>token_id<span class="token punctuation">`</span></span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>uid<span class="token punctuation">`</span></span><span class="token punctuation">,</span><span class="token identifier"><span class="token punctuation">`</span>token_id<span class="token punctuation">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+
+<span class="token keyword">SET</span> FOREIGN_KEY_CHECKS <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="_1-2-pom依赖"><a href="#_1-2-pom依赖" class="header-anchor">#</a> 1.2 POM依赖</h3> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.mybatis.generator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>mybatis-generator-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.3.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configurationFile</span><span class="token punctuation">&gt;</span></span>${basedir}/src/main/resources/generator/generatorConfig.xml<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configurationFile</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>overwrite</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>overwrite</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>verbose</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>verbose</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_1-3-执行脚本生成代码"><a href="#_1-3-执行脚本生成代码" class="header-anchor">#</a> 1.3 执行脚本生成代码</h3> <p>mysql数据库记得要安装好,如果clone代码下来学习,记得要改成自己的数据库。
+当上面的步骤都完成后,并输入自己的mysql地址和用户信息后。就可以执行下面脚本了。</p> <p><code>mvn mybatis-generator:generate</code></p> <p>执行后就会生成我们本节要说的所有内容代码了。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>➜ tree
+.
+├── LICENSE
+├── README.md
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── orm
+    │   │       └── example
+    │   │           └── dal
+    │   │               ├── mapper
+    │   │               │   └── TUserMapper.java
+    │   │               └── model
+    │   │                   └── TUser.java
+    │   └── resources
+    │       ├── generator
+    │       │   └── generatorConfig.xml
+    │       └── mapper
+    │           └── TUserMapper.xml
+    └── test
+        └── java
+
+13 directories, 7 files
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h2 id="二、抛转引玉"><a href="#二、抛转引玉" class="header-anchor">#</a> 二、抛转引玉</h2> <div class="custom-block note"><p class="custom-block-title">核心功能介绍</p> <p>到这里,我们已经使用Mybatis实现了与数据库的交互。可以看到并没有看到sql信息。
+因为sql信息都维护在TUserMapper.xml里面,Mybatis帮我们把TUserMapper.xml和TUserMapper建立了关系。
+为TUserMapper这个接口,通过代理的方式生成了代理类。最终让我们通过MapperRegistry获取到了代理类,从而进行数据库操作。</p></div> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">mapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 读取配置信息(为什么路径前不用加/,因为是相对路径。maven编译后的资源文件和class文件都是在一个包下,所以不用加/就是当前包目录)</span>
+        <span class="token class-name">InputStream</span> mapperInputStream <span class="token operator">=</span> <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getContextClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span><span class="token string">&quot;mybatisConfig.xml&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 生成SqlSession工厂,SqlSession从名字上看就是,跟数据库交互的会话信息,负责将sql提交到数据库进行执行</span>
+        <span class="token class-name">SqlSessionFactory</span> sqlSessionFactory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SqlSessionFactoryBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span>mapperInputStream<span class="token punctuation">,</span> <span class="token string">&quot;development&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 获取Mybatis配置信息</span>
+        <span class="token class-name">Configuration</span> configuration <span class="token operator">=</span> sqlSessionFactory<span class="token punctuation">.</span><span class="token function">getConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 参数: autoCommit,从名字上看就是是否自动提交事务</span>
+        <span class="token class-name">SqlSession</span> sqlSession <span class="token operator">=</span> sqlSessionFactory<span class="token punctuation">.</span><span class="token function">openSession</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 获取Mapper</span>
+        <span class="token class-name">TUserMapper</span> mapper <span class="token operator">=</span> configuration<span class="token punctuation">.</span><span class="token function">getMapperRegistry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMapper</span><span class="token punctuation">(</span><span class="token class-name">TUserMapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> sqlSession<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">TUser</span> tUser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        tUser<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&quot;testUser1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        tUser<span class="token punctuation">.</span><span class="token function">setTokenId</span><span class="token punctuation">(</span><span class="token string">&quot;testTokenId1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mapper<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>tUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 获取插入的数据</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>mapper<span class="token punctuation">.</span><span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 数据插入后，执行查询，然后回滚数据</span>
+        sqlSession<span class="token punctuation">.</span><span class="token function">rollback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="_2-1-学习目标制定"><a href="#_2-1-学习目标制定" class="header-anchor">#</a> 2.1 学习目标制定</h3> <ul><li>配置文件是如何解析成 <code>Configuration</code> ?</li> <li><code>sql</code> 和数据库是如何交互的 <code>SqlSession</code> ?</li> <li><code>mapper.xml</code> 和 <code>Mapper</code> 是如何绑定的<code>MapperRegistry</code> ?</li> <li><code>Mybatis</code> 是如何做动态代理的 ?</li></ul> <h3 id="_2-2-学习后我们能得到什么"><a href="#_2-2-学习后我们能得到什么" class="header-anchor">#</a> 2.2 学习后我们能得到什么</h3> <ul><li>从配置文件解析中我们能学会,如果解析占位符。并将占位符填充真实数据。</li> <li>通过对 <code>SqlSession</code> 的学习,我们会了解到Mybatis的缓存设计,批处理任务,事务等操作。</li> <li>通过对 <code>MapperRegistry</code> 的学习, 我们会了解到如何实现 <code>orm(对象关系映射)</code> 框架。</li></ul></div> <div class="theme-default-content" data-v-a4b7f0d6><hr data-v-a4b7f0d6> <div style="display: flex" data-v-a4b7f0d6><div data-v-a4b7f0d6>本文由西魏陶渊明版权所有。如若转载，请注明出处：西魏陶渊明</div> <div style="margin-left: 1rem" data-v-a4b7f0d6><a href="https://java.springlearn.cn/" target="_blank" rel="noopener noreferrer" data-v-a4b7f0d6><img src="https://img.shields.io/badge/%E6%8A%80%E6%9C%AF%E7%AB%99-%E6%A1%83%E8%8A%B1%E6%BA%90%E8%AE%B0%20-green" alt loading="lazy" data-v-a4b7f0d6><span data-v-a4b7f0d6><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" data-v-a4b7f0d6><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z" data-v-a4b7f0d6></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9" data-v-a4b7f0d6></polygon></svg> <span class="sr-only" data-v-a4b7f0d6>(opens new window)</span></span></a></div></div></div></div> <!----> <div class="content__content-bottom"></div> <footer class="page-meta"><div class="edit-link"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon edit-icon"><path d="M117.953 696.992 64.306 959.696l265.931-49.336 450.204-452.505-212.284-213.376-450.204 452.513zm496.384-296.326L219.039 797.993l-46.108-46.34L568.233 354.33l46.104 46.335zm345.357-122.99-114.45 115.04-212.288-213.377 114.45-115.035 212.288 213.371zm0 0" fill="currentColor"></path></svg> <a href="https://github.com/lxchinesszz/JavaGuide/edit/master/docs/learn/mybatis/环境搭建.md" target="_blank" rel="noopener noreferrer">编辑此页</a></div> <div class="meta-item update-time"><span class="label">上次编辑于:</span> <span class="info">2022年3月28日 23:13</span></div> <div class="meta-item contributors"><span class="label">贡献者: </span> <span class="info"><span title="email: lxchinesszz@163.com" class="contributor">
+          lxchinesszz
+        </span> <!----></span></div></footer> <!----> <div class="comments-wrapper"><div class="waline-wrapper"><div id="waline-comment"></div></div></div> <!----> <div class="content__page-bottom"></div></main> <footer class="footer-wrapper"><!----> <div class="footer"> 只要坚持不懈，嘲笑你的人，迟早会被你笑死。</div> <div class="copyright">Copyright © 2022 西魏陶渊明</div></footer></div><div class="global-ui"><!----><!----><div id="pwa-install"><!----> <div id="install-modal-wrapper" style="display:none;"><div class="background"></div> <div class="install-modal"><div class="header"><button aria-label="关闭" class="close-button"><svg width="23" height="22" xmlns="http://www.w3.org/2000/svg" class="icon close-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.12.358a1.224 1.224 0 011.729 0l8.92 8.914L20.686.358a1.224 1.224 0 011.73 1.728L13.497 11l8.92 8.913a1.222 1.222 0 11-1.73 1.729l-8.919-8.913-8.92 8.913a1.224 1.224 0 01-1.729-1.729L10.04 11l-8.92-8.914a1.222 1.222 0 010-1.728z" fill="currentColor"></path></svg></button> <div class="logo"><!----> <div class="title"><h1></h1> <p class="desc">该应用可以安装在您的 PC 或移动设备上。这将使该 Web 应用程序外观和行为与其他应用程序相同。它将在出现在应用程序列表中，并可以固定到主屏幕，开始菜单或任务栏。此 Web 应用程序还将能够与其他应用程序和您的操作系统安全地进行交互。</p></div></div></div> <div class="content"><div class="highlight"><!----> <!----></div> <div class="description"><h3>详情</h3> <p></p></div></div> <div class="button-wrapper"><button class="install-button">
+        安装 <span></span></button> <button class="cancel-button">
+        取消
+      </button></div></div></div></div><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button title="关闭" aria-label="关闭" class="pswp__button pswp__button--close"></button> <button title="分享" aria-label="分享" class="pswp__button pswp__button--share"></button> <button title="切换全屏" aria-label="切换全屏" class="pswp__button pswp__button--fs"></button> <button title="缩放" aria-label="缩放" class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button title="上一个 (左箭头)" aria-label="上一个 (左箭头)" class="pswp__button pswp__button--arrow--left"></button> <button title="下一个 (右箭头)" aria-label="下一个 (右箭头)" class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div></div></div>
+    <script src="/assets/js/app.71239624.js" defer></script><script src="/assets/js/layout-Layout.d87e4e77.js" defer></script><script src="/assets/js/layout-Blog~layout-Layout~layout-NotFound.dee40e34.js" defer></script><script src="/assets/js/page-第01篇Mybatis抛砖引玉环境搭建.43289aa6.js" defer></script><script src="/assets/js/vendors~layout-Blog~layout-Layout~layout-NotFound.62e68b4b.js" defer></script><script src="/assets/js/vendors~layout-Layout.3cea2888.js" defer></script>
+  </body>
+</html>
