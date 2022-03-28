@@ -53,7 +53,7 @@ module.exports = config({
     // https://vuepress-theme-hope.github.io/zh/config/theme/feature/
     themeConfig: {
         //主题色和深色模式设置选项配置。 'auto-switch' | 'switch' | 'auto' | 'disable'
-        darkmode: 'switch',
+        darkmode: 'auto',
         anchorBanner: 'https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg',
         breadcrumb: false,
         // 不允许变色
@@ -142,7 +142,7 @@ module.exports = config({
                         ariaLabel: 'Java',
                         items: [
                             {text: 'Spring', link: '/learn/spring/'},
-                            {text: 'Mybatis', link: '/language/japane121se/'},
+                            {text: 'Mybatis', link: '/learn/mybatis/'},
                             {text: 'Mybatis-Plus', link: '/language/jap1333anese/'},
                             {text: 'Dubbo', link: '/language/japa222nese/'},
                             {text: 'Job', link: '/language/japa444nese/'},
@@ -298,6 +298,21 @@ module.exports = config({
                             icon: "creative",
                             collapsable: false,
                             children: ['Spring循环依赖']
+                        }
+                    ],
+                    "/learn/mybatis/": [
+                        {
+                            title: "源码学习",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['环境搭建','配置文件解析','核心类介绍']
+                        }
+                        ,
+                        {
+                            title: "插件扩展",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['插件分析']
                         }
                     ],
                     "/learn/tools/guava/": [
