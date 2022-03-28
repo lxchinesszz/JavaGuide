@@ -14,6 +14,7 @@
     "vuepress-theme-hope": "^1.28.4"
   },
   "dependencies": {
+    "js-cookie": "^3.0.1",
     "vuepress": "^1.9.7",
     "vuepress-theme-hope": "^1.28.4"
   }

@@ -1,18 +1,29 @@
 <template>
   <div class="password" :class="{ expand: page || isMainPage }">
+    <div class="passImgDiv">
+      <img class="passImg" src="https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg" alt="">
+    </div>
     <div class="hint" :class="{ hasTried }">
-      {{ hasTried ? encrypt.errorHint : encrypt.title }}
+      {{ hasTried ? $themeConfig.encrypt.errorHint : passSuccess ? passSuccess : $themeConfig.encrypt.title }}
     </div>
     <div class="input">
-      <input v-model="password" type="password" @keypress.enter="verify" />
+      <input v-model="password" type="password" @keypress.enter="verify"/>
       <button @click="verify">OK</button>
     </div>
   </div>
 </template>
 
-<script src="./Password" />
+<script src="./Password"/>
 
 <style lang="stylus">
+.passImgDiv
+  height 20vh - $navbarHeight
+  width 30vw
+  margin-bottom 2rem
+
+.passImg
+  width 100%
+
 .password
   background var(--bg-color)
   height 90vh - $navbarHeight

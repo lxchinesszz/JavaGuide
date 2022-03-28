@@ -64,7 +64,8 @@ module.exports = config({
         homeJitang: false,
         fullscreen: false,
         encrypt: {
-            title: 'Hello'
+            title: '扫描公众号,输入暗号获取密码',
+            errorHint: '暗号不对,有内鬼,任务取消'
         },
         // 默认为 "Edit this page"
         logo: "https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico",

@@ -15,11 +15,11 @@
       <PageInfo :key="$route.path" v-bind="pageInfoProps" />
     </MyTransition>
 
-    <MyTransition v-if="pagePassword && !pageDescrypted" :delay="0.08">
-      <Password
+    <MyTransition v-if="pagePassword && !pass" :delay="0.08">
+      <Password ref="passwordRef"
         :key="$route.path"
         :page="true"
-        @password-verify="password = $event"
+        @password-verify="checkPassword"
       />
     </MyTransition>
 
@@ -27,7 +27,7 @@
       <Password
         :key="$route.path"
         :page="true"
-        @password-verify="checkPathPassword"
+        @password-verify="checkPassword"
       />
     </MyTransition>
 
@@ -38,7 +38,7 @@
 
       <slot v-if="!pagePassword || pageDescrypted" name="content-top" />
 
-      <MyTransition v-show="!pagePassword || pageDescrypted" :delay="0.08">
+      <MyTransition v-show="!pagePassword || pass" :delay="0.08">
         <div>
           <Content :key="$route.path" class="theme-default-content" />
           <FooterBanner class="theme-default-content" ></FooterBanner>

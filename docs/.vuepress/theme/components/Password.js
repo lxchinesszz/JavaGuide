@@ -1,12 +1,15 @@
 import Vue from "vue";
+import Cookies from 'js-cookie'
+
 export default Vue.extend({
     name: "Password",
     props: {
-        page: { type: Boolean, default: false },
+        page: {type: Boolean, default: false},
     },
     data: () => ({
         password: "",
         hasTried: false,
+        passSuccess: null
     }),
     computed: {
         isMainPage() {
@@ -22,9 +25,15 @@ export default Vue.extend({
             // eslint-disable-next-line vue/require-explicit-emits
             this.$emit("password-verify", this.password);
             void Vue.nextTick().then(() => {
-                this.hasTried = true;
             });
         },
     },
+    created: function () {
+        console.log("password:", Cookies.get("password"));
+        if (Cookies.get("password")) {
+            this.password = Cookies.get("password");
+            this.verify();
+        }
+    }
 });
 //# sourceMappingURL=Password.js.map
