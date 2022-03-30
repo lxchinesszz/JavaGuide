@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /blog.png
-heroText: 采菊东篱下
+heroText: 西魏陶渊明
 tagline: 点滴笔记，点滴分享
 heroFullScreen: true
 actionText: 网站地图

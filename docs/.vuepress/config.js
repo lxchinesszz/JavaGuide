@@ -2,7 +2,7 @@ const {config} = require("vuepress-theme-hope");
 const path = require("path");
 module.exports = config({
     theme: path.resolve(__dirname, './theme'),
-    title: "采菊东篱下",
+    title: "西魏陶渊明",
     description: "桃花潭水深千尺",
     author: '西魏陶渊明',
     blog: false,
@@ -39,7 +39,7 @@ module.exports = config({
         // },
         "/": {
             lang: "zh-CN",
-            title: "采菊东篱下",
+            title: "西魏陶渊明",
             // 默认是 false, 设置为 true 来启用
             editLinks: true,
             editLinkText: '编辑学习区',
@@ -53,7 +53,7 @@ module.exports = config({
     // https://vuepress-theme-hope.github.io/zh/config/theme/feature/
     themeConfig: {
         //主题色和深色模式设置选项配置。 'auto-switch' | 'switch' | 'auto' | 'disable'
-        darkmode: 'auto',
+        darkmode: 'switch',
         anchorBanner: 'https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg',
         breadcrumb: false,
         // 不允许变色
@@ -64,7 +64,7 @@ module.exports = config({
         homeJitang: false,
         fullscreen: false,
         encrypt: {
-            title: '扫描公众号,输入暗号获取密码',
+            title: '扫描公众号,输入暗号获取密码,解锁全站文章',
             errorHint: '暗号不对,有内鬼,任务取消'
         },
         // 默认为 "Edit this page"
@@ -310,10 +310,17 @@ module.exports = config({
                         }
                         ,
                         {
+                            title: "专题文章",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['Mapper代理对象创建','Mybatis一级二级缓存设计','Mybatis缓存设计','Mybatis执行流程分析']
+                        }
+                        ,
+                        {
                             title: "插件扩展",
                             icon: "creative",
                             collapsable: false,
-                            children: ['插件分析']
+                            children: ['插件分析',"LimitPlugin","PagePlugin","AuthPlugin"]
                         }
                     ],
                     "/learn/tools/guava/": [
