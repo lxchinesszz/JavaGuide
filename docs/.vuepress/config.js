@@ -27,7 +27,25 @@ module.exports = config({
             rel: 'icon',
             type: "image/x-icon",
             href: 'https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico'
-        }]
+        }],
+        [
+            "script",
+            {
+                src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js",
+            },
+        ],
+        [
+            "script",
+            {
+                src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin3.min.js",
+            },
+        ], [
+            'script',
+            {charset: 'utf-8', src: 'https://readmore.openwrite.cn/js/readmore.js'},
+        ], [
+            'script',
+            {charset: 'utf-8', src: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js'}
+        ]
     ],
     locales: {
         // "/play/": {
@@ -59,7 +77,7 @@ module.exports = config({
         // 不允许变色
         themeColor: false,
         // 是否开启毒鸡汤,模式。如果开启home将不在使用tagline。而是随机获取毒鸡汤
-        dujitang: true,
+        dujitang: false,
         // 正文上门的鸡汤，数据获取来自一言
         homeJitang: false,
         fullscreen: false,
@@ -306,21 +324,21 @@ module.exports = config({
                             title: "源码学习",
                             icon: "creative",
                             collapsable: false,
-                            children: ['环境搭建','配置文件解析','核心类介绍']
+                            children: ['环境搭建', '配置文件解析', '核心类介绍']
                         }
                         ,
                         {
                             title: "专题文章",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Mapper代理对象创建','Mybatis一级二级缓存设计','Mybatis缓存设计','Mybatis执行流程分析']
+                            children: ['Mapper代理对象创建', 'Mybatis一级二级缓存设计', 'Mybatis缓存设计', 'Mybatis执行流程分析']
                         }
                         ,
                         {
                             title: "插件扩展",
                             icon: "creative",
                             collapsable: false,
-                            children: ['插件分析',"LimitPlugin","PagePlugin","AuthPlugin"]
+                            children: ['插件分析', "LimitPlugin", "PagePlugin", "AuthPlugin"]
                         }
                     ],
                     "/learn/tools/guava/": [

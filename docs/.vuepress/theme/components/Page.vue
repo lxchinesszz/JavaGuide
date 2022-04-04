@@ -2,32 +2,32 @@
   <main class="page">
     <MyTransition>
       <BreadCrumb
-        :key="$route.path"
-        :show="$themeConfig.breadcrumb !== false"
-        :icon="$themeConfig.breadcrumbIcon !== false"
-        :icon-prefix="$themeConfig.iconPrefix"
+          :key="$route.path"
+          :show="$themeConfig.breadcrumb !== false"
+          :icon="$themeConfig.breadcrumbIcon !== false"
+          :icon-prefix="$themeConfig.iconPrefix"
       />
     </MyTransition>
 
-    <slot name="top" />
+    <slot name="top"/>
 
     <MyTransition :delay="0.04">
-      <PageInfo :key="$route.path" v-bind="pageInfoProps" />
+      <PageInfo :key="$route.path" v-bind="pageInfoProps"/>
     </MyTransition>
 
     <MyTransition v-if="pagePassword && !pass" :delay="0.08">
       <Password ref="passwordRef"
-        :key="$route.path"
-        :page="true"
-        @password-verify="checkPassword"
+                :key="$route.path"
+                :page="true"
+                @password-verify="checkPassword"
       />
     </MyTransition>
 
     <MyTransition v-else-if="isPathEncrypted" :delay="0.08">
       <Password
-        :key="$route.path"
-        :page="true"
-        @password-verify="checkPassword"
+          :key="$route.path"
+          :page="true"
+          @password-verify="checkPassword"
       />
     </MyTransition>
 
@@ -36,34 +36,35 @@
         <Anchor :key="$route.path" :bannerImg="$themeConfig.anchorBanner"/>
       </MyTransition>
 
-      <slot v-if="!pagePassword || pageDescrypted" name="content-top" />
+      <slot v-if="!pagePassword || pageDescrypted" name="content-top"/>
 
       <MyTransition v-show="!pagePassword || pass" :delay="0.08">
         <div>
-          <Content :key="$route.path" class="theme-default-content" />
-          <FooterBanner class="theme-default-content" ></FooterBanner>
+          <Content :key="$route.path" class="theme-default-content"/>
+          <!--          默认不填noPageCopyright:true 不显示-->
+          <FooterBanner class="theme-default-content" v-show="!$page.frontmatter.noPageCopyright"></FooterBanner>
         </div>
       </MyTransition>
-      <slot v-if="!pagePassword || pageDescrypted" name="content-bottom" />
+      <slot v-if="!pagePassword || pageDescrypted" name="content-bottom"/>
 
       <MyTransition :delay="0.12">
-        <PageMeta :key="$route.path" />
+        <PageMeta :key="$route.path"/>
       </MyTransition>
 
       <MyTransition :delay="0.14">
-        <PageNav :key="$route.path" v-bind="{ sidebarItems }" />
+        <PageNav :key="$route.path" v-bind="{ sidebarItems }"/>
       </MyTransition>
 
       <MyTransition :delay="0.16">
-        <CommentService v-if="$themeConfig.comment" :key="$route.path" />
+        <CommentService v-if="$themeConfig.comment" :key="$route.path"/>
       </MyTransition>
     </template>
 
-    <slot name="bottom" />
+    <slot name="bottom"/>
   </main>
 </template>
 
-<script src="./Page" />
+<script src="./Page"/>
 
 <style lang="stylus">
 .page

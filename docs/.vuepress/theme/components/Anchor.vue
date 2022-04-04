@@ -7,6 +7,7 @@ $headings = 2 3 4 5 6
 
 .anchor-banner-img
   width: 100%;
+  -webkit-user-drag: none;
 .anchor-place-holder
   position sticky
   top: ($navbarHeight + 2rem)
