@@ -35,11 +35,6 @@ module.exports = config({
             },
         ],
         [
-            "script",
-            {
-                src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin3.min.js",
-            },
-        ], [
             'script',
             {charset: 'utf-8', src: 'https://readmore.openwrite.cn/js/readmore.js'},
         ], [
