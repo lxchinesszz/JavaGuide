@@ -316,7 +316,7 @@ module.exports = config({
                             title: "基础知识",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Spring循环依赖']
+                            children: ['Spring循环依赖','AOP']
                         }
                     ],
                     "/learn/mybatis/": [

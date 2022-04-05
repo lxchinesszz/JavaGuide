@@ -20,6 +20,11 @@ title: 第04篇:Mybatis代理对象生成
 
 ## 一、思路分析
 
+Mybatis中Mapper一般只是一个接口,那么为什么能执行数据操作的呢? 那肯定是基于代理没得说。两种方式第一种是xml绑定sql，
+一种是基于@Select/@Update等注解来绑定sql。那么他是如何将sql信息传递给jdbc接口进行操作的呢?
+
+
+
 1. 为Mapper接口,生成代理类。
 2. 解析Mapper.xml或者是@Select等注解生成Sql信息
 3. 解析方法的参数解析@Param
@@ -166,7 +171,9 @@ private MappedStatement resolveMappedStatement(){
 解析xml标签来实现 
 
 XMLMapperBuilder#parseStatementNode
-```java
+
+- line(11) 通过标签来映射成指定的类型SqlCommandType
+```java {11}
 public class XMLStatementBuilder extends BaseBuilder {
  public void parseStatementNode() {
     String id = context.getStringAttribute("id");
@@ -186,7 +193,8 @@ public enum SqlCommandType {
 ```
 
 **注解方式**
-一定是解析注解方法 `AnnotationWrapper`
+
+一定是解析注解方法 `AnnotationWrapper`。将不同的注解解析成SqlCommandType。如下伪代码。
 MapperAnnotationBuilder#getAnnotationWrapper(method, true, statementAnnotationTypes)
 
 ```java 
@@ -324,3 +332,122 @@ private class AnnotationWrapper {
 |解析多参数带@Param|TUser queryUserByTokenId(@Param("tokenId") Long tokenId, @Param("name") String name)|methodSignature.convertArgsToSqlCommandParam(new Object[]{1L, "孙悟空"})|{tokenId=1, name=孙悟空, param1=1, param2=孙悟空}|
 
 
+
+## 2.4 SqlSession
+
+我们看下接口定义基本就是增删改查，提交。由此可以猜测出真正封装jdbc的操作应该就是这个SqlSession。
+
+在SqlSession中有几个比较重要的类，如下图。他们负责不同的逻辑。
+分别处理入参(ParameterHandler)，处理出参(ResultSetHandler)，生成Jdbc(StatementHandler)，处理缓存相关(Executor)。
+
+![](https://img.springlearn.cn/blog/learn_1649170321000.png)
+
+
+```java 
+public interface SqlSession extends Closeable {
+
+  <T> T selectOne(String statement);
+
+  <T> T selectOne(String statement, Object parameter);
+
+  int insert(String statement);
+
+  int insert(String statement, Object parameter);
+
+  int update(String statement);
+
+  int update(String statement, Object parameter);
+
+  int delete(String statement);
+
+  int delete(String statement, Object parameter);
+
+  void commit();
+
+  void commit(boolean force);
+
+  void rollback();
+
+  void rollback(boolean force);
+
+  List<BatchResult> flushStatements();
+
+  @Override
+  void close();
+
+  void clearCache();
+
+  Configuration getConfiguration();
+
+  <T> T getMapper(Class<T> type);
+
+  Connection getConnection();
+}
+```
+
+我们看增删改查的方法入参无非2个。1个是statement,1个是入参。
+其中statement主要是为了获取 MappedStatement。如下
+
+```java 
+private <E> List<E> selectList(String statement, Object parameter, RowBounds rowBounds, ResultHandler handler) {
+    try {
+      MappedStatement ms = configuration.getMappedStatement(statement);
+      return executor.query(ms, wrapCollection(parameter), rowBounds, handler);
+    } catch (Exception e) {
+      throw ExceptionFactory.wrapException("Error querying database.  Cause: " + e, e);
+    } finally {
+      ErrorContext.instance().reset();
+    }
+  }
+```
+
+另外一个入参是为了组装sql信息。MappedStatement#getBoundSql 获取sql信息。
+
+
+```java 
+  @Override
+  public <E> List<E> query(MappedStatement ms, Object parameter, RowBounds rowBounds, ResultHandler resultHandler) throws SQLException {
+    BoundSql boundSql = ms.getBoundSql(parameter);
+    CacheKey key = createCacheKey(ms, parameter, rowBounds, boundSql);
+    return query(ms, parameter, rowBounds, resultHandler, key, boundSql);
+  }
+```
+并且通过PreparedStatement进行组装提交给数据库进行执行。
+
+DefaultParameterHandler
+```java 
+@Override
+  public void setParameters(PreparedStatement ps) {
+    ErrorContext.instance().activity("setting parameters").object(mappedStatement.getParameterMap().getId());
+    List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
+    if (parameterMappings != null) {
+      for (int i = 0; i < parameterMappings.size(); i++) {
+        ParameterMapping parameterMapping = parameterMappings.get(i);
+        if (parameterMapping.getMode() != ParameterMode.OUT) {
+          Object value;
+          String propertyName = parameterMapping.getProperty();
+          if (boundSql.hasAdditionalParameter(propertyName)) { // issue #448 ask first for additional params
+            value = boundSql.getAdditionalParameter(propertyName);
+          } else if (parameterObject == null) {
+            value = null;
+          } else if (typeHandlerRegistry.hasTypeHandler(parameterObject.getClass())) {
+            value = parameterObject;
+          } else {
+            MetaObject metaObject = configuration.newMetaObject(parameterObject);
+            value = metaObject.getValue(propertyName);
+          }
+          TypeHandler typeHandler = parameterMapping.getTypeHandler();
+          JdbcType jdbcType = parameterMapping.getJdbcType();
+          if (value == null && jdbcType == null) {
+            jdbcType = configuration.getJdbcTypeForNull();
+          }
+          try {
+            typeHandler.setParameter(ps, i + 1, value, jdbcType);
+          } catch (TypeException | SQLException e) {
+            throw new TypeException("Could not set parameters for mapping: " + parameterMapping + ". Cause: " + e, e);
+          }
+        }
+      }
+    }
+  }
+```
