@@ -12,7 +12,7 @@ comment: true
 footer: true
 password: 111
 backtotop: true
-title: 第06篇:Mybatis缓存装饰器
+title: 第07篇:Mybatis缓存装饰器
 ---
 
 

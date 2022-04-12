@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-block tip"><p class="custom-block-title">一日一句毒鸡汤</p>
+  <div class="custom-block tip"><p class="custom-block-title">真正的猛士,每天干一碗毒鸡汤!</p>
     <p id="yiyan">问世间钱为何物，只叫人生死相许。！😄</p></div>
 </template>
 

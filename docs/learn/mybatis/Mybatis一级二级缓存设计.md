@@ -12,7 +12,7 @@ comment: true
 footer: true
 password: 111
 backtotop: true
-title: 第05篇:Mybatis缓存设计
+title: 第06篇:Mybatis缓存设计
 ---
 
 

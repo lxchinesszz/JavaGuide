@@ -311,7 +311,7 @@ module.exports = config({
                             title: "基础知识",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Spring循环依赖','AOP']
+                            children: ['Spring循环依赖','AOP','EL']
                         }
                     ],
                     "/learn/mybatis/": [
@@ -326,7 +326,7 @@ module.exports = config({
                             title: "专题文章",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Mapper代理对象创建', 'Mybatis一级二级缓存设计', 'Mybatis缓存设计', 'Mybatis执行流程分析']
+                            children: ['Mapper代理对象创建', 'Mybatis执行流程分析','Mybatis一级二级缓存设计', 'Mybatis缓存设计']
                         }
                         ,
                         {
