@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring EL表达式使用指南 | 西魏陶渊明</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script charset="utf-8" src="https://readmore.openwrite.cn/js/readmore.js"></script>
+    <script charset="utf-8" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/atom+xml" href="https://vuepress-theme-hope-demo.mrhope.site/atom.xml" title="西魏陶渊明 Atom Feed">
+    <link rel="alternate" type="application/json" href="https://vuepress-theme-hope-demo.mrhope.site/feed.json" title="西魏陶渊明 JSON Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://vuepress-theme-hope-demo.mrhope.site/rss.xml" title="西魏陶渊明 RSS Feed">
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png">
+    <meta name="description" content="vuepress-theme-hope 的 demo">
+    <meta property="og:url" content="/learn/spring/EL.html">
+    <meta property="og:site_name" content="西魏陶渊明">
+    <meta property="og:title" content="Spring EL表达式使用指南">
+    <meta property="og:description" content="&quot; 好久没有发现这么好的文章了,今天逛头条发现了一篇好文章,在这里转载一下&quot; &quot; 大家可以学习一下,文章原文地址见参考。希望支持原作者,在头条点一个关注。&quot; 一、概述 Spring表达式语言全称为“Spring Expression Language”，缩写为“SpEL”。是一个支持查询，并在运行时操纵一个对象图功能、是一门强大的表达式语言。SpEL是单独模">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh-CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="西魏陶渊明">
+    <meta property="article:author" content="西魏陶渊明">
+    <meta name="theme-color" content="#46bd87">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <link rel="preload" href="/assets/css/0.styles.23a55af9.css" as="style"><link rel="preload" href="/assets/js/app.c13d9e10.js" as="script"><link rel="preload" href="/assets/js/layout-Layout.0436190e.js" as="script"><link rel="preload" href="/assets/js/page-SpringEL表达式使用指南.50e52563.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Blog~layout-Layout~layout-NewLayout~layout-NotFound.f8df0345.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Layout~layout-NewLayout.c5320da8.js" as="script"><link rel="prefetch" href="/assets/js/135.bdbcd41b.js"><link rel="prefetch" href="/assets/js/136.fb088aff.js"><link rel="prefetch" href="/assets/js/137.94d1c835.js"><link rel="prefetch" href="/assets/js/138.805abcc2.js"><link rel="prefetch" href="/assets/js/139.803fec61.js"><link rel="prefetch" href="/assets/js/140.62ea0387.js"><link rel="prefetch" href="/assets/js/141.92df7ec6.js"><link rel="prefetch" href="/assets/js/142.53f5cc80.js"><link rel="prefetch" href="/assets/js/143.f1ce966a.js"><link rel="prefetch" href="/assets/js/144.d9c3d725.js"><link rel="prefetch" href="/assets/js/145.f47f1da7.js"><link rel="prefetch" href="/assets/js/146.abbf2cf5.js"><link rel="prefetch" href="/assets/js/147.68a5a54b.js"><link rel="prefetch" href="/assets/js/148.5e9a7e48.js"><link rel="prefetch" href="/assets/js/149.d1e581bd.js"><link rel="prefetch" href="/assets/js/150.59eed5dd.js"><link rel="prefetch" href="/assets/js/2.a6576500.js"><link rel="prefetch" href="/assets/js/layout-Blog.a7270bf6.js"><link rel="prefetch" href="/assets/js/layout-Blog~layout-NotFound.061f9f0d.js"><link rel="prefetch" href="/assets/js/layout-NewLayout.83f5a8e2.js"><link rel="prefetch" href="/assets/js/layout-NotFound.2349b506.js"><link rel="prefetch" href="/assets/js/layout-Slide.2f97c1b7.js"><link rel="prefetch" href="/assets/js/page--052ba78e.8c5c1109.js"><link rel="prefetch" href="/assets/js/page-AOP使用指南.83b1db0d.js"><link rel="prefetch" href="/assets/js/page-Arthas（阿尔萨斯）能为你做什么.7afbab89.js"><link rel="prefetch" href="/assets/js/page-Docsify.9fbe426b.js"><link rel="prefetch" href="/assets/js/page-DruidSQL解析.2bcfeb7e.js"><link rel="prefetch" href="/assets/js/page-FeignMock注意事项.bc5ec581.js"><link rel="prefetch" href="/assets/js/page-Get新技能,Java实现文件监控.cf384c6b.js"><link rel="prefetch" href="/assets/js/page-Guava-Map.ea378176.js"><link rel="prefetch" href="/assets/js/page-Guava-cache.72a5cc73.js"><link rel="prefetch" href="/assets/js/page-Guava-retry重试组件.c40fa03d.js"><link rel="prefetch" href="/assets/js/page-Guava：用于Java的Google核心库.09a1b875.js"><link rel="prefetch" href="/assets/js/page-Hexo.2a423c61.js"><link rel="prefetch" href="/assets/js/page-Home.2895b35f.js"><link rel="prefetch" href="/assets/js/page-JUnitAPI.5e5f0b20.js"><link rel="prefetch" href="/assets/js/page-JUnit单测类属性注入.af8d8069.js"><link rel="prefetch" href="/assets/js/page-JVM相关命令.cd0f3c33.js"><link rel="prefetch" href="/assets/js/page-JVM钩子hooks函数.0ec7447c.js"><link rel="prefetch" href="/assets/js/page-Javassist.218db29a.js"><link rel="prefetch" href="/assets/js/page-Java代码规范全部奉上.a63d929b.js"><link rel="prefetch" href="/assets/js/page-Java四大引用.1b50108d.js"><link rel="prefetch" href="/assets/js/page-Java异常体系.937b37eb.js"><link rel="prefetch" href="/assets/js/page-Java管理扩展.17433edf.js"><link rel="prefetch" href="/assets/js/page-Java编程.86492037.js"><link rel="prefetch" href="/assets/js/page-Join大法.0320525f.js"><link rel="prefetch" href="/assets/js/page-Lambda函数式编程.0823953a.js"><link rel="prefetch" href="/assets/js/page-Markdown增强.461aae49.js"><link rel="prefetch" href="/assets/js/page-Maven基础入门.f1ce8a41.js"><link rel="prefetch" href="/assets/js/page-MockDataAPI.f9dfce62.js"><link rel="prefetch" href="/assets/js/page-MockitoAPI.092dcaeb.js"><link rel="prefetch" href="/assets/js/page-MySQL.9b8d0102.js"><link rel="prefetch" href="/assets/js/page-Mybatis.9ddf4fe2.js"><link rel="prefetch" href="/assets/js/page-Mysql优化示例.83e63c88.js"><link rel="prefetch" href="/assets/js/page-Redis.0481b744.js"><link rel="prefetch" href="/assets/js/page-Redis缓存穿透雪崩问题.6fe1b534.js"><link rel="prefetch" href="/assets/js/page-SPI服务发现机制.f8583757.js"><link rel="prefetch" href="/assets/js/page-SQL索引性能优化.c09cbfe3.js"><link rel="prefetch" href="/assets/js/page-SQL锁机制.89a6cf88.js"><link rel="prefetch" href="/assets/js/page-Spring-retry重试组件.2399fbf5.js"><link rel="prefetch" href="/assets/js/page-Spring.e702c56b.js"><link rel="prefetch" href="/assets/js/page-SpringBootTesting.b6662801.js"><link rel="prefetch" href="/assets/js/page-Spring循环依赖.db3b21ee.js"><link rel="prefetch" href="/assets/js/page-Vuepress.69f36db7.js"><link rel="prefetch" href="/assets/js/page-classclassloader相关.6db5b586.js"><link rel="prefetch" href="/assets/js/page-explain调优.e5d2afc8.js"><link rel="prefetch" href="/assets/js/page-hehe.e565a439.js"><link rel="prefetch" href="/assets/js/page-maven-resources-plugin.dd784e53.js"><link rel="prefetch" href="/assets/js/page-maven-surefire-plugin.38769524.js"><link rel="prefetch" href="/assets/js/page-monitorwatchtrace相关.afa3fd5e.js"><link rel="prefetch" href="/assets/js/page-spring-boot-maven-plugin.efdb017d.js"><link rel="prefetch" href="/assets/js/page-synchronized锁升级.71b2221a.js"><link rel="prefetch" href="/assets/js/page-①谁在调用JUnit.6957a97c.js"><link rel="prefetch" href="/assets/js/page-②如何知道是否依赖Spring容器.df784abd.js"><link rel="prefetch" href="/assets/js/page-中文文档写作规范.542b0158.js"><link rel="prefetch" href="/assets/js/page-主要功能与配置演示.7f17cb8b.js"><link rel="prefetch" href="/assets/js/page-事务回滚原理.53b6d8c0.js"><link rel="prefetch" href="/assets/js/page-使用断言.efb21446.js"><link rel="prefetch" href="/assets/js/page-信号量Semaphore.cf56efce.js"><link rel="prefetch" href="/assets/js/page-倒计锁CountDownLatch.7b9b1fe2.js"><link rel="prefetch" href="/assets/js/page-八阿哥的剑.4e577a52.js"><link rel="prefetch" href="/assets/js/page-再也不怕被HashMap欺负了.cc30b61c.js"><link rel="prefetch" href="/assets/js/page-函数式编程.e4f63895.js"><link rel="prefetch" href="/assets/js/page-分布式锁.b1f0366a.js"><link rel="prefetch" href="/assets/js/page-匆匆那年.29b94815.js"><link rel="prefetch" href="/assets/js/page-单元测试专题.3f75c34e.js"><link rel="prefetch" href="/assets/js/page-单测维护.28feed6c.js"><link rel="prefetch" href="/assets/js/page-博客主页.7df6a586.js"><link rel="prefetch" href="/assets/js/page-反射框架Reflections.b4222fc9.js"><link rel="prefetch" href="/assets/js/page-启动缓慢.d6f80aab.js"><link rel="prefetch" href="/assets/js/page-命名规则.0fc01f8e.js"><link rel="prefetch" href="/assets/js/page-基础命令.cb17c383.js"><link rel="prefetch" href="/assets/js/page-基础教程.c99a0a9a.js"><link rel="prefetch" href="/assets/js/page-如何学会复盘.758f258c.js"><link rel="prefetch" href="/assets/js/page-如何找到垃圾SQL语句,你知道这些方式吗？.6075ec49.js"><link rel="prefetch" href="/assets/js/page-委派双亲之类加载器.223c4b45.js"><link rel="prefetch" href="/assets/js/page-密码加密的文章.4664890f.js"><link rel="prefetch" href="/assets/js/page-年终总结汇报大纲.47b5517c.js"><link rel="prefetch" href="/assets/js/page-幻灯片页.11966145.js"><link rel="prefetch" href="/assets/js/page-开个工厂造线程.4e315027.js"><link rel="prefetch" href="/assets/js/page-异步验证.516226e1.js"><link rel="prefetch" href="/assets/js/page-影响范围.69c90177.js"><link rel="prefetch" href="/assets/js/page-循环锁屏障CyclicBarrier.31552a99.js"><link rel="prefetch" href="/assets/js/page-成熟的线程要懂得拒绝.eefb194d.js"><link rel="prefetch" href="/assets/js/page-技术选型.391ff028.js"><link rel="prefetch" href="/assets/js/page-指南.d3d6a237.js"><link rel="prefetch" href="/assets/js/page-数据隔离.db2897cf.js"><link rel="prefetch" href="/assets/js/page-极限测试.b2928a28.js"><link rel="prefetch" href="/assets/js/page-案例分享.f1c27b41.js"><link rel="prefetch" href="/assets/js/page-没有条件创造条件Condition.c355f184.js"><link rel="prefetch" href="/assets/js/page-没有规矩不成方圆.01ea467e.js"><link rel="prefetch" href="/assets/js/page-测试成本.3e142ac4.js"><link rel="prefetch" href="/assets/js/page-测试范围.5e1391d5.js"><link rel="prefetch" href="/assets/js/page-海量数据模拟.fe7c74a1.js"><link rel="prefetch" href="/assets/js/page-消息验证.3d0ecd00.js"><link rel="prefetch" href="/assets/js/page-程序猿到底有没有必要买一台阿里云服务器.bd957928.js"><link rel="prefetch" href="/assets/js/page-第01篇Mybatis抛砖引玉环境搭建.a5b06485.js"><link rel="prefetch" href="/assets/js/page-第02篇Mybatis配置文件解析.3a0df24a.js"><link rel="prefetch" href="/assets/js/page-第03篇Mybatis核心类详细介绍.ade04675.js"><link rel="prefetch" href="/assets/js/page-第04篇Mybatis代理对象生成.6bb46d74.js"><link rel="prefetch" href="/assets/js/page-第05篇Mybatis的SQL执行流程分析.d9b955be.js"><link rel="prefetch" href="/assets/js/page-第06篇Mybatis缓存设计.d2d56740.js"><link rel="prefetch" href="/assets/js/page-第07篇Mybatis缓存装饰器.6ded857e.js"><link rel="prefetch" href="/assets/js/page-第08篇Mybatis的插件设计分析.8ab3da44.js"><link rel="prefetch" href="/assets/js/page-第09篇Mybatis查询限制插件设计.b24027e8.js"><link rel="prefetch" href="/assets/js/page-第10篇Mybatis分页插件设计.f9811995.js"><link rel="prefetch" href="/assets/js/page-第11篇Mybatis权限插件设计.c0c06541.js"><link rel="prefetch" href="/assets/js/page-线程安全之原子操作.4902144e.js"><link rel="prefetch" href="/assets/js/page-线程安全感.1c247b3b.js"><link rel="prefetch" href="/assets/js/page-线程池扫盲.e6e1fdea.js"><link rel="prefetch" href="/assets/js/page-组件禁用.7b492681.js"><link rel="prefetch" href="/assets/js/page-给线程归归类.475edce1.js"><link rel="prefetch" href="/assets/js/page-自定义布局.dcb127fd.js"><link rel="prefetch" href="/assets/js/page-自定义插件教程.c8d07f54.js"><link rel="prefetch" href="/assets/js/page-读写锁ReadWriteLock.290e9850.js"><link rel="prefetch" href="/assets/js/page-重入锁ReentrantLock.116452aa.js"><link rel="prefetch" href="/assets/js/page-重剑无锋大巧不工.0655fc3c.js"><link rel="prefetch" href="/assets/js/page-页面配置.66d729fd.js"><link rel="prefetch" href="/assets/js/page-项目主页.3f6cf696.js"><link rel="prefetch" href="/assets/js/page-领域驱动模型的思考与认知.f042ced8.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.465ec439.js"><link rel="prefetch" href="/assets/js/vendors~mermaid.26d75e42.js"><link rel="prefetch" href="/assets/js/vendors~photo-swipe.13a74a92.js"><link rel="prefetch" href="/assets/js/vendors~reveal.798c3908.js"><link rel="prefetch" href="/assets/js/vendors~waline.29234001.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.23a55af9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container has-navbar has-sidebar has-anchor"><header class="navbar"><!----> <div class="content__navbar-start"></div> <button title="Sidebar Button" class="sidebar-button"><span class="icon"></span></button> <a href="/" class="home-link router-link-active"><img src="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico" alt="西魏陶渊明" class="logo"> <!----> <span class="site-name can-hide">西魏陶渊明</span></a> <!----> <div class="content__navbar-center"></div> <div class="links"><button tabindex="-1" aria-hidden="true" class="color-button"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="skin-icon"><path d="M224 800c0 9.6 3.2 44.8 6.4 54.4 6.4 48-48 76.8-48 76.8s80 41.6 147.2 0 134.4-134.4
+        38.4-195.2c-22.4-12.8-41.6-19.2-57.6-19.2C259.2 716.8 227.2 761.6 224 800zM560 675.2l-32
+        51.2c-51.2 51.2-83.2 32-83.2 32 25.6 67.2 0 112-12.8 128 25.6 6.4 51.2 9.6 80 9.6 54.4 0
+        102.4-9.6 150.4-32l0 0c3.2 0 3.2-3.2 3.2-3.2 22.4-16 12.8-35.2
+        6.4-44.8-9.6-12.8-12.8-25.6-12.8-41.6 0-54.4 60.8-99.2 137.6-99.2 6.4 0 12.8 0 22.4
+        0 12.8 0 38.4 9.6 48-25.6 0-3.2 0-3.2 3.2-6.4 0-3.2 3.2-6.4 3.2-6.4 6.4-16 6.4-16 6.4-19.2
+        9.6-35.2 16-73.6 16-115.2 0-105.6-41.6-198.4-108.8-268.8C704 396.8 560 675.2 560 675.2zM224
+        419.2c0-28.8 22.4-51.2 51.2-51.2 28.8 0 51.2 22.4 51.2 51.2 0 28.8-22.4 51.2-51.2 51.2C246.4
+        470.4 224 448 224 419.2zM320 284.8c0-22.4 19.2-41.6 41.6-41.6 22.4 0 41.6 19.2 41.6 41.6 0
+        22.4-19.2 41.6-41.6 41.6C339.2 326.4 320 307.2 320 284.8zM457.6 208c0-12.8 12.8-25.6 25.6-25.6
+        12.8 0 25.6 12.8 25.6 25.6 0 12.8-12.8 25.6-25.6 25.6C470.4 233.6 457.6 220.8 457.6 208zM128
+        505.6C128 592 153.6 672 201.6 736c28.8-60.8 112-60.8 124.8-60.8-16-51.2 16-99.2
+        16-99.2l316.8-422.4c-48-19.2-99.2-32-150.4-32C297.6 118.4 128 291.2 128 505.6zM764.8
+        86.4c-22.4 19.2-390.4 518.4-390.4 518.4-22.4 28.8-12.8 76.8 22.4 99.2l9.6 6.4c35.2 22.4
+        80 12.8 99.2-25.6 0 0 6.4-12.8 9.6-19.2 54.4-105.6 275.2-524.8 288-553.6
+        6.4-19.2-3.2-32-19.2-32C777.6 76.8 771.2 80 764.8 86.4z"></path></svg> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="darkmode-toggle"><label for="darkmode-toggle" class="desc">主题模式:</label> <div class="darkmode-switch"><div class="switch"><input id="switch" type="checkbox" checked="checked" class="switch-input"> <label for="switch" class="label"><span class="label-content"></span></label></div></div> <!----></div></div></div></button> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn/网站地图/" class="nav-link"><i class="iconfont icon-creative"></i>
+  网站地图
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        Java
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><a href="/learn/test/" class="nav-link"><!---->
+  单元测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+        Maven扩展
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  编译卡点插件
+</a></li><li class="dropdown-subitem"><a href="/language/jap32anese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        框架篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/spring/" class="nav-link router-link-active active"><!---->
+  Spring
+</a></li><li class="dropdown-item"><a href="/learn/mybatis/" class="nav-link"><!---->
+  Mybatis
+</a></li><li class="dropdown-item"><a href="/language/jap1333anese/" class="nav-link"><!---->
+  Mybatis-Plus
+</a></li><li class="dropdown-item"><a href="/language/japa222nese/" class="nav-link"><!---->
+  Dubbo
+</a></li><li class="dropdown-item"><a href="/language/japa444nese/" class="nav-link"><!---->
+  Job
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+        工具篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><a href="/learn/tools/bytecode/Javassist.html" class="nav-link"><!---->
+  字节码
+</a></li><li class="dropdown-item"><a href="/learn/tools/druid/" class="nav-link"><!---->
+  SQL解析
+</a></li><li class="dropdown-item"><a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><a href="/learn/tools/arthas/" class="nav-link"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+        Database
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+        设计&amp;规范
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+        博客搭建
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese1/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanes2e/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div></nav> <!----> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link can-hide">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <!----> <div class="content__navbar-end"></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!----> <!----> <div class="content__sidebar-top"></div> <nav class="sidebar-nav-links"><div class="nav-item"><a href="/learn/网站地图/" class="nav-link"><i class="iconfont icon-creative"></i>
+  网站地图
+</a></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      Java
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><!----> <a href="/learn/test/" class="nav-link"><!---->
+  单元测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+      Maven扩展
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  编译卡点插件
+</a></li><li class="dropdown-subitem"><a href="/language/jap32anese/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      框架篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/spring/" class="nav-link router-link-active active"><!---->
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/learn/mybatis/" class="nav-link"><!---->
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/language/jap1333anese/" class="nav-link"><!---->
+  Mybatis-Plus
+</a></li><li class="dropdown-item"><!----> <a href="/language/japa222nese/" class="nav-link"><!---->
+  Dubbo
+</a></li><li class="dropdown-item"><!----> <a href="/language/japa444nese/" class="nav-link"><!---->
+  Job
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+      工具篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/bytecode/Javassist.html" class="nav-link"><!---->
+  字节码
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/druid/" class="nav-link"><!---->
+  SQL解析
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/arthas/" class="nav-link"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+      Database
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+      设计&amp;规范
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+      博客搭建
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese1/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanes2e/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <!----> <div class="content__sidebar-center"></div> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><i class="iconfont icon-creative"></i> <span class="title">基础知识</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/" class="sidebar-link">Spring循环依赖</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#一、什么是循环依赖" class="sidebar-link">一、什么是循环依赖</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#二、解决循环依赖思路" class="sidebar-link">二、解决循环依赖思路</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#三、spring如何解决循环依赖" class="sidebar-link">三、Spring如何解决循环依赖</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-1-spring中创建bean的步骤" class="sidebar-link heading3">3.1 Spring中创建Bean的步骤</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-2-循环依赖三层缓存" class="sidebar-link heading3">3.2 循环依赖三层缓存</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_3-3-发现点问题" class="sidebar-link heading3">3.3 发现点问题</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#四、知识点总结" class="sidebar-link">四、知识点总结</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-1-满足循环依赖的条件是什么" class="sidebar-link heading3">4.1 满足循环依赖的条件是什么?</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-2-循环依赖可能导致什么问题" class="sidebar-link heading3">4.2 循环依赖可能导致什么问题?</a></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#_4-3-为什么要用三级缓存而不是二级缓存" class="sidebar-link heading3">4.3 为什么要用三级缓存而不是二级缓存?</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/#五、开放性问题" class="sidebar-link">五、开放性问题</a></li></ul></li><li><a href="/learn/spring/AOP/" class="sidebar-link">AOP 使用指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#https-img-shields-io-badge-e6-ba-90-e7-a0-81-aop-green-https-github-com-lxchinesszz-spring-learning" class="sidebar-link">![](https://github.com/lxchinesszz/spring-learning)</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#一、常用注解" class="sidebar-link">一、常用注解</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#二、切面表达式" class="sidebar-link">二、切面表达式</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#三、api使用案例" class="sidebar-link">三、API使用案例</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#_3-1-within" class="sidebar-link">3.1 within</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#a-api说明" class="sidebar-link heading3">a. API说明</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#b-目录" class="sidebar-link heading3">b. 目录</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#c-拦截代码" class="sidebar-link heading3">c. 拦截代码</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#_3-2-within" class="sidebar-link">3.2 @within</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#a-api说明-2" class="sidebar-link heading3">a. API说明</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#b-目录-2" class="sidebar-link heading3">b. 目录</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#c-拦截代码-2" class="sidebar-link heading3">c. 拦截代码</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#_3-3-this" class="sidebar-link">3.3 this</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#a-api说明-3" class="sidebar-link heading3">a. API说明</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#b-目录-3" class="sidebar-link heading3">b. 目录</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#c-拦截代码-3" class="sidebar-link heading3">c. 拦截代码</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#_3-4-args" class="sidebar-link">3.4 args</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#a-api说明-4" class="sidebar-link heading3">a. API说明</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#b-目录-4" class="sidebar-link heading3">b. 目录</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#c-拦截代码-4" class="sidebar-link heading3">c. 拦截代码</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#_3-5-annotation" class="sidebar-link">3.5 @annotation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#a-api说明-5" class="sidebar-link heading3">a. API说明</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#b-目录-5" class="sidebar-link heading3">b. 目录</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#c-代码" class="sidebar-link heading3">c. 代码</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#_3-6-args" class="sidebar-link">3.6 @args</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#a-api说明-6" class="sidebar-link heading3">a. API说明</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#b-目录-6" class="sidebar-link heading3">b. 目录</a></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#c-代码-2" class="sidebar-link heading3">c. 代码</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#_3-7-execution" class="sidebar-link">3.7 execution</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/AOP/#a-api说明-7" class="sidebar-link heading3">a. API说明</a></li></ul></li></ul></li><li><a href="/learn/spring/EL/" aria-current="page" class="active sidebar-link">Spring EL表达式使用指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/EL/#一、概述" class="sidebar-link">一、概述</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#二、作用" class="sidebar-link">二、作用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_2-1-基本表达式" class="sidebar-link heading3">2.1 基本表达式</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_2-2-类相关表达式" class="sidebar-link heading3">2.2 类相关表达式</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_2-3-集合相关表达式" class="sidebar-link heading3">2.3 集合相关表达式</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_2-4-其他表达式" class="sidebar-link heading3">2.4 其他表达式</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#三、主要类" class="sidebar-link">三、主要类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_3-1-expressionparser" class="sidebar-link heading3">3.1 ExpressionParser</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_3-2-parsercontext" class="sidebar-link heading3">3.2 ParserContext</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_3-3-expression" class="sidebar-link heading3">3.3 Expression</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_3-4-evaluationcontext" class="sidebar-link heading3">3.4 EvaluationContext</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#四、案例运用" class="sidebar-link">四、案例运用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_4-1-基础的hello" class="sidebar-link heading3">4.1 基础的Hello</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_4-2-关系运算符" class="sidebar-link heading3">4.2 关系运算符</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_4-3-逻辑运算符" class="sidebar-link heading3">4.3 逻辑运算符</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_4-4-算术运算符" class="sidebar-link heading3">4.4 算术运算符</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#五、组合使用" class="sidebar-link">五、组合使用</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#六、操作类" class="sidebar-link">六、操作类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_6-1-类类型" class="sidebar-link heading3">6.1 类类型</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_6-2-自定义函数" class="sidebar-link heading3">6.2 自定义函数</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_6-3-类属性" class="sidebar-link heading3">6.3 类属性</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#七、模板表达式" class="sidebar-link">七、模板表达式</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#八、规则引擎" class="sidebar-link">八、规则引擎</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_8-1-背景" class="sidebar-link heading3">8.1 背景</a></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#_8-2-实现" class="sidebar-link heading3">8.2 实现</a></li></ul></li><li class="sidebar-sub-header"><a href="/learn/spring/EL/#九、总结" class="sidebar-link">九、总结</a></li></ul></li></ul></section></li></ul> <!----> <div class="content__sidebar-bottom"></div> <!----></aside> <main class="page"><nav class="breadcrumb disable"><!----></nav> <!----> <div class="content__page-top"></div> <div vocab="https://schema.org/" typeof="Article" class="page-title"><h1><!----> <span property="headline">Spring EL表达式使用指南</span></h1> <!----> <!----> <hr></div> <div class="anchor-place-holder"><aside id="anchor"><div class="anchor-banner"><img class="anchor-banner-img" src="https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg"></div><div class="anchor-wrapper"><ul class="anchor-list"><li class="anchor"><a href="/learn/spring/EL/#一、概述" class="anchor-link heading2"><div>一、概述</div></a></li><li class="anchor"><a href="/learn/spring/EL/#二、作用" class="anchor-link heading2"><div>二、作用</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_2-1-基本表达式" class="anchor-link heading3"><div>2.1 基本表达式</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_2-2-类相关表达式" class="anchor-link heading3"><div>2.2 类相关表达式</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_2-3-集合相关表达式" class="anchor-link heading3"><div>2.3 集合相关表达式</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_2-4-其他表达式" class="anchor-link heading3"><div>2.4 其他表达式</div></a></li><li class="anchor"><a href="/learn/spring/EL/#三、主要类" class="anchor-link heading2"><div>三、主要类</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_3-1-expressionparser" class="anchor-link heading3"><div>3.1 ExpressionParser</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_3-2-parsercontext" class="anchor-link heading3"><div>3.2 ParserContext</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_3-3-expression" class="anchor-link heading3"><div>3.3 Expression</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_3-4-evaluationcontext" class="anchor-link heading3"><div>3.4 EvaluationContext</div></a></li><li class="anchor"><a href="/learn/spring/EL/#四、案例运用" class="anchor-link heading2"><div>四、案例运用</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_4-1-基础的hello" class="anchor-link heading3"><div>4.1 基础的Hello</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_4-2-关系运算符" class="anchor-link heading3"><div>4.2 关系运算符</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_4-3-逻辑运算符" class="anchor-link heading3"><div>4.3 逻辑运算符</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_4-4-算术运算符" class="anchor-link heading3"><div>4.4 算术运算符</div></a></li><li class="anchor"><a href="/learn/spring/EL/#五、组合使用" class="anchor-link heading2"><div>五、组合使用</div></a></li><li class="anchor"><a href="/learn/spring/EL/#六、操作类" class="anchor-link heading2"><div>六、操作类</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_6-1-类类型" class="anchor-link heading3"><div>6.1 类类型</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_6-2-自定义函数" class="anchor-link heading3"><div>6.2 自定义函数</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_6-3-类属性" class="anchor-link heading3"><div>6.3 类属性</div></a></li><li class="anchor"><a href="/learn/spring/EL/#七、模板表达式" class="anchor-link heading2"><div>七、模板表达式</div></a></li><li class="anchor"><a href="/learn/spring/EL/#八、规则引擎" class="anchor-link heading2"><div>八、规则引擎</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_8-1-背景" class="anchor-link heading3"><div>8.1 背景</div></a></li><li class="anchor"><a href="/learn/spring/EL/#_8-2-实现" class="anchor-link heading3"><div>8.2 实现</div></a></li><li class="anchor"><a href="/learn/spring/EL/#九、总结" class="anchor-link heading2"><div>九、总结</div></a></li></ul></div></aside></div> <!----> <div class="content__content-top"></div> <div><div class="theme-default-content content__default"><p><img src="https://img.springlearn.cn/blog/learn_1610710891000.png" alt="" loading="lazy"></p> <div class="custom-block tip" data-v-2de2b786><p class="custom-block-title" data-v-2de2b786>真正的猛士,每天干一碗毒鸡汤!</p> <p id="yiyan" data-v-2de2b786>问世间钱为何物，只叫人生死相许。！😄</p></div> <blockquote><p>好久没有发现这么好的文章了,今天逛头条发现了一篇好文章,在这里转载一下
+大家可以学习一下,文章原文地址见参考。希望支持原作者,在头条点一个关注。</p></blockquote> <h2 id="一、概述"><a href="#一、概述" class="header-anchor">#</a> 一、概述</h2> <p>Spring表达式语言全称为“Spring Expression Language”，缩写为“SpEL”。是一个支持查询，并在运行时操纵一个对象图功能、是一门强大的表达式语言。SpEL是单独模块，只依赖于core模块，可以被独立使用、运行。</p> <p><strong>参考文章</strong></p> <p><a href="https://docs.spring.io/spring-integration/docs/5.3.0.RELEASE/reference/html/spel.html#spel" target="_blank" rel="noopener noreferrer">SpringEpel<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://www.toutiao.com/i6911604368844292620/" target="_blank" rel="noopener noreferrer">玩转SpEL<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="二、作用"><a href="#二、作用" class="header-anchor">#</a> 二、作用</h2> <h3 id="_2-1-基本表达式"><a href="#_2-1-基本表达式" class="header-anchor">#</a> 2.1 基本表达式</h3> <p>字面量表达式、关系，逻辑与算数运算表达式、字符串连接及截取表达式、三目运算、正则表达式、括号优先级表达式；</p> <h3 id="_2-2-类相关表达式"><a href="#_2-2-类相关表达式" class="header-anchor">#</a> 2.2 类相关表达式</h3> <p>类类型表达式、类实例化、instanceof表达式、变量定义及引用、赋值表达式、自定义函数、对象属性存取及安全导航表达式、对象方法调用、Bean引用；</p> <h3 id="_2-3-集合相关表达式"><a href="#_2-3-集合相关表达式" class="header-anchor">#</a> 2.3 集合相关表达式</h3> <p>内联List、内联数组、集合，字典访问、列表，字典，数组修改、集合投影、集合选择；不支持多维内联数组初始化；不支持内联字典定义；</p> <h3 id="_2-4-其他表达式"><a href="#_2-4-其他表达式" class="header-anchor">#</a> 2.4 其他表达式</h3> <p>模板表达式。</p> <h2 id="三、主要类"><a href="#三、主要类" class="header-anchor">#</a> 三、主要类</h2> <h3 id="_3-1-expressionparser"><a href="#_3-1-expressionparser" class="header-anchor">#</a> 3.1 ExpressionParser</h3> <p>表达式解析器接口，包含了(Expression) parseExpression(String), (Expression) parseExpression(String, ParserContext)两个接口方法</p> <h3 id="_3-2-parsercontext"><a href="#_3-2-parsercontext" class="header-anchor">#</a> 3.2 ParserContext</h3> <p>解析器上下文接口，主要是对解析器Token的抽象类，包含3个方法：getExpressionPrefix,getExpressionSuffix和isTemplate，就是表示表达式从什么符号开始什么符号结束，是否是作为模板（包含字面量和表达式）解析。</p> <h3 id="_3-3-expression"><a href="#_3-3-expression" class="header-anchor">#</a> 3.3 Expression</h3> <p>表达式的抽象，是经过解析后的字符串表达式的形式表示。通过expressionInstance.getValue方法，可以获取表示式的值。也可以通过调用getValue(EvaluationContext)，从评估（evaluation)上下文中获取表达式对于当前上下文的值</p> <h3 id="_3-4-evaluationcontext"><a href="#_3-4-evaluationcontext" class="header-anchor">#</a> 3.4 EvaluationContext</h3> <p>估值上下文接口，只有一个setter方法：<code>setVariable(String, Object)</code>，通过调用该方法，可以为evaluation提供上下文变量</p> <h2 id="四、案例运用"><a href="#四、案例运用" class="header-anchor">#</a> 四、案例运用</h2> <h3 id="_4-1-基础的hello"><a href="#_4-1-基础的hello" class="header-anchor">#</a> 4.1 基础的Hello</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Test
+public void baseTest() {
+// 字符串表达式
+    String exp = &quot;Hello , #{ #username }&quot;;
+    // 表达式解析器
+    ExpressionParser parser = new SpelExpressionParser();
+    // 表达式上下文
+    EvaluationContext context = new StandardEvaluationContext();
+    context.setVariable(&quot;username&quot;, &quot;纹银三百两&quot;);
+    // 解析
+    Expression expression = parser.parseExpression(exp, new TemplateParserContext());
+    System.out.println(expression.getValue(context, String.class));
+  }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>基础结果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Hello , 纹银三百两
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_4-2-关系运算符"><a href="#_4-2-关系运算符" class="header-anchor">#</a> 4.2 关系运算符</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>//true
+boolean trueValue1 = parser.parseExpression(&quot;2 == 2&quot;).getValue(Boolean.class);
+//false
+boolean falseValue1 = parser.parseExpression(&quot;2 &lt; -5.0&quot;).getValue(Boolean.class);
+//true
+boolean trueValue2 = parser.parseExpression(&quot;'black' &lt; 'block'&quot;).getValue(Boolean.class);
+//false，字符xyz是否为int类型
+boolean falseValue2 = parser.parseExpression(&quot;'xyz' instanceof T(int)&quot;).getValue(Boolean.class);
+//true，正则是否匹配
+boolean trueValue3 =parser.parseExpression(&quot;'5.00' matches '^-?\\d+(\\.\\d{2})?$'&quot;).getValue(Boolean.class);
+//false
+boolean falseValue3=parser.parseExpression(&quot;'5.0067' matches '^-?\\d+(\\.\\d{2})?$'&quot;).getValue(Boolean.class);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="_4-3-逻辑运算符"><a href="#_4-3-逻辑运算符" class="header-anchor">#</a> 4.3 逻辑运算符</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>// -- AND 与运算 --
+//false 
+boolean falseValue4 = parser.parseExpression(&quot;true and false&quot;).getValue(Boolean.class);
+ // -- OR 或运算--
+//true
+boolean trueValue5 = parser.parseExpression(&quot;true or false&quot;).getValue(Boolean.class);
+//false
+boolean falseValue5 = parser.parseExpression(&quot;!true&quot;).getValue(Boolean.class);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_4-4-算术运算符"><a href="#_4-4-算术运算符" class="header-anchor">#</a> 4.4 算术运算符</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>// Addition
+int two = parser.parseExpression(&quot;1 + 1&quot;).getValue(Integer.class); // 2
+String testString =
+parser.parseExpression(&quot;'test' + ' ' + 'string'&quot;).getValue(String.class); // 'test string'
+// Subtraction
+int four = parser.parseExpression(&quot;1 - -3&quot;).getValue(Integer.class); // 4
+double d = parser.parseExpression(&quot;1000.00 - 1e4&quot;).getValue(Double.class); // -9000
+// Multiplication
+int six = parser.parseExpression(&quot;-2 * -3&quot;).getValue(Integer.class); // 6
+double twentyFour = parser.parseExpression(&quot;2.0 * 3e0 * 4&quot;).getValue(Double.class); // 24.0
+// Division
+int minusTwo = parser.parseExpression(&quot;6 / -3&quot;).getValue(Integer.class); // -2
+double one = parser.parseExpression(&quot;8.0 / 4e0 / 2&quot;).getValue(Double.class); // 1.0
+// Modulus
+int three = parser.parseExpression(&quot;7 % 4&quot;).getValue(Integer.class); // 3
+int one = parser.parseExpression(&quot;8 / 5 % 2&quot;).getValue(Integer.class); // 1
+// Operator precedence
+int minusTwentyOne = parser.parseExpression(&quot;1+2-3*8&quot;).getValue(Integer.class); // -21
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="五、组合使用"><a href="#五、组合使用" class="header-anchor">#</a> 五、组合使用</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Test
+  public void expressionTest() {
+    String exp = &quot;1 between {1, 2} and 1&gt;2&quot;;
+    ExpressionParser parser = new SpelExpressionParser();
+    Expression expression = parser.parseExpression(exp);
+    //false
+    System.out.println(expression.getValue(boolean.class));
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="六、操作类"><a href="#六、操作类" class="header-anchor">#</a> 六、操作类</h2> <h3 id="_6-1-类类型"><a href="#_6-1-类类型" class="header-anchor">#</a> 6.1 类类型</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Test
+public void classTypeTest() {
+    ExpressionParser parser = new SpelExpressionParser();
+    //java.lang包类访问
+    Class&lt;String&gt; result1 = parser.parseExpression(&quot;T(String)&quot;).getValue(Class.class);
+    //class java.lang.String
+    System.out.println(result1);
+
+    //其他包类访问
+    String expression2 = &quot;T(spel.SpElTest)&quot;;
+    Class&lt;SpElTest&gt; value = parser.parseExpression(expression2).getValue(Class.class);
+    //true
+    System.out.println(value == SpElTest.class);
+
+    //类静态字段访问
+    int result3 = parser.parseExpression(&quot;T(Integer).MAX_VALUE&quot;).getValue(int.class);
+    //true
+    System.out.println(result3 == Integer.MAX_VALUE);
+
+    //类静态方法调用
+    int result4 = parser.parseExpression(&quot;T(Integer).parseInt('1')&quot;).getValue(int.class);
+    //1
+    System.out.println(result4);
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h3 id="_6-2-自定义函数"><a href="#_6-2-自定义函数" class="header-anchor">#</a> 6.2 自定义函数</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+   * 两数之和
+   */
+public static Integer add(Integer x, Integer y) {
+    return x + y;
+  }
+
+@Test
+public void functionTest() throws NoSuchMethodException {
+    // 表达式
+    String exp = &quot;#{ #add(4,5)}&quot;;
+    // 表达式上下文
+    StandardEvaluationContext context = new StandardEvaluationContext();
+    Method add = SpElTest.class.getDeclaredMethod(&quot;add&quot;, Integer.class, Integer.class);
+    context.registerFunction(&quot;add&quot;, add);
+    // 表达式解析器
+    ExpressionParser parser = new SpelExpressionParser();
+    // 解析
+    Expression expression = parser.parseExpression(exp, new TemplateParserContext());
+    // 9
+    System.out.println(expression.getValue(context, Integer.class));
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="_6-3-类属性"><a href="#_6-3-类属性" class="header-anchor">#</a> 6.3 类属性</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code> @Test
+  public void assignTest() {
+    String exp = &quot;username: #{#user.username},age: #{#user.age}&quot;;
+    StandardEvaluationContext context = new StandardEvaluationContext();
+    Person person = new Person()
+        .setUsername(&quot;纹银三百两&quot;)
+        .setAge(23);
+    context.setVariable(&quot;user&quot;, person);
+    ExpressionParser parser = new SpelExpressionParser();
+    Expression expression = parser.parseExpression(exp, new TemplateParserContext());
+    //username: 纹银三百两,age: 23
+    System.out.println(expression.getValue(context, String.class));
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="七、模板表达式"><a href="#七、模板表达式" class="header-anchor">#</a> 七、模板表达式</h2> <p>指定模板 <code>%{ }</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Test
+public void templateTest() {
+    SpelExpressionParser parser = new SpelExpressionParser();
+    ParserContext context = new TemplateParserContext(&quot;%{&quot;, &quot;}&quot;);
+    Expression expression = parser.parseExpression(&quot;你好:%{#name},正在学习:%{#lesson}，加油、奋斗！！！&quot;, context);
+    EvaluationContext evaluationContext = new StandardEvaluationContext();
+    evaluationContext.setVariable(&quot;name&quot;, &quot;纹银三百两&quot;);
+    evaluationContext.setVariable(&quot;lesson&quot;, &quot;spring高手系列。&quot;);
+    String value = expression.getValue(evaluationContext, String.class);
+    //你好:纹银三百两,正在学习:spring高手系列。加油、奋斗！！！
+    System.out.println(value);
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="八、规则引擎"><a href="#八、规则引擎" class="header-anchor">#</a> 八、规则引擎</h2> <h3 id="_8-1-背景"><a href="#_8-1-背景" class="header-anchor">#</a> 8.1 背景</h3> <p>假设人员注册信息(姓名、年龄、性别），自定义其中规则，如下：</p> <p>李家好汉（李姓，男，且满18岁）
+豆蔻少女（13-15岁，女性）</p> <h3 id="_8-2-实现"><a href="#_8-2-实现" class="header-anchor">#</a> 8.2 实现</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Test
+  public void ruleTest() {
+    Person person1 = new Person().setUsername(&quot;小龙女&quot;).setAge(14).setSex(1);
+    checkRule(FastJsonUtil.parseMap(JSON.toJSONString(person1)));
+    Person person2 = new Person().setUsername(&quot;张三&quot;).setAge(18).setSex(0);
+    checkRule(FastJsonUtil.parseMap(JSON.toJSONString(person2)));
+    Person person3 = new Person().setUsername(&quot;李四&quot;).setAge(20).setSex(0);
+    checkRule(FastJsonUtil.parseMap(JSON.toJSONString(person3)));
+
+  }
+
+  /**
+   * 规则check
+   *
+   * @param exp 参数map
+   */
+  private static void checkRule(Map&lt;String, Object&gt; exp) {
+    ExpressionParser parser = new SpelExpressionParser();
+    //规则容器
+    Map&lt;String, String&gt; ruleMap = Maps.newHashMap();
+    String rule1 = &quot;( #username.contains({'李'}) and  #age &gt; 18 and #sex == 0 )&quot;;
+    ruleMap.put(&quot;李家好汉&quot;, rule1);
+    String rule2 = &quot;( #age between {13,15} and #sex == 1 )&quot;;
+    ruleMap.put(&quot;豆蔻少女&quot;, rule2);
+    EvaluationContext spElContext = getSpElContext(exp);
+    ruleMap.keySet().forEach(key -&gt; {
+      String ruleV = ruleMap.get(key);
+      Boolean isPass = parser.parseExpression(ruleV).getValue(spElContext, Boolean.class);
+      if (Objects.nonNull(isPass) &amp;&amp; isPass) {
+        System.out.println(&quot;username:【&quot; + exp.get(&quot;username&quot;) + &quot;】,命中规则:【&quot; + key+&quot;】&quot;);
+      }
+
+    });
+  }
+
+  /**
+   * 解析表达式需要的上下文，透传请求参数
+   *
+   * @param param 参数
+   * @return 返回结果
+   */
+  private static EvaluationContext getSpElContext(Map&lt;String, Object&gt; param) {
+    StandardEvaluationContext evaluationContext = new StandardEvaluationContext();
+    for (Entry&lt;String, Object&gt; entry : param.entrySet()) {
+      if (entry.getValue() != null) {
+        evaluationContext.setVariable(entry.getKey(), entry.getValue());
+      }
+    }
+    return evaluationContext;
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><p><strong>结果：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>username:【小龙女】,命中规则:【豆蔻少女】
+username:【李四】,命中规则:【李家好汉】
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="九、总结"><a href="#九、总结" class="header-anchor">#</a> 九、总结</h2> <p>Spring EL表达式，作为JAVA的内置语言，十分强大。主要可以用来做表达式解析，或者规则链路，且可以操作函数方法；从而达到一种动态的链路规则解析效果。</p></div> <div class="theme-default-content" data-v-a4b7f0d6><hr data-v-a4b7f0d6> <div style="display: flex" data-v-a4b7f0d6><div data-v-a4b7f0d6>本文由西魏陶渊明版权所有。如若转载，请注明出处：西魏陶渊明</div> <div style="margin-left: 1rem" data-v-a4b7f0d6><a href="https://java.springlearn.cn/" target="_blank" rel="noopener noreferrer" data-v-a4b7f0d6><img src="https://img.shields.io/badge/%E6%8A%80%E6%9C%AF%E7%AB%99-%E6%A1%83%E8%8A%B1%E6%BA%90%E8%AE%B0%20-green" alt loading="lazy" data-v-a4b7f0d6><span data-v-a4b7f0d6><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" data-v-a4b7f0d6><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z" data-v-a4b7f0d6></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9" data-v-a4b7f0d6></polygon></svg> <span class="sr-only" data-v-a4b7f0d6>(opens new window)</span></span></a></div></div></div></div> <!----> <div class="content__content-bottom"></div> <footer class="page-meta"><div class="edit-link"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon edit-icon"><path d="M117.953 696.992 64.306 959.696l265.931-49.336 450.204-452.505-212.284-213.376-450.204 452.513zm496.384-296.326L219.039 797.993l-46.108-46.34L568.233 354.33l46.104 46.335zm345.357-122.99-114.45 115.04-212.288-213.377 114.45-115.035 212.288 213.371zm0 0" fill="currentColor"></path></svg> <a href="https://github.com/lxchinesszz/JavaGuide/edit/master/docs/learn/spring/EL.md" target="_blank" rel="noopener noreferrer">编辑此页</a></div> <!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/learn/spring/AOP/" class="prev"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon prev-icon"><path d="M906.783 588.79c-.02 8.499-6.882 15.36-15.38 15.37l-443.7-.01 75.704 191.682c2.52 6.42.482 13.763-5.038 17.91-5.52 4.168-13.138 4.147-18.616-.092L123.228 524.175a15.362 15.362 0 0 1-6-12.165c0-4.782 2.222-9.277 6-12.185L499.753 210.35a15.388 15.388 0 0 1 9.38-3.195c3.236 0 6.502 1.034 9.236 3.103 5.52 4.147 7.578 11.49 5.038 17.91L447.683 419.84l443.72-.01c8.498.01 15.36 6.881 15.36 15.36l.02 153.6z" fill="currentColor"></path></svg>
+        AOP 使用指南
+      </a></span> <!----></p></div> <div class="comments-wrapper"><div class="waline-wrapper"><div id="waline-comment"></div></div></div> <!----> <div class="content__page-bottom"></div></main> <footer class="footer-wrapper"><!----> <div class="footer"> 只要坚持不懈，嘲笑你的人，迟早会被你笑死。</div> <div class="copyright">Copyright © 2022 西魏陶渊明</div></footer></div><div class="global-ui"><!----><!----><div id="pwa-install"><!----> <div id="install-modal-wrapper" style="display:none;"><div class="background"></div> <div class="install-modal"><div class="header"><button aria-label="关闭" class="close-button"><svg width="23" height="22" xmlns="http://www.w3.org/2000/svg" class="icon close-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.12.358a1.224 1.224 0 011.729 0l8.92 8.914L20.686.358a1.224 1.224 0 011.73 1.728L13.497 11l8.92 8.913a1.222 1.222 0 11-1.73 1.729l-8.919-8.913-8.92 8.913a1.224 1.224 0 01-1.729-1.729L10.04 11l-8.92-8.914a1.222 1.222 0 010-1.728z" fill="currentColor"></path></svg></button> <div class="logo"><!----> <div class="title"><h1></h1> <p class="desc">该应用可以安装在您的 PC 或移动设备上。这将使该 Web 应用程序外观和行为与其他应用程序相同。它将在出现在应用程序列表中，并可以固定到主屏幕，开始菜单或任务栏。此 Web 应用程序还将能够与其他应用程序和您的操作系统安全地进行交互。</p></div></div></div> <div class="content"><div class="highlight"><!----> <!----></div> <div class="description"><h3>详情</h3> <p></p></div></div> <div class="button-wrapper"><button class="install-button">
+        安装 <span></span></button> <button class="cancel-button">
+        取消
+      </button></div></div></div></div><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button title="关闭" aria-label="关闭" class="pswp__button pswp__button--close"></button> <button title="分享" aria-label="分享" class="pswp__button pswp__button--share"></button> <button title="切换全屏" aria-label="切换全屏" class="pswp__button pswp__button--fs"></button> <button title="缩放" aria-label="缩放" class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button title="上一个 (左箭头)" aria-label="上一个 (左箭头)" class="pswp__button pswp__button--arrow--left"></button> <button title="下一个 (右箭头)" aria-label="下一个 (右箭头)" class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div></div></div>
+    <script src="/assets/js/app.c13d9e10.js" defer></script><script src="/assets/js/layout-Layout.0436190e.js" defer></script><script src="/assets/js/page-SpringEL表达式使用指南.50e52563.js" defer></script><script src="/assets/js/vendors~layout-Blog~layout-Layout~layout-NewLayout~layout-NotFound.f8df0345.js" defer></script><script src="/assets/js/vendors~layout-Layout~layout-NewLayout.c5320da8.js" defer></script>
+  </body>
+</html>
