@@ -170,11 +170,25 @@ module.exports = config({
                             {text: '字节码', link: '/learn/tools/bytecode/Javassist'},
                             {text: 'SQL解析', link: '/learn/tools/druid/'},
                             {text: 'Guava', link: '/learn/tools/guava/'},
+                            {text: '池化技术', link: '/learn/tools/pool2/'},
                             {text: 'Arthas', link: '/learn/tools/arthas/'},
                             {text: 'RxJava', link: '/learn/tools/rxjava/'},
                             {text: 'Reactor', link: '/learn/tools/Reactor/'},
                         ]
                     },
+                    {
+                        text: '实战项目',
+                        items: [
+                            {
+                                text: '效率工具', items: [
+                                    {text: 'Jmvn', link: '/learn/project/jmvn/'},
+                                    {text: 'Java脚手架', link: '/learn/project/start/'},
+                                    {text: 'Alfred Plugin', link: '/learn/project/alfred/'},
+                                ]
+                            }
+                        ]
+                    },
+
                     // {
                     //     text: '字节码',
                     //     items: [
@@ -311,7 +325,7 @@ module.exports = config({
                             title: "基础知识",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Spring循环依赖','AOP','EL']
+                            children: ['Spring循环依赖', 'AOP', 'EL']
                         }
                     ],
                     "/learn/mybatis/": [
@@ -326,7 +340,7 @@ module.exports = config({
                             title: "专题文章",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Mapper代理对象创建', 'Mybatis执行流程分析','Mybatis一级二级缓存设计', 'Mybatis缓存设计']
+                            children: ['Mapper代理对象创建', 'Mybatis执行流程分析', 'Mybatis一级二级缓存设计', 'Mybatis缓存设计']
                         }
                         ,
                         {
@@ -334,6 +348,13 @@ module.exports = config({
                             icon: "creative",
                             collapsable: false,
                             children: ['插件分析', "LimitPlugin", "PagePlugin", "AuthPlugin"]
+                        }
+                        ,
+                        {
+                            title: "工具类",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['MetaObject']
                         }
                     ],
                     "/learn/tools/guava/": [
@@ -473,6 +494,26 @@ module.exports = config({
                             icon: "creative",
                             collapsable: false,
                             children: ['base-cli', 'jvm-cli', 'class-cli', 'watch-cli']
+                        }
+                    ],
+                    "/learn/project/jmvn/": [
+                        {
+                            title: "快速入门",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['introduction', 'introduction-install']
+                        },
+                        {
+                            title: "使用配置",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['jmvn-init', 'jmvn-install', 'jmvn-export']
+                        },
+                        {
+                            title: "插件开发",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['jmvn-plugin']
                         }
                     ]
                 },

@@ -14,6 +14,8 @@ import SidebarTop from "@SidebarTop";
 import Common from "@theme/components/Common.vue";
 import Home from "@theme/components/Home.vue";
 import Page from "@theme/components/Page.vue";
+import FloatingBar from "@theme/components/FloatingBar.vue"
+
 export default Vue.extend({
     name: "Layout",
     components: {
@@ -32,6 +34,7 @@ export default Vue.extend({
         SidebarBottom,
         SidebarCenter,
         SidebarTop,
+        FloatingBar
     },
 });
 //# sourceMappingURL=Layout.js.map
