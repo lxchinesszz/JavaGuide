@@ -13,7 +13,7 @@ footer: true
 backtotop: true
 sidebarDepth: 3
 title: Druid SQL解析
-icon: object
+icon: zuanshi
 ---
 
 ![](https://img.springlearn.cn/blog/learn_1648308606000.png)

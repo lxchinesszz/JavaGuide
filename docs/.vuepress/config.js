@@ -5,7 +5,7 @@ module.exports = config({
     title: "西魏陶渊明",
     description: "桃花潭水深千尺",
     author: '西魏陶渊明',
-    blog: false,
+    blog: true,
     dest: "./dist",
     head: [
         [
@@ -124,7 +124,8 @@ module.exports = config({
                             {text: 'Java编程', link: '/learn/java/'},
                             // {text: 'Java八股文', link: '/learn/java2/'},
                             // {text: 'JVM', link: '/language/japanese/'},
-                            {text: '单元测试专题', link: '/learn/test/'},
+                            {text: '分布式服务', link: '/learn/distributed/'},
+                            {text: '测试专题', link: '/learn/test/'},
                         ]
                     },
                     {
@@ -145,8 +146,7 @@ module.exports = config({
                             },
                             {
                                 text: '扩展开发', items: [
-                                    {text: '编译卡点插件', link: '/language/chinese/'},
-                                    {text: 'Japanese', link: '/language/jap32anese/'}
+                                    {text: '编译卡点插件', link: '/learn/maven/plugin/artifact-check-maven-plugin/'},
                                 ]
                             }
                         ]
@@ -157,9 +157,9 @@ module.exports = config({
                         items: [
                             {text: 'Spring', link: '/learn/spring/'},
                             {text: 'Mybatis', link: '/learn/mybatis/'},
-                            {text: 'Mybatis-Plus', link: '/language/jap1333anese/'},
-                            {text: 'Dubbo', link: '/language/japa222nese/'},
-                            {text: 'Job', link: '/language/japa444nese/'},
+                            // {text: 'Mybatis-Plus', link: '/language/jap1333anese/'},
+                            // {text: 'Dubbo', link: '/language/japa222nese/'},
+                            // {text: 'Job', link: '/language/japa444nese/'},
                         ]
                     },
                     {
@@ -354,7 +354,7 @@ module.exports = config({
                             title: "工具类",
                             icon: "creative",
                             collapsable: false,
-                            children: ['MetaObject']
+                            children: ['MetaObject', 'Mybatissql日志打印']
                         }
                     ],
                     "/learn/tools/guava/": [
@@ -496,6 +496,14 @@ module.exports = config({
                             children: ['base-cli', 'jvm-cli', 'class-cli', 'watch-cli']
                         }
                     ],
+                    "/learn/tools/pool2/": [
+                        {
+                            title: "推荐文章",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['字符串常量池']
+                        }
+                    ],
                     "/learn/project/jmvn/": [
                         {
                             title: "快速入门",
@@ -514,6 +522,31 @@ module.exports = config({
                             icon: "creative",
                             collapsable: false,
                             children: ['jmvn-plugin']
+                        }
+                    ],
+                    "/learn/project/alfred/": [
+                        {
+                            title: "自定义工作流",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['create-alfred', 'alfred-worflow-js']
+                        }
+                    ],
+                    "/learn/distributed/": [
+                        {
+                            title: "基础知识",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['base/分布式配置中心',
+                                'base/分布式注册中心',
+                                'base/分布式服务网关',
+                                'base/分布式服务熔断',
+                                'base/分布式服务降级',
+                                'base/分布式服务限流',
+                                'base/分布式负载均衡',
+                                'base/分布式事务',
+                                'base/分布式服务调用',
+                                'base/分布式链路追踪']
                         }
                     ]
                 },

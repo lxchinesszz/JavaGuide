@@ -1,6 +1,6 @@
 window.onload = function () {
     themeDefaultContent = $(
-        '.page'
+        '.theme-default-content'
     );
     // https://readmore.openwrite.cn/user/blog2weixin/list
     themeDefaultContent.eq(0).attr('id', 'container2');
