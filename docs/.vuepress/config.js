@@ -10,36 +10,40 @@ module.exports = config({
     head: [
         [
             "script",
-            {src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"},
+            {src: "https://img.springlearn.cn/learn_9957c49cd4d8fb645569586a438024db.react.production.min.js"},
         ],
         [
             "script",
             {
-                src: "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
+                src: "https://img.springlearn.cn/learn_a775a739f8300fa1057643160208e962.react-dom.production.min.js",
             },
         ],
-        ["script", {src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"}],
+        ["script", {src: "https://img.springlearn.cn/learn_f71f954c936a7a5bc107119f656be7a8.vue.min.js"}],
         [
             "script",
-            {src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"},
+            {src: "https://img.springlearn.cn/learn_3d5c67462f6ac197a271d1e178f295e9.min.js "},
         ],
         ['link', {
             rel: 'icon',
             type: "image/x-icon",
             href: 'https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico'
         }],
-        [
-            "script",
-            {
-                src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js",
-            },
-        ],
+        // ['link', {
+        //     rel: 'stylesheet',
+        //     href: 'https://img.springlearn.cn/learn_41d489b6f8e99292d8d2c4ca59e10664.tailwind.min.css'
+        // }],
+        // [
+        //     "script",
+        //     {
+        //         src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js",
+        //     },
+        // ],
         [
             'script',
             {charset: 'utf-8', src: 'https://readmore.openwrite.cn/js/readmore.js'},
         ], [
             'script',
-            {charset: 'utf-8', src: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js'}
+            {charset: 'utf-8', src: ' https://img.springlearn.cn/learn_eed96b41c5dfddf972e76e7922f60fc8.jquery.min.js'}
         ]
     ],
     locales: {
@@ -78,7 +82,7 @@ module.exports = config({
         fullscreen: false,
         encrypt: {
             title: '扫描公众号,输入暗号获取密码,解锁全站文章',
-            errorHint: '暗号不对,有内鬼,任务取消'
+            errorHint: '暗号不对,有内鬼,终止交易'
         },
         // 默认为 "Edit this page"
         logo: "https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico",

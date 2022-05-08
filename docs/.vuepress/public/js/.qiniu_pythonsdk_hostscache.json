@@ -1,13 +1,1 @@
-{
-  "http:3jws4LSQj3Nwi_bWktpNReSf2Rh4D4CU6rTcZlrA:springlearn": {
-    "upHosts": [
-      "http://up.qiniu.com",
-      "http://upload.qiniu.com",
-      "-H up.qiniu.com http://183.131.7.3"
-    ],
-    "ioHosts": [
-      "http://iovip.qbox.me"
-    ],
-    "deadline": 1649091768
-  }
-}
+{"http:3jws4LSQj3Nwi_bWktpNReSf2Rh4D4CU6rTcZlrA:springlearn": {"upHosts": ["http://up.qiniu.com", "http://upload.qiniu.com", "-H up.qiniu.com http://183.131.7.3"], "ioHosts": ["http://iovip.qbox.me"], "deadline": 1652082498}}

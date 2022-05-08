@@ -1,11 +1,16 @@
 <template>
-  <div class="password" :class="{ expand: page || isMainPage }">
-    <div class="passImgDiv">
-      <img class="passImg" src="https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg" alt="">
+  <div class="password divide-fuchsia-300" :class="{ expand: page || isMainPage }">
+    <div class="gzhCard shadow">
+      <div class="passImgDiv">
+        <img class="passImg" src="https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg" alt="">
+      </div>
+      <div class="hint" :class="{ hasTried }">
+        {{ hasTried ? $themeConfig.encrypt.errorHint : passSuccess ? passSuccess : $themeConfig.encrypt.title }}
+      </div>
     </div>
-    <div class="hint" :class="{ hasTried }">
-      {{ hasTried ? $themeConfig.encrypt.errorHint : passSuccess ? passSuccess : $themeConfig.encrypt.title }}
-    </div>
+<!--    <div class="static" style="margin-bottom: 1rem">-->
+<!--      <Deadline/>-->
+<!--    </div>-->
     <div class="input">
       <input v-model="password" type="password" @keypress.enter="verify"/>
       <button @click="verify">OK</button>
@@ -16,22 +21,30 @@
 <script src="./Password"/>
 
 <style lang="stylus">
+
+.shadow
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+
+.gzhCard
+  margin-bottom 1rem
+  border-radius 1rem
+
 .passImgDiv
-  height 20vh - $navbarHeight
-  width 30vw
-  margin-bottom 2rem
+  height 20vh
+  width auto
+  margin-bottom 1rem
 
 .passImg
-  width 100%
+  height 20vh
+  width auto
 
 .password
   background var(--bg-color)
-  height 90vh - $navbarHeight
-  margin-top $navbarHeight
   text-align center
-  padding-left $sidebarWidth
   display flex
   flex-direction column
+  margin-top $navbarHeight
   justify-content center
   align-items center
 
@@ -49,21 +62,26 @@
     height 400px
 
   .hint
-    margin-bottom 20px
+    //margin-bottom 20px
     font-family Arial, Helvetica, sans-serif
-    font-weight 600
     font-size 22px
     line-height 2
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    &.hasTried
+&.hasTried
       color red
+      font-weight 600
       animation-name shake
       animation-duration 0.5s
       animation-timing-function ease-out
       animation-fill-mode both
 
   .input
-    width 80%
+    width 70%
     max-width 600px
     display flex
     justify-content center

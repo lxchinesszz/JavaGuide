@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Cookies from 'js-cookie'
+import Deadline from './Deadine.vue'
 
 export default Vue.extend({
     name: "Password",
@@ -11,6 +12,7 @@ export default Vue.extend({
         hasTried: false,
         passSuccess: null
     }),
+    components: {Deadline},
     computed: {
         isMainPage() {
             return this.$frontmatter.home === true;
