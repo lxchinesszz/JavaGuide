@@ -1,7 +1,7 @@
 ---
 breadcrumb: false
 navbar: true
-sidebar: auto
+sidebar: true
 pageInfo: false
 contributor: true
 editLink: true
@@ -11,6 +11,7 @@ next: true
 comment: false
 footer: true
 backtotop: true
+sidebarDepth: 3
 title: 反射框架Reflections
 ---
 

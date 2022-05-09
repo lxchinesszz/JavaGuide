@@ -1,3 +1,13 @@
 img {
     -webkit-user-drag: none;
 }
+
+.theme-default-content code {
+    border: 0;
+    padding: 2px 4px;
+    color: #D83B64;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+    position: relative;
+    bottom: 1px;
+}

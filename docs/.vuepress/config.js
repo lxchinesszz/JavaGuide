@@ -245,6 +245,11 @@ module.exports = config({
                                 text: '设计', items: [
                                     {text: '领域驱动模型的思考与认知', link: '/learn/design/领域驱动模型的思考与认知'},
                                 ]
+                            },
+                            {
+                                text: '总结 & 复盘', items: [
+                                    {text: '学会复盘', link: '/learn/other/如何学会复盘'},
+                                ]
                             }
                         ]
                     },
@@ -506,6 +511,14 @@ module.exports = config({
                             icon: "creative",
                             collapsable: false,
                             children: ['字符串常量池']
+                        }
+                    ],
+                    "/learn/tools/reflections/": [
+                        {
+                            title: "推荐文章",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['Java泛型']
                         }
                     ],
                     "/learn/project/jmvn/": [
