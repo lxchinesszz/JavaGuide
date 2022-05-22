@@ -1,11 +1,11 @@
 <template>
   <main class="blog-page">
-    <MyTransition>
-      <component :is="componentName" v-if="componentName" />
-    </MyTransition>
+<!--    <MyTransition>-->
+<!--      <component :is="componentName" v-if="componentName" />-->
+<!--    </MyTransition>-->
 
     <MyTransition :delay="0.24">
-      <ArticleList v-if="showArticles" :key="$route.path" />
+      <ArticleList v-if="showArticles" :key="$route.path" class="artList"/>
     </MyTransition>
   </main>
 </template>
@@ -13,6 +13,9 @@
 <script src="./BlogPage" />
 
 <style lang="stylus">
+.artList
+  margin-top -3.1rem
+
 .blog-page
   max-width 780px
   flex 1

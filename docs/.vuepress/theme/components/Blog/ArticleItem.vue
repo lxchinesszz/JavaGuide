@@ -27,12 +27,12 @@
 .labelTag {
   position: relative;
   overflow: hidden;
-  top: -29px;
-  left: -81px;
+  top: -45px;
+  left: -97px;
   transform: rotate(-45deg);
   width: 10rem;
   height: 4rem;
-  line-height: 5.8rem;
+  line-height: 6.2rem;
   text-align: center;
   text-transform: uppercase;
   transform-origin: center;
