@@ -1,6 +1,9 @@
 <template>
   <article class="article" vocab="https://schema.org/" typeof="Article">
     <StickyIcon v-if="article.frontmatter.sticky" />
+    <div class="labelTag" style="background:#d22429">
+      原创
+    </div>
     <header class="title" @click="$router.push(article.path)">
       <LockIcon v-if="isEncrypted" />
       <PresentationIcon v-if="article.frontmatter.layout === 'Slide'" />
@@ -21,6 +24,23 @@
 <script src="./ArticleItem" />
 
 <style lang="stylus">
+.labelTag {
+  position: relative;
+  overflow: hidden;
+  top: -29px;
+  left: -81px;
+  transform: rotate(-45deg);
+  width: 10rem;
+  height: 4rem;
+  line-height: 5.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  transform-origin: center;
+  background: #ef085b;
+  color: white;
+  font-weight: 700;
+  font-size: 12.432px;
+}
 .article
   position relative
   box-sizing border-box
@@ -31,6 +51,7 @@
   border-radius 6px
   text-align left
   box-shadow 0 1px 3px 0 var(--card-shadow-color)
+  overflow: hidden;
 
   @media (max-width $MQMobileNarrow)
     border-radius 0

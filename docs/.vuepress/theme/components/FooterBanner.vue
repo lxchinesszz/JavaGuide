@@ -1,6 +1,9 @@
 <template>
   <div>
     <hr/>
+    <p>
+      <img src="https://img.springlearn.cn/learn_4ebd4ed339f1c23b2bc65644d1df9a97.gif" loading="lazy" class="feijiFoot">
+    </p>
     <div style="display: flex">
       <div>本文由西魏陶渊明版权所有。如若转载，请注明出处：西魏陶渊明</div>
       <div style="margin-left: 1rem"><a href="https://java.springlearn.cn/" target="_blank" rel="noopener noreferrer"><img
@@ -24,5 +27,7 @@ export default {
 </script>
 
 <style scoped>
-
+.feijiFoot{
+  -webkit-user-drag: none;
+}
 </style>

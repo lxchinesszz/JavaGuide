@@ -119,7 +119,7 @@ module.exports = config({
                     errorHint: 'TMD，难道你想白嫖?'
                 },
                 nav: [
-                    {text: "网站地图", link: "/learn/网站地图/", icon: "creative"},
+                    {text: "使用说明", link: "/learn/误入歧途/", icon: "creative"},
                     // { text: "大学生专题", link: "/learn/school/students", icon: "study" },
                     {
                         text: 'Java',
@@ -178,6 +178,7 @@ module.exports = config({
                             {text: 'Arthas', link: '/learn/tools/arthas/'},
                             {text: 'RxJava', link: '/learn/tools/rxjava/'},
                             {text: 'Reactor', link: '/learn/tools/Reactor/'},
+                            {text: 'Disruptor', link: '/learn/tools/disruptor/'},
                         ]
                     },
                     {
@@ -188,6 +189,8 @@ module.exports = config({
                                     {text: 'Jmvn', link: '/learn/project/jmvn/'},
                                     {text: 'Java脚手架', link: '/learn/project/start/'},
                                     {text: 'Alfred Plugin', link: '/learn/project/alfred/'},
+                                    {text: 'Tomato 新特性', link: 'https://tomato.springlearn.cn/'},
+                                    {text: 'Mojito 通信组件', link: 'https://mojito.springlearn.cn/'},
                                 ]
                             }
                         ]
@@ -296,7 +299,7 @@ module.exports = config({
                             title: " 第三章 并发编程",
                             icon: "xiancheng",
                             collapsable: false,
-                            children: ['Semaphore', 'CountDownLatch', 'CyclicBarrier', 'ReadWriteLock', '原子操作', 'Condition']
+                            children: ['Semaphore', 'CountDownLatch', 'CyclicBarrier', 'ReadWriteLock', '原子操作', 'Condition','BlockingQueue','Contended']
                         }
                     ],
                     "/learn/databases/sql/": [
@@ -334,7 +337,7 @@ module.exports = config({
                             title: "基础知识",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Spring循环依赖', 'AOP', 'EL']
+                            children: ['Spring循环依赖', 'AOP', 'EL','Endpoint监控端点扩展','Spring动态绑定配置','Web接口资源是如何保存起来的']
                         }
                     ],
                     "/learn/mybatis/": [
@@ -554,16 +557,17 @@ module.exports = config({
                             title: "基础知识",
                             icon: "creative",
                             collapsable: false,
-                            children: ['base/分布式配置中心',
-                                'base/分布式注册中心',
-                                'base/分布式服务网关',
-                                'base/分布式服务熔断',
-                                'base/分布式服务降级',
-                                'base/分布式服务限流',
-                                'base/分布式负载均衡',
-                                'base/分布式事务',
-                                'base/分布式服务调用',
-                                'base/分布式链路追踪']
+                            children: [
+                                '分布式注册中心',
+                                '分布式负载均衡',
+                                '分布式服务调用',
+                                '分布式配置中心',
+                                '分布式服务降级',
+                                '分布式服务限流',
+                                '分布式服务熔断',
+                                '分布式服务网关',
+                                '分布式链路追踪',
+                                '分布式事务处理']
                         }
                     ]
                 },

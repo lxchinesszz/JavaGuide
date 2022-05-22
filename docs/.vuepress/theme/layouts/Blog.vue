@@ -12,7 +12,6 @@
     <main v-else class="page blog">
       <div class="blog-page-wrapper">
         <BlogPage />
-
         <MyTransition :delay="0.16">
           <BlogInfo />
         </MyTransition>
