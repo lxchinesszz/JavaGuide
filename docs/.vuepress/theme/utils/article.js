@@ -52,10 +52,11 @@ export const compareDate = (dateA, dateB) => {
     return compare(getDate(dateA), getDate(dateB));
 };
 export const filterArticle = (pages, filterFunc) => pages.filter((page) => {
-    const { frontmatter: { article, blogpage, home }, title, } = page;
+    const { frontmatter: { article, blogpage, home,draft }, title, } = page;
+    console.log(page.frontmatter.draft)
     return (typeof title !== "undefined" &&
         blogpage !== true &&
-        home !== true &&
+        home !== true && !draft &&
         article !== false &&
         (!filterFunc || filterFunc(page)));
 });

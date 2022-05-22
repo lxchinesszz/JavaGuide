@@ -8,7 +8,7 @@ actionText: 网站地图
 editLink: true
 action:
 - text: 开始修炼 💡
-  link: /learn/网站地图
+  link: /article/
   type: primary
 - text: 桃花源 ❀
   link: https://blog.springlearn.cn/

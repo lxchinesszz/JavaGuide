@@ -4,9 +4,11 @@ import EmptyIcon from "@theme/icons/EmptyIcon.vue";
 import MyTransition from "@theme/components/MyTransition.vue";
 import { filterArticle, sortArticle } from "@theme/utils/article";
 import { getPathMatchedKeys } from "@theme/utils/encrypt";
+import ArticleBannerSwiper from "@theme/components/Blog/ArticleBannerSwiper.vue";
+
 export default Vue.extend({
     name: "ArticleList",
-    components: { ArticleItem, EmptyIcon, MyTransition },
+    components: { ArticleItem, EmptyIcon, MyTransition,ArticleBannerSwiper },
     data: () => ({
         currentPage: 1,
         articleList: [],

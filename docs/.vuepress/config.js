@@ -667,5 +667,14 @@ module.exports = config({
                 ],
             },
         },
+        plugins: [
+            [
+                "active-hash",
+                {
+                    // your 你的选项
+                    offset:0
+                },
+            ],
+        ],
     },
 });

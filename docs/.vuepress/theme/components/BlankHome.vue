@@ -1,10 +1,8 @@
 <template>
   <main class="home">
-    <div>
       <MyTransition :delay="0.24">
         <Content class="theme-default-content custom"/>
       </MyTransition>
-    </div>
   </main>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div v-if="author || time" class="article-info">
     <!-- Author -->
-    <span v-if="author" :aria-label="authorText" data-balloon-pos="down">
+    <span v-if="author" :aria-label="authorText" data-balloon-pos="right">
       <AuthorIcon />
       <span property="author" v-text="author" />
     </span>
@@ -11,7 +11,7 @@
       v-if="time"
       class="time"
       :aria-label="timeText"
-      data-balloon-pos="down"
+      data-balloon-pos="right"
     >
       <CalendarIcon />
       <span property="datePublished" v-text="time" />
@@ -19,7 +19,7 @@
 
     <CategoryInfo
       v-if="article.frontmatter.category"
-      :category="article.frontmatter.category"
+      :category="article.frontmatter.category" data-balloon-pos="right"
     />
 
     <TagInfo v-if="tags.length !== 0" :tags="tags" />
@@ -29,7 +29,7 @@
       v-if="readingTime"
       class="read-time-info"
       :aria-label="readingTimeText"
-      data-balloon-pos="down"
+      data-balloon-pos="right"
     >
       <TimerIcon />
       <span v-text="readingTime" />

@@ -1,7 +1,7 @@
 <template>
   <div id="article-list" class="article-wrapper">
     <EmptyIcon v-if="!articles.length" class="empty" />
-
+    <ArticleBannerSwiper class="articleBannerSwiper"/>
     <MyTransition
       v-for="(article, index) in articles"
       :key="article.path"
@@ -21,6 +21,12 @@
 <script src="./ArticleList" />
 
 <style lang="stylus">
+.articleBannerSwiper
+  width 100%
+  text-align center
+  margin-bottom 0.8rem
+  @media (max-width $MQMobile)
+    display none
 .article-wrapper
   margin-top -0.5rem - $navbarHeight
   padding-top: $navbarHeight + 0.5rem

@@ -1,5 +1,5 @@
 <template>
-  <Common :sidebar="false">
+  <Common :sidebar="false" class="theme-default-content">
     <template #sidebar-bottom>
       <BlogInfo />
     </template>
