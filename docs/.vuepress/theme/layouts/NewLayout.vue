@@ -46,7 +46,7 @@
       <BlogHome v-if="$frontmatter.blog && $themeConfig.blog !== false" />
 
       <Home v-else-if="$frontmatter.home" />
-      <BlankHome v-else-if="$frontmatter.blankHome" />
+<!--      <BlankHome v-else-if="$frontmatter.blankHome" />-->
 
       <Page
           v-else

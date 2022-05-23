@@ -5,7 +5,11 @@
     </MyTransition>
 
     <MyTransition :delay="0.04">
-      <BlogInfoList />
+      <div>
+        <BlogInfoList />
+        <FriendLink/>
+        <Advertising/>
+      </div>
     </MyTransition>
   </aside>
 </template>
@@ -19,7 +23,7 @@
       display none
 
   .page &
-    position sticky
+    //position sticky
     box-sizing border-box
     top ($navbarHeight + 1rem)
     flex 0 0 300px

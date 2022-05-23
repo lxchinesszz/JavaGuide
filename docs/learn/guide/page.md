@@ -17,8 +17,11 @@ tag:
 sticky: true
 # 此页面会出现在首页的文章板块中
 star: true
-# 你可以自定义页脚
+[//]: # (# 你可以自定义页脚)
 footer: 这是测试显示的页脚
+original: true
+copyright:
+  - noSelect: true
 ---
 
 ## 页面信息

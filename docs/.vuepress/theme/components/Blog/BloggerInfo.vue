@@ -8,9 +8,10 @@
       role="navigation"
       @click="jumpIntro"
     >
+<!--      <Logo></Logo>-->
       <img
         v-if="bloggerAvatar"
-        class="avatar"
+        class="avatar hvr-float-shadow"
         :class="{ round: blogConfig.roundAvatar !== false }"
         property="image"
         alt="Blogger Avatar"
@@ -53,6 +54,9 @@
 <script src="./BloggerInfo" />
 
 <style lang="stylus">
+//.avatar:hover
+//  transform: scale(1.24);
+//  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .blogger-info
   .page &
     background var(--bgcolor)
@@ -75,6 +79,8 @@
     .name
       margin 16px auto
       font-size 22px
+      color: #404245;
+      font-weight: 600;
 
   .num-wrapper
     display flex

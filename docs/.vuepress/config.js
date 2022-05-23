@@ -72,6 +72,7 @@ module.exports = config({
         //主题色和深色模式设置选项配置。 'auto-switch' | 'switch' | 'auto' | 'disable'
         darkmode: 'switch',
         anchorBanner: 'https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg',
+        postMedia: 'https://img.springlearn.cn/blog/learn_1653269759000.png',
         breadcrumb: false,
         // 不允许变色
         themeColor: false,
@@ -84,6 +85,30 @@ module.exports = config({
             title: '扫描公众号,输入暗号获取密码,解锁全站文章',
             errorHint: '暗号不对,有内鬼,终止交易'
         },
+        adList: [
+            // {
+            //     link: 'https://www.aliyun.com/minisite/goods?userCode=oab21mxz&amp;share_source=copy_link',
+            //     img: 'https://img.springlearn.cn/learn_41803d11c899f1b682c70b16e7335cf5.jpg'
+            // },
+            {
+                link: '',
+                img: 'https://img.springlearn.cn/learn_9ea02e620c7d483bfa2d310c1440d3e9.png'
+            }
+        ],
+        friendLink:[
+            {
+                link: 'https://bugstack.cn/',
+                desc: 'bugstack 虫洞栈'
+            },
+            {
+                link: 'https://www.toutiao.com/c/user/token/MS4wLjABAAAAUpgfl4Z-CCzEU1PqmX4f2a7OZ3RxnTpYZ5euMr_6ZE4/?#mid=1563737358895105',
+                desc: '今日头条'
+            },
+            {
+                link: 'https://blog.csdn.net/message_lx',
+                desc: 'CSDN'
+            }
+        ],
         // 默认为 "Edit this page"
         logo: "https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico",
         searchPlaceholder: '斯是陋室惟吾德馨',
@@ -119,7 +144,7 @@ module.exports = config({
                     errorHint: 'TMD，难道你想白嫖?'
                 },
                 nav: [
-                    {text: "使用说明", link: "/learn/误入歧途/", icon: "creative"},
+                    {text: "InfoQ", link: "/learn/误入歧途/", icon: "creative"},
                     // { text: "大学生专题", link: "/learn/school/students", icon: "study" },
                     {
                         text: 'Java',
@@ -299,7 +324,7 @@ module.exports = config({
                             title: " 第三章 并发编程",
                             icon: "xiancheng",
                             collapsable: false,
-                            children: ['Semaphore', 'CountDownLatch', 'CyclicBarrier', 'ReadWriteLock', '原子操作', 'Condition','BlockingQueue','Contended']
+                            children: ['Semaphore', 'CountDownLatch', 'CyclicBarrier', 'ReadWriteLock', '原子操作', 'Condition', 'BlockingQueue', 'Contended']
                         }
                     ],
                     "/learn/databases/sql/": [
@@ -337,7 +362,7 @@ module.exports = config({
                             title: "基础知识",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Spring循环依赖', 'AOP', 'EL','Endpoint监控端点扩展','Spring动态绑定配置','Web接口资源是如何保存起来的']
+                            children: ['Spring循环依赖', 'AOP', 'EL', 'Endpoint监控端点扩展', 'Spring动态绑定配置', 'Web接口资源是如何保存起来的']
                         }
                     ],
                     "/learn/mybatis/": [
@@ -672,7 +697,7 @@ module.exports = config({
                 "active-hash",
                 {
                     // your 你的选项
-                    offset:0
+                    offset: 0
                 },
             ],
         ],

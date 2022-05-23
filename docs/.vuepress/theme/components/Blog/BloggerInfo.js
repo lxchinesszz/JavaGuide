@@ -2,9 +2,10 @@ import MediaLinks from "@theme/components/MediaLinks.vue";
 import { timelineMixin } from "@theme/mixins/timeline";
 import { filterArticle } from "@theme/utils/article";
 import { navigate } from "@theme/utils/navigate";
+import Logo from  "@theme/components/Logo.vue";
 export default timelineMixin.extend({
     name: "BloggerInfo",
-    components: { MediaLinks },
+    components: { MediaLinks,Logo },
     computed: {
         blogConfig() {
             return this.$themeConfig.blog || {};

@@ -2,7 +2,7 @@
   <article class="article" vocab="https://schema.org/" typeof="Article">
 <!--    <StickyIcon v-if="article.frontmatter.sticky"/>-->
     <Yuanchuang v-if="article.frontmatter.yuanchuang"/>
-    <HotIcon  v-if="article.frontmatter.sticky"/>
+    <HotIcon  v-if="article.frontmatter.sticky" class="hvr-icon-wobble-vertical"/>
     <!--    <div class="labelTag" style="background:#d22429">-->
     <!--      原创-->
     <!--    </div>-->
@@ -11,10 +11,10 @@
            :style="{'background-image':'url(' + article.frontmatter.image + ')'}">
       </div>
       <div class="post-media" v-if="!article.frontmatter.image"
-           style="background-image:url(https://img.springlearn.cn/learn_25bdfe0bbcdde49653f3f4336b392adc.gif)">
+           :style="{'background-image':'url(' + $themeConfig.postMedia + ')'}">
       </div>
       <div class="post-content">
-        <header class="title" @click="$router.push(article.path)">
+        <header class="title hvr-icon-buzz-out" @click="$router.push(article.path)">
           <LockIcon v-if="isEncrypted"/>
           <PresentationIcon v-if="article.frontmatter.layout === 'Slide'"/>
           <span property="headline">{{ article.title }}</span>
@@ -38,6 +38,9 @@
 <script src="./ArticleItem"/>
 
 <style lang="stylus">
+//.article:nth-child(2n+1) {
+//
+//}
 .post {
   display flex
   flex-direction row
@@ -76,7 +79,6 @@
   font-weight: 700;
   font-size: 12.432px;
 }
-
 .article
   position relative
   box-sizing border-box
@@ -84,14 +86,21 @@
   margin 0 auto 20px
   padding 16px 20px
   background var(--bgcolor)
+  //background-image url("https://img.springlearn.cn/learn_1c8815b93233372f146510910cd9738c.png")
   border-radius 6px
   text-align left
   box-shadow 0 1px 3px 0 var(--card-shadow-color)
   overflow: hidden;
-
   @media (max-width $MQMobileNarrow)
     border-radius 0
 
+  //&:nth-child(2n+1)
+  //  background var(--bgcolor)
+  //  background-size cover;
+  //  background-image url('https://img.springlearn.cn/learn_ecb1d2abbc051298aeb24e4b203331ca.png');
+  //&:nth-child(3n+1)
+  //  background-size cover;
+  //  background-image url('https://img.springlearn.cn/learn_51bb1102ab907e7ada0f56c82ad15368.png');
   &:last-child
     margin-bottom 0
 
