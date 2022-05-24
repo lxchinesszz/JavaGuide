@@ -204,6 +204,7 @@ module.exports = config({
                             {text: 'RxJava', link: '/learn/tools/rxjava/'},
                             {text: 'Reactor', link: '/learn/tools/Reactor/'},
                             {text: 'Disruptor', link: '/learn/tools/disruptor/'},
+                            {text: 'JMH基准测试', link: '/learn/tools/jmh/'},
                         ]
                     },
                     {
@@ -272,6 +273,7 @@ module.exports = config({
                             {
                                 text: '设计', items: [
                                     {text: '领域驱动模型的思考与认知', link: '/learn/design/领域驱动模型的思考与认知'},
+                                    {text: '六大原则 & 23种设计模式', link: '/learn/design/六脉神剑'},
                                 ]
                             },
                             {
