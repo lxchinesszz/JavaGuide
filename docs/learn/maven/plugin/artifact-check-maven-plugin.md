@@ -14,6 +14,7 @@ backtotop: true
 title: 编译卡点插件
 password: 111
 icon: zuanshi
+category: Maven
 ---
 
 <Pwd/>

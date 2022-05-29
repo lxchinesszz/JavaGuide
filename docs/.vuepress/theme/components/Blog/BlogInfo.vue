@@ -1,20 +1,24 @@
 <template>
   <aside class="blog-info-wrapper">
     <MyTransition>
-      <BloggerInfo />
+      <div>
+        <BloggerInfo/>
+      </div>
     </MyTransition>
 
     <MyTransition :delay="0.04">
       <div>
-        <BlogInfoList />
+        <BlogInfoList/>
+        <NoticeWidget/>
         <FriendLink/>
-        <Advertising/>
+        <!--        广告地址-->
+        <!--        <Advertising/>-->
       </div>
     </MyTransition>
   </aside>
 </template>
 
-<script src="./BlogInfo" />
+<script src="./BlogInfo"/>
 
 <style lang="stylus">
 .blog-info-wrapper

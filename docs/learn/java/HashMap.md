@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: 再也不怕被HashMap欺负了
+category: Java进阶
 ---
 
 

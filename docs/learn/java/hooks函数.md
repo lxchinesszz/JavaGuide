@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: JVM钩子hooks函数
+category: Java进阶
 ---
 
 

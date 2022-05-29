@@ -13,5 +13,6 @@ footer: true
 password: 111
 backtotop: true
 title: 第11篇:Mybatis权限插件设计
+category: Mybatis
 ---
 <PageBanner/>

@@ -12,6 +12,7 @@ comment: true
 footer: true
 backtotop: true
 title: Spring Boot Endpoint监控端点扩展
+category: SpringBoot
 ---
 
 ::: tip

@@ -95,7 +95,7 @@ module.exports = config({
                 img: 'https://img.springlearn.cn/learn_9ea02e620c7d483bfa2d310c1440d3e9.png'
             }
         ],
-        friendLink:[
+        friendLink: [
             {
                 link: 'https://bugstack.cn/',
                 desc: 'bugstack 虫洞栈'
@@ -112,7 +112,7 @@ module.exports = config({
         // 默认为 "Edit this page"
         logo: "https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico",
         searchPlaceholder: '斯是陋室惟吾德馨',
-        hostname: "https://vuepress-theme-hope-demo.mrhope.site",
+        hostname: "https://java.springlearn.cn/",
         author: "西魏陶渊明",
         repo: "https://github.com/lxchinesszz/JavaGuide",
         docsBranch: "master",
@@ -154,7 +154,7 @@ module.exports = config({
                             // {text: 'Java八股文', link: '/learn/java2/'},
                             // {text: 'JVM', link: '/language/japanese/'},
                             {text: '分布式服务', link: '/learn/distributed/'},
-                            {text: '测试专题', link: '/learn/test/'},
+                            {text: '测试专题', link: '/learn/test/'}
                         ]
                     },
                     {
@@ -205,6 +205,7 @@ module.exports = config({
                             {text: 'Reactor', link: '/learn/tools/Reactor/'},
                             {text: 'Disruptor', link: '/learn/tools/disruptor/'},
                             {text: 'JMH基准测试', link: '/learn/tools/jmh/'},
+                            {text: '内存布局', link: '/learn/tools/jol/'},
                         ]
                     },
                     {
@@ -217,6 +218,7 @@ module.exports = config({
                                     {text: 'Alfred Plugin', link: '/learn/project/alfred/'},
                                     {text: 'Tomato 新特性', link: 'https://tomato.springlearn.cn/'},
                                     {text: 'Mojito 通信组件', link: 'https://mojito.springlearn.cn/'},
+                                    {text: 'JVM调优&问题排查', link: '/learn/project/jvm/'},
                                 ]
                             }
                         ]
@@ -278,7 +280,7 @@ module.exports = config({
                             },
                             {
                                 text: '总结 & 复盘', items: [
-                                    {text: '学会复盘', link: '/learn/other/如何学会复盘'},
+                                    {text: '悟已往之不谏知来者其可追', link: '/learn/other/如何学会复盘'},
                                 ]
                             }
                         ]

@@ -12,6 +12,7 @@ comment: true
 footer: true
 backtotop: true
 title: 动态绑定配置
+category: Spring
 ---
 
 ![](https://img.springlearn.cn/blog/learn_1652957155000.png)

@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: SPI服务发现机制
+category: Java进阶
 ---
 
 ![](https://img.springlearn.cn/blog/learn_1590160192000.png)

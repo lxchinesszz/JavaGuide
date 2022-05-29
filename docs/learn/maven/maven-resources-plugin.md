@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: maven-resources-plugin
+category: Maven
 ---
 
 > maven-resources-plugin

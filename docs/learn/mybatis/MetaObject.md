@@ -12,6 +12,7 @@ comment: true
 footer: true
 backtotop: true
 title: 第12篇:Mybatis中反射工具
+category: Mybatis
 ---
 
 ::: tip

@@ -13,6 +13,7 @@ footer: true
 password: 111
 backtotop: true
 title: 第07篇:Mybatis缓存装饰器
+category: Mybatis
 ---
 
 

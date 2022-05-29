@@ -14,6 +14,7 @@ backtotop: true
 title: 自定义插件教程
 password: 111
 icon: zuanshi
+category: Maven
 ---
 
 > Maven插件官网: https://maven.apache.org/guides/plugin/guide-java-plugin-development.html

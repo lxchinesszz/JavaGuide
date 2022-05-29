@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: synchronized锁升级
+category: Java进阶
 ---
 
 

@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: 信号量 Semaphore
+category: Java进阶
 ---
 
 

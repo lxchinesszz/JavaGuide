@@ -12,6 +12,7 @@ comment: true
 footer: true
 backtotop: true
 title: Spring循环依赖
+category: Spring
 ---
 
 ![](https://img.springlearn.cn/blog/learn_1647108921000.png)

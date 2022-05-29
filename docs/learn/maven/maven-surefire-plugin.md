@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: maven-surefire-plugin
+category: Maven
 ---
 
 > maven-surefire-plugin Surefire 插件在test构建生命周期阶段用于执行应用程序的单元测试。

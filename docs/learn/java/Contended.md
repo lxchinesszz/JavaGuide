@@ -12,6 +12,7 @@ comment: true
 footer: true
 backtotop: true
 title: 性能优化之@Contended减少伪共享
+category: Java进阶
 ---
 
 ## 一、什么叫伪共享

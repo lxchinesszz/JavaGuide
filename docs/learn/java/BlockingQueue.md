@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: Java并发包队列之BlockingQueue
+category: Java进阶
 ---
 
 ## 一、什么是BlockingQueue

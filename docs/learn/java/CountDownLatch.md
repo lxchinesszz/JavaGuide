@@ -12,6 +12,7 @@ comment: false
 footer: true
 backtotop: true
 title: 倒计锁 CountDownLatch
+category: Java进阶
 ---
 
 

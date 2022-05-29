@@ -13,6 +13,7 @@ footer: true
 password: 111
 backtotop: true
 title: 第05篇:Mybatis的SQL执行流程分析
+category: Mybatis
 ---
 
 <PageBanner/>

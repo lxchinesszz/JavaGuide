@@ -11,8 +11,10 @@ next: true
 comment: false
 footer: true
 backtotop: true
-title: spring-boot-maven-plugin
-category: Maven
+sidebarDepth: 3
+title: Java Object 内存布局
+password: 123
+icon: zuanshi
 ---
 
-> spring-boot-maven-plugin
+[参考链接](https://blog.csdn.net/uuqaz/article/details/123340729)

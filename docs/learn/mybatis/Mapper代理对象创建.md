@@ -13,6 +13,7 @@ footer: true
 password: 111
 backtotop: true
 title: 第04篇:Mybatis代理对象生成
+category: Mybatis
 ---
 
 <PageBanner/>
