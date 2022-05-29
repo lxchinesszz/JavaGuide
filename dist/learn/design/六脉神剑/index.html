@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>六大原则 &amp; 23种设计模式 | 西魏陶渊明</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script src="https://img.springlearn.cn/learn_9957c49cd4d8fb645569586a438024db.react.production.min.js"></script>
+    <script src="https://img.springlearn.cn/learn_a775a739f8300fa1057643160208e962.react-dom.production.min.js"></script>
+    <script src="https://img.springlearn.cn/learn_f71f954c936a7a5bc107119f656be7a8.vue.min.js"></script>
+    <script src="https://img.springlearn.cn/learn_3d5c67462f6ac197a271d1e178f295e9.min.js "></script>
+    <link rel="icon" type="image/x-icon" href="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico">
+    <script charset="utf-8" src="https://readmore.openwrite.cn/js/readmore.js"></script>
+    <script charset="utf-8" src=" https://img.springlearn.cn/learn_eed96b41c5dfddf972e76e7922f60fc8.jquery.min.js"></script>
+    <link rel="alternate" type="application/atom+xml" href="https://java.springlearn.cn/atom.xml" title="西魏陶渊明 Atom Feed">
+    <link rel="alternate" type="application/json" href="https://java.springlearn.cn/feed.json" title="西魏陶渊明 JSON Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://java.springlearn.cn/rss.xml" title="西魏陶渊明 RSS Feed">
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="/assets/icon/apple-icon-152.png">
+    <meta name="description" content="vuepress-theme-hope 的 demo">
+    <meta property="og:url" content="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91.html">
+    <meta property="og:site_name" content="西魏陶渊明">
+    <meta property="og:title" content="六大原则 &amp; 23种设计模式">
+    <meta property="og:description" content="一、设计模式 设计模式一般分为三类：创建型模式、结构型模式、行为型模式。 创建型模式：对象实例化的模式，创建型模式用于解耦对象的实例化过程。; 结构型模式：把类或对象结合在一起形成一个更大的结构。; 行为型模式：类和对象如何交互，及划分责任和算法; 1.1 创建型模式 创建型模式简单来说就是用来创建对象的。一共有五种：单例模式、建造者模式、工厂方法模式、抽象">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="/https://img.springlearn.cn/blog/learn_1653399918000.png">
+    <meta property="og:locale" content="zh-CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="西魏陶渊明">
+    <meta property="article:author" content="西魏陶渊明">
+    <meta property="article:published_time" content="2022-05-24T00:00:00.000Z">
+    <meta name="theme-color" content="#46bd87">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <link rel="preload" href="/assets/css/0.styles.a75e4fc5.css" as="style"><link rel="preload" href="/assets/js/app.cf8327b5.js" as="script"><link rel="preload" href="/assets/js/layout-Layout.276cd497.js" as="script"><link rel="preload" href="/assets/js/page-六大原则23种设计模式.10c52c4f.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Blog~layout-Layout~layout-NewLayout~layout-NotFound.90ac852b.js" as="script"><link rel="preload" href="/assets/js/vendors~layout-Layout~layout-NewLayout.cdf057ea.js" as="script"><link rel="prefetch" href="/assets/js/1.bc5cf8f7.js"><link rel="prefetch" href="/assets/js/175.cde4b8ec.js"><link rel="prefetch" href="/assets/js/176.10641bfe.js"><link rel="prefetch" href="/assets/js/177.4d712bc5.js"><link rel="prefetch" href="/assets/js/178.42b1f500.js"><link rel="prefetch" href="/assets/js/179.0f71ad2c.js"><link rel="prefetch" href="/assets/js/180.98620bd9.js"><link rel="prefetch" href="/assets/js/181.517f98ca.js"><link rel="prefetch" href="/assets/js/182.a658f800.js"><link rel="prefetch" href="/assets/js/183.9be8c1a3.js"><link rel="prefetch" href="/assets/js/184.c2513f68.js"><link rel="prefetch" href="/assets/js/185.aaed2e82.js"><link rel="prefetch" href="/assets/js/186.b070da27.js"><link rel="prefetch" href="/assets/js/187.027a276b.js"><link rel="prefetch" href="/assets/js/188.e7652cf6.js"><link rel="prefetch" href="/assets/js/189.e3706409.js"><link rel="prefetch" href="/assets/js/190.85ac9451.js"><link rel="prefetch" href="/assets/js/191.cefcf1bb.js"><link rel="prefetch" href="/assets/js/192.3a8efd04.js"><link rel="prefetch" href="/assets/js/193.8274bbad.js"><link rel="prefetch" href="/assets/js/layout-Blog.a0b50041.js"><link rel="prefetch" href="/assets/js/layout-Blog~layout-NotFound.b9fd00dc.js"><link rel="prefetch" href="/assets/js/layout-NewLayout.134784c4.js"><link rel="prefetch" href="/assets/js/layout-NotFound.53b63542.js"><link rel="prefetch" href="/assets/js/layout-Slide.7a430342.js"><link rel="prefetch" href="/assets/js/page--a18262e4.8c2a2310.js"><link rel="prefetch" href="/assets/js/page-AOP使用指南.3b4d063d.js"><link rel="prefetch" href="/assets/js/page-Alfred-workflow-js.1b616610.js"><link rel="prefetch" href="/assets/js/page-Alfred添加工作流.1dfccba6.js"><link rel="prefetch" href="/assets/js/page-Arthas（阿尔萨斯）能为你做什么.9b49b246.js"><link rel="prefetch" href="/assets/js/page-Disruptor高性能队列.c6f0d03d.js"><link rel="prefetch" href="/assets/js/page-Docsify.b5e86c00.js"><link rel="prefetch" href="/assets/js/page-DruidSQL解析.0d1f81be.js"><link rel="prefetch" href="/assets/js/page-FeignMock注意事项.4b9f4583.js"><link rel="prefetch" href="/assets/js/page-Get新技能,Java实现文件监控.a1a3542b.js"><link rel="prefetch" href="/assets/js/page-Guava-Map.5462df82.js"><link rel="prefetch" href="/assets/js/page-Guava-cache.0efac2a2.js"><link rel="prefetch" href="/assets/js/page-Guava-retry重试组件.c25cdf25.js"><link rel="prefetch" href="/assets/js/page-Guava：用于Java的Google核心库.c8bbf8f2.js"><link rel="prefetch" href="/assets/js/page-Hexo.9330df22.js"><link rel="prefetch" href="/assets/js/page-Home.32435830.js"><link rel="prefetch" href="/assets/js/page-JMH基准测试.7c084858.js"><link rel="prefetch" href="/assets/js/page-JUnitAPI.9470dde5.js"><link rel="prefetch" href="/assets/js/page-JUnit单测类属性注入.eb0bbf12.js"><link rel="prefetch" href="/assets/js/page-JVM相关命令.05dfa865.js"><link rel="prefetch" href="/assets/js/page-JVM调优.28006ba0.js"><link rel="prefetch" href="/assets/js/page-JVM钩子hooks函数.aea6fa87.js"><link rel="prefetch" href="/assets/js/page-JavaObject内存布局.aba8f031.js"><link rel="prefetch" href="/assets/js/page-Javassist.c62f9be1.js"><link rel="prefetch" href="/assets/js/page-Java代码规范全部奉上.027e635f.js"><link rel="prefetch" href="/assets/js/page-Java四大引用.c0f26026.js"><link rel="prefetch" href="/assets/js/page-Java并发包队列之BlockingQueue.d4e43414.js"><link rel="prefetch" href="/assets/js/page-Java异常体系.2a1c7092.js"><link rel="prefetch" href="/assets/js/page-Java泛型体系知识学习.a03b3872.js"><link rel="prefetch" href="/assets/js/page-Java管理扩展.8c327c62.js"><link rel="prefetch" href="/assets/js/page-Java编程.a44f0f32.js"><link rel="prefetch" href="/assets/js/page-Join大法.aac1bf67.js"><link rel="prefetch" href="/assets/js/page-Lambda函数式编程.ad3b3696.js"><link rel="prefetch" href="/assets/js/page-Mac效率工具必备神器Alfred插件开发.0d11b88e.js"><link rel="prefetch" href="/assets/js/page-Markdown增强.53e7cb15.js"><link rel="prefetch" href="/assets/js/page-Maven基础入门.94cc34db.js"><link rel="prefetch" href="/assets/js/page-MockDataAPI.8ee844c0.js"><link rel="prefetch" href="/assets/js/page-MockitoAPI.6cb79f05.js"><link rel="prefetch" href="/assets/js/page-MySQL.5b68c51d.js"><link rel="prefetch" href="/assets/js/page-Mybatis.4976feb9.js"><link rel="prefetch" href="/assets/js/page-Mysql优化示例.a4797972.js"><link rel="prefetch" href="/assets/js/page-Reactive反应式编程.54bbcaef.js"><link rel="prefetch" href="/assets/js/page-Redis.2223619f.js"><link rel="prefetch" href="/assets/js/page-Redis缓存穿透雪崩问题.11dd4ce4.js"><link rel="prefetch" href="/assets/js/page-SPI服务发现机制.bd94edd8.js"><link rel="prefetch" href="/assets/js/page-SQL索引性能优化.76b729e2.js"><link rel="prefetch" href="/assets/js/page-SQL锁机制.9928c11d.js"><link rel="prefetch" href="/assets/js/page-Spring-retry重试组件.74a63f73.js"><link rel="prefetch" href="/assets/js/page-Spring.0de9693d.js"><link rel="prefetch" href="/assets/js/page-SpringBootEndpoint监控端点扩展.745b1b62.js"><link rel="prefetch" href="/assets/js/page-SpringBootTesting.37bd281f.js"><link rel="prefetch" href="/assets/js/page-SpringEL表达式使用指南.805c4b7b.js"><link rel="prefetch" href="/assets/js/page-Spring循环依赖.4ddca24c.js"><link rel="prefetch" href="/assets/js/page-Vuepress.714c7846.js"><link rel="prefetch" href="/assets/js/page-Web接口资源是如何保存起来的.9d3d0a62.js"><link rel="prefetch" href="/assets/js/page-Zookeeper实践.d91e4f13.js"><link rel="prefetch" href="/assets/js/page-classclassloader相关.d4203488.js"><link rel="prefetch" href="/assets/js/page-explain调优.7265bf36.js"><link rel="prefetch" href="/assets/js/page-hehe.b59f1190.js"><link rel="prefetch" href="/assets/js/page-maven-resources-plugin.b5394995.js"><link rel="prefetch" href="/assets/js/page-maven-surefire-plugin.23e4ab33.js"><link rel="prefetch" href="/assets/js/page-monitorwatchtrace相关.0becea19.js"><link rel="prefetch" href="/assets/js/page-spring-boot-maven-plugin.f8efe6ec.js"><link rel="prefetch" href="/assets/js/page-synchronized锁升级.6509cadf.js"><link rel="prefetch" href="/assets/js/page-①谁在调用JUnit.b6db9a2f.js"><link rel="prefetch" href="/assets/js/page-②如何知道是否依赖Spring容器.605a3a65.js"><link rel="prefetch" href="/assets/js/page-一致性hash问题.4ede9d41.js"><link rel="prefetch" href="/assets/js/page-中文文档写作规范.c713a45c.js"><link rel="prefetch" href="/assets/js/page-主要功能与配置演示.7207f1e8.js"><link rel="prefetch" href="/assets/js/page-事务回滚原理.4a347a0c.js"><link rel="prefetch" href="/assets/js/page-使用断言.c7cf8dfd.js"><link rel="prefetch" href="/assets/js/page-信号量Semaphore.02a0720d.js"><link rel="prefetch" href="/assets/js/page-倒计锁CountDownLatch.5c6c3dd7.js"><link rel="prefetch" href="/assets/js/page-八阿哥的剑.de102a53.js"><link rel="prefetch" href="/assets/js/page-再也不怕被HashMap欺负了.eedc4e4c.js"><link rel="prefetch" href="/assets/js/page-函数式编程.2a7ffae8.js"><link rel="prefetch" href="/assets/js/page-分布式服务.924cf7de.js"><link rel="prefetch" href="/assets/js/page-分布式锁.30ce49f5.js"><link rel="prefetch" href="/assets/js/page-切莫走火入魔.ab15347c.js"><link rel="prefetch" href="/assets/js/page-创建项目.3d9aba3b.js"><link rel="prefetch" href="/assets/js/page-动态绑定配置.76e060ed.js"><link rel="prefetch" href="/assets/js/page-匆匆那年.0da173d2.js"><link rel="prefetch" href="/assets/js/page-单元测试专题.e22290c0.js"><link rel="prefetch" href="/assets/js/page-单测维护.53efa7aa.js"><link rel="prefetch" href="/assets/js/page-反射框架Reflections.c6d0b771.js"><link rel="prefetch" href="/assets/js/page-启动缓慢.eb85ab5f.js"><link rel="prefetch" href="/assets/js/page-命名规则.7d2afb29.js"><link rel="prefetch" href="/assets/js/page-基于命令行的Java脚手架.73513be7.js"><link rel="prefetch" href="/assets/js/page-基础命令.0fba2c3b.js"><link rel="prefetch" href="/assets/js/page-基础教程.764ebef4.js"><link rel="prefetch" href="/assets/js/page-多线程之线程隔离.f6f86636.js"><link rel="prefetch" href="/assets/js/page-如何学会复盘.98c2c284.js"><link rel="prefetch" href="/assets/js/page-如何找到垃圾SQL语句,你知道这些方式吗？.c782b6b6.js"><link rel="prefetch" href="/assets/js/page-委派双亲之类加载器.aa04bd0f.js"><link rel="prefetch" href="/assets/js/page-字符串常量池.e2070df0.js"><link rel="prefetch" href="/assets/js/page-密码加密的文章.1f9a9293.js"><link rel="prefetch" href="/assets/js/page-工具介绍.935bc423.js"><link rel="prefetch" href="/assets/js/page-年终总结汇报大纲.700eb55c.js"><link rel="prefetch" href="/assets/js/page-幻灯片页.47e07ad2.js"><link rel="prefetch" href="/assets/js/page-开个工厂造线程.d90ab3cd.js"><link rel="prefetch" href="/assets/js/page-异步验证.895ee1d6.js"><link rel="prefetch" href="/assets/js/page-影响范围.3494ce44.js"><link rel="prefetch" href="/assets/js/page-循环锁屏障CyclicBarrier.a45eed78.js"><link rel="prefetch" href="/assets/js/page-快速安装.252ce710.js"><link rel="prefetch" href="/assets/js/page-性能优化之@Contended减少伪共享.2ee92f87.js"><link rel="prefetch" href="/assets/js/page-成熟的线程要懂得拒绝.79f4757c.js"><link rel="prefetch" href="/assets/js/page-技术选型.dce5edcf.js"><link rel="prefetch" href="/assets/js/page-指南.0f07f80c.js"><link rel="prefetch" href="/assets/js/page-插件开发.86176659.js"><link rel="prefetch" href="/assets/js/page-数据模型安装.64187d64.js"><link rel="prefetch" href="/assets/js/page-数据模型导出.f1666ba4.js"><link rel="prefetch" href="/assets/js/page-数据隔离.1b516670.js"><link rel="prefetch" href="/assets/js/page-极限测试.6439c7ae.js"><link rel="prefetch" href="/assets/js/page-案例分享.51326b28.js"><link rel="prefetch" href="/assets/js/page-池化技术.4e620908.js"><link rel="prefetch" href="/assets/js/page-没有条件创造条件Condition.1ed23658.js"><link rel="prefetch" href="/assets/js/page-没有规矩不成方圆.561c4151.js"><link rel="prefetch" href="/assets/js/page-测试成本.f2b1dc80.js"><link rel="prefetch" href="/assets/js/page-测试范围.71d1c2f4.js"><link rel="prefetch" href="/assets/js/page-海量数据模拟.a4af2a3a.js"><link rel="prefetch" href="/assets/js/page-消息验证.2bbc31af.js"><link rel="prefetch" href="/assets/js/page-程序猿到底有没有必要买一台阿里云服务器.18e0ca96.js"><link rel="prefetch" href="/assets/js/page-第01篇Mybatis学习之环境搭建.a25a4c96.js"><link rel="prefetch" href="/assets/js/page-第01篇分布式注册中心.53c1b0b6.js"><link rel="prefetch" href="/assets/js/page-第02篇Mybatis配置文件解析.cce5aa76.js"><link rel="prefetch" href="/assets/js/page-第02篇分布式负载均衡.c9f6b513.js"><link rel="prefetch" href="/assets/js/page-第03篇Mybatis核心类详细介绍.5dfb7304.js"><link rel="prefetch" href="/assets/js/page-第03篇分布式服务调用.d978ac64.js"><link rel="prefetch" href="/assets/js/page-第04篇Mybatis代理对象生成.d35705f0.js"><link rel="prefetch" href="/assets/js/page-第04篇分布式配置中心.f4c60fee.js"><link rel="prefetch" href="/assets/js/page-第05篇Mybatis的SQL执行流程分析.be89ee4a.js"><link rel="prefetch" href="/assets/js/page-第05篇分布式服务降级.b4ee8e90.js"><link rel="prefetch" href="/assets/js/page-第06篇Mybatis缓存设计.7345a9d1.js"><link rel="prefetch" href="/assets/js/page-第06篇分布式服务限流.79cde2aa.js"><link rel="prefetch" href="/assets/js/page-第07篇Mybatis缓存装饰器.e5f23714.js"><link rel="prefetch" href="/assets/js/page-第07篇分布式服务熔断.3004f866.js"><link rel="prefetch" href="/assets/js/page-第08篇Mybatis的插件设计分析.d96812a7.js"><link rel="prefetch" href="/assets/js/page-第08篇分布式服务网关.404767e1.js"><link rel="prefetch" href="/assets/js/page-第09篇Mybatis查询限制插件设计.e2de1103.js"><link rel="prefetch" href="/assets/js/page-第09篇分布式链路追踪.e8fe12cd.js"><link rel="prefetch" href="/assets/js/page-第10篇Mybatis分页插件设计.a869b76b.js"><link rel="prefetch" href="/assets/js/page-第10篇分布式事务处理.ca72bb4d.js"><link rel="prefetch" href="/assets/js/page-第11篇Mybatis权限插件设计.6df566a1.js"><link rel="prefetch" href="/assets/js/page-第12篇Mybatis中反射工具.8c1f2d9a.js"><link rel="prefetch" href="/assets/js/page-第13篇Mybatis中打印Sql信息.4c2f0150.js"><link rel="prefetch" href="/assets/js/page-线程安全之原子操作.3f0faa51.js"><link rel="prefetch" href="/assets/js/page-线程安全感.f2f85018.js"><link rel="prefetch" href="/assets/js/page-线程池扫盲.983de03c.js"><link rel="prefetch" href="/assets/js/page-组件禁用.f80092b3.js"><link rel="prefetch" href="/assets/js/page-给线程归归类.522c4f93.js"><link rel="prefetch" href="/assets/js/page-编译卡点插件.0b71f47d.js"><link rel="prefetch" href="/assets/js/page-自定义布局.36efc748.js"><link rel="prefetch" href="/assets/js/page-自定义插件教程.6f81241e.js"><link rel="prefetch" href="/assets/js/page-读写锁ReadWriteLock.58a26ee6.js"><link rel="prefetch" href="/assets/js/page-重入锁ReentrantLock.dcfa7df2.js"><link rel="prefetch" href="/assets/js/page-重剑无锋大巧不工.6137aeb5.js"><link rel="prefetch" href="/assets/js/page-页面配置.732a4cbb.js"><link rel="prefetch" href="/assets/js/page-领域驱动模型的思考与认知.b93ed78a.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.3dfa1289.js"><link rel="prefetch" href="/assets/js/vendors~mermaid.b107435c.js"><link rel="prefetch" href="/assets/js/vendors~photo-swipe.e994cf9d.js"><link rel="prefetch" href="/assets/js/vendors~reveal.eace511a.js"><link rel="prefetch" href="/assets/js/vendors~waline.cf1b1b02.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a75e4fc5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container has-navbar has-anchor"><header class="navbar"><!----> <div class="content__navbar-start"></div> <button title="Sidebar Button" class="sidebar-button"><span class="icon"></span></button> <a href="/" class="home-link router-link-active"><img src="https://img.springlearn.cn/learn_d98f09cdad8fa38168ec59c15a508490.ico" alt="西魏陶渊明" class="logo"> <!----> <span class="site-name can-hide">西魏陶渊明</span></a> <!----> <div class="content__navbar-center"></div> <div class="links"><button tabindex="-1" aria-hidden="true" class="color-button"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="skin-icon"><path d="M224 800c0 9.6 3.2 44.8 6.4 54.4 6.4 48-48 76.8-48 76.8s80 41.6 147.2 0 134.4-134.4
+        38.4-195.2c-22.4-12.8-41.6-19.2-57.6-19.2C259.2 716.8 227.2 761.6 224 800zM560 675.2l-32
+        51.2c-51.2 51.2-83.2 32-83.2 32 25.6 67.2 0 112-12.8 128 25.6 6.4 51.2 9.6 80 9.6 54.4 0
+        102.4-9.6 150.4-32l0 0c3.2 0 3.2-3.2 3.2-3.2 22.4-16 12.8-35.2
+        6.4-44.8-9.6-12.8-12.8-25.6-12.8-41.6 0-54.4 60.8-99.2 137.6-99.2 6.4 0 12.8 0 22.4
+        0 12.8 0 38.4 9.6 48-25.6 0-3.2 0-3.2 3.2-6.4 0-3.2 3.2-6.4 3.2-6.4 6.4-16 6.4-16 6.4-19.2
+        9.6-35.2 16-73.6 16-115.2 0-105.6-41.6-198.4-108.8-268.8C704 396.8 560 675.2 560 675.2zM224
+        419.2c0-28.8 22.4-51.2 51.2-51.2 28.8 0 51.2 22.4 51.2 51.2 0 28.8-22.4 51.2-51.2 51.2C246.4
+        470.4 224 448 224 419.2zM320 284.8c0-22.4 19.2-41.6 41.6-41.6 22.4 0 41.6 19.2 41.6 41.6 0
+        22.4-19.2 41.6-41.6 41.6C339.2 326.4 320 307.2 320 284.8zM457.6 208c0-12.8 12.8-25.6 25.6-25.6
+        12.8 0 25.6 12.8 25.6 25.6 0 12.8-12.8 25.6-25.6 25.6C470.4 233.6 457.6 220.8 457.6 208zM128
+        505.6C128 592 153.6 672 201.6 736c28.8-60.8 112-60.8 124.8-60.8-16-51.2 16-99.2
+        16-99.2l316.8-422.4c-48-19.2-99.2-32-150.4-32C297.6 118.4 128 291.2 128 505.6zM764.8
+        86.4c-22.4 19.2-390.4 518.4-390.4 518.4-22.4 28.8-12.8 76.8 22.4 99.2l9.6 6.4c35.2 22.4
+        80 12.8 99.2-25.6 0 0 6.4-12.8 9.6-19.2 54.4-105.6 275.2-524.8 288-553.6
+        6.4-19.2-3.2-32-19.2-32C777.6 76.8 771.2 80 764.8 86.4z"></path></svg> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="darkmode-toggle"><label for="darkmode-toggle" class="desc">主题模式:</label> <div class="darkmode-switch"><div class="switch"><input id="switch" type="checkbox" checked="checked" class="switch-input"> <label for="switch" class="label"><span class="label-content"></span></label></div></div> <!----></div></div></div></button> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn/误入歧途/" class="nav-link"><i class="iconfont icon-creative"></i>
+  InfoQ
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        Java
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><a href="/learn/distributed/" class="nav-link"><!---->
+  分布式服务
+</a></li><li class="dropdown-item"><a href="/learn/test/" class="nav-link"><!---->
+  测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+        Maven扩展
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/plugin/artifact-check-maven-plugin/" class="nav-link"><!---->
+  编译卡点插件
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+        框架篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/spring/" class="nav-link"><!---->
+  Spring
+</a></li><li class="dropdown-item"><a href="/learn/mybatis/" class="nav-link"><!---->
+  Mybatis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+        工具篇
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><a href="/learn/tools/bytecode/Javassist.html" class="nav-link"><!---->
+  字节码
+</a></li><li class="dropdown-item"><a href="/learn/tools/druid/" class="nav-link"><!---->
+  SQL解析
+</a></li><li class="dropdown-item"><a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><a href="/learn/tools/pool2/" class="nav-link"><!---->
+  池化技术
+</a></li><li class="dropdown-item"><a href="/learn/tools/arthas/" class="nav-link"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li><li class="dropdown-item"><a href="/learn/tools/disruptor/" class="nav-link"><!---->
+  Disruptor
+</a></li><li class="dropdown-item"><a href="/learn/tools/jmh/" class="nav-link"><!---->
+  JMH基准测试
+</a></li><li class="dropdown-item"><a href="/learn/tools/jol/" class="nav-link"><!---->
+  内存布局
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="实战项目" class="dropdown-title"><span class="title"><!---->
+        实战项目
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>效率工具</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/project/jmvn/" class="nav-link"><!---->
+  Jmvn
+</a></li><li class="dropdown-subitem"><a href="/learn/project/start/" class="nav-link"><!---->
+  Java脚手架
+</a></li><li class="dropdown-subitem"><a href="/learn/project/alfred/" class="nav-link"><!---->
+  Alfred Plugin
+</a></li><li class="dropdown-subitem"><a href="https://tomato.springlearn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><!---->
+  Tomato 新特性
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://mojito.springlearn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><!---->
+  Mojito 通信组件
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/learn/project/jvm/" class="nav-link"><!---->
+  JVM调优&amp;问题排查
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+        Database
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+        设计&amp;规范
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li><li class="dropdown-subitem"><a href="/learn/design/六脉神剑.html" class="nav-link"><!---->
+  六大原则 &amp; 23种设计模式
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>总结 &amp; 复盘</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/other/如何学会复盘.html" class="nav-link"><!---->
+  悟已往之不谏知来者其可追
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+        博客搭建
+      </span> <span class="arrow"></span></button> <ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese1/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanes2e/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div></nav> <!----> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link can-hide">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <!----> <div class="content__navbar-end"></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!----> <!----> <div class="content__sidebar-top"></div> <nav class="sidebar-nav-links"><div class="nav-item"><a href="/learn/误入歧途/" class="nav-link"><i class="iconfont icon-creative"></i>
+  InfoQ
+</a></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      Java
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/java/" class="nav-link"><!---->
+  Java编程
+</a></li><li class="dropdown-item"><!----> <a href="/learn/distributed/" class="nav-link"><!---->
+  分布式服务
+</a></li><li class="dropdown-item"><!----> <a href="/learn/test/" class="nav-link"><!---->
+  测试专题
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Maven扩展" class="dropdown-title"><span class="title"><!---->
+      Maven扩展
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>基础入门</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/" class="nav-link"><!---->
+  Maven基础
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/自定义maven插件/" class="nav-link"><!---->
+  自定义插件
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>源码分析</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/spring-boot-maven-plugin/" class="nav-link"><!---->
+  spring-boot-maven-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-resources-plugin/" class="nav-link"><!---->
+  maven-resources-plugin
+</a></li><li class="dropdown-subitem"><a href="/learn/maven/maven-surefire-plugin/" class="nav-link"><!---->
+  maven-surefire-plugin
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>扩展开发</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/maven/plugin/artifact-check-maven-plugin/" class="nav-link"><!---->
+  编译卡点插件
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title"><!---->
+      框架篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/spring/" class="nav-link"><!---->
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/learn/mybatis/" class="nav-link"><!---->
+  Mybatis
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="tools" class="dropdown-title"><span class="title"><!---->
+      工具篇
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn/tools/reflections/" class="nav-link"><!---->
+  反射框架
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/bytecode/Javassist.html" class="nav-link"><!---->
+  字节码
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/druid/" class="nav-link"><!---->
+  SQL解析
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/guava/" class="nav-link"><!---->
+  Guava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/pool2/" class="nav-link"><!---->
+  池化技术
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/arthas/" class="nav-link"><!---->
+  Arthas
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/rxjava/" class="nav-link"><!---->
+  RxJava
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/Reactor/" class="nav-link"><!---->
+  Reactor
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/disruptor/" class="nav-link"><!---->
+  Disruptor
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/jmh/" class="nav-link"><!---->
+  JMH基准测试
+</a></li><li class="dropdown-item"><!----> <a href="/learn/tools/jol/" class="nav-link"><!---->
+  内存布局
+</a></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="实战项目" class="dropdown-title"><span class="title"><!---->
+      实战项目
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>效率工具</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/project/jmvn/" class="nav-link"><!---->
+  Jmvn
+</a></li><li class="dropdown-subitem"><a href="/learn/project/start/" class="nav-link"><!---->
+  Java脚手架
+</a></li><li class="dropdown-subitem"><a href="/learn/project/alfred/" class="nav-link"><!---->
+  Alfred Plugin
+</a></li><li class="dropdown-subitem"><a href="https://tomato.springlearn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><!---->
+  Tomato 新特性
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://mojito.springlearn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><!---->
+  Mojito 通信组件
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/learn/project/jvm/" class="nav-link"><!---->
+  JVM调优&amp;问题排查
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="Database" class="dropdown-title"><span class="title"><!---->
+      Database
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>关系型数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/sql/" class="nav-link"><!---->
+  Mysql
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/nosql/redis/" class="nav-link"><!---->
+  Redis
+</a></li><li class="dropdown-subitem"><a href="/learn/databases/nosql/mongo/" class="nav-link"><!---->
+  Mongo
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>图数据库</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/databases/map/" class="nav-link"><!---->
+  Neo4J
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="设计&amp;规范" class="dropdown-title"><span class="title"><!---->
+      设计&amp;规范
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>规范</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/Java代码规范全部奉上.html" class="nav-link"><!---->
+  Java代码规范全部奉上
+</a></li><li class="dropdown-subitem"><a href="/learn/design/中文文档写作规范.html" class="nav-link"><!---->
+  中文文档写作规范
+</a></li><li class="dropdown-subitem"><a href="/learn/design/年终总结汇报大纲.html" class="nav-link"><!---->
+  年终总结汇报大纲
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>设计</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/design/领域驱动模型的思考与认知.html" class="nav-link"><!---->
+  领域驱动模型的思考与认知
+</a></li><li class="dropdown-subitem"><a href="/learn/design/六脉神剑.html" class="nav-link"><!---->
+  六大原则 &amp; 23种设计模式
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>总结 &amp; 复盘</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/other/如何学会复盘.html" class="nav-link"><!---->
+  悟已往之不谏知来者其可追
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="mobile-dropdown-wrapper"><button type="button" aria-label="博客搭建" class="dropdown-title"><span class="title"><!---->
+      博客搭建
+    </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>博客框架</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/blog/hexo/" class="nav-link"><!---->
+  hexo
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/vuepress/" class="nav-link"><!---->
+  vuepress
+</a></li><li class="dropdown-subitem"><a href="/learn/blog/docsify/" class="nav-link"><!---->
+  docsify
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>服务器选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/learn/chinese/" class="nav-link"><!---->
+  自搭建服务
+</a></li><li class="dropdown-subitem"><a href="/language/japanese1/" class="nav-link"><!---->
+  Vercel
+</a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>域名选择</span></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese/" class="nav-link"><!---->
+  Chinese
+</a></li><li class="dropdown-subitem"><a href="/language/japanes2e/" class="nav-link"><!---->
+  Japanese
+</a></li></ul></li></ul></div></div> <a rel="noopener noreferrer" href="https://github.com/lxchinesszz/JavaGuide" target="_blank" class="repo-link">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <!----> <div class="content__sidebar-center"></div> <!----> <!----> <div class="content__sidebar-bottom"></div> <!----></aside> <main class="page"><nav class="breadcrumb disable"><!----></nav> <!----> <div class="content__page-top"></div> <div vocab="https://schema.org/" typeof="Article" class="page-title"><h1><!----> <span property="headline">六大原则 &amp; 23种设计模式</span></h1> <!----> <meta property="image" content="https://img.springlearn.cn/blog/learn_1653399918000.png"> <hr></div> <div class="anchor-place-holder"><aside id="anchor"><div class="anchor-banner"><img class="anchor-banner-img" src="https://img.springlearn.cn/learn_c3d5074d94563b8297f81633f171d230.jpeg"></div><div class="anchor-wrapper"><ul class="anchor-list"><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#一、设计模式" class="anchor-link heading2"><div>一、设计模式</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_1-1-创建型模式" class="anchor-link heading2"><div>1.1 创建型模式</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_1-2-结构型模式" class="anchor-link heading2"><div>1.2 结构型模式</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_1-3-行为型模式" class="anchor-link heading2"><div>1.3 行为型模式</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#二、六大原则" class="anchor-link heading2"><div>二、六大原则</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_2-1-开闭原则" class="anchor-link heading2"><div>2.1 开闭原则</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_2-2-单一职责原则" class="anchor-link heading2"><div>2.2 单一职责原则</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_2-3-里氏替换原则" class="anchor-link heading2"><div>2.3 里氏替换原则</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_2-4-依赖倒置原则" class="anchor-link heading2"><div>2.4 依赖倒置原则</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_2-5-接口隔离原则" class="anchor-link heading2"><div>2.5 接口隔离原则</div></a></li><li class="anchor"><a href="/learn/design/%E5%85%AD%E8%84%89%E7%A5%9E%E5%89%91/#_2-6-迪米特法则" class="anchor-link heading2"><div>2.6 迪米特法则</div></a></li></ul></div></aside></div> <!----> <div class="content__content-top"></div> <div><div class="theme-default-content content__default"><p><img src="https://img.springlearn.cn/blog/learn_1653399918000.png" alt="" loading="lazy"></p> <h2 id="一、设计模式"><a href="#一、设计模式" class="header-anchor">#</a> 一、设计模式</h2> <p>设计模式一般分为三类：创建型模式、结构型模式、行为型模式。</p> <ul><li>创建型模式：对象实例化的模式，创建型模式用于解耦对象的实例化过程。</li> <li>结构型模式：把类或对象结合在一起形成一个更大的结构。</li> <li>行为型模式：类和对象如何交互，及划分责任和算法</li></ul> <p><img src="https://img.springlearn.cn/27c9d5187cd283f8d160ec1ed2b5ac89.jpg" alt="" loading="lazy"></p> <h2 id="_1-1-创建型模式"><a href="#_1-1-创建型模式" class="header-anchor">#</a> 1.1 创建型模式</h2> <p>创建型模式简单来说就是用来创建对象的。一共有五种：单例模式、建造者模式、工厂方法模式、抽象工厂模式、原型模式。</p> <ol><li>单例模式 ：确保某一个类只有一个实例，并且提供一个全局访问点。</li> <li>建造者模式 ： 用来创建复杂的复合对象。</li> <li>工厂方法模式 ：让子类来决定要创建哪个对象。</li> <li>抽象工厂模式 ：创建多个产品族中的产品对象。</li> <li>原型模式 ：通过复制原型来创建新对象。</li></ol> <h2 id="_1-2-结构型模式"><a href="#_1-2-结构型模式" class="header-anchor">#</a> 1.2 结构型模式</h2> <p>结构型模式主要是用于处理类或者对象的组合。一共有七种：适配器模式、装饰模式、代理模式、外观模式、桥接模式、组合模式、享元模式。</p> <ol><li>代理模式 ：控制客户端对对象的访问。</li> <li>组合模式 ：将整体与局部（树形结构）进行递归组合，让客户端能够以一种的方式对其进行处理。</li> <li>适配器模式 ：将原来不兼容的两个类融合在一起。</li> <li>装饰者模式 ：为对象添加新功能。</li> <li>享元模式 ：使用对象池来减少重复对象的创建。</li> <li>外观模式 ：对外提供一个统一的接口用来访问子系统。</li> <li>桥接模式 ：将两个能够独立变化的部分分离开来。</li></ol> <h2 id="_1-3-行为型模式"><a href="#_1-3-行为型模式" class="header-anchor">#</a> 1.3 行为型模式</h2> <p>行为型模式主要是描述类或者对象是怎样交互和怎样分配职责的。一共有十一种：策略模式、模板方法模式、观察者模式、迭代器模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p> <ol><li>策略模式 ：封装不同的算法，算法之间能互相替换。</li> <li>状态模式 ：根据不同的状态做出不同的行为。</li> <li>责任链模式 ：将事件沿着链去处理。</li> <li>观察者模式 ：状态发生改变时通知观察者，一对多的关系。</li> <li>模板方法模式 ：定义一套流程模板，根据需要实现模板中的操作。</li> <li>迭代器模式 ：提供一种方法顺序访问一个聚合对象中的各个元素。</li> <li>备忘录模式 ：保存对象的状态，在需要时进行恢复。</li> <li>访问者模式 ：稳定数据结构中，定义新的操作行为。</li> <li>中介者模式 ：将网状结构转变为星型结构，所有行为都通过中介。</li> <li>解释器模式 ：定义语法，并对其进行解释。</li> <li>命令模式 ：将请求封装成命令，并记录下来，能够撤销与重做。</li></ol> <p><strong>总结</strong>
+虽然设计模式是个好东西，能够给我们带来各种好处，比如降低对象之间的耦合，增加程序的可复用性、可扩展性、可维护性等等。
+但是我们也不应该滥用设计模式，设计模式在一定程序上会增加系统的复杂性。我们在写码时应该评估好各方面，避免过度设计。</p> <h2 id="二、六大原则"><a href="#二、六大原则" class="header-anchor">#</a> 二、六大原则</h2> <h2 id="_2-1-开闭原则"><a href="#_2-1-开闭原则" class="header-anchor">#</a> 2.1 开闭原则</h2> <p><strong>定义</strong></p> <p>一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。</p> <p><strong>问题场景</strong></p> <p>在软件的生命周期内，因为变化、升级和维护等原因需要<code>对软件原有代码进行修改时</code>，可能会<code>给旧代码中引入错误</code>，也可能会使我们<code>不得不对整个功能进行重构</code>，并且需要原有代码经过重新测试。</p> <p><strong>解决方案</strong></p> <p>当软件需要变化时，<code>尽量通过扩展软件实体的行为来实现变化</code>，而<code>不是通过修改已有的代码</code>来实现变化。</p> <p><strong>表达</strong></p> <p>用抽象构建框架，用实现扩展细节因为抽象灵活性好，适应性广，只要抽象的合理，可以基本保持软件架构的稳定。而软件中易变的细节，我们用从抽象派生的实现类来进行扩展，当软件需要发生变化时，我们只需要根据需求重新派生一个实现类来扩展就可以了。当然前提是我们的抽象要合理，要对需求的变更有前瞻性和预见性才行。</p> <p><strong>分析</strong></p> <p>就是对扩展开放,对修改关闭, 里式替换原则理论支持了这个一说法,及子类要能替换父类,这样子类就可以在父类的基础上,扩展</p> <h2 id="_2-2-单一职责原则"><a href="#_2-2-单一职责原则" class="header-anchor">#</a> 2.2 单一职责原则</h2> <p><strong>定义</strong></p> <p><code>一个类只负责一项职责。</code></p> <p><strong>问题场景</strong></p> <p>类T负责两个不同的职责：职责P1，职责P2。当由于职责P1需求发生改变而需要修改类T时，有可能会导致原本运行正常的职责P2功能发生故障。</p> <p><strong>解决方案</strong></p> <p>遵循单一职责原则。分别建立两个类T1、T2，使T1完成职责P1功能，T2完成职责P2功能。这样，当修改类T1时，不会使职责P2发生故障风险；同理，当修改T2时，也不会使职责P1发生故障风险。</p> <p><strong>表达</strong></p> <p>不要让责任扩散</p> <p><strong>分析</strong></p> <p>一个类,指责要单一,避免如果有多种职责,修改一个职责的时候,误触到其他职责的问题</p> <h2 id="_2-3-里氏替换原则"><a href="#_2-3-里氏替换原则" class="header-anchor">#</a> 2.3 里氏替换原则</h2> <p><strong>定义</strong></p> <p>所有引用基类的地方必须能透明地使用其子类的对象。</p> <p><strong>问题场景</strong></p> <p>有一功能P由类A完成，现在要扩展P,其中P由类A的子类B完成，则子类在完成的同时，可能会导致原来功能故障</p> <p><strong>解决方案</strong></p> <p>当使用继承时，遵循里氏替换原则。类B继承类A时，除添加新的方法完成新增功能外，尽量不要重写父类A的方法，也尽量不要重载父类A的方法。</p> <p><strong>表达</strong></p> <p>使用继承的时候，不要随便修改父类中已经实现的方法</p> <p><strong>分析</strong></p> <p>子类要能替换父类</p> <h2 id="_2-4-依赖倒置原则"><a href="#_2-4-依赖倒置原则" class="header-anchor">#</a> 2.4 依赖倒置原则</h2> <p><strong>定义</strong></p> <p>高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节；细节应该依赖抽象。</p> <p><strong>问题场景</strong></p> <p>类A直接依赖类B，假如要将类A改为依赖类C，则必须通过修改类A的代码来达成。这种场景下，类A一般是高层模块，负责复杂的业务逻辑；类B和类C是低层模块，负责基本的原子操作；假如修改类A，会给程序带来不必要的风险。</p> <p><strong>解决方案</strong></p> <p>将类A修改为依赖接口I，类B和类C各自实现接口I，类A通过接口I间接与类B或者类C发生联系，则会大大降低修改类A的几率。</p> <p><strong>表达</strong></p> <p>如果A依赖B，现在要改为依赖C，如果直接修改A有风险，可以让A去依赖一个接口，BC都实现这个接口，也就是策略模式</p> <p><strong>分析</strong></p> <p>白话就是说,要根据接口或者抽象去设计,不要依赖于细节,eg.项目中要换数据库,不用重新写底层的数据库代码. 就是使用了hibernate一样,替换方言就好了,因为hibernate是根据接口设计的,不同数据库有不同的实现,可以直接使用. eg2: 我生病了要去买药,如果A药铺,没有我就用B药铺买. 因为他们都是药铺,都有一样的功能,可以友好的替换</p> <h2 id="_2-5-接口隔离原则"><a href="#_2-5-接口隔离原则" class="header-anchor">#</a> 2.5 接口隔离原则</h2> <p><strong>定义</strong></p> <p>客户端不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。</p> <p><strong>问题场景</strong></p> <p>类A通过接口I依赖类B，类C通过接口I依赖类D，如果接口I对于类A和类B来说不是最小接口，则<strong>类B和类D必须去实现他们不需要的方法</strong>。</p> <p><strong>解决方案</strong></p> <p>将臃肿的接口I拆分为独立的几个接口，类A和类C分别与他们需要的接口建立依赖关系。也就是采用接口隔离原则</p> <p><strong>表达</strong></p> <p>防止去实现不需要的接口方法，可以按接口拆分，避免臃肿。</p> <p><strong>分析</strong></p> <p>白话,接口要最小化,功能更细分. 目的是:不需要的功能,就不要去实现</p> <p>比如有些接口可能里面什么方法都没有，其存在的意义，就是为了其实现类拥有特殊的功能.所以我们也要怕我们的接口里面没有方法，就怀疑了它存在的价值</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>public class RandomAccess{
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>当实现RandomAccess的类比如ArrayList就具有随机访问的能力，而没有实现该接口的，就只能去迭代访问。</p> <p>我们可以简单的看下Collections下的binarySearch方法的源码</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span>
+    <span class="token keyword">int</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">Comparable</span><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> <span class="token class-name">T</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">,</span> <span class="token class-name">T</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>list <span class="token keyword">instanceof</span> <span class="token class-name">RandomAccess</span> <span class="token operator">||</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>BINARYSEARCH_THRESHOLD<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">indexedBinarySearch</span><span class="token punctuation">(</span>list<span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            <span class="token keyword">return</span> <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">iteratorBinarySearch</span><span class="token punctuation">(</span>list<span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="_2-6-迪米特法则"><a href="#_2-6-迪米特法则" class="header-anchor">#</a> 2.6 迪米特法则</h2> <p><strong>定义</strong></p> <p>一个对象应该对其他对象保持最少的了解。</p> <p><strong>问题场景</strong></p> <p>类与类之间的关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大。</p> <p><strong>解决方案</strong></p> <p>尽量降低类与类之间的耦合。</p> <p><strong>表达</strong></p> <p>尽量降低类与类之间的耦合。</p> <p><strong>分析</strong></p> <p>降低类与类之间直接交互,能隐藏的属性就可以隐藏. eg. 修电脑,去IT部门,之前一直找小张,现在小张走了,还需要重新认识小李. 迪米特法则,就是直接找IT主管,让主管派人修. 主管就是接口，调用接口的方法，底层具体是小张还是小李，我们不用去管</p> <p>这里其实也强调了接口的重要性!</p></div> <div class="theme-default-content" data-v-2a672880><hr data-v-2a672880> <p data-v-2a672880><img src="https://img.springlearn.cn/learn_4ebd4ed339f1c23b2bc65644d1df9a97.gif" loading="lazy" class="feijiFoot" data-v-2a672880></p> <div style="display: flex" data-v-2a672880><div data-v-2a672880>本文由西魏陶渊明版权所有。如若转载，请注明出处：西魏陶渊明</div> <div style="margin-left: 1rem" data-v-2a672880><a href="https://java.springlearn.cn/" target="_blank" rel="noopener noreferrer" data-v-2a672880><img src="https://img.shields.io/badge/%E6%8A%80%E6%9C%AF%E7%AB%99-%E6%A1%83%E8%8A%B1%E6%BA%90%E8%AE%B0%20-green" alt loading="lazy" data-v-2a672880><span data-v-2a672880><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" data-v-2a672880><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z" data-v-2a672880></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9" data-v-2a672880></polygon></svg> <span class="sr-only" data-v-2a672880>(opens new window)</span></span></a></div></div></div></div> <!----> <div class="content__content-bottom"></div> <footer class="page-meta"><div class="edit-link"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon edit-icon"><path d="M117.953 696.992 64.306 959.696l265.931-49.336 450.204-452.505-212.284-213.376-450.204 452.513zm496.384-296.326L219.039 797.993l-46.108-46.34L568.233 354.33l46.104 46.335zm345.357-122.99-114.45 115.04-212.288-213.377 114.45-115.035 212.288 213.371zm0 0" fill="currentColor"></path></svg> <a href="https://github.com/lxchinesszz/JavaGuide/edit/master/docs/learn/design/六脉神剑.md" target="_blank" rel="noopener noreferrer">编辑此页</a></div> <div class="meta-item update-time"><span class="label">上次编辑于:</span> <span class="info">2022年5月24日 21:52</span></div> <div class="meta-item contributors"><span class="label">贡献者: </span> <span class="info"><span title="email: lxchinesszz@163.com" class="contributor">
+          lxchinesszz
+        </span> <!----></span></div></footer> <!----> <div class="comments-wrapper"><div class="waline-wrapper"><div id="waline-comment"></div></div></div> <!----> <div class="content__page-bottom"></div></main> <footer class="footer-wrapper"><!----> <div class="footer"> 只要坚持不懈，嘲笑你的人，迟早会被你笑死。</div> <div class="copyright">Copyright © 2022 西魏陶渊明</div></footer></div><div class="global-ui"><!----><!----><div id="pwa-install"><!----> <div id="install-modal-wrapper" style="display:none;"><div class="background"></div> <div class="install-modal"><div class="header"><button aria-label="关闭" class="close-button"><svg width="23" height="22" xmlns="http://www.w3.org/2000/svg" class="icon close-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.12.358a1.224 1.224 0 011.729 0l8.92 8.914L20.686.358a1.224 1.224 0 011.73 1.728L13.497 11l8.92 8.913a1.222 1.222 0 11-1.73 1.729l-8.919-8.913-8.92 8.913a1.224 1.224 0 01-1.729-1.729L10.04 11l-8.92-8.914a1.222 1.222 0 010-1.728z" fill="currentColor"></path></svg></button> <div class="logo"><!----> <div class="title"><h1></h1> <p class="desc">该应用可以安装在您的 PC 或移动设备上。这将使该 Web 应用程序外观和行为与其他应用程序相同。它将在出现在应用程序列表中，并可以固定到主屏幕，开始菜单或任务栏。此 Web 应用程序还将能够与其他应用程序和您的操作系统安全地进行交互。</p></div></div></div> <div class="content"><div class="highlight"><!----> <!----></div> <div class="description"><h3>详情</h3> <p></p></div></div> <div class="button-wrapper"><button class="install-button">
+        安装 <span></span></button> <button class="cancel-button">
+        取消
+      </button></div></div></div></div><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button title="关闭" aria-label="关闭" class="pswp__button pswp__button--close"></button> <button title="分享" aria-label="分享" class="pswp__button pswp__button--share"></button> <button title="切换全屏" aria-label="切换全屏" class="pswp__button pswp__button--fs"></button> <button title="缩放" aria-label="缩放" class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button title="上一个 (左箭头)" aria-label="上一个 (左箭头)" class="pswp__button pswp__button--arrow--left"></button> <button title="下一个 (右箭头)" aria-label="下一个 (右箭头)" class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div></div></div>
+    <script src="/assets/js/app.cf8327b5.js" defer></script><script src="/assets/js/layout-Layout.276cd497.js" defer></script><script src="/assets/js/page-六大原则23种设计模式.10c52c4f.js" defer></script><script src="/assets/js/vendors~layout-Blog~layout-Layout~layout-NewLayout~layout-NotFound.90ac852b.js" defer></script><script src="/assets/js/vendors~layout-Layout~layout-NewLayout.cdf057ea.js" defer></script>
+  </body>
+</html>
