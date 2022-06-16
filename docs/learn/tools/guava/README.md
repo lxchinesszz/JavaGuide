@@ -2,7 +2,7 @@
 breadcrumb: false
 navbar: true
 sidebar: true
-pageInfo: false
+pageInfo: true
 contributor: true
 editLink: true
 updateTime: true

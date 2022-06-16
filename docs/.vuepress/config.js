@@ -44,6 +44,10 @@ module.exports = config({
         ], [
             'script',
             {charset: 'utf-8', src: ' https://img.springlearn.cn/learn_eed96b41c5dfddf972e76e7922f60fc8.jquery.min.js'}
+        ],
+        [
+            'script',
+            {charset: 'utf-8', src: 'https://img.springlearn.cn/learn_d67ad5eb7554e8aed39db1a4d7948ea6.pure.mini.js'}
         ]
     ],
     locales: {
@@ -366,7 +370,7 @@ module.exports = config({
                             title: "基础知识",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Spring循环依赖', 'AOP', 'EL', 'Endpoint监控端点扩展', 'Spring动态绑定配置', 'Web接口资源是如何保存起来的']
+                            children: ['Spring循环依赖', 'AOP', 'EL', 'Endpoint监控端点扩展', 'Spring动态绑定配置', 'Web接口资源是如何保存起来的', 'Spring声明式事务的实现方案', 'FactoryBean接口实例化']
                         }
                     ],
                     "/learn/mybatis/": [
@@ -381,7 +385,7 @@ module.exports = config({
                             title: "专题文章",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Mapper代理对象创建', 'Mybatis执行流程分析', 'Mybatis一级二级缓存设计', 'Mybatis缓存设计']
+                            children: ['Mapper代理对象创建', 'Mybatis执行流程分析', 'Mybatis一级二级缓存设计', 'Mybatis缓存设计', '事务的实现方案']
                         }
                         ,
                         {
@@ -553,6 +557,14 @@ module.exports = config({
                             children: ['Java泛型']
                         }
                     ],
+                    "/learn/project/jvm/": [
+                        {
+                            title: "推荐文章",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['JVM参数配置说明', 'JVM']
+                        }
+                    ],
                     "/learn/project/jmvn/": [
                         {
                             title: "快速入门",
@@ -607,7 +619,9 @@ module.exports = config({
         },
         footer: {
             display: true,
-            content: " 只要坚持不懈，嘲笑你的人，迟早会被你笑死。",
+            content: " 只要坚持不懈，嘲笑你的人，迟早会被你笑死。 <span id=\"busuanzi_container_site_pv\">本站总访问量<span id=\"busuanzi_value_site_pv\"></span>次</span> <span id=\"busuanzi_container_site_uv\">\n" +
+                "  本站访客数<span id=\"busuanzi_value_site_uv\"></span>人次\n" +
+                "</span>",
         },
         comment: {
             type: "waline",

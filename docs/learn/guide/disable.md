@@ -7,7 +7,7 @@ navbar: false
 sidebar: false
 
 breadcrumb: false
-pageInfo: false
+pageInfo: true
 contributor: false
 editLink: false
 updateTime: false

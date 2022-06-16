@@ -2,7 +2,7 @@
 breadcrumb: false
 navbar: true
 sidebar: true
-pageInfo: false
+pageInfo: true
 contributor: true
 editLink: true
 updateTime: true
@@ -302,6 +302,6 @@ ns         %     Task name
 
 所以RxJava 是鼻祖，Reactor是追随者。也是因为上面的特性，所以后台开发者没有安卓开发者感兴趣，不需要压榨机器的性能。
 
-Reactor要想推广起来，必须要与异步Servlet或是Spring WebFlux结合（开发者无感使用），才可能推广使用起来。
+`Reactor要想推广起来，必须要与异步Servlet或是Spring WebFlux结合`（开发者无感使用），或是`云原生应用彻底推广起来,强制开发者必须使用。`才可能推广使用起来。
 但是不管怎么样这种编程思想是可以借鉴。
 

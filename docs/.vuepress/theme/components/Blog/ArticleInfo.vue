@@ -35,6 +35,7 @@
       <span v-text="readingTime" />
       <meta property="timeRequired" :content="readingTimeContent" />
     </span>
+
   </div>
 </template>
 
