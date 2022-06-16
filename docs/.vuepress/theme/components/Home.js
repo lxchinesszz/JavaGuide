@@ -1,10 +1,9 @@
 import Vue from "vue";
-import axios from 'axios';
 import MyTransition from "@theme/components/MyTransition.vue";
 import NavLink from "@theme/components/Navbar/NavLink.vue";
 import HomeJitang from "@theme/components/Home/HomeJitang.vue"
 import HomeAnimation from "@theme/components/Home/HomeAnimation.vue"
-
+import {say} from "../../public/js/yiyan";
 import {navigate} from "@theme/utils/navigate";
 
 export default Vue.extend({
@@ -25,11 +24,9 @@ export default Vue.extend({
     }
     ,
     created: function () {
-        let _this = this;
-        axios.get('https://service-etyft6el-1257000250.sh.apigw.tencentcs.com/release/dujitang')
-            .then(({data}) => {
-                _this.djt = data
-            }).catch(console.error);
+        this.$nextTick(() => {
+            this.djt = say();
+        })
     },
     methods: {
         navigate(link) {

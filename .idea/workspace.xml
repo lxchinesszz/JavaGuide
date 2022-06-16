@@ -1,175 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="Merge remote-tracking branch 'refs/remotes/origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.name">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/js/busuanzi.pure.mini.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/mybatis/事务的实现方案.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/outsite/沟通软实力.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/jvm/JVM.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/jvm/JVM参数配置说明.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/jvm/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/FactoryBean接口实例化.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/Spring声明式事务的实现方案.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/public/js/.qiniu_pythonsdk_hostscache.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/public/js/.qiniu_pythonsdk_hostscache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/components/Blog/ArticleInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/components/Blog/ArticleInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/styles/code/index.styl" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/styles/code/index.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/styles/palette.styl" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/styles/palette.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/blog/docsify/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/docsify/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/blog/hexo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/hexo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/blog/vuepress/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/vuepress/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/nosql/redis/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/nosql/redis/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/nosql/redis/Redis缓存穿透雪崩问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/nosql/redis/Redis缓存穿透雪崩问题.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/sql/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/sql/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/sql/SQL优化示例.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/sql/SQL优化示例.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/sql/SQL索引性能优化.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/sql/SQL索引性能优化.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/sql/SQL锁机制.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/sql/SQL锁机制.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/sql/explain.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/sql/explain.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/sql/join.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/sql/join.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/sql/垃圾SQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/sql/垃圾SQL.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/databases/sql/海量数据模拟.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/databases/sql/海量数据模拟.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/design/Java代码规范全部奉上.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/design/Java代码规范全部奉上.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/design/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/design/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/design/中文文档写作规范.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/design/中文文档写作规范.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/design/六脉神剑.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/design/六脉神剑.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/design/年终总结汇报大纲.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/design/年终总结汇报大纲.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/design/领域驱动模型的思考与认知.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/design/领域驱动模型的思考与认知.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式事务处理.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式事务处理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式服务熔断.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式服务熔断.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式服务网关.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式服务网关.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式服务调用.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式服务调用.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式服务降级.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式服务降级.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式服务限流.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式服务限流.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式注册中心.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式注册中心.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式负载均衡.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式负载均衡.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式配置中心.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式配置中心.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式链路追踪.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式链路追踪.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/guide/disable.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/guide/disable.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/guide/test.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/guide/test.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/BlockingQueue.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/BlockingQueue.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/Condition.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/Condition.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/Contended.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/Contended.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/CountDownLatch.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/CountDownLatch.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/CyclicBarrier.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/CyclicBarrier.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/HashMap.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/HashMap.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/JMX.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/JMX.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/Java异常体系.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/Java异常体系.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/ReadWriteLock.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/ReadWriteLock.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/ReentrantLock.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/ReentrantLock.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/SPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/SPI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/Semaphore.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/Semaphore.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/hooks函数.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/hooks函数.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/synchronized.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/synchronized.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/函数式编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/函数式编程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/分布式锁.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/分布式锁.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/原子操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/原子操作.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/四大引用.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/四大引用.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/委派双亲之类加载器.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/委派双亲之类加载器.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/拒绝策略.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/拒绝策略.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/线程安全.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/线程安全.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/线程工厂.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/线程工厂.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/线程池.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/线程池.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/线程组.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/线程组.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/线程隔离.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/线程隔离.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java2/Java异常体系.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java2/Java异常体系.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java2/函数式编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java2/函数式编程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/maven/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/maven/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/maven/maven-resources-plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/maven/maven-resources-plugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/maven/maven-surefire-plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/maven/maven-surefire-plugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/maven/plugin/artifact-check-maven-plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/maven/plugin/artifact-check-maven-plugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/maven/spring-boot-maven-plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/maven/spring-boot-maven-plugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/maven/自定义maven插件.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/maven/自定义maven插件.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/AuthPlugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/AuthPlugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/LimitPlugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/LimitPlugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/Mapper代理对象创建.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/Mapper代理对象创建.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/MetaObject.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/MetaObject.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/Mybatissql日志打印.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/Mybatissql日志打印.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/Mybatis一级二级缓存设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/Mybatis一级二级缓存设计.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/Mybatis执行流程分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/Mybatis执行流程分析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/Mybatis缓存设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/Mybatis缓存设计.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/PagePlugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/PagePlugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/插件分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/插件分析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/核心类介绍.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/核心类介绍.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/环境搭建.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/环境搭建.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/配置文件解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/配置文件解析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/other/bug.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/other/bug.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/other/java-watch-file.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/other/java-watch-file.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/other/zookeeper.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/other/zookeeper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/other/一致性hash问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/other/一致性hash问题.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/other/如何学会复盘.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/other/如何学会复盘.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/other/程序猿到底有没有必要买一台阿里云服务器.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/other/程序猿到底有没有必要买一台阿里云服务器.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/other/重剑无锋大巧不工.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/other/重剑无锋大巧不工.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/alfred/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/alfred/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/alfred/alfred-worflow-js.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/alfred/alfred-worflow-js.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/alfred/create-alfred.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/alfred/create-alfred.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/jmvn/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jmvn/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/jmvn/introduction-install.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jmvn/introduction-install.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/jmvn/jmvn-export.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jmvn/jmvn-export.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/jmvn/jmvn-init.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jmvn/jmvn-init.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/jmvn/jmvn-install.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jmvn/jmvn-install.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/jmvn/jmvn-plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jmvn/jmvn-plugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/jvm/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jvm/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/school/students.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/school/students.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/AOP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/AOP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/EL.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/EL.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/Endpoint监控端点扩展.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/Endpoint监控端点扩展.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/Spring动态绑定配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/Spring动态绑定配置.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/Spring循环依赖.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/Spring循环依赖.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/Web接口资源是如何保存起来的.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/Web接口资源是如何保存起来的.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/FeignMock.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/FeignMock.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/JUnitAPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/JUnitAPI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/JUnit单测类属性注入.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/JUnit单测类属性注入.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/MockDataAPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/MockDataAPI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/MockitoAPI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/MockitoAPI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/SpringBootTesting.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/SpringBootTesting.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/事务回滚原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/事务回滚原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/使用断言.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/使用断言.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/单测维护.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/单测维护.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/启动缓慢.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/启动缓慢.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/命名规则.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/命名规则.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/如何知道是否依赖Spring容器.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/如何知道是否依赖Spring容器.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/异步验证.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/异步验证.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/影响范围.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/影响范围.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/技术选型.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/技术选型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/数据隔离.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/数据隔离.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/极限测试.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/极限测试.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/案例分享.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/案例分享.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/测试成本.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/测试成本.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/测试范围.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/测试范围.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/消息验证.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/消息验证.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/test/谁在调用JUnit.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/test/谁在调用JUnit.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/arthas/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/arthas/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/arthas/base-cli.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/arthas/base-cli.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/arthas/class-cli.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/arthas/class-cli.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/arthas/jvm-cli.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/arthas/jvm-cli.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/arthas/learn.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/arthas/learn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/arthas/watch-cli.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/arthas/watch-cli.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/bytecode/Javassist.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/bytecode/Javassist.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/disruptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/disruptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/druid/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/druid/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/guava/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/guava/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/guava/guava-cache.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/guava/guava-cache.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/guava/guava-map.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/guava/guava-map.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/guava/guava-retry.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/guava/guava-retry.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/guava/spring-retry.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/guava/spring-retry.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/jmh/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/jmh/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/jol/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/jol/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/pool2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/pool2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/pool2/字符串常量池.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/pool2/字符串常量池.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/reactor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/reactor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/reflections/Java泛型.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/reflections/Java泛型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/reflections/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/reflections/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/网站地图.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/网站地图.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/误入歧途.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/误入歧途.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/js/yiyan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/Djt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/Djt.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/PageBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/PageBanner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/components/Home/HomeJitang.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/components/Home/HomeJitang.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +52,9 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.docs:build">
+    <configuration name="yiyan.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/docs/.vuepress/public/js/yiyan.js" working-dir="$PROJECT_DIR$/docs/.vuepress/public/js">
+      <method v="2" />
+    </configuration>
     <configuration name="docs:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -238,6 +79,7 @@
       <list>
         <item itemvalue="npm.docs:build" />
         <item itemvalue="npm.docs:clean-dev" />
+        <item itemvalue="Node.js.yiyan.js" />
       </list>
     </recent_temporary>
   </component>
@@ -253,6 +95,7 @@
       <workItem from="1655011977801" duration="601000" />
       <workItem from="1655042063306" duration="31877000" />
       <workItem from="1655369870803" duration="4849000" />
+      <workItem from="1655385206370" duration="2355000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -261,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655385016667</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add go">
+      <created>1655385272029</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655385272029</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="code add" />
     <MESSAGE value="Merge remote-tracking branch 'refs/remotes/origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'refs/remotes/origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.name" />
+    <MESSAGE value="add go" />
+    <option name="LAST_COMMIT_MESSAGE" value="add go" />
   </component>
 </project>

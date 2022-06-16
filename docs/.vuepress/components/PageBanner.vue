@@ -7,19 +7,18 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Djt from './Djt.vue'
+import {say} from "../public/js/yiyan";
 
 export default {
   name: "PageBanner",
   components: {Djt},
   created: function () {
-    axios.get('https://service-etyft6el-1257000250.sh.apigw.tencentcs.com/release/dujitang')
-        .then(({data}) => {
-          const hitokoto = document.getElementById('yiyan')
-          hitokoto.href = 'https://java.springlearn.cn'
-          hitokoto.innerText = data
-        }).catch(console.error);
+    this.$nextTick(() => {
+      const hitokoto = document.getElementById('yiyan')
+      hitokoto.href = 'https://java.springlearn.cn'
+      hitokoto.innerText = say()
+    })
   }
 }
 </script>

@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import axios from 'axios'
+import {say} from "../../../public/js/yiyan";
+
 // 首页鸡汤
 export default {
   name: "HomeJitang",
@@ -19,12 +20,11 @@ export default {
     //     })
     //     .catch(console.error);
     // 使用毒鸡汤
-    axios.get('https://service-etyft6el-1257000250.sh.apigw.tencentcs.com/release/dujitang')
-        .then(({data}) => {
-          const hitokoto = document.getElementById('hitokoto_text')
-          hitokoto.href = 'https://java.springlearn.cn'
-          hitokoto.innerText = data
-        }).catch(console.error);
+    this.$nextTick(() => {
+      const hitokoto = document.getElementById('hitokoto_text')
+      hitokoto.href = 'https://java.springlearn.cn'
+      hitokoto.innerText = say()
+    })
   }
 }
 </script>
