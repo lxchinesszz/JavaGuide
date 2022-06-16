@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/js/yiyan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/Djt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/Djt.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/PageBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/PageBanner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/components/Home/HomeJitang.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/components/Home/HomeJitang.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/1.bc5cf8f7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/layout-Blog~layout-NotFound.b9fd00dc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/layout-NotFound.53b63542.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/layout-Slide.7a430342.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~layout-Blog~layout-Layout~layout-NewLayout~layout-NotFound.90ac852b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~layout-Layout~layout-NewLayout.cdf057ea.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <workItem from="1655011977801" duration="601000" />
       <workItem from="1655042063306" duration="31877000" />
       <workItem from="1655369870803" duration="4849000" />
-      <workItem from="1655385206370" duration="2355000" />
+      <workItem from="1655385206370" duration="2783000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655385272029</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix bug">
+      <created>1655387731793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655387731793</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +128,7 @@
     <MESSAGE value="code add" />
     <MESSAGE value="Merge remote-tracking branch 'refs/remotes/origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.name" />
     <MESSAGE value="add go" />
-    <option name="LAST_COMMIT_MESSAGE" value="add go" />
+    <MESSAGE value="fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
   </component>
 </project>
