@@ -31,6 +31,6 @@ func recv(sb chan string) {
 	fmt.Println("接收成功", ret)
 }
 func code(a *int)  {
-	*a = 100
+	*a = 800
 	return
 }
