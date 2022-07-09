@@ -4,7 +4,7 @@
   "description": "西魏陶渊明的个人笔记",
   "license": "MIT",
   "scripts": {
-    "docs:build": "vuepress build docs",
+    "build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs -p 6676 --no-cache",
     "docs:dev": "vuepress dev docs",
     "docs:eject-theme": "vuepress eject-hope docs"
