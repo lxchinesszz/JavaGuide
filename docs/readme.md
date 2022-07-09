@@ -2,7 +2,7 @@
 home: true
 heroImage: /blog.png
 heroText: Learning notes
-tagline: 天下代码一大抄, 看你会抄不会抄, 抄来抄去有提高！
+tagline: 天下代码一大抄, 抄来抄去有提高, 看你会抄不会抄！
 heroFullScreen: true
 actionText: 网站地图
 editLink: true

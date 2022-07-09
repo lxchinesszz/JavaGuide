@@ -16,116 +16,42 @@ title: Docsify
 
 ## 一、docsify
 
-`Hexo` 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-[hexo](https://hexo.io/zh-cn/)
+`docsify` 可以快速帮你生成文档网站。不同于 GitBook、Hexo 的地方是它不会生成静态的 .html 文件，所有转换工作都是在运行时。如果你想要开始使用它，只需要创建一个 index.html 就可以开始编写文档并直接部署在 GitHub Pages。
+[docsify](https://docsify.js.org/#/zh-cn/)
+
+[https://ddd.springlearn.cn/](https://ddd.springlearn.cn/)
 
 ## 二、安装
 
-### 2.1 安装前提
 
-安装 Hexo 相当简单，只需要先安装下列应用程序即可：
-
-- Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)
-- Git
-- npm
-
-### 2.2 安装
+### 2.1 安装
 
 首先利用 `npm` 下载 
 
 ```bash
-npm install -g hexo-cli;
+npm i docsify-cli -g
 
-mdkir myblog;
+# 初始化项目
+docsify init ./docs
 
-cd myblog;
-
-hexo init;
+# 本地预览
+docsify serve docs
 ```
 
 
 ## 三、使用
 
-`hexo` 的命令非常简单，小编用了很多年，基本上只有2个。你知道是哪两个吗? 
+大家可以参考我的项目实现
 
-### 3.1 new 新建文章
+### 3.1 导航栏配置
 
-`$ hexo new [layout] <title>`
+![](https://img.springlearn.cn/blog/learn_1656224450000.png)
 
-- layout 是博客布局，基本不会用
-- title 就是博客的名字
-
-### 3.2 generate 文章编译
-
-生成静态文件。
-
-`$ hexo generate`
-
-该命令可以简写为：
-
-`$ hexo g`
-
-### 3.3 server 本地运行
-
-启动服务器,本地运行
-
-`$ hexo server`
-
-### 3.4 deploy 远程部署
-
-部署远程
-
-`$ hexo deploy`
-
-该命令可以简写为：
-
-`$ hexo d`
-
-### 3.5 clean 清理缓存
-
-`$ hexo clean`
-
-清除缓存文件 (db.json) 和已生成的静态文件 (public)。
-
-在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。
-
-### 3.6 version
-
-`$ hexo version`
-
-显示 Hexo 版本。
+- [`docusaurus.config.js`](https://github.com/lxchinesszz/ddd-website/blob/master/docusaurus.config.js)
 
 
-## 四、部署
+### 3.2 编写文章
 
-`hexo` 的配置文件都在根目录下的 `_config.yml` 文件下。如果要部署远程，非常简单。
+文章基于Markdown格式,只要会使用Markdown就可以了。
 
-```yml
-deploy:
-    type: git
-    repo:
-#      可以使用github    
-#      github: https://github.com/lxchinesszz/lxchinesszz.github.io.git
-      coding: https://e.coding.net/lxchinesszz/lxchinesszz.git
-    branch: master
-```
-
-
-- 1. 这里需要注意，如果使用github部署, 仓库的名字是有讲究的。名字要跟github的账户名前缀一直。
-`lxchinesszz.github.io`
-- 2. 打开设置要配置一下域名，如果不配置域名默认就是 `https://lxchinesszz.github.io/`
-
-![](https://img.springlearn.cn/blog/learn_1640502249000.png)
-
-### 4.1 本地部署
-
-`hexo s`
-
-### 4.2 远程部署
-
-`hexo g -d` 
-
-或者是
-
-`hexo g`  + `hexo d`
-
+就这么简单,搭建可以直接拉去我的项目,进行调整即可。更多的定制化可以直接参考官方文档。

@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/1.bc5cf8f7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/layout-Blog~layout-NotFound.b9fd00dc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/layout-NotFound.53b63542.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/layout-Slide.7a430342.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~layout-Blog~layout-Layout~layout-NewLayout~layout-NotFound.90ac852b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~layout-Layout~layout-NewLayout.cdf057ea.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/blog/aliyun/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/blog/将博客搬至CSDN/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/other/如何设计一款通信层框架.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/blog/docsify/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/docsify/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/blog/hexo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/hexo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/blog/vuepress/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/vuepress/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/project/jvm/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jvm/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +48,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/liuxin/JavaGuide/docs/learn/spring&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/liuxin/JavaGuide/docs/learn/blog/aliyun&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;MFCli&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -47,8 +56,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/learn/blog/aliyun" />
       <recent name="$PROJECT_DIR$/docs/learn/spring" />
       <recent name="$PROJECT_DIR$/docs/learn/mybatis" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/learn/blog/将博客搬至CSDN" />
     </key>
   </component>
   <component name="RunManager" selected="npm.docs:build">
@@ -95,7 +108,13 @@
       <workItem from="1655011977801" duration="601000" />
       <workItem from="1655042063306" duration="31877000" />
       <workItem from="1655369870803" duration="4849000" />
-      <workItem from="1655385206370" duration="2783000" />
+      <workItem from="1655385206370" duration="5368000" />
+      <workItem from="1655720004682" duration="2285000" />
+      <workItem from="1655878733722" duration="643000" />
+      <workItem from="1655893854928" duration="609000" />
+      <workItem from="1656220199482" duration="3713000" />
+      <workItem from="1656293609037" duration="599000" />
+      <workItem from="1657340770180" duration="453000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -118,7 +137,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655387731793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix bug1">
+      <created>1655388003308</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655388003308</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add new css">
+      <created>1655388131931</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655388131931</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +162,8 @@
     <MESSAGE value="Merge remote-tracking branch 'refs/remotes/origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.name" />
     <MESSAGE value="add go" />
     <MESSAGE value="fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+    <MESSAGE value="fix bug1" />
+    <MESSAGE value="add new css" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new css" />
   </component>
 </project>

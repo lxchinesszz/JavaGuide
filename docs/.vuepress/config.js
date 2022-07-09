@@ -296,13 +296,15 @@ module.exports = config({
                                 text: '博客框架', items: [
                                     {text: 'hexo', link: '/learn/blog/hexo/'},
                                     {text: 'vuepress', link: '/learn/blog/vuepress/'},
-                                    {text: 'docsify', link: '/learn/blog/docsify/'}
+                                    {text: 'docsify', link: '/learn/blog/docsify/'},
+                                    {text: '将博客搬至CSDN', link: '/learn/blog/将博客搬至CSDN/'}
+
                                 ]
                             },
                             {
                                 text: '服务器选择', items: [
-                                    {text: '自搭建服务', link: '/learn/chinese/'},
-                                    {text: 'Vercel', link: '/language/japanese1/'}
+                                    {text: '自搭建服务', link: '/learn/blog/aliyun/'},
+                                    {text: 'Vercel', link: '/learn/blog/vercel/'}
                                 ]
                             },
                             {
