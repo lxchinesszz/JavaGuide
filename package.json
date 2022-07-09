@@ -18,5 +18,9 @@
     "swiper": "^8.1.5",
     "vuepress": "^1.9.7",
     "vuepress-theme-hope": "^1.28.4"
+  },
+  "engines" : {
+    "npm" : ">=7.0.0",
+    "node" : ">=14.0.0"
   }
 }

@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/learn/blog/aliyun/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/blog/将博客搬至CSDN/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/other/如何设计一款通信层框架.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/blog/docsify/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/docsify/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/blog/hexo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/hexo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/blog/vuepress/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/blog/vuepress/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/img_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/project/jvm/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/project/jvm/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +98,7 @@
       <workItem from="1655893854928" duration="609000" />
       <workItem from="1656220199482" duration="3713000" />
       <workItem from="1656293609037" duration="599000" />
-      <workItem from="1657340770180" duration="453000" />
+      <workItem from="1657340770180" duration="771000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -151,19 +135,43 @@
       <option name="project" value="LOCAL" />
       <updated>1655388131931</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add new css">
+      <created>1657341360982</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657341360982</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add new css">
+      <created>1657341382307</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657341382307</updated>
+    </task>
+    <task id="LOCAL-00008" summary="del go">
+      <created>1657341461215</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657341461215</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="code add" />
     <MESSAGE value="Merge remote-tracking branch 'refs/remotes/origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.name" />
     <MESSAGE value="add go" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="fix bug1" />
     <MESSAGE value="add new css" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new css" />
+    <MESSAGE value="del go" />
+    <option name="LAST_COMMIT_MESSAGE" value="del go" />
   </component>
 </project>
