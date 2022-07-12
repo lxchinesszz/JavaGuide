@@ -387,7 +387,7 @@ module.exports = config({
                             title: "专题文章",
                             icon: "creative",
                             collapsable: false,
-                            children: ['Mapper代理对象创建', 'Mybatis执行流程分析', 'Mybatis一级二级缓存设计', 'Mybatis缓存设计', '事务的实现方案']
+                            children: ['Mapper代理对象创建', 'Mybatis执行流程分析', 'Mybatis一级二级缓存设计', 'Mybatis缓存设计', '事务的实现方案', 'Spring事务整合']
                         }
                         ,
                         {

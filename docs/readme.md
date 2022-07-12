@@ -7,11 +7,11 @@ heroFullScreen: true
 actionText: 网站地图
 editLink: true
 action:
-- text: 开始修炼 💡
+- text: 我的博客 💡
   link: /article/
   type: primary
-- text: 桃花源 ❀
-  link: https://blog.springlearn.cn/
+- text: 我的导航 🚀
+  link: https://dev.springlearn.cn/
   footer: Copyright © 2021 | The Blog by liuxin | 豫ICP备18041471号
 ---
 

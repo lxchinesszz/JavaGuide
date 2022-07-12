@@ -7,7 +7,7 @@ heroFullScreen: true
 actionText: 网站地图
 editLink: true
 action:
-- text: 开始修炼 💡
+- text: 我的博客 💡
   link: /article/
   type: primary
 - text: 桃花源 ❀

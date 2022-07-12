@@ -11,7 +11,7 @@ next: true
 comment: true
 footer: true
 backtotop: true
-title: 第13篇:Mybatis中打印Sql信息
+title: 第15篇:Mybatis中打印Sql信息
 category: Mybatis
 ---
 
