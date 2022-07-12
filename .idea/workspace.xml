@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/learn/mybatis/Spring事务整合.md" afterDir="false" />
+    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="add build">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/distributed/分布式服务调用.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/distributed/分布式服务调用.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/AuthPlugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/AuthPlugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/LimitPlugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/LimitPlugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/MetaObject.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/MetaObject.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/Mybatissql日志打印.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/Mybatissql日志打印.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/PagePlugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/PagePlugin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/事务的实现方案.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/事务的实现方案.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/mybatis/插件分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/mybatis/插件分析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +51,7 @@
       <recent name="$PROJECT_DIR$/docs/learn/blog/将博客搬至CSDN" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.docs:clean-dev">
+  <component name="RunManager" selected="npm.docs:build">
     <configuration name="yiyan.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/docs/.vuepress/public/js/yiyan.js" working-dir="$PROJECT_DIR$/docs/.vuepress/public/js">
       <method v="2" />
     </configuration>
@@ -88,8 +77,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.docs:clean-dev" />
         <item itemvalue="npm.docs:build" />
+        <item itemvalue="npm.docs:clean-dev" />
         <item itemvalue="Node.js.yiyan.js" />
       </list>
     </recent_temporary>
@@ -115,7 +104,7 @@
       <workItem from="1657340770180" duration="7708000" />
       <workItem from="1657371733184" duration="3353000" />
       <workItem from="1657592501001" duration="1699000" />
-      <workItem from="1657606620115" duration="2572000" />
+      <workItem from="1657606620115" duration="3490000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -208,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657343642602</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add build">
+      <created>1657629520606</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657629520606</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
