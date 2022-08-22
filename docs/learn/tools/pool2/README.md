@@ -12,9 +12,8 @@ comment: false
 footer: true
 backtotop: true
 sidebarDepth: 3
-title: 池化技术
+title: apache-commons 池化技术
 password: 123
-icon: zuanshi
 ---
 
 :::info 羽化而登仙，池化而提效

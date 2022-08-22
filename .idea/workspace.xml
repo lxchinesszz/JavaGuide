@@ -2,369 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/article/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/article/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/css/0.styles.1a046cf5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/185.b5edcbe6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/186.b0f21332.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/187.4e3932c4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/188.ae81d083.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/189.e7e3382e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/190.90888f49.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/191.73000b26.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/192.a6c28160.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/193.6ca74c8f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/194.b639435a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/195.e48353e3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/196.1c877e68.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/197.223e6805.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/198.9f064e25.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/199.51fd64a8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/200.baede55d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/201.33337110.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/202.7a51278a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/app.3e3baad9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page--a18262e4.63695491.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-AOP使用指南.882dccd5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Alfred-workflow-js.c30f38d1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Alfred添加工作流.c36f5f93.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Arthas（阿尔萨斯）能为你做什么.b3e7956d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Docsify.8ba985b4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-DruidSQL解析.bd42a06c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-FactoryBean接口实例化.ceadddfe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-FeignMock注意事项.6024eb53.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Get新技能,Java实现文件监控.216cc0a4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Guava-Map.1ac5ae06.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Guava-cache.0d34d4df.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Guava-retry重试组件.a7307527.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Home.76d2f7b9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-JMH基准测试.5af1d5a7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-JUnitAPI.544c557f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-JUnit单测类属性注入.68a8d61f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-JVM内存模型.9bbd9e40.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-JVM相关命令.3111976c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-JVM钩子hooks函数.43ebe6db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-JavaObject内存布局.f53bac72.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Javassist.aee8703d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Java代码规范全部奉上.8a6cad77.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Java四大引用.226419c1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Java并发包队列之BlockingQueue.83254eda.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Java异常体系.2c8e249b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Java泛型体系知识学习.632037d5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Java管理扩展.40919cd9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Java编程.3f523165.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Markdown增强.4ad0988f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Maven基础入门.23ff290b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-MockitoAPI.ed627e05.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Mybatis.f497f56d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Mysql优化示例.953362bb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Reactive反应式编程.df4a32db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Redis缓存穿透雪崩问题.f8216c73.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-SPI服务发现机制.23c62fbd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-SQL索引性能优化.b5ba3941.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-SQL锁机制.e1e3f62a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Spring-retry重试组件.d38e9d1f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Spring.aa5118fb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-SpringBootEndpoint监控端点扩展.d20c13a5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-SpringBootTesting.836e8d6d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Spring声明式事务的实现方案.7704fd09.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Vuepress.c129c9fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Web接口资源是如何保存起来的.5c28bf29.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-Zookeeper实践.21257d63.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-classclassloader相关.0f708156.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-explain调优.27cbcb57.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-hehe.559176e6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-maven-resources-plugin.3f628a45.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-maven-surefire-plugin.fdfe00a5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-monitorwatchtrace相关.6fc8f954.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-spring-boot-maven-plugin.496177e0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-①谁在调用JUnit.3435b6eb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-②如何知道是否依赖Spring容器.b328d63d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-中文文档写作规范.ab880d3b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-主要功能与配置演示.e19906c8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-使用断言.0612ca73.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-信号量Semaphore.732f54fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-倒计锁CountDownLatch.7d00767e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-六大原则23种设计模式.367f1e72.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-函数式编程.a68fb261.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-分布式服务.80e5d15e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-创建项目.7555ce68.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-动态绑定配置.1e2f023b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-匆匆那年.1f8d43a2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-单元测试专题.fbb53191.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-反射框架Reflections.5e256f86.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-基于命令行的Java脚手架.3adf635d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-基础命令.dad19ecf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-基础教程.2e94eb04.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-多线程之线程隔离.0c6aff38.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-如何学会复盘.c9ee57fd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-如何设计一款通信层框架.db81c695.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-字符串常量池.f2b01223.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-密码加密的文章.523bfbf0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-将博客搬至CSDN.c3a068c1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-年终总结汇报大纲.e24daac1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-幻灯片页.65d67181.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-异步验证.a74192f6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-影响范围.6eb327d2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-循环锁屏障CyclicBarrier.f363650d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-快速安装.d88fca35.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-性能优化之@Contended减少伪共享.313f8c2d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-指南.e039b734.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-插件开发.c2b8c58d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-数据模型安装.96b51cf2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-数据模型导出.aab794c9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-数据隔离.3b5e0d4e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-极限测试.f2a561ab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-案例分享.a1aa0da9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-池化技术.d9b76c08.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-没有条件创造条件Condition.123d5c7d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-没有规矩不成方圆.4f204a69.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-测试成本.71966208.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-消息验证.8bfd0c1b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-程序猿到底有没有必要买一台阿里云服务器.f9aafb02.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第01篇Mybatis学习之环境搭建.438bf22b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第01篇分布式注册中心.3fa09c32.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第02篇分布式负载均衡.a6da84a8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第03篇分布式服务调用.29a35d6a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第04篇分布式配置中心.8568a641.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第05篇Mybatis的SQL执行流程分析.9e8fb65f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第05篇分布式服务降级.1b287c01.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第06篇Mybatis缓存设计.5b0a74b8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第06篇分布式服务限流.7b57f0a9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第07篇分布式服务熔断.e7766dca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第08篇Mybatis的插件设计分析.bce3ed4a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第08篇分布式服务网关.df805e94.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第09篇Mybatis查询限制插件设计.2db9fbb5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第09篇分布式链路追踪.9ad2fb95.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第10篇Mybatis分页插件设计.e5ae1d6c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第10篇分布式事务处理.d7822264.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第11篇Mybatis权限插件设计.105be138.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第12篇Mybatis中反射工具.d585ecfc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第13篇Mybatis中打印Sql信息.ff602f98.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-第14篇Mybatis事务处理.681daff8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-线程安全之原子操作.e1bcdbc8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-线程安全感.812baaa1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-线程池扫盲.ba66c2ce.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-组件禁用.adb0555a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-给线程归归类.901124ea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-编译卡点插件.72becc60.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-自定义布局.c72ea2ee.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-自定义插件教程.8bbcc901.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-读写锁ReadWriteLock.7f3273f4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-软实力之沟通篇.5ba34c5f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-重入锁ReentrantLock.b8fd1132.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-重剑无锋大巧不工.45f3a09f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-阿里云自建服务器.264aee0c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-页面配置.1ac6bdc9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/page-领域驱动模型的思考与认知.eb14d971.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~flowchart.24e081a7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~mermaid.8789c1c3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~photo-swipe.469e20d5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~reveal.a7c68b1c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/vendors~waline.8c39a97a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/Java进阶/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/Java进阶/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/Java进阶/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/Java进阶/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/Java进阶/page/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/Java进阶/page/3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/Maven/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/Maven/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/Mybatis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/Mybatis/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/Mybatis/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/Mybatis/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/Spring/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/Spring/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/SpringBoot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/SpringBoot/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/使用指南/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/使用指南/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/分布式/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/分布式/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/分布式/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/分布式/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/设计&amp;规范/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/设计&amp;规范/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/category/软实力/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/category/软实力/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/encrypt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/encrypt/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/feed.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/feed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/blog-readme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/blog-readme/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/blog/aliyun/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/blog/aliyun/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/blog/docsify/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/blog/docsify/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/blog/hexo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/blog/hexo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/blog/vuepress/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/blog/vuepress/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/blog/将博客搬至CSDN/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/blog/将博客搬至CSDN/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/nosql/redis/Redis缓存穿透雪崩问题/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/nosql/redis/Redis缓存穿透雪崩问题/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/nosql/redis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/nosql/redis/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/sql/SQL优化示例/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/sql/SQL优化示例/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/sql/SQL索引性能优化/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/sql/SQL索引性能优化/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/sql/SQL锁机制/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/sql/SQL锁机制/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/sql/explain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/sql/explain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/sql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/sql/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/sql/join/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/sql/join/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/sql/垃圾SQL/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/sql/垃圾SQL/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/databases/sql/海量数据模拟/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/databases/sql/海量数据模拟/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/design/Java代码规范全部奉上/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/design/Java代码规范全部奉上/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/design/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/design/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/design/中文文档写作规范/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/design/中文文档写作规范/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/design/六脉神剑/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/design/六脉神剑/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/design/年终总结汇报大纲/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/design/年终总结汇报大纲/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/design/领域驱动模型的思考与认知/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/design/领域驱动模型的思考与认知/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式事务处理/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式事务处理/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式服务熔断/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式服务熔断/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式服务网关/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式服务网关/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式服务调用/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式服务调用/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式服务降级/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式服务降级/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式服务限流/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式服务限流/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式注册中心/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式注册中心/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式负载均衡/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式负载均衡/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式配置中心/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式配置中心/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/distributed/分布式链路追踪/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/distributed/分布式链路追踪/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/guide/disable/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/guide/disable/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/guide/encrypt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/guide/encrypt/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/guide/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/guide/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/guide/markdown/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/guide/markdown/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/guide/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/guide/page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/guide/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/guide/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/BlockingQueue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/BlockingQueue/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/Condition/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/Condition/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/Contended/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/Contended/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/CountDownLatch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/CountDownLatch/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/CyclicBarrier/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/CyclicBarrier/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/HashMap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/HashMap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/JMX/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/JMX/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/Java异常体系/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/Java异常体系/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/ReadWriteLock/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/ReadWriteLock/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/ReentrantLock/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/ReentrantLock/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/SPI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/SPI/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/Semaphore/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/Semaphore/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/hooks函数/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/hooks函数/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/synchronized/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/synchronized/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/函数式编程/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/函数式编程/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/分布式锁/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/分布式锁/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/原子操作/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/原子操作/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/四大引用/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/四大引用/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/委派双亲之类加载器/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/委派双亲之类加载器/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/拒绝策略/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/拒绝策略/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/线程安全/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/线程安全/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/线程工厂/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/线程工厂/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/线程池/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/线程池/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/线程组/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/线程组/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java/线程隔离/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java/线程隔离/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java2/Java异常体系/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java2/Java异常体系/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/java2/函数式编程/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/java2/函数式编程/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/layout/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/layout/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/maven/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/maven/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/maven/maven-resources-plugin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/maven/maven-resources-plugin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/maven/maven-surefire-plugin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/maven/maven-surefire-plugin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/maven/plugin/artifact-check-maven-plugin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/maven/plugin/artifact-check-maven-plugin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/maven/spring-boot-maven-plugin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/maven/spring-boot-maven-plugin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/maven/自定义maven插件/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/maven/自定义maven插件/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/AuthPlugin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/AuthPlugin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/LimitPlugin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/LimitPlugin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/Mapper代理对象创建/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/Mapper代理对象创建/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/MetaObject/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/MetaObject/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/Mybatissql日志打印/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/Mybatissql日志打印/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/Mybatis一级二级缓存设计/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/Mybatis一级二级缓存设计/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/Mybatis执行流程分析/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/Mybatis执行流程分析/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/Mybatis缓存设计/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/Mybatis缓存设计/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/PagePlugin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/PagePlugin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/事务的实现方案/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/事务的实现方案/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/插件分析/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/插件分析/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/核心类介绍/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/核心类介绍/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/环境搭建/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/环境搭建/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/mybatis/配置文件解析/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/mybatis/配置文件解析/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/other/bug/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/other/bug/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/other/java-watch-file/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/other/java-watch-file/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/other/zookeeper/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/other/zookeeper/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/other/一致性hash问题/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/other/一致性hash问题/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/other/如何学会复盘/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/other/如何学会复盘/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/other/如何设计一款通信层框架/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/other/如何设计一款通信层框架/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/other/程序猿到底有没有必要买一台阿里云服务器/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/other/程序猿到底有没有必要买一台阿里云服务器/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/other/重剑无锋大巧不工/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/other/重剑无锋大巧不工/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/outsite/沟通软实力/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/outsite/沟通软实力/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/alfred/alfred-worflow-js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/alfred/alfred-worflow-js/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/alfred/create-alfred/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/alfred/create-alfred/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/alfred/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/alfred/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jmvn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jmvn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jmvn/introduction-install/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jmvn/introduction-install/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jmvn/introduction/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jmvn/introduction/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jmvn/jmvn-export/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jmvn/jmvn-export/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jmvn/jmvn-init/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jmvn/jmvn-init/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jmvn/jmvn-install/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jmvn/jmvn-install/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jmvn/jmvn-plugin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jmvn/jmvn-plugin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jvm/JVM/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jvm/JVM/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jvm/JVM参数配置说明/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jvm/JVM参数配置说明/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/project/jvm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/project/jvm/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/school/students/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/school/students/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/slides/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/slides/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/AOP/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/AOP/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/EL/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/EL/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/Endpoint监控端点扩展/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/Endpoint监控端点扩展/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/FactoryBean接口实例化/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/FactoryBean接口实例化/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/Spring动态绑定配置/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/Spring动态绑定配置/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/Spring声明式事务的实现方案/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/Spring声明式事务的实现方案/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/Spring循环依赖/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/Spring循环依赖/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/Web接口资源是如何保存起来的/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/Web接口资源是如何保存起来的/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/spring/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/spring/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/FeignMock/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/FeignMock/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/JUnitAPI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/JUnitAPI/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/JUnit单测类属性注入/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/JUnit单测类属性注入/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/MockDataAPI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/MockDataAPI/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/MockitoAPI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/MockitoAPI/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/SpringBootTesting/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/SpringBootTesting/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/事务回滚原理/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/事务回滚原理/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/使用断言/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/使用断言/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/单测维护/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/单测维护/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/启动缓慢/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/启动缓慢/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/命名规则/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/命名规则/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/如何知道是否依赖Spring容器/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/如何知道是否依赖Spring容器/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/异步验证/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/异步验证/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/影响范围/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/影响范围/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/技术选型/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/技术选型/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/数据隔离/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/数据隔离/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/极限测试/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/极限测试/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/案例分享/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/案例分享/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/测试成本/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/测试成本/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/测试范围/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/测试范围/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/消息验证/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/消息验证/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/test/谁在调用JUnit/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/test/谁在调用JUnit/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/arthas/base-cli/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/arthas/base-cli/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/arthas/class-cli/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/arthas/class-cli/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/arthas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/arthas/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/arthas/jvm-cli/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/arthas/jvm-cli/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/arthas/learn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/arthas/learn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/arthas/watch-cli/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/arthas/watch-cli/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/bytecode/Javassist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/bytecode/Javassist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/disruptor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/disruptor/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/druid/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/druid/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/guava/guava-cache/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/guava/guava-cache/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/guava/guava-map/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/guava/guava-map/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/guava/guava-retry/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/guava/guava-retry/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/guava/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/guava/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/guava/spring-retry/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/guava/spring-retry/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/jmh/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/jmh/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/jol/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/jol/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/pool2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/pool2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/pool2/字符串常量池/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/pool2/字符串常量池/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/reactor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/reactor/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/reactor/webflux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/reactor/webflux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/reflections/Java泛型/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/reflections/Java泛型/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/tools/reflections/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/tools/reflections/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/网站地图/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/网站地图/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/learn/误入歧途/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/learn/误入歧途/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/play/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/play/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/rss.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/rss.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/service-worker.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/slide/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/slide/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/star/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/star/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/tag/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tag/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/tag/markdown/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tag/markdown/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/tag/使用指南/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tag/使用指南/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/tag/文章加密/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tag/文章加密/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/tag/页面配置/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tag/页面配置/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/timeline/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/timeline/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/ProjectList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/SeriesList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/Title.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/Ximg.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/dubbo/Dubbo源码解析之客户端Consumer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/dubbo/Dubbo源码解析之服务端Provider.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/dubbo/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/dubbo/dubbo整合spring的两种实现原理.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/electron/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/electron/图床软件示例.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/jobs/Elastic-Job源码解析(一)之与Spring完美整合.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/jobs/Elastic-Job源码解析(三)之分片定时任务执行.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/jobs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/HTTP协议使用示例.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/RPC协议使用示例.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/协议.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第01篇:手写JavaRPC框架之思路分析.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第02篇:手写JavaRPC框架之设计思路.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第03篇:手写JavaRPC框架之搞定序列化.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第04篇:手写JavaRPC框架之搞定网络通信.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/tools/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/layouts/NewLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/layouts/NewLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/home.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/home.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/java/HashMap.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/HashMap.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/tools/disruptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/disruptor/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/tools/druid/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/druid/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/tools/guava/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/guava/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/tools/pool2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/pool2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,6 +46,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -396,7 +68,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/liuxin/JavaGuide/docs/learn/blog/aliyun",
+    "last_opened_file_path": "/Users/liuxin/JavaGuide/docs/learn/jobs",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MFCli",
     "ts.external.directory.path": "/Users/liuxin/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5787.30/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
@@ -405,15 +77,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/learn/blog/aliyun" />
-      <recent name="$PROJECT_DIR$/docs/learn/spring" />
-      <recent name="$PROJECT_DIR$/docs/learn/mybatis" />
+      <recent name="$PROJECT_DIR$/docs/learn/jobs" />
+      <recent name="$PROJECT_DIR$/docs/learn/electron" />
+      <recent name="$PROJECT_DIR$/docs/learn/dubbo" />
+      <recent name="$PROJECT_DIR$/docs/learn/tools" />
+      <recent name="$PROJECT_DIR$/docs/learn/project/mojito" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/learn/blog/将博客搬至CSDN" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.docs:build">
+  <component name="RunManager" selected="npm.docs:clean-dev">
     <configuration name="yiyan.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/docs/.vuepress/public/js/yiyan.js" working-dir="$PROJECT_DIR$/docs/.vuepress/public/js">
       <method v="2" />
     </configuration>
@@ -439,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.docs:build" />
         <item itemvalue="npm.docs:clean-dev" />
+        <item itemvalue="npm.docs:build" />
         <item itemvalue="Node.js.yiyan.js" />
       </list>
     </recent_temporary>
@@ -466,7 +140,25 @@
       <workItem from="1657340770180" duration="7708000" />
       <workItem from="1657371733184" duration="3353000" />
       <workItem from="1657592501001" duration="1699000" />
-      <workItem from="1657606620115" duration="4226000" />
+      <workItem from="1657606620115" duration="4662000" />
+      <workItem from="1657703035006" duration="1398000" />
+      <workItem from="1657716674317" duration="2401000" />
+      <workItem from="1657972054416" duration="5397000" />
+      <workItem from="1658201102977" duration="1069000" />
+      <workItem from="1658218428942" duration="3892000" />
+      <workItem from="1658307091680" duration="730000" />
+      <workItem from="1658308687892" duration="837000" />
+      <workItem from="1658406472318" duration="1472000" />
+      <workItem from="1658745085377" duration="608000" />
+      <workItem from="1658929631808" duration="1382000" />
+      <workItem from="1659797951064" duration="631000" />
+      <workItem from="1660221479543" duration="650000" />
+      <workItem from="1660395851847" duration="764000" />
+      <workItem from="1660735856265" duration="7178000" />
+      <workItem from="1660786266759" duration="592000" />
+      <workItem from="1660805681706" duration="1765000" />
+      <workItem from="1660830647155" duration="1516000" />
+      <workItem from="1660917356074" duration="33780000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -573,7 +265,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657630682053</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add build">
+      <created>1657631428959</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657631428959</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add build">
+      <created>1657631443538</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1657631443538</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,5 +311,16 @@
     <MESSAGE value="add css" />
     <MESSAGE value="add build" />
     <option name="LAST_COMMIT_MESSAGE" value="add build" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/docs/.vuepress/theme/layouts/NewLayout.vue</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

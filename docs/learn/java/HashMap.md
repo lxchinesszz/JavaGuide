@@ -11,7 +11,7 @@ next: true
 comment: false
 footer: true
 backtotop: true
-title: 再也不怕被HashMap欺负了
+title: 面试再也不怕被HashMap欺负了
 category: Java进阶
 ---
 
@@ -146,9 +146,11 @@ HashMap中声明的常量信息,注意看。下面源码中会提到。
 1. 判断 table 是否为 null。为 null 则新建一个 table 数组
 2. 调用 hash 获取 该 key 的 hash 值
 ![](https://img.springlearn.cn/blog/learn_1596528441000.png)
-3. 如果发现有数据,且还是树结构就调用树的put方法
-4. 如果发现有数据,是链表的结构就循环插入尾部,如果发现达到了要转换树的长度,就转成红黑树
-5. 发现key冲突直接新值替换旧值,并且break;
+3. 将hash & n-1的值当做下标去找数据
+4. 如果发现有数据
+   1. 但是数据的hash和key都和当前要插入的一致就替换。(此时还是一个Node节点)
+   2. 但是数据的hash一致,但是key不一致,说明是hash冲突了。就转换成一个Node链表,数据放到链表尾部
+5. 如果发现链表长度大于等于8,就转换成红黑树
 ![](https://img.springlearn.cn/blog/learn_1596528854000.png)
 
 ## 三、面试知识扩展

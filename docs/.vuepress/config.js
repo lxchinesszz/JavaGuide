@@ -19,6 +19,11 @@ module.exports = config({
             },
         ],
         ["script", {src: "https://img.springlearn.cn/learn_f71f954c936a7a5bc107119f656be7a8.vue.min.js"}],
+        // ["script", {src: "https://unpkg.com/element-ui/lib/index.js"}],
+        // ['link', {
+        //     rel: 'stylesheet',
+        //     href: 'https://unpkg.com/element-ui/lib/theme-chalk/index.css'
+        // }],
         [
             "script",
             {src: "https://img.springlearn.cn/learn_3d5c67462f6ac197a271d1e178f295e9.min.js "},
@@ -30,7 +35,11 @@ module.exports = config({
         }],
         // ['link', {
         //     rel: 'stylesheet',
-        //     href: 'https://img.springlearn.cn/learn_41d489b6f8e99292d8d2c4ca59e10664.tailwind.min.css'
+        //     href: 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css'
+        // }],
+        // ['link', {
+        //     rel: 'stylesheet',
+        //     href: 'https://unpkg.com/pattern.css'
         // }],
         // [
         //     "script",
@@ -64,7 +73,7 @@ module.exports = config({
             // 默认是 false, 设置为 true 来启用
             editLinks: true,
             editLinkText: '编辑学习区',
-            description: "vuepress-theme-hope 的 demo",
+            description: "天下代码一大抄，抄来抄去有提高，看你会抄不会抄。",
         },
     },
     encrypt: {
@@ -161,29 +170,29 @@ module.exports = config({
                             {text: '测试专题', link: '/learn/test/'}
                         ]
                     },
-                    {
-                        text: 'Maven扩展',
-                        items: [
-                            {
-                                text: '基础入门', items: [
-                                    {text: 'Maven基础', link: '/learn/maven/'},
-                                    {text: '自定义插件', link: '/learn/maven/自定义maven插件/'}
-                                ]
-                            },
-                            {
-                                text: '源码分析', items: [
-                                    {text: 'spring-boot-maven-plugin', link: '/learn/maven/spring-boot-maven-plugin/'},
-                                    {text: 'maven-resources-plugin', link: '/learn/maven/maven-resources-plugin/'},
-                                    {text: 'maven-surefire-plugin', link: '/learn/maven/maven-surefire-plugin/'}
-                                ]
-                            },
-                            {
-                                text: '扩展开发', items: [
-                                    {text: '编译卡点插件', link: '/learn/maven/plugin/artifact-check-maven-plugin/'},
-                                ]
-                            }
-                        ]
-                    },
+                    // {
+                    //     text: 'Maven扩展',
+                    //     items: [
+                    //         {
+                    //             text: '基础入门', items: [
+                    //                 {text: 'Maven基础', link: '/learn/maven/'},
+                    //                 {text: '自定义插件', link: '/learn/maven/自定义maven插件/'}
+                    //             ]
+                    //         },
+                    //         {
+                    //             text: '源码分析', items: [
+                    //                 {text: 'spring-boot-maven-plugin', link: '/learn/maven/spring-boot-maven-plugin/'},
+                    //                 {text: 'maven-resources-plugin', link: '/learn/maven/maven-resources-plugin/'},
+                    //                 {text: 'maven-surefire-plugin', link: '/learn/maven/maven-surefire-plugin/'}
+                    //             ]
+                    //         },
+                    //         {
+                    //             text: '扩展开发', items: [
+                    //                 {text: '编译卡点插件', link: '/learn/maven/plugin/artifact-check-maven-plugin/'},
+                    //             ]
+                    //         }
+                    //     ]
+                    // },
                     {
                         text: '框架篇',
                         ariaLabel: 'Java',
@@ -217,11 +226,11 @@ module.exports = config({
                         items: [
                             {
                                 text: '效率工具', items: [
+                                    {text: 'Mojito 通信组件', link: '/learn/project/mojito/'},
                                     {text: 'Jmvn', link: '/learn/project/jmvn/'},
                                     {text: 'Java脚手架', link: '/learn/project/start/'},
                                     {text: 'Alfred Plugin', link: '/learn/project/alfred/'},
                                     {text: 'Tomato 新特性', link: 'https://tomato.springlearn.cn/'},
-                                    {text: 'Mojito 通信组件', link: 'https://mojito.springlearn.cn/'},
                                     {text: 'JVM调优&问题排查', link: '/learn/project/jvm/'},
                                 ]
                             }
@@ -245,27 +254,27 @@ module.exports = config({
                     //         }
                     //     ]
                     // },
-                    {
-                        text: 'Database',
-                        items: [
-                            {
-                                text: '关系型数据库', items: [
-                                    {text: 'Mysql', link: '/learn/databases/sql/'},
-                                ]
-                            },
-                            {
-                                text: 'NoSql', items: [
-                                    {text: 'Redis', link: '/learn/databases/nosql/redis/'},
-                                    {text: 'Mongo', link: '/learn/databases/nosql/mongo/'}
-                                ]
-                            },
-                            {
-                                text: '图数据库', items: [
-                                    {text: 'Neo4J', link: '/learn/databases/map/'},
-                                ]
-                            }
-                        ]
-                    },
+                    // {
+                    //     text: 'Database',
+                    //     items: [
+                    //         {
+                    //             text: '关系型数据库', items: [
+                    //                 {text: 'Mysql', link: '/learn/databases/sql/'},
+                    //             ]
+                    //         },
+                    //         {
+                    //             text: 'NoSql', items: [
+                    //                 {text: 'Redis', link: '/learn/databases/nosql/redis/'},
+                    //                 {text: 'Mongo', link: '/learn/databases/nosql/mongo/'}
+                    //             ]
+                    //         },
+                    //         {
+                    //             text: '图数据库', items: [
+                    //                 {text: 'Neo4J', link: '/learn/databases/map/'},
+                    //             ]
+                    //         }
+                    //     ]
+                    // },
                     {
                         text: '设计&规范',
                         items: [
@@ -595,6 +604,26 @@ module.exports = config({
                             children: ['create-alfred', 'alfred-worflow-js']
                         }
                     ],
+                    "/learn/project/mojito/": [
+                        {
+                            title: "通信层搭建",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['第01篇:手写JavaRPC框架之思路分析', '第02篇:手写JavaRPC框架之设计思路','第03篇:手写JavaRPC框架之搞定序列化','第04篇:手写JavaRPC框架之搞定网络通信']
+                        },
+                        {
+                            title: "代理层搭建",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['第01篇:手写JavaRPC框架之思路分析', '第02篇:手写JavaRPC框架之设计思路','第03篇:手写JavaRPC框架之搞定序列化']
+                        },
+                        {
+                            title: "整合Spring",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['第01篇:手写JavaRPC框架之思路分析', '第02篇:手写JavaRPC框架之设计思路']
+                        }
+                    ],
                     "/learn/distributed/": [
                         {
                             title: "基础知识",
@@ -612,7 +641,40 @@ module.exports = config({
                                 '分布式链路追踪',
                                 '分布式事务处理']
                         }
-                    ]
+                    ],
+                    "/learn/tools/": [
+                        {
+                            title: "工具系列",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['reflections/', 'guava/','druid/','reactor/','pool2/','disruptor/','bytecode/']
+                        }
+                    ],
+                    "/learn/dubbo/": [
+                        {
+                            title: "全局流程",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['Dubbo源码解析之服务端Provider','Dubbo源码解析之客户端Consumer','dubbo整合spring的两种实现原理']
+                        }
+                    ],
+                    "/learn/jobs/": [
+                        {
+                            title: "全局流程",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['Elastic-Job源码解析(一)之与Spring完美整合','Elastic-Job源码解析(三)之分片定时任务执行']
+                        }
+                    ],
+                    "/learn/electron/": [
+                        {
+                            title: "介绍说明",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['图床软件示例']
+                        }
+                    ],
+
                 },
             },
         },

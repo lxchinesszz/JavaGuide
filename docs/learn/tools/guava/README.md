@@ -11,7 +11,7 @@ next: true
 comment: true
 footer: true
 backtotop: true
-title: Guava：用于 Java 的 Google 核心库
+title: Guava核心库专题
 ---
 
 ![](https://camo.githubusercontent.com/45e5eb02492f9e3bf6345cfd7ca7ecb42dca2268fef7af35dfe3da82740b4000/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f676f6f676c652f67756176612e737667)

@@ -17,6 +17,8 @@ action:
 
 <Djt/>
 
+![](https://img.springlearn.cn/blog/a982515ed6df23c14bd77c4e6585ff57.png)
+
 ## <Badge text="程序猿" color="#4D96FF"/> <Badge text="上号" color="#6BCB77" />  <Badge text="打怪" color="#FF6B6B" /> <Badge text="升级" color="#8479E1" />  <Badge text="写Bug" color="grey" />
 
 [//]: # (## <Badge text="明确业务分层架构,定义领域模型,编程不迷茫" color="#4D96FF"/>)

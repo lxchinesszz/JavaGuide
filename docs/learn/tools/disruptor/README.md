@@ -14,7 +14,6 @@ backtotop: true
 sidebarDepth: 3
 title: Disruptor高性能队列
 password: 123
-icon: zuanshi
 ---
 
 ::: info 介绍

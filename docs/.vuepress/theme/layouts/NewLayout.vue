@@ -6,7 +6,6 @@
         <Content slot-key="navbar-start" />
       </slot>
     </template>
-
     <template #navbar-center>
       <slot name="navbar-center">
         <NavbarCenter />
