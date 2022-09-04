@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第05篇:手写JavaRPC框架之执行层思路.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core07.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core08.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core09.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core10.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/tools/apt/README.md" afterDir="false" />
+    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="add 字节码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/SeriesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/SeriesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +54,7 @@
       <recent name="$PROJECT_DIR$/docs/learn/blog/将博客搬至CSDN" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.docs:clean-dev">
+  <component name="RunManager" selected="npm.docs:build">
     <configuration name="yiyan.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/docs/.vuepress/public/js/yiyan.js" working-dir="$PROJECT_DIR$/docs/.vuepress/public/js">
       <method v="2" />
     </configuration>
@@ -96,8 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.docs:clean-dev" />
         <item itemvalue="npm.docs:build" />
+        <item itemvalue="npm.docs:clean-dev" />
         <item itemvalue="Node.js.yiyan.js" />
       </list>
     </recent_temporary>
@@ -150,7 +134,7 @@
       <workItem from="1661606036472" duration="6295000" />
       <workItem from="1661741033419" duration="10000" />
       <workItem from="1661779061261" duration="329000" />
-      <workItem from="1662206423130" duration="15800000" />
+      <workItem from="1662206423130" duration="16109000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -278,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661132149914</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add 字节码">
+      <created>1662299471957</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1662299471958</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +300,8 @@
     <MESSAGE value="add" />
     <MESSAGE value="add css" />
     <MESSAGE value="add build" />
-    <option name="LAST_COMMIT_MESSAGE" value="add build" />
+    <MESSAGE value="add 字节码" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 字节码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
