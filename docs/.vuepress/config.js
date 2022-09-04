@@ -219,6 +219,7 @@ module.exports = config({
                             {text: 'Disruptor', link: '/learn/tools/disruptor/'},
                             {text: 'JMH基准测试', link: '/learn/tools/jmh/'},
                             {text: '内存布局', link: '/learn/tools/jol/'},
+                            {text: 'APT技术', link: '/learn/tools/apt/'},
                         ]
                     },
                     {
@@ -378,7 +379,37 @@ module.exports = config({
                     ],
                     "/learn/spring/": [
                         {
-                            title: "基础知识",
+                            title: "Spring Core",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['core01','core02','core03','core04','core05','core06','core07','core08']
+                        },
+                        {
+                            title: "Spring Web",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['core09']
+                        },
+                        {
+                            title: "Spring Integration",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['']
+                        },
+                        {
+                            title: "Spring Testing",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['']
+                        },
+                        {
+                            title: "Spring Data Access",
+                            icon: "creative",
+                            collapsable: false,
+                            children: ['']
+                        },
+                        {
+                            title: "Spring 周边",
                             icon: "creative",
                             collapsable: false,
                             children: ['Spring循环依赖', 'AOP', 'EL', 'Endpoint监控端点扩展', 'Spring动态绑定配置', 'Web接口资源是如何保存起来的', 'Spring声明式事务的实现方案', 'FactoryBean接口实例化']
@@ -615,13 +646,13 @@ module.exports = config({
                             title: "代理层搭建",
                             icon: "creative",
                             collapsable: false,
-                            children: ['第01篇:手写JavaRPC框架之思路分析', '第02篇:手写JavaRPC框架之设计思路','第03篇:手写JavaRPC框架之搞定序列化']
+                            children: ['第05篇:手写JavaRPC框架之执行层思路']
                         },
                         {
                             title: "整合Spring",
                             icon: "creative",
                             collapsable: false,
-                            children: ['第01篇:手写JavaRPC框架之思路分析', '第02篇:手写JavaRPC框架之设计思路']
+                            children: ['']
                         }
                     ],
                     "/learn/distributed/": [

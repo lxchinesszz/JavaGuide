@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /blog.png
-heroText: 《无名之辈》
+heroText: 无名之辈
 tagline: 天下代码一大抄, 抄来抄去有提高, 看你会抄不会抄！
 heroFullScreen: true
 actionText: 网站地图
@@ -35,7 +35,7 @@ action:
 
 <ProjectList/>
 
-<Title title="公众号" sub-title="他们太强了，我卷不动了，随心月更，交给朋友"/>
+<Title title="公众号" sub-title="他们太强了，我卷不动了，随心月更，交个朋友"/>
 
 - [x] 关注公众号，留言: "暗号"，获取你我的独家记忆，并解锁全部文章，及更多福利。
 - [x] 最新文章会首发公众号，强烈推荐读者伙伴关注一波！

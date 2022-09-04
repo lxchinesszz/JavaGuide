@@ -26,9 +26,9 @@ export default {
       infoList: [
         {
           link: '/learn/spring',
-          img: 'https://img.springlearn.cn/blog/c4ec0c55d575895d52ca0fe93a074a82.png',
+          img: 'https://img.springlearn.cn/blog/1c861b137fedd470229042b05bc85d97.png',
           title: 'Spring专题系列',
-          desc: 'spring 是 java 开发者,永远绕不开的结。其中的设计思想还有编码风格, 是非常值得开发者来学习的,但是随着 Spring 的 发展, 它已经不在是一个轻量级的框架了。面对如此庞大的框架, 我们的学习一定要找到一个切入点, 这样学习效率才会更高。本系列就是做这个事情的。它不一定全,但是一定是你需要的。'
+          desc: 'spring 是 java 开发者,永远绕不开的结。是非常值得开发者来学习的,面对如此庞大的框架, 我们的学习一定要找到一个切入点, 这样学习效率才会更高。'
         },
         {
           link: '/learn/mybatis',
@@ -119,8 +119,9 @@ export default {
   display: flex;
   flex-direction: column;
   letter-spacing: -0.2px;
-  line-height: 18px;
+  line-height: 23px;
   flex: 2;
+  padding-left: 1rem;
 }
 
 .info:hover {

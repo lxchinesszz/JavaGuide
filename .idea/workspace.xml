@@ -2,39 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/ProjectList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/SeriesList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/Title.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/Ximg.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/dubbo/Dubbo源码解析之客户端Consumer.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/dubbo/Dubbo源码解析之服务端Provider.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/dubbo/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/dubbo/dubbo整合spring的两种实现原理.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/electron/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/electron/图床软件示例.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/jobs/Elastic-Job源码解析(一)之与Spring完美整合.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/jobs/Elastic-Job源码解析(三)之分片定时任务执行.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/jobs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/HTTP协议使用示例.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/RPC协议使用示例.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/协议.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第01篇:手写JavaRPC框架之思路分析.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第02篇:手写JavaRPC框架之设计思路.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第03篇:手写JavaRPC框架之搞定序列化.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第04篇:手写JavaRPC框架之搞定网络通信.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/learn/tools/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/project/mojito/第05篇:手写JavaRPC框架之执行层思路.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core07.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core08.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core09.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core10.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learn/tools/apt/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/SeriesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/SeriesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/layouts/NewLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/layouts/NewLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/home.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/home.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/java/HashMap.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/java/HashMap.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/learn/spring/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/disruptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/disruptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/druid/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/druid/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/guava/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/guava/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/tools/pool2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/pool2/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/liuxin/JavaGuide/docs/learn/jobs",
+    "last_opened_file_path": "/Users/liuxin/JavaGuide/docs/learn/tools/javaccode",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MFCli",
     "ts.external.directory.path": "/Users/liuxin/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5787.30/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
@@ -77,11 +60,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/learn/tools/javaccode" />
+      <recent name="$PROJECT_DIR$/docs/learn/spring" />
+      <recent name="$PROJECT_DIR$/docs/learn/project/mojito" />
       <recent name="$PROJECT_DIR$/docs/learn/jobs" />
       <recent name="$PROJECT_DIR$/docs/learn/electron" />
-      <recent name="$PROJECT_DIR$/docs/learn/dubbo" />
-      <recent name="$PROJECT_DIR$/docs/learn/tools" />
-      <recent name="$PROJECT_DIR$/docs/learn/project/mojito" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/learn/blog/将博客搬至CSDN" />
@@ -158,7 +141,16 @@
       <workItem from="1660786266759" duration="592000" />
       <workItem from="1660805681706" duration="1765000" />
       <workItem from="1660830647155" duration="1516000" />
-      <workItem from="1660917356074" duration="33780000" />
+      <workItem from="1660917356074" duration="33792000" />
+      <workItem from="1661219642684" duration="6665000" />
+      <workItem from="1661260777343" duration="48000" />
+      <workItem from="1661269745319" duration="1222000" />
+      <workItem from="1661349226253" duration="3531000" />
+      <workItem from="1661584150726" duration="301000" />
+      <workItem from="1661606036472" duration="6295000" />
+      <workItem from="1661741033419" duration="10000" />
+      <workItem from="1661779061261" duration="329000" />
+      <workItem from="1662206423130" duration="15800000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -279,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657631443538</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add build">
+      <created>1661132149914</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1661132149914</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
