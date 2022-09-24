@@ -15,6 +15,8 @@ sidebarDepth: 3
 title: APT技术
 ---
 
+![](https://img.springlearn.cn/blog/0d7181f253655683928c302f20fe7c1d.png)
+
 ## 一、什么是APT
 
 `APT(Annotation Processing Tool)` 注解处理器，是 `javac` 的一个工具，他可以在源码生成class的时候,处理Java语法树。

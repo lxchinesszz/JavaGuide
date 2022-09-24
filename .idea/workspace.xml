@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="add 字节码">
+    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/learn/spring/core11.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core01.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core01.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core02.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core02.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core03.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core03.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core04.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core04.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core05.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core05.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core07.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core07.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core08.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core08.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/tools/apt/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/tools/apt/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,22 +39,22 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/liuxin/JavaGuide/docs/learn/tools/javaccode",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MFCli",
-    "ts.external.directory.path": "/Users/liuxin/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5787.30/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/liuxin/JavaGuide/docs/learn/spring&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MFCli&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/liuxin/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5787.30/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/learn/tools/javaccode" />
       <recent name="$PROJECT_DIR$/docs/learn/spring" />
+      <recent name="$PROJECT_DIR$/docs/learn/tools/javaccode" />
       <recent name="$PROJECT_DIR$/docs/learn/project/mojito" />
       <recent name="$PROJECT_DIR$/docs/learn/jobs" />
       <recent name="$PROJECT_DIR$/docs/learn/electron" />
@@ -134,7 +143,15 @@
       <workItem from="1661606036472" duration="6295000" />
       <workItem from="1661741033419" duration="10000" />
       <workItem from="1661779061261" duration="329000" />
-      <workItem from="1662206423130" duration="16109000" />
+      <workItem from="1662206423130" duration="18152000" />
+      <workItem from="1663040999996" duration="752000" />
+      <workItem from="1663077359904" duration="698000" />
+      <workItem from="1663168593224" duration="1100000" />
+      <workItem from="1663400249185" duration="5932000" />
+      <workItem from="1663588425546" duration="1576000" />
+      <workItem from="1663675574882" duration="2400000" />
+      <workItem from="1663771569393" duration="624000" />
+      <workItem from="1663936868842" duration="4824000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -269,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662299471958</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="modify">
+      <created>1662299756948</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1662299756948</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +325,8 @@
     <MESSAGE value="add css" />
     <MESSAGE value="add build" />
     <MESSAGE value="add 字节码" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 字节码" />
+    <MESSAGE value="modify" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

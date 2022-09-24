@@ -21,4 +21,4 @@ title: 第07篇:Converter SPI类型转换
 
 >天下代码一大抄, 抄来抄去有提高, 看你会抄不会抄！
 
-https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#validation
+https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#core-convert
