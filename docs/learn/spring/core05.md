@@ -26,14 +26,13 @@ title: 第05篇:SpEL强大的表达式语言
 
 ## 一、概述
 
-Spring表达式语言全称为“Spring Expression Language”，缩写为“SpEL”。是一个支持查询，并在运行时操纵一个对象图功能、是一门强大的表达式语言。SpEL是单独模块，只依赖于core模块，可以被独立使用、运行。
+Spring 表达式语言（简称“SpEL”）是一种强大的表达式语言，支持在运行时查询和操作对象图。语言语法类似于 Unified EL，但提供了额外的功能，最值得注意的是方法调用和基本的字符串模板功能。
+
+虽然还有其他几种可用的 Java 表达式语言——OGNL、MVEL 和 JBoss EL 等等
+
+但创建 Spring 表达式语言的目的是为 Spring 社区提供一种可在所有产品中使用的受良好支持的表达式语言。它的语言特性由 Spring 产品组合中的项目需求驱动。
 
 
-**参考文章**
-
-[SpringEpel](https://docs.spring.io/spring-integration/docs/5.3.0.RELEASE/reference/html/spel.html#spel)
-
-[玩转SpEL](https://www.toutiao.com/i6911604368844292620/)
 ## 二、作用
 
 ### 2.1 基本表达式
@@ -54,32 +53,156 @@ Spring表达式语言全称为“Spring Expression Language”，缩写为“SpE
 
 ## 三、主要类
 
-### 3.1 ExpressionParser
+## 3.1 ExpressionParser
 
-表达式解析器接口，包含了(Expression) parseExpression(String), (Expression) parseExpression(String, ParserContext)两个接口方法
+![](https://img.springlearn.cn/blog/dc2b1cd43cf0f44fcb70b678f794317c.png)
 
-### 3.2 ParserContext
+表达式解析器接口，包含了(Expression) parseExpression(String), (Expression) parseExpression(String, ParserContext)两个接口方法。
+
+```java
+public interface ExpressionParser {
+
+	/**
+   * 解析表达式字符串并返回一个可用于重复评估的表达式对象。
+	 */
+	Expression parseExpression(String expressionString) throws ParseException;
+
+	/**
+   * 解析表达式字符串并返回一个可用于重复评估的表达式对象。
+   * context -- 用于影响此表达式解析例程的上下文（可选)
+	 */
+	Expression parseExpression(String expressionString, ParserContext context) throws ParseException;
+
+}
+```
+
+## 3.2 ParserContext
 
 解析器上下文接口，主要是对解析器Token的抽象类，包含3个方法：getExpressionPrefix,getExpressionSuffix和isTemplate，就是表示表达式从什么符号开始什么符号结束，是否是作为模板（包含字面量和表达式）解析。
 
+```java
+public interface ParserContext {
 
-### 3.3 Expression
+	/**
+	 * 被解析的表达式是否是模板
+	 */
+	boolean isTemplate();
+
+	/**
+	 * 对于模板表达式，返回标识字符串中表达式块开始的前缀。例如：“${”
+	 */
+	String getExpressionPrefix();
+
+	/**
+	 * 对于模板表达式，返回标识字符串中表达式块结尾的前缀。例如： ”}”
+	 */
+	String getExpressionSuffix();
+
+}
+```
+
+
+## 3.3 Expression
 
 表达式的抽象，是经过解析后的字符串表达式的形式表示。通过expressionInstance.getValue方法，可以获取表示式的值。也可以通过调用getValue(EvaluationContext)，从评估（evaluation)上下文中获取表达式对于当前上下文的值
 
+```java
+public interface Expression {
 
-### 3.4 EvaluationContext
+	/**
+   * 返回用于创建此表达式的原始字符串（未修改）
+	 */
+	String getExpressionString();
 
-估值上下文接口，只有一个setter方法：`setVariable(String, Object)`，通过调用该方法，可以为evaluation提供上下文变量
+	/**
+   * 在默认的标准上下文中计算这个表达式。
+	 */
+	@Nullable
+	Object getValue() throws EvaluationException;
 
-## 四、案例运用
+	/**
+   * 在默认上下文中计算表达式。如果评估的结果与预期的结果类型不匹配，则将返回异常。
+	 */
+	@Nullable
+	<T> T getValue(@Nullable Class<T> desiredResultType) throws EvaluationException;
 
-### 4.1 基础的Hello
+	/**
+   * 针对指定的根对象评估此表达式。
+	 */
+	@Nullable
+	Object getValue(Object rootObject) throws EvaluationException;
 
+	/**
+   * 针对指定的根对象评估此表达式。结果与预期的结果类型不匹配，则将返回异常。
+	 */
+	@Nullable
+	<T> T getValue(Object rootObject, @Nullable Class<T> desiredResultType) throws EvaluationException;
+
+	/**
+   * 在提供的上下文中评估此表达式并返回评估结果。
+	 */
+	@Nullable
+	Object getValue(EvaluationContext context) throws EvaluationException;
+
+	/**
+   * 在提供的上下文中评估此表达式并返回评估结果。但提供的根上下文会覆盖,默认的上下文
+	 */
+	@Nullable
+	Object getValue(EvaluationContext context, Object rootObject) throws EvaluationException;
+
+	/**
+   * 在指定的上下文中评估表达式，该上下文可以解析对属性、方法、类型等的引用。评估结果的类型应为特定类，如果不是且无法转换为该类，将引发异常类型
+	 */
+	@Nullable
+	<T> T getValue(EvaluationContext context, @Nullable Class<T> desiredResultType) throws EvaluationException;
+
+	/**
+   * 在指定的上下文中评估表达式，该上下文可以解析对属性、方法、类型等的引用。评估结果的类型应为特定类，如果不是且无法转换为该类，将引发异常类型。提供的根对象覆盖在提供的上下文中指定的任何默认值。
+	 */
+	@Nullable
+	<T> T getValue(EvaluationContext context, Object rootObject, @Nullable Class<T> desiredResultType)
+			throws EvaluationException;
+
+	/**
+   * 返回可以使用默认上下文传递给setValue方法的最通用类型。
+	 */
+	@Nullable
+	Class<?> getValueType() throws EvaluationException;
+
+	/**
+   * 根据根对象,获取表达式的类型
+	 */
+	@Nullable
+	Class<?> getValueType(Object rootObject) throws EvaluationException;
+
+	/**
+   * 根据上下文,获取表达式的类型
+	 */
+	@Nullable
+	Class<?> getValueType(EvaluationContext context) throws EvaluationException;
+
+	/**
+   * 根据上下文,获取表达式的类型,root对象会覆盖上下文
+	 */
+	@Nullable
+	Class<?> getValueType(EvaluationContext context, Object rootObject) throws EvaluationException;
+
+}
 ```
-@Test
-public void baseTest() {
-// 字符串表达式
+
+## 3.4 EvaluationContext
+
+EvaluationContext在评估表达式以解析属性、方法或字段并帮助执行类型转换时，使用该接口。Spring 提供了两种实现。
+
+- SimpleEvaluationContext：针对不需要完整范围的 SpEL 语言语法且应受到有意义限制的表达式类别，公开了基本 SpEL 语言功能和配置选项的子集。示例包括但不限于数据绑定表达式和基于属性的过滤器。
+- StandardEvaluationContext：公开全套 SpEL 语言功能和配置选项。您可以使用它来指定默认根对象并配置每个可用的评估相关策略。
+
+SimpleEvaluationContext旨在仅支持 SpEL 语言语法的一个子集。它不包括 Java 类型引用、构造函数和 bean 引用。它还要求您明确选择对表达式中的属性和方法的支持级别。默认情况下，create()静态工厂方法只允许对属性进行读取访问。您还可以获得构建器来配置所需的确切支持级别
+
+
+如下示例。
+```java
+    // 字符串表达式
     String exp = "Hello , #{ #username }";
     // 表达式解析器
     ExpressionParser parser = new SpelExpressionParser();
@@ -88,17 +211,72 @@ public void baseTest() {
     context.setVariable("username", "纹银三百两");
     // 解析
     Expression expression = parser.parseExpression(exp, new TemplateParserContext());
+    // Hello , 纹银三百两
     System.out.println(expression.getValue(context, String.class));
+```
+
+## 3.5 SpelParserConfiguration
+
+可以使用解析器配置对象 ( org.springframework.expression.spel.SpelParserConfiguration) 来配置 SpEL 表达式解析器。配置对象控制一些表达式组件的行为。例如，如果您对数组或集合进行索引，并且指定索引处的元素是null，SpEL可以自动创建元素。这在使用由属性引用链组成的表达式时很有用。
+
+```java
+class Demo {
+    public List<String> list;
+}
+
+// Turn on:
+// - 空引用,自动初始化
+// - 如果是集合,自动扩容
+SpelParserConfiguration config = new SpelParserConfiguration(true, true);
+
+ExpressionParser parser = new SpelExpressionParser(config);
+
+Expression expression = parser.parseExpression("list[3]");
+
+Demo demo = new Demo();
+
+Object o = expression.getValue(demo);
+```
+
+## 四、案例运用
+
+## 4.1 文字表达
+
+```
+@Test
+public void baseTest() {
+    // 字符串表达式
+    String exp = "Hello , #{ #username }";
+    // 表达式解析器
+    ExpressionParser parser = new SpelExpressionParser();
+    // 表达式上下文
+    EvaluationContext context = new StandardEvaluationContext();
+    context.setVariable("username", "纹银三百两");
+    // 解析
+    Expression expression = parser.parseExpression(exp, new TemplateParserContext());
+    // Hello , 纹银三百两
+    System.out.println(expression.getValue(context, String.class));
+    
+    // Hello World!
+    Expression exp = parser.parseExpression("'Hello World'.concat('!')"); 
+    String message = (String) exp.getValue();
+
+    Expression exp2 = parser.parseExpression("'Hello World'.bytes"); 
+    byte[] bytes = (byte[]) exp2.getValue();
+    
+    // invokes 'getBytes().length'
+    Expression exp = parser.parseExpression("'Hello World'.bytes.length"); 
+    int length = (Integer) exp.getValue();
+    
+  
+    Expression exp = parser.parseExpression("new String('hello world').toUpperCase()"); 
+    String message = exp.getValue(String.class);
   }
 
 ```
-基础结果：
-```
-Hello , 纹银三百两
-```
 
 
-### 4.2 关系运算符
+## 4.2 关系运算符
 
 ```
 //true
@@ -114,7 +292,7 @@ boolean trueValue3 =parser.parseExpression("'5.00' matches '^-?\\d+(\\.\\d{2})?$
 //false
 boolean falseValue3=parser.parseExpression("'5.0067' matches '^-?\\d+(\\.\\d{2})?$'").getValue(Boolean.class);
 ```
-### 4.3 逻辑运算符
+## 4.3 逻辑运算符
 
 ```
 // -- AND 与运算 --
@@ -127,7 +305,7 @@ boolean trueValue5 = parser.parseExpression("true or false").getValue(Boolean.cl
 boolean falseValue5 = parser.parseExpression("!true").getValue(Boolean.class);
 ```
 
-### 4.4 算术运算符
+## 4.4 算术运算符
 
 ```
 // Addition
@@ -150,22 +328,97 @@ int one = parser.parseExpression("8 / 5 % 2").getValue(Integer.class); // 1
 int minusTwentyOne = parser.parseExpression("1+2-3*8").getValue(Integer.class); // -21
 ```
 
-## 五、组合使用
+## 4.5 三元运算符
+
+您可以使用三元运算符在表达式内执行 if-then-else 条件逻辑。以下清单显示了一个最小示例：
+
+```java
+String falseString = parser.parseExpression(
+        "false ? 'trueExp' : 'falseExp'").getValue(String.class);
+```
+在这种情况下，布尔值false会返回字符串 value 'falseExp'。一个更现实的例子如下：
+
+```java
+
+public class SpringElTest {
+
+    public String name;
+
+    public boolean isMember(String name) {
+        return true;
+    }
+    @Test
+    public void test() throws Exception {
+        SpringElTest root = new SpringElTest();
+        SpelExpressionParser parser = new SpelExpressionParser();
+        StandardEvaluationContext context = new StandardEvaluationContext(root);
+        // 可以注册方法,注意如果是注册的方法要 #isMember(#queryName)而不是isMember(#queryName)
+//        context.registerFunction("isMember", isMember);
+        context.setVariable("queryName", "周杰伦");
+
+        // 绑定属性
+        EvaluationContext setContext = SimpleEvaluationContext.forReadWriteDataBinding().build();
+        parser.parseExpression("name").setValue(setContext, root, "许嵩");
+
+        String expression = "isMember(#queryName)? #queryName + ' is a member of the ' " +
+                "+ name + ' Society' : #queryName + ' is not a member of the ' + name + ' Society'";
+        String queryResultString = parser.parseExpression(expression)
+                .getValue(context, String.class);
+        // 周杰伦 is a member of the 许嵩 Society
+        System.out.println(queryResultString);
+    }
+}
 
 ```
-@Test
-  public void expressionTest() {
-    String exp = "1 between {1, 2} and 1>2";
-    ExpressionParser parser = new SpelExpressionParser();
-    Expression expression = parser.parseExpression(exp);
-    //false
-    System.out.println(expression.getValue(boolean.class));
-  }
+
+## 4.6 使用变量
+
+```java
+Inventor tesla = new Inventor("Nikola Tesla", "Serbian");
+
+EvaluationContext context = SimpleEvaluationContext.forReadWriteDataBinding().build();
+context.setVariable("newName", "Mike Tesla");
+
+parser.parseExpression("name = #newName").getValue(context, tesla);
+System.out.println(tesla.getName())  // "Mike Tesla"
+```
+
+## 五、集合操作
+
+选择是一种强大的表达式语言功能，可让您通过从其条目中进行选择将源集合转换为另一个集合。
+
+选择使用.?[selectionExpression]. 它过滤集合并返回一个包含原始元素子集的新集合。例如，选择可以让我们轻松获得塞尔维亚发明人的列表，如下例所示：
+
+## 5.1 集合过滤
+
+```java
+// create an array of integers
+List<Integer> primes = new ArrayList<Integer>();
+primes.addAll(Arrays.asList(2,3,5,7,11,13,17));
+
+// create parser and set variable 'primes' as the array of integers
+ExpressionParser parser = new SpelExpressionParser();
+EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataAccess();
+context.setVariable("primes", primes);
+
+// all prime numbers > 10 from the list (using selection ?{...})
+// evaluates to [11, 13, 17]
+List<Integer> primesGreaterThanTen = (List<Integer>) parser.parseExpression(
+        "#primes.?[#this>10]").getValue(context);
+```
+
+## 5.2 集合映射
+
+类似与map操作，语法是.![projectionExpression]
+
+```java
+// returns ['Smiljan', 'Idvor' ]
+List placesOfBirth = (List)parser.parseExpression("members.![placeOfBirth.city]");
 ```
 
 ## 六、操作类
 
-### 6.1 类类型
+## 6.1 类类型
 
 ```
 @Test
@@ -194,7 +447,7 @@ public void classTypeTest() {
   }
 ```
 
-### 6.2 自定义函数
+## 6.2 自定义函数
 
 ```
 /**
@@ -221,7 +474,7 @@ public void functionTest() throws NoSuchMethodException {
   }
 ```
 
-### 6.3 类属性
+## 6.3 类属性
 
 ```
  @Test
@@ -241,7 +494,7 @@ public void functionTest() throws NoSuchMethodException {
 
 ## 七、模板表达式
 
-指定模板 `%{ }`
+指定模板 `%{ }`，默认是 `#{}`
 
 ```
 @Test
@@ -260,14 +513,14 @@ public void templateTest() {
 
 ## 八、规则引擎
 
-### 8.1 背景
+## 8.1 背景
 
 假设人员注册信息(姓名、年龄、性别），自定义其中规则，如下：
 
 李家好汉（李姓，男，且满18岁）
 豆蔻少女（13-15岁，女性）
 
-### 8.2 实现
+## 8.2 实现
 
 ```
 @Test
@@ -329,7 +582,75 @@ username:【小龙女】,命中规则:【豆蔻少女】
 username:【李四】,命中规则:【李家好汉】
 ```
 
-## 九、总结
+## 九、容器内使用
+
+## 9.1 注释配置
+
+```java
+public class FieldValueTestBean {
+
+    @Value("#{ systemProperties['user.region'] }")
+    private String defaultLocale;
+
+    public void setDefaultLocale(String defaultLocale) {
+        this.defaultLocale = defaultLocale;
+    }
+
+    public String getDefaultLocale() {
+        return this.defaultLocale;
+    }
+}
+
+public class PropertyValueTestBean {
+
+    private String defaultLocale;
+
+    @Value("#{ systemProperties['user.region'] }")
+    public void setDefaultLocale(String defaultLocale) {
+        this.defaultLocale = defaultLocale;
+    }
+
+    public String getDefaultLocale() {
+        return this.defaultLocale;
+    }
+}
+```
+
+## 9.2 自动装配
+
+```java
+public class SimpleMovieLister {
+
+    private MovieFinder movieFinder;
+    private String defaultLocale;
+
+    @Autowired
+    public void configure(MovieFinder movieFinder,
+            @Value("#{ systemProperties['user.region'] }") String defaultLocale) {
+        this.movieFinder = movieFinder;
+        this.defaultLocale = defaultLocale;
+    }
+
+    // ...
+}
+
+public class MovieRecommender {
+
+    private String defaultLocale;
+
+    private CustomerPreferenceDao customerPreferenceDao;
+
+    public MovieRecommender(CustomerPreferenceDao customerPreferenceDao,
+            @Value("#{systemProperties['user.country']}") String defaultLocale) {
+        this.customerPreferenceDao = customerPreferenceDao;
+        this.defaultLocale = defaultLocale;
+    }
+
+    // ...
+}
+```
+
+## 十、总结
 
 Spring EL表达式，作为JAVA的内置语言，十分强大。主要可以用来做表达式解析，或者规则链路，且可以操作函数方法；从而达到一种动态的链路规则解析效果。
 
