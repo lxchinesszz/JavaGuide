@@ -14,11 +14,11 @@ export default {
   name: "PageBanner",
   components: {Djt},
   created: function () {
-    this.$nextTick(() => {
-      const hitokoto = document.getElementById('yiyan')
-      hitokoto.href = 'https://java.springlearn.cn'
-      hitokoto.innerText = say()
-    })
+    // this.$nextTick(() => {
+    //   const hitokoto = document.getElementById('yiyan')
+    //   hitokoto.href = 'https://java.springlearn.cn'
+    //   hitokoto.innerText = say()
+    // })
   }
 }
 </script>

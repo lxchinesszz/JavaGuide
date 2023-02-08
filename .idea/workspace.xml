@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="">
+    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/Djt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/Djt.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/PageBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/PageBanner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/components/Blog/ArticleItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/components/Blog/ArticleItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/AOP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/AOP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/EL.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/EL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core01.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core01.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core02.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core02.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core03.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core03.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core04.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core04.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/learn/spring/core05.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core05.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/learn/spring/core06.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core06.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core07.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core07.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core08.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core08.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core09.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core09.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core10.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core10.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core11.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core11.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +56,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/liuxin/JavaGuide/docs/learn/spring&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;MFCli&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/liuxin/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5787.30/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
@@ -145,7 +167,15 @@
       <workItem from="1663675574882" duration="2400000" />
       <workItem from="1663771569393" duration="624000" />
       <workItem from="1663936868842" duration="7667000" />
-      <workItem from="1665288698795" duration="1980000" />
+      <workItem from="1665288698795" duration="3226000" />
+      <workItem from="1665652079147" duration="6588000" />
+      <workItem from="1666525606109" duration="823000" />
+      <workItem from="1668314021149" duration="2692000" />
+      <workItem from="1675402881159" duration="802000" />
+      <workItem from="1675407029901" duration="450000" />
+      <workItem from="1675531453304" duration="980000" />
+      <workItem from="1675676320361" duration="799000" />
+      <workItem from="1675825157955" duration="1445000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -308,7 +338,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664012838541</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add spring css">
+      <created>1665470898527</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1665470898527</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add spring aop">
+      <created>1665470947830</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1665470947830</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +387,8 @@
     <MESSAGE value="modify" />
     <MESSAGE value="add spring" />
     <MESSAGE value="add spring css" />
-    <option name="LAST_COMMIT_MESSAGE" value="add spring css" />
+    <MESSAGE value="add spring aop" />
+    <option name="LAST_COMMIT_MESSAGE" value="add spring aop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

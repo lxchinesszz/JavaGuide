@@ -16,7 +16,7 @@ action:
   footer: Copyright © 2021 | The Blog by liuxin | 豫ICP备18041471号
 ---
 
-<Djt/>
+> 稻盛和夫说：你不会的东西，觉得难的东西，一定不要躲，先搞明白，后精湛，你就比别人优秀了。因为大部分人都不舍得花力气去钻研，自动被淘汰，所以你执着的努力，就占了大便宜。
 
 ## <Badge text="程序猿" color="#4D96FF"/> <Badge text="上号" color="#6BCB77" />  <Badge text="打怪" color="#FF6B6B" /> <Badge text="升级" color="#8479E1" />  <Badge text="写Bug" color="grey" />
 

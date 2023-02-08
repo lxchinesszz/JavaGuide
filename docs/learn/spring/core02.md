@@ -12,6 +12,8 @@ comment: true
 footer: true
 backtotop: true
 title: 第02篇:解耦就用Event
+category: Spring Framework
+image: https://img.springlearn.cn/blog/b8f74de10af99991e3fc73632eeeb190.png
 ---
 
 ![](https://img.springlearn.cn/blog/b8f74de10af99991e3fc73632eeeb190.png)

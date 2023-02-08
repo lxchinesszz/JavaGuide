@@ -15,11 +15,11 @@ export default {
     }
   },
   created: function () {
-    this.$nextTick(() => {
-      let hitokoto = document.getElementById('yiyan123')
-      hitokoto.href = 'https://java.springlearn.cn'
-      hitokoto.innerText = say();
-    })
+    // this.$nextTick(() => {
+    //   let hitokoto = document.getElementById('yiyan123')
+    //   hitokoto.href = 'https://java.springlearn.cn'
+    //   hitokoto.innerText = say();
+    // })
   }
 }
 </script>

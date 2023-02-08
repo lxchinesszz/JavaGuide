@@ -12,7 +12,7 @@ comment: true
 footer: true
 backtotop: true
 title: Spring EL表达式使用指南
-category: Spring
+category: Spring Framework
 ---
 
 ![](https://img.springlearn.cn/blog/learn_1610710891000.png)

@@ -12,6 +12,8 @@ comment: true
 footer: true
 backtotop: true
 title: 第09篇:Formatter 格式转换
+category: Spring Framework
+image: https://img.springlearn.cn/blog/b8f74de10af99991e3fc73632eeeb190.png
 ---
 
 ![](https://img-blog.csdnimg.cn/img_convert/aa1d259419ff268edc2fe3088f940556.png)

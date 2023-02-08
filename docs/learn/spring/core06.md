@@ -12,6 +12,8 @@ comment: true
 footer: true
 backtotop: true
 title: 第06篇:AOP面向切面编程
+category: Spring Framework
+image: https://img.springlearn.cn/blog/b8f74de10af99991e3fc73632eeeb190.png
 ---
 
 ![](https://img.springlearn.cn/blog/b8f74de10af99991e3fc73632eeeb190.png)

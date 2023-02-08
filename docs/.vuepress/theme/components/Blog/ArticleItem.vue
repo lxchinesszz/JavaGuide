@@ -11,7 +11,7 @@
            :style="{'background-image':'url(' + article.frontmatter.image + ')'}">
       </div>
       <div class="post-media" v-if="!article.frontmatter.image"
-           :style="{'background-image':'url(' + $themeConfig.postMedia + ')'}">
+           :style="{'background-image':'url(' + $themeConfig.postMedia + ')','border-radius':'10px'}">
       </div>
       <div class="post-content">
         <header class="title hvr-icon-buzz-out" @click="$router.push(article.path)">
