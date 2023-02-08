@@ -37,7 +37,7 @@ export default {
         },
         {
           img: 'https://img.springlearn.cn/blog/3b384399150b25b8f71c4b7b75a1ca3e.png',
-          link: '',
+          link: '/learn/project/pangu',
           title: 'SpringBoot脚手架【web版本】 ',
           desc: 'SpringBoot 国产脚手架,支持企业级定制,同时支持 intellij idea 的 spring 扩展。'
         },
@@ -45,6 +45,12 @@ export default {
           img: 'https://img.springlearn.cn/blog/c54c185f6ffb2237d16ea3803102225c.png',
           link: '/learn/electron/',
           title: '我开源了我的图床客户端 ',
+          desc: '写了五六年博客,我最终还是把我的图床客户端给开源了,分享给更多热爱技术方向的👬🏻兄弟们。'
+        },
+        {
+          img: 'https://img.springlearn.cn/blog/1a30b8599b543abb486775a6e87fc40e.png',
+          link: 'https://dev.springlearn.cn',
+          title: 'Vue3搭建自己的浏览器书签平台 ',
           desc: '写了五六年博客,我最终还是把我的图床客户端给开源了,分享给更多热爱技术方向的👬🏻兄弟们。'
         }]
     }
@@ -73,6 +79,7 @@ export default {
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px 0 var(--card-shadow-color);
     margin-bottom: 10px;
+    transition: all 0.3s;
   }
 
 }
@@ -87,6 +94,7 @@ export default {
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px 0 var(--card-shadow-color);
     margin-bottom: 10px;
+    transition: all 0.3s;
   }
 
 }
