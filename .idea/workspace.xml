@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/Djt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/Djt.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/PageBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/PageBanner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/theme/components/Blog/ArticleItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/theme/components/Blog/ArticleItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/AOP.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/AOP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/EL.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/EL.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core01.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core01.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core02.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core02.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core03.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core03.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core04.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core04.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core05.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core05.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core06.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core06.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core07.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core07.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core08.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core08.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core09.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core09.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core10.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core10.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/learn/spring/core11.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learn/spring/core11.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="b2abb6b5-603f-4302-8303-0f92f34c2090" name="变更" comment="变更" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +156,7 @@
       <workItem from="1675407029901" duration="450000" />
       <workItem from="1675531453304" duration="980000" />
       <workItem from="1675676320361" duration="799000" />
-      <workItem from="1675825157955" duration="1445000" />
+      <workItem from="1675825157955" duration="1535000" />
     </task>
     <task id="LOCAL-00001" summary="code add">
       <created>1655385016667</created>
@@ -352,7 +333,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665470947830</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="变更">
+      <created>1675826627927</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1675826627927</updated>
+    </task>
+    <task id="LOCAL-00027" summary="变更">
+      <created>1675826677014</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1675826677014</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +383,8 @@
     <MESSAGE value="add spring" />
     <MESSAGE value="add spring css" />
     <MESSAGE value="add spring aop" />
-    <option name="LAST_COMMIT_MESSAGE" value="add spring aop" />
+    <MESSAGE value="变更" />
+    <option name="LAST_COMMIT_MESSAGE" value="变更" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
