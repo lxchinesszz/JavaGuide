@@ -95,7 +95,7 @@ module.exports = config({
         homeJitang: false,
         fullscreen: false,
         encrypt: {
-            title: '扫描公众号,输入暗号获取密码,解锁全站文章',
+            title: '输入1024,解锁全站文章',
             errorHint: '暗号不对,有内鬼,终止交易'
         },
         adList: [
