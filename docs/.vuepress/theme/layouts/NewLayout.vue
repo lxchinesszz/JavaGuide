@@ -51,6 +51,7 @@
           v-else
           :headers="slotProps.headers"
           :sidebar-items="slotProps.sidebarItems"
+          :style="{backgroundImage: 'url(' + $frontmatter.backgroundImage +')'}"
       >
         <template #top>
           <slot name="page-top">

@@ -324,6 +324,42 @@ module.exports = config({
                                 ]
                             }
                         ]
+                    },
+                    {
+                        text: '📦 供应链系统',
+                        items: [
+                            {
+                                text: '基础服务', items: [
+                                    {text: '商货管理', link: '/learn/scm/base/商货品服务/'},
+                                    {text: '仓网系统', link: '/learn/scm/base/仓服务管理/'},
+                                    {text: '地址服务', link: '/learn/scm/base/全球地址库/'},
+                                ]
+                            },
+                            {
+                                text: '采购入库', items: [
+                                    {text: '采购订单', link: '/learn/scm/purchase/采购订单/'},
+                                    {text: '到货管理', link: '/learn/scm/purchase/到货管理/'},
+                                    {text: '供货计划', link: '/learn/scm/purchase/供货计划/'},
+                                    {text: '理货报告', link: '/learn/scm/purchase/理货报告/'}
+                                ]
+                            },
+                            {
+                                text: '销售出库', items: [
+                                    {text: '公域拉单', link: '/learn/scm/fulfill-aggregate/公域拉单/'},
+                                    {text: '私域推单', link: '/learn/scm/fulfill-aggregate/私域拉单/'},
+                                    {text: '物流轨迹', link: '/learn/scm/fulfill-aggregate/物流轨迹/'},
+                                    {text: '库存分层', link: '/learn/scm/fulfill-aggregate/库存分层/'}
+                                ]
+                            },
+                            {
+                                text: '财务结算', items: [
+                                    {text: '财务支出', link: '/learn/scm/finance/财务支出/'},
+                                    {text: '预收收入', link: '/learn/scm/finance/预收收入/'},
+                                    {text: '成本控制', link: '/learn/scm/finance/成本控制/'},
+                                    {text: '财报管报', link: '/learn/scm/finance/财报管报/'},
+                                ]
+                            }
+                        ]
                     }
                 ],
                 sidebar: {

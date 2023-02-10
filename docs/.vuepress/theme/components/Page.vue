@@ -42,7 +42,7 @@
         <div>
           <Content :key="$route.path" class="theme-default-content"/>
           <!--          默认不填noPageCopyright:true 不显示-->
-          <FooterBanner class="theme-default-content" v-show="!$page.frontmatter.noPageCopyright"></FooterBanner>
+          <FooterBanner class="theme-default-content" v-show="!$page.frontmatter.noPageCopyright" style="margin-top: 12px"></FooterBanner>
         </div>
       </MyTransition>
       <slot v-if="!pagePassword || pageDescrypted" name="content-bottom"/>
@@ -67,6 +67,20 @@
 <script src="./Page"/>
 
 <style lang="stylus">
+//.page::before
+//  background url("https://scm.springlearn.cn/img/package-6.png");
+//  content "";
+//  top -30px
+//  position absolute;
+//  bottom 0
+//  left 0
+//  right 0
+
+//.theme-default-content
+//  background: var(--bgcolor);
+//  border-radius: 6px;
+//  box-shadow: 0 1px 3px 0 var(--card-shadow-color);
+
 .page
   display block
   box-sizing border-box

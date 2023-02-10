@@ -4,7 +4,10 @@
 
 <style lang="stylus">
 $headings = 2 3 4 5 6
-
+//#anchor
+//  background: var(--bgcolor);
+//  border-radius: 6px;
+//  box-shadow: 0 1px 3px 0 var(--card-shadow-color);
 .anchor-banner-img
   width: 100%;
   -webkit-user-drag: none;
