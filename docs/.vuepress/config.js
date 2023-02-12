@@ -327,7 +327,15 @@ module.exports = config({
                     },
                     {
                         text: '📦 供应链系统',
+                        link: '/learn/scm/',
                         items: [
+                            {
+                                text: "入门介绍",
+                                items: [
+                                    {text: '白话介绍', link: '/learn/scm/introduce/白话翻译/'},
+                                    {text: '系统介绍', link: '/learn/scm/introduce/系统介绍/'},
+                                ]
+                            },
                             {
                                 text: '基础服务', items: [
                                     {text: '商货管理', link: '/learn/scm/base/商货品服务/'},
